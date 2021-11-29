@@ -8,6 +8,8 @@
         :lazy-src="imagem"
         aspect-ratio="1"
         class="grey lighten-2 "
+        height="200px"
+        width="400px"
       >
         <template v-slot:placeholder>
           <v-row
