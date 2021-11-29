@@ -22,7 +22,7 @@ export default {
 
 <style>
 .titulo{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: antio;
 }
 
 </style>
