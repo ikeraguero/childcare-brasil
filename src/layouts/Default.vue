@@ -1,9 +1,9 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark height="100">
+    <v-app-bar app color="#F8F7F2" dark height="100">
       <v-spacer></v-spacer>
-      <v-icon large>mdi-account</v-icon>
-      <v-app-bar-nav-icon large @click.stop="sidebar = !sidebar"></v-app-bar-nav-icon>
+      <v-icon color="#728b88" large>mdi-account</v-icon>
+      <v-app-bar-nav-icon color="#728b88" large @click.stop="sidebar = !sidebar"></v-app-bar-nav-icon>
     </v-app-bar>
     <v-navigation-drawer right app v-model="sidebar" :mini-variant.sync="mini">
       <v-list dense color="primary" dark height="100">
@@ -18,7 +18,7 @@
       </v-list>
       <v-list-item class="px=2" @click="mini = !mini">
         <v-list-item-avatar>
-          <v-icon standard>mdi-account</v-icon>
+          <v-icon  standard>mdi-account</v-icon>
         </v-list-item-avatar>
         <v-list-item-content>Usuário</v-list-item-content>
         <v-btn icon small><v-icon>mdi-chevron-right</v-icon></v-btn>
@@ -33,7 +33,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-main>
+    <v-main class="teste"> 
       <router-view></router-view>
     </v-main>
     <v-footer app class="py-3"
@@ -63,4 +63,7 @@ export default {
 </script>
 
 <style>
+.teste{
+  background-color:#728b88 ;
+}
 </style>
