@@ -12,26 +12,26 @@
 
           <div class="d-flex justify-center mt-16 ">
 
-            <v-btn icon min-width="200" link to="/perfil">
+            <v-btn icon min-width="200" link to="/queroadotar">
             <v-img 
             link to="/perfil"
             class="posicao"
-            lazy-src="@/assets/imagens/queroadotar.png"
+            lazy-src="@/assets/imagens/1.png"
             max-height="350"
             max-width="250"
-            src="@/assets/imagens/queroadotar.png" 
+            src="@/assets/imagens/1.png" 
           ></v-img>
           
             </v-btn>
 
-            <v-btn icon min-width="200" link to="/perfil">
+            <v-btn icon min-width="200" link to="/queroajudar">
 
             <v-img
             class="posicao"
-            lazy-src="@/assets/imagens/queroajudar.png"
+            lazy-src="@/assets/imagens/2.png"
             max-height="350"
             max-width="250"
-            src="@/assets/imagens/queroajudar.png"
+            src="@/assets/imagens/2.png"
           ></v-img>
             </v-btn>
 

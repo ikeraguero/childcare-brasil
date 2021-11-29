@@ -35,10 +35,21 @@ const routes = [
         component: () => import(/* webpackChunkName: "doacoes" */ '../views/Doacoes.vue')
       },
       {
+        path: '/queroadotar',
+        name: 'QueroAdotar',
+        component: () => import(/* webpackChunkName: "doacoes" */ '../views/QueroAdotar.vue')
+      },
+      {
+        path: '/queroajudar',
+        name: 'QueroAjudar',
+        component: () => import(/* webpackChunkName: "doacoes" */ '../views/QueroAjudar.vue')
+      },
+      {
         path: '/faq',
         name: 'FAQ',
         component: () => import(/* webpackChunkName: "faq" */ '../views/FAQ.vue')
       },
+      
     ]
   },
   {

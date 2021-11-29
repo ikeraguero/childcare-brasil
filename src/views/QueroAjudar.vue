@@ -1,5 +1,7 @@
 <template>
-    <h1 color="black">Quero Adotar</h1>
+  <div>
+      <h1 class="h1" color="black">Quero Ajudar</h1>
+  </div>
 </template>
 
 <script>
