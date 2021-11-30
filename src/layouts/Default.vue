@@ -1,13 +1,16 @@
 <template>
   <v-app>
     <v-app-bar app color="#F8F7F2" dark height="100">
+      
+      <v-btn icon min-width="250px" link to="/">
       <v-img
         src="@/assets/imagens/logoanimal.jpeg"
         max-width="250px"
         max-height="250px"
       >
-
       </v-img>
+      </v-btn>
+      
       <v-spacer></v-spacer>
       <v-icon color="#728b88" large>mdi-account</v-icon>
       <v-app-bar-nav-icon color="#728b88" large @click.stop="sidebar = !sidebar"></v-app-bar-nav-icon>

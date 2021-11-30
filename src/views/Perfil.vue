@@ -5,6 +5,12 @@
       <v-container>
         <v-text-field color="#f8f8f2" label="Nome" v-model="nome"></v-text-field>
         <v-text-field color="#f8f8f2" label="Sobrenome" v-model="sobrenome"></v-text-field>
+        <v-text-field color="#f8f8f2" label="Telefone" v-model="telefone"></v-text-field>
+        <v-text-field color="#f8f8f2" label="CPF" v-model="cpf"></v-text-field>
+        <v-text-field color="#f8f8f2" label="E-mail" v-model="email"></v-text-field>
+        <v-text-field color="#f8f8f2" label="Senha" v-model="senha"></v-text-field>
+
+
         <v-btn color="#f8f8f2">Salvar</v-btn>
       </v-container>
     </v-form>
@@ -17,6 +23,10 @@ export default {
     return {
       nome: "",
       sobrenome: "",
+      telefone:"",
+      cpf: "",
+      email:"",
+      senha:"",
     };
   },
 };
