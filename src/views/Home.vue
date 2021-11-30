@@ -1,14 +1,15 @@
 <template>
   <v-container class="pa-8" fluid>
-    <h1 class="h1">Home</h1>
+    <h1 class="h1"></h1>
     <v-row>
       <v-col cols=5>
      <mosaico-animais />
       </v-col>
       <v-col>
-        <p class="text-justify">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </p> <br> <br>
+        <p class="slogan">
+            Doe um lar, adote um animal.  
+        </p> 
+        <br><br>
 
           <div class="d-flex justify-center mt-16 ">
 
@@ -41,7 +42,7 @@
       </v-col>
     </v-row>
     <v-row>
-      <h1>Resto do texto</h1>
+      <h1></h1>
     </v-row>
   </v-container>
 
@@ -62,6 +63,12 @@ export default {
 <style>
 .posicao{
   display: inline-block;
+}
+.slogan {
+  font-family: 'Reenie Beanie', cursive;;
+  text-align: center;
+  color: #f8f8f2;
+  font-size: 60px;
 }
 
 </style>

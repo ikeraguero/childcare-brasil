@@ -1,22 +1,29 @@
 <template>
   <v-app>
     <v-app-bar app color="#F8F7F2" dark height="100">
+      <v-img
+        src="@/assets/imagens/logoanimal.jpeg"
+        max-width="250px"
+        max-height="250px"
+      >
+
+      </v-img>
       <v-spacer></v-spacer>
       <v-icon color="#728b88" large>mdi-account</v-icon>
       <v-app-bar-nav-icon color="#728b88" large @click.stop="sidebar = !sidebar"></v-app-bar-nav-icon>
     </v-app-bar>
     <v-navigation-drawer right app v-model="sidebar" :mini-variant.sync="mini">
-      <v-list dense color="primary" dark height="100">
+      <v-list dense color="#F8F7F2" dark height="100">
         <v-list-item>
           <v-list-item-action>
-            <v-icon @click.stop="sidebar = !sidebar">mdi-chevron-right</v-icon>
+            <v-icon color="#728b88" @click.stop="sidebar = !sidebar">mdi-chevron-right</v-icon>
           </v-list-item-action>
           <v-list-item-title>
-            <h3 class="pa-9" >Minha Conta</h3>
+            <h3 class="conta">Minha Conta</h3>
           </v-list-item-title>
         </v-list-item>
       </v-list>
-      <v-list-item class="px=2" @click="mini = !mini">
+      <v-list-item class="px=2"  @click="mini = !mini">
         <v-list-item-avatar>
           <v-icon  standard>mdi-account</v-icon>
         </v-list-item-avatar>
@@ -33,7 +40,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-main class="teste"> 
+    <v-main class="fundo"> 
       <router-view></router-view>
     </v-main>
     <v-footer app class="py-3"
@@ -63,7 +70,11 @@ export default {
 </script>
 
 <style>
-.teste{
+.fundo{
   background-color:#728b88 ;
+}
+.conta{
+  padding: auto 9px;
+  color: #728b88;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <v-container fill-height fluid text-center>
+  <v-container class="fundo" fill-height fluid text-center>
     <v-container>
       <v-row>
         <v-col
@@ -7,7 +7,7 @@
           cols="1"
           sm="4"
           offset="4"
-          ><h1 class="h1">Login</h1></v-col
+          ><h1 class="titulo">Login</h1></v-col
         >
       </v-row>
       <v-row class="elavation-3 mx-auto">
@@ -19,16 +19,17 @@
         </v-col>
         <v-col>
           <v-form>
-            <v-text-field label="Email" v-model="user.email"></v-text-field>
+            <v-text-field color="#f8f8f2" label="Email" v-model="user.email"></v-text-field>
             <v-text-field
+            color="#f8f8f2"
               label="Senha"
               v-model="user.password"
               :type="show ? 'text' : 'password'"
               :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
               @click:append="show = !show"
             ></v-text-field>
-            <v-btn color="primary" @click="login">Login</v-btn>
-            <v-btn class="ml-2" color="warning" @click="reset">Cancelar</v-btn>
+            <v-btn color="#f8f8f2" @click="login">Login</v-btn>
+            <v-btn class="ml-2" color="red" @click="reset">Cancelar</v-btn>
           </v-form>
         </v-col>
       </v-row>
@@ -64,4 +65,14 @@ export default {
 </script>
 
 <style>
+.titulo {
+  text-align: center;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 80px;
+  color: #f8f7f2;
+}
+
+.fundo{
+  background-color:#728b88 ;
+}
 </style>

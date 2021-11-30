@@ -28,10 +28,13 @@ export default {
   color: #f8f7f2;
   font-family: 'Cardo';
   font-size: 25px;
-  text-justify: auto;
+  text-align: justify; 
 }
-.titulo{
-  color: ;
+.titulo {
+  text-align: center;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 80px;
+  color: #f8f7f2;
 }
 
 </style>
