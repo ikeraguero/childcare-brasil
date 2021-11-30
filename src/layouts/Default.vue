@@ -15,7 +15,7 @@
       <v-icon color="#728b88" large>mdi-account</v-icon>
       <v-app-bar-nav-icon color="#728b88" large @click.stop="sidebar = !sidebar"></v-app-bar-nav-icon>
     </v-app-bar>
-    <v-navigation-drawer right app v-model="sidebar" :mini-variant.sync="mini">
+    <v-navigation-drawer color="#f8f8f2" right app v-model="sidebar" :mini-variant.sync="mini">
       <v-list dense color="#F8F7F2" dark height="100">
         <v-list-item>
           <v-list-item-action>
@@ -43,7 +43,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-main class="fundo"> 
+    <v-main class="fundo">
       <router-view></router-view>
     </v-main>
     <v-footer app class="py-3"
@@ -78,6 +78,13 @@ export default {
 }
 .conta{
   padding: auto 9px;
+  color: #728b88;
+}
+
+.v-list-item__content {
+  color: #728b88;
+}
+.v-list-item__icon {
   color: #728b88;
 }
 </style>

@@ -8,10 +8,11 @@
       <v-col>
         <p class="slogan">
             Doe um lar, adote um animal.  
-        </p> 
+        </p>
+
         <br><br>
 
-          <div class="d-flex justify-center mt-16 ">
+          <div class="d-flex justify-space-around mt-16 ">
 
             <v-btn icon min-width="200" link to="/queroadotar">
             <v-img 
@@ -22,7 +23,6 @@
             max-width="250"
             src="@/assets/imagens/1.png" 
           ></v-img>
-          
             </v-btn>
 
             <v-btn icon min-width="200" link to="/queroajudar">
@@ -34,15 +34,20 @@
             max-width="250"
             src="@/assets/imagens/2.png"
           ></v-img>
-            </v-btn>
-
+            </v-btn> 
           </div>
-
+          <br> <br> <br>
+          <div class="d-flex justify-space-around">
+            <h1>Quero Adotar</h1> 
+            <h1>Quero Ajudar</h1>
+          </div>
         
       </v-col>
     </v-row>
     <v-row>
-      <h1></h1>
+      <v-col>
+        <h1 class="titulo-resto">Animigos</h1>
+      </v-col>
     </v-row>
   </v-container>
 
@@ -64,11 +69,23 @@ export default {
 .posicao{
   display: inline-block;
 }
+
 .slogan {
-  font-family: 'Reenie Beanie', cursive;;
+  font-family: 'Reenie Beanie', cursive;
   text-align: center;
   color: #f8f8f2;
   font-size: 60px;
 }
+
+h1{
+  color: #f8f8f2;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 60px;
+}
+
+.titulo-resto{
+  text-align: center;
+}
+
 
 </style>
