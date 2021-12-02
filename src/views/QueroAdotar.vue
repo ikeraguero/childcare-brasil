@@ -22,14 +22,23 @@ export default {
         {
           id: 1,
           src: require("@/assets/imagens/1.jpg"),
+          nome: "toto",
+          idade: "3 meses",
+          peso: "5 kg",
         },
         {
           id: 2,
           src: require("@/assets/imagens/2.jpg"),
+          nome: "pitoco",
+          idade: "4 meses",
+          peso: "15 kg",
         },
         {
           id: 3,
           src: require("@/assets/imagens/3.jpg"),
+          nome: "monstro",
+          idade: "9 meses",
+          peso: "2 kg",
         },
         {
           id: 4,

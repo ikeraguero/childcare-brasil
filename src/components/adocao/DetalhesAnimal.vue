@@ -14,6 +14,11 @@
         </v-img>
       </v-card>
     </v-col>
+    <div class="">
+      <p>Nome: {{ value.nome }}</p>
+      <p>Idade: {{ value.idade }}</p>
+      <p>Peso: {{ value.peso }}</p>
+    </div>
   </v-row>
 </template>
 
