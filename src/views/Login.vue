@@ -19,8 +19,14 @@
         </v-col>
         <v-col>
           <v-form>
-            <v-text-field color="#f8f8f2" label="Email" v-model="user.email"></v-text-field>
+            <v-text-field 
+            class="text-white"
+            color="#f8f8f2" 
+            label="Email" 
+            v-model="user.email"
+            ></v-text-field>
             <v-text-field
+            class="text-white"
             color="#f8f8f2"
               label="Senha"
               v-model="user.password"
@@ -29,7 +35,7 @@
               @click:append="show = !show"
             ></v-text-field>
             <v-btn color="#f8f8f2" @click="login">Login</v-btn>
-            <v-btn class="ml-2" color="red" @click="reset">Cancelar</v-btn>
+            <v-btn class="ml-2" color="red" @click="reset">Cancelar</v-btn>              
           </v-form>
         </v-col>
       </v-row>
@@ -75,4 +81,14 @@ export default {
 .fundo{
   background-color:#728b88 ;
 }
+
+
+.text-white input {
+  color:#f8f7f2 !important;
+}
+
+#text-white input {
+  color:#f8f7f2 !important;
+}
+
 </style>
