@@ -4,6 +4,7 @@
     <v-form>
       <v-container>
         <v-text-field
+        dark
           class="text-white"
           color="white"
           label="Nome:"
@@ -11,6 +12,7 @@
         ></v-text-field>
 
         <v-text-field
+          dark
           class="text-white"
           color="#f8f8f2"
           label="Sobrenome:"
@@ -18,6 +20,7 @@
         ></v-text-field>
 
         <v-text-field
+        dark
           class="text-white"
           color="#f8f8f2"
           label="Telefone:"
@@ -25,6 +28,7 @@
         ></v-text-field>
 
         <v-text-field
+        dark
           class="text-white"
           color="#f8f8f2"
           label="CPF:"
@@ -32,6 +36,7 @@
         ></v-text-field>
 
         <v-text-field
+        dark
           class="text-white"
           color="#f8f8f2"
           label="E-mail:"
@@ -39,6 +44,7 @@
         ></v-text-field>
 
         <v-text-field
+        dark
           class="text-white"
           color="#f8f8f2"
           label="Senha:"
@@ -78,7 +84,4 @@ export default {
   color: #f8f7f2 !important;
 }
 
-::placeholder {
-  color: #f8f7f2 !important;
-}
 </style>

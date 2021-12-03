@@ -20,12 +20,14 @@
         <v-col>
           <v-form>
             <v-text-field 
+            dark
             class="text-white"
             color="#f8f8f2" 
             label="Email" 
             v-model="user.email"
             ></v-text-field>
             <v-text-field
+            dark
             class="text-white"
             color="#f8f8f2"
               label="Senha"
