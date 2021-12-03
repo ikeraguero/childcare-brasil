@@ -63,7 +63,7 @@ export default {
         { title: "Perfil", icon: "mdi-account-cog", to: "/perfil" },
         { title: "Quem somos", icon: "mdi-account-group", to: "/quemSomos" },
         { title: "Contato", icon: "mdi-contacts", to: "/contato" },
-        { title: "Doações", icon: "mdi-cash", to: "/doacoes" },
+        { title: "Cuidados", icon: "mdi-hand-heart", to: "/cuidados" },
         { title: "FAQ", icon: "mdi-help-circle", to: "/faq" },
         { title: "Sair", icon: "mdi-exit-to-app", to: "/login" },
       ],
