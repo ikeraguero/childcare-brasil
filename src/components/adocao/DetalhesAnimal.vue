@@ -29,7 +29,7 @@
         </div>
         <v-col class="d-flex justify-end">
           <v-row class="d-flex justify-center ">
-            <v-btn  class="config-botao" max-width="230" link to="/">
+            <v-btn  class="config-botao" max-width="230" link to="/formulario">
               <v-img
               lazy-src="@/assets/imagens/queroadotar.png"
               src="@/assets/imagens/queroadotar.png"

@@ -50,6 +50,12 @@ const routes = [
         component: () => import(/* webpackChunkName: "faq" */ '../views/FAQ.vue')
       },
       
+      {
+        path: '/formulario',
+        name: 'Formulario',
+        component: () => import(/* webpackChunkName: "faq" */ '../views/Formulario.vue')
+      },
+      
     ]
   },
   {
