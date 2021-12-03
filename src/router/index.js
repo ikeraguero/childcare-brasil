@@ -32,7 +32,7 @@ const routes = [
       {
         path: '/cuidados',
         name: 'Cuidados',
-        component: () => import(/* webpackChunkName: "doacoes" */ '../views/Cuidados.vue')
+        component: () => import(/* webpackChunkName: "cuidados" */ '../views/Cuidados.vue')
       },
       {
         path: '/queroadotar',
