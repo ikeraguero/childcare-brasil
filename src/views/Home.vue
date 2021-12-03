@@ -18,10 +18,10 @@
             <v-img 
             link to="/perfil"
             class="posicao"
-            lazy-src="@/assets/imagens/1.png"
-            max-height="350"
-            max-width="250"
-            src="@/assets/imagens/1.png" 
+            lazy-src="@/assets/imagens/3.png"
+            max-height="600px"
+            max-width="500px"
+            src="@/assets/imagens/3.png" 
           ></v-img>
             </v-btn>
 
@@ -29,10 +29,10 @@
 
             <v-img
             class="posicao"
-            lazy-src="@/assets/imagens/2.png"
-            max-height="350"
-            max-width="250"
-            src="@/assets/imagens/2.png"
+            lazy-src="@/assets/imagens/4.png"
+            max-height="600"
+            max-width="500"
+            src="@/assets/imagens/4.png"
           ></v-img>
             </v-btn> 
           </div>

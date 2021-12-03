@@ -78,7 +78,7 @@ export default {
 }
 .conta{
   padding: auto 9px;
-  colropor: #728b88;
+  color: #728b88;
 }
 
 .v-list-item__content {

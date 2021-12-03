@@ -3,9 +3,20 @@
     <h1 class="titulo">Quero Ajudar</h1>
 
     <p class="texto">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      Toda ajuda para conseguirmos nos manter crescendo e alcançando cada vez mais animaizinhos é essencial e muito bem vinda, por isso, caso sinta vontade de contribuir para o bem estar dos pets, você pode deixar sua contribuição na nossa sede ou transferir para nós por meio do pix. <br> <br>
+
+      Chave do pix: 100.405.779-29 
+
     </p>
+      <v-img
+    src="@/assets\imagens\qrcode.jpeg"
+
+    max-height="350"
+    max-width="250"
+    ></v-img>
   </v-container>
+
+  
 </template>
 
 <script>
