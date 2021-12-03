@@ -19,8 +19,8 @@
     <v-col>
       <v-row class="caracteristicas">
         <div class="">
+          <h1><p>{{ value.nome }}</p></h1>
           <p>Animal: {{ value.animal }}</p>
-          <p>Nome: {{ value.nome }}</p>
           <p>Idade: {{ value.idade }}</p>
           <p>Sexo: {{ value.sexo }}</p>
           <p>Raça: {{ value.raca }}</p>
