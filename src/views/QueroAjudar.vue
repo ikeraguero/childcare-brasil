@@ -9,7 +9,7 @@
 
     </p>
       <v-img
-    src="@/assets\imagens\qrcode.jpeg"
+    src="@/assets/imagens/qrcode.jpeg"
 
     max-height="350"
     max-width="250"
