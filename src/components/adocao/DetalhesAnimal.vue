@@ -22,10 +22,10 @@
               <p>{{ value.nome }}</p>
             </h1>
             <p>Animal: {{ value.Animal }}</p>
-            <p>Idade: {{ value.idade }}</p>
-            <p>Sexo: {{ value.sexo }}</p>
-            <p>Raça: {{ value.raca }}</p>
-            <p>Porte: {{ value.porte }}</p>
+            <p>Idade: {{ value.Idade }}</p>
+            <p>Sexo: {{ value.Sexo }}</p>
+            <p>Raça: {{ value.Raça }}</p>
+            <p>Porte: {{ value.Porte }}</p>
             <p>Descrição: {{ value.Descrição }}</p>
           </div>
           <v-col class="d-flex justify-end">
