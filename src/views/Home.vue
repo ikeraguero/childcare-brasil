@@ -19,7 +19,7 @@
             link to="/perfil"
             class="posicao"
             lazy-src="@/assets/imagens/3.png"
-            max-height="600px"
+            max-height="200px"
             max-width="500px"
             src="@/assets/imagens/3.png" 
           ></v-img>
@@ -30,7 +30,7 @@
             <v-img
             class="posicao"
             lazy-src="@/assets/imagens/4.png"
-            max-height="600"
+            max-height="200"
             max-width="500"
             src="@/assets/imagens/4.png"
           ></v-img>

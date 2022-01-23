@@ -3,7 +3,7 @@
     <h1 class="titulo">Quero Ajudar</h1>
 
     <p class="texto">
-      Toda ajuda para conseguirmos nos manter crescendo e alcançando cada vez mais animaizinhos é essencial e muito bem vinda, por isso, caso sinta vontade de contribuir para o bem estar dos pets, você pode deixar sua contribuição na nossa sede ou transferir para nós por meio do pix. <br> <br>
+      Toda ajuda para conseguirmos nos manter crescendo e alcançando cada vez mais animaizinhos é essencial e muito bem vinda, por isso, caso sinta vontade de contribuir para o bem estar dos pets, você pode deixar sua contribuição na nossa sede ou transferir para nós por meio do PIX. <br> <br>
 
       Chave do pix: 100.405.779-29 
 

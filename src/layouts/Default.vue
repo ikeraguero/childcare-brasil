@@ -12,7 +12,7 @@
       </v-btn>
       
       <v-spacer></v-spacer>
-      <v-icon color="#728b88" large>mdi-account</v-icon>
+      <v-btn icon color="#728b88" large on click link to="/perfil"><v-icon>mdi-account</v-icon></v-btn>
       <v-app-bar-nav-icon color="#728b88" large @click.stop="sidebar = !sidebar"></v-app-bar-nav-icon>
     </v-app-bar>
     <v-navigation-drawer color="#f8f8f2" right app v-model="sidebar" :mini-variant.sync="mini">
@@ -22,7 +22,7 @@
             <v-icon color="#728b88" @click.stop="sidebar = !sidebar">mdi-chevron-right</v-icon>
           </v-list-item-action>
           <v-list-item-title>
-            <h3 class="conta">Minha Conta</h3>
+            <h3 class="conta" >Minha Conta</h3>
           </v-list-item-title>
         </v-list-item>
       </v-list>
