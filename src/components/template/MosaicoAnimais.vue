@@ -14,9 +14,9 @@ export default {
             imagens: [
                "https://super.abril.com.br/wp-content/uploads/2018/05/filhotes-de-cachorro-alcanc3a7am-o-c3a1pice-de-fofura-com-8-semanas1.png?w=1024",
 
-               "https://www.dicaspetz.com.br/wp-content/uploads/2017/04/comportamento-dos-gatos-1.jpg",
+               "https://super.abril.com.br/wp-content/uploads/2020/09/04-09_gato_SITE.jpg?quality=90&strip=info&resize=680,453",
 
-               "https://www.dicaspetz.com.br/wp-content/uploads/2019/08/cachorro-pode-comer-racao-de-gato-pet.jpg",
+               "https://static1.patasdacasa.com.br/articles/5/16/5/@/376-saiba-tudo-sobre-uma-das-racas-de-cachor-articles_media_mobile-1.jpg",
 
                "https://media-manager.noticiasaominuto.com/1920/1597688948/naom_5cacad8def7ed.jpg?crop_params=eyJsYW5kc2NhcGUiOnsiY3JvcFdpZHRoIjozNzI4LCJjcm9wSGVpZ2h0IjoyMDk4LCJjcm9wWCI6MCwiY3JvcFkiOjY2fSwicG9ydHJhaXQiOnsiY3JvcFdpZHRoIjoxNDkxLCJjcm9wSGVpZ2h0IjoyNjU0LCJjcm9wWCI6Njg3LCJjcm9wWSI6MTV9fQ==",
 
@@ -41,5 +41,6 @@ export default {
     margin: 0;
     padding: 5px !important;
 }
+
 
 </style>
