@@ -1,12 +1,12 @@
 <template>
   <v-app>
-    <v-app-bar app color="#F8F7F2" dark height="100">
+    <v-app-bar app color="#E9FEFF" dark height="100">
       
-      <v-btn icon min-width="250px" link to="/">
+      <v-btn icon min-width="150px" link to="/">
       <v-img
-        src="@/assets/imagens/logoanimal.jpeg"
-        max-width="250px"
-        max-height="250px"
+        src="@/assets/imagens/logoteste.png"
+        max-width="100px"
+        max-height="300px"
       >
       </v-img>
       </v-btn>
@@ -15,8 +15,8 @@
       <v-btn icon color="#728b88" large on click link to="/perfil"><v-icon>mdi-account</v-icon></v-btn>
       <v-app-bar-nav-icon color="#728b88" large @click.stop="sidebar = !sidebar"></v-app-bar-nav-icon>
     </v-app-bar>
-    <v-navigation-drawer color="#f8f8f2" right app v-model="sidebar" :mini-variant.sync="mini">
-      <v-list dense color="#F8F7F2" dark height="100">
+    <v-navigation-drawer color="#E9FEFF" right app v-model="sidebar" :mini-variant.sync="mini">
+      <v-list dense color="#E9FEFF" dark height="100">
         <v-list-item>
           <v-list-item-action>
             <v-icon color="#728b88" @click.stop="sidebar = !sidebar">mdi-chevron-right</v-icon>
@@ -47,7 +47,7 @@
       <router-view></router-view>
     </v-main>
     <v-footer app class="py-3"
-      ><span class="caption">Todos os direitos reservados &copy;2021</span></v-footer
+      ><span class="caption">Todos os direitos reservados &copy;2022</span></v-footer
     >
   </v-app>
 </template>
@@ -74,17 +74,17 @@ export default {
 
 <style>
 .fundo{
-  background-color:#728b88 ;
+  background-color: #287679 ;
 }
 .conta{
   padding: auto 9px;
-  color: #728b88;
+  color: #287679;
 }
 
 .v-list-item__content {
-  color: #728b88;
+  color: #287679;
 }
 .v-list-item__icon {
-  color: #728b88;
+  color: #287679;
 }
 </style>

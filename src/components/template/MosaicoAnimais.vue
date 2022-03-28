@@ -12,23 +12,23 @@ export default {
     data() {
         return {
             imagens: [
-               "https://super.abril.com.br/wp-content/uploads/2018/05/filhotes-de-cachorro-alcanc3a7am-o-c3a1pice-de-fofura-com-8-semanas1.png?w=1024",
+               "https://upload.wikimedia.org/wikipedia/commons/4/43/Pas_entre_tallers_Llotja_Sant_Andreu.JPG",
 
-               "https://super.abril.com.br/wp-content/uploads/2020/09/04-09_gato_SITE.jpg?quality=90&strip=info&resize=680,453",
+               "https://nova-escola-producao.s3.amazonaws.com/tunxSkGu84NNEkscfMQUVeRzZD62xuejkA7ZhCD79kyDMjHzpWW2b7MgT62N/menina-faz-exercicio-no-caderno-na-escola.jpg",
 
-               "https://static1.patasdacasa.com.br/articles/5/16/5/@/376-saiba-tudo-sobre-uma-das-racas-de-cachor-articles_media_mobile-1.jpg",
+               "https://vejaconstrucoes.com.br/wp-content/uploads/2020/09/escola-no-bairro-gloria-joinville-hans-muller.jpg",
 
-               "https://media-manager.noticiasaominuto.com/1920/1597688948/naom_5cacad8def7ed.jpg?crop_params=eyJsYW5kc2NhcGUiOnsiY3JvcFdpZHRoIjozNzI4LCJjcm9wSGVpZ2h0IjoyMDk4LCJjcm9wWCI6MCwiY3JvcFkiOjY2fSwicG9ydHJhaXQiOnsiY3JvcFdpZHRoIjoxNDkxLCJjcm9wSGVpZ2h0IjoyNjU0LCJjcm9wWCI6Njg3LCJjcm9wWSI6MTV9fQ==",
+               "https://assets-global.website-files.com/61155c49f7b752051f9f05b0/613a5a222251daa01457b003_engajar%20alunos.jpg",
 
-                "https://cdn.noticias.ambientebrasil.com.br/wp-content/uploads/2021/03/imagem_de_um_cachorro.png",
+                "https://www.educacao.sp.gov.br/wp-content/uploads/2018/01/galeria7-4-700x480.jpg",
 
-               "https://socientifica.com.br/wp-content/uploads/2020/12/cat-2068462_1280-scaled.jpg",
+               "https://s2.glbimg.com/dzeSuxMCWpnB5HuwwAjPVxnOkcY=/696x390/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/U/m/g5y7cARJKR9EXqcnGG2A/alunos.jpg",
 
-               "https://blog.cobasi.com.br/wp-content/uploads/2021/07/cheiro-que-cachorro-nao-gosta-topo.png",
+               "https://upload.wikimedia.org/wikipedia/commons/8/80/Fachada_da_Escola_Estadual_Alberto_Giovannini%2C_Coronel_Fabriciano_MG.JPG",
 
-               "https://www.plazahoteis.com.br/wp-content/uploads/2019/08/cuidados-gatos-adultos-ago19.jpg",
+               "https://www.provafacilnaweb.com.br/wp-content/uploads/2014/08/Banners-blogpost-Wordpress-14.png",
 
-               "https://matsudapet.com.br/blog/wp-content/uploads/2019/08/shutterstock_559799125-compressed.jpg" 
+               "https://estado.rs.gov.br/upload/recortes/201706/22164124_234791_GDO.jpg" 
             ]
         }
     }

@@ -7,7 +7,7 @@
       </v-col>
       <v-col>
         <p class="slogan">
-            Doe um lar, adote um animal.  
+            Faça sua doação para:  
         </p>
 
         <br><br>
@@ -20,8 +20,8 @@
             class="posicao"
             lazy-src="@/assets/imagens/3.png"
             max-height="200px"
-            max-width="500px"
-            src="@/assets/imagens/3.png" 
+            max-width="200px"
+            src="@/assets/imagens/botao1.png" 
           ></v-img>
             </v-btn>
 
@@ -31,22 +31,22 @@
             class="posicao"
             lazy-src="@/assets/imagens/4.png"
             max-height="200"
-            max-width="500"
-            src="@/assets/imagens/4.png"
+            max-width="200"
+            src="@/assets/imagens/botao2.png"
           ></v-img>
             </v-btn> 
           </div>
           <br> <br> <br>
           <div class="d-flex justify-space-around">
-            <h1>Quero Adotar</h1> 
-            <h1>Quero Ajudar</h1>
+            <h1>Escolas</h1> 
+            <h1>Crianças</h1>
           </div>
         
       </v-col>
     </v-row>
     <v-row>
       <v-col>
-        <h1 class="titulo-resto">Animigos</h1>
+        <h1 class="titulo-resto"></h1>
       </v-col>
     </v-row>
   </v-container>
@@ -73,12 +73,12 @@ export default {
 .slogan {
   font-family: 'Reenie Beanie', cursive;
   text-align: center;
-  color: #f8f8f2;
+  color: #E9FEFF;
   font-size: 60px;
 }
 
 h1{
-  color: #f8f8f2;
+  color: #E9FEFF;
   font-family: 'Reenie Beanie', cursive;
   font-size: 60px;
 }
