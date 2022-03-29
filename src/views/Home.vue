@@ -14,30 +14,30 @@
 
           <div class="d-flex justify-space-around mt-16 ">
 
-            <v-btn icon min-width="200" link to="/queroadotar">
+            <v-btn icon min-width="200" min-height="200" link to="/ajudarescolas">
             <v-img 
             link to="/perfil"
             class="posicao"
             lazy-src="@/assets/imagens/3.png"
-            max-height="200px"
-            max-width="200px"
+            max-height="2250px"
+            max-width="225px"
             src="@/assets/imagens/botao1.png" 
           ></v-img>
             </v-btn>
 
-            <v-btn icon min-width="200" link to="/queroajudar">
+            <v-btn icon min-width="200" min-height="200" link to="/ajudarcriancas">
 
             <v-img
             class="posicao"
             lazy-src="@/assets/imagens/4.png"
-            max-height="200"
-            max-width="200"
+            max-height="225"
+            max-width="225"
             src="@/assets/imagens/botao2.png"
           ></v-img>
             </v-btn> 
           </div>
-          <br> <br> <br>
-          <div class="d-flex justify-space-around">
+          <br>
+          <div class="d-flex justify-space-around" height="100">
             <h1>Escolas</h1> 
             <h1>Crianças</h1>
           </div>

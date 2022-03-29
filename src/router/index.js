@@ -35,14 +35,14 @@ const routes = [
         component: () => import(/* webpackChunkName: "cuidados" */ '../views/Cuidados.vue')
       },
       {
-        path: '/queroadotar',
-        name: 'QueroAdotar',
-        component: () => import(/* webpackChunkName: "doacoes" */ '../views/QueroAdotar.vue')
+        path: '/ajudarcriancas',
+        name: 'AjudarCriancas',
+        component: () => import(/* webpackChunkName: "doacoes" */ '../views/AjudarCriancas.vue')
       },
       {
-        path: '/queroajudar',
-        name: 'QueroAjudar',
-        component: () => import(/* webpackChunkName: "doacoes" */ '../views/QueroAjudar.vue')
+        path: '/ajudarescolas',
+        name: 'AjudarEscolas',
+        component: () => import(/* webpackChunkName: "doacoes" */ '../views/AjudarEscolas.vue')
       },
       {
         path: '/faq',

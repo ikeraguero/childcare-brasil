@@ -1,7 +1,7 @@
 <template>
   <div class="block galleryBlock">
     <v-container>
-      <h2 class="titulo">Quero Adotar</h2>
+      <h2 class="titulo">Quero Ajudar</h2>
       <listar-animais v-if="!detalhes" v-model="items" @adotar="adotar" />
       <detalhes-animal v-else v-model="animalSelecionado" />
     </v-container>
@@ -16,7 +16,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/plugins/firebase";
 
 export default {
-  name: "QueroAdotar",
+  name: "AjudarCriancas",
   data() {
     return {
       detalhes: false,
@@ -48,6 +48,6 @@ export default {
   text-align: center;
   font-family: "Reenie Beanie", cursive;
   font-size: 80px;
-  color: #f8f7f2;
+  color: #E9FEFF;
 }
 </style>

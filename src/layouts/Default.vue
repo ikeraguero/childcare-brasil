@@ -5,8 +5,8 @@
       <v-btn icon min-width="150px" link to="/">
       <v-img
         src="@/assets/imagens/logoteste.png"
-        max-width="100px"
-        max-height="300px"
+        max-width="100x"
+        max-height="100px"
       >
       </v-img>
       </v-btn>
