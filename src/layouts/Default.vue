@@ -2,11 +2,11 @@
   <v-app>
     <v-app-bar app color="#E9FEFF" dark height="100">
       
-      <v-btn icon min-width="150px" link to="/">
+      <v-btn icon min-width="250px" link to="/">
       <v-img
-        src="@/assets/imagens/logoteste.png"
-        max-width="100x"
-        max-height="100px"
+        src="@/assets/imagens/logo1.png"
+        max-width="300px"
+        max-height="350px"
       >
       </v-img>
       </v-btn>

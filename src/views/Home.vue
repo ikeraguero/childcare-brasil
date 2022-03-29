@@ -19,7 +19,7 @@
             link to="/perfil"
             class="posicao"
             lazy-src="@/assets/imagens/3.png"
-            max-height="2250px"
+            max-height="225px"
             max-width="225px"
             src="@/assets/imagens/botao1.png" 
           ></v-img>
@@ -30,9 +30,9 @@
             <v-img
             class="posicao"
             lazy-src="@/assets/imagens/4.png"
-            max-height="225"
-            max-width="225"
-            src="@/assets/imagens/botao2.png"
+            max-height="225px"
+            max-width="225px"
+            src="@/assets/imagens/imagem1.png"
           ></v-img>
             </v-btn> 
           </div>
@@ -43,6 +43,7 @@
           </div>
         
       </v-col>
+      <br>
     </v-row>
     <v-row>
       <v-col>
@@ -71,7 +72,7 @@ export default {
 }
 
 .slogan {
-  font-family: 'Reenie Beanie', cursive;
+  font-family: "Architects Daughter", cursive;
   text-align: center;
   color: #E9FEFF;
   font-size: 60px;
@@ -79,7 +80,7 @@ export default {
 
 h1{
   color: #E9FEFF;
-  font-family: 'Reenie Beanie', cursive;
+font-family: "Architects Daughter", italic, cursive;
   font-size: 60px;
 }
 
