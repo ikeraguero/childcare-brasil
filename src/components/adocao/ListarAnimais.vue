@@ -1,5 +1,6 @@
 <template>
   <v-row>
+    
     <v-col
       v-for="animal in value"
       :key="animal.id"
@@ -7,8 +8,9 @@
       cols="6"
       sm="4"
     >
-      <v-card flat tile class="d-flex" @click="$emit('adotar', animal)">
-        <v-img :src='animal.src' aspect-ratio="1" class="grey lighten-2">
+      <v-hover><v-card flat tile class="d-flex" @click="$emit('adotar', animal)">
+          <v-img :src='animal.src' aspect-ratio="1" class="grey lighten-2">
+          
           <template v-slot:placeholder>
             <v-row class="fill-height ma-0" align="center" justify="center">
               <v-progress-circular
@@ -17,8 +19,9 @@
               ></v-progress-circular>
             </v-row>
           </template>
-        </v-img>
+        </v-img>        
       </v-card>
+      </v-hover>
     </v-col>
   </v-row>
 </template>
@@ -43,7 +46,8 @@ export default {
       for (let animal of this.value) {
         try {
           const url = await getDownloadURL(
-            ref(storage, `animais/${animal.id}.jpg`)
+            ref(storage, `animais/${animal.src}`)
+            
           );
           const xhr = new XMLHttpRequest();
           xhr.responseType = "blob";

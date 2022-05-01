@@ -32,7 +32,7 @@
             lazy-src="@/assets/imagens/4.png"
             max-height="225px"
             max-width="225px"
-            src="@/assets/imagens/imagem1.png"
+            src="@/assets/imagens/botao2.png"
           ></v-img>
             </v-btn> 
           </div>
@@ -50,6 +50,7 @@
         <h1 class="titulo-resto"></h1>
       </v-col>
     </v-row>
+    
   </v-container>
 
 </template>
@@ -74,12 +75,12 @@ export default {
 .slogan {
   font-family: "Architects Daughter", cursive;
   text-align: center;
-  color: #E9FEFF;
+  color: #FFF6EE;
   font-size: 60px;
 }
 
 h1{
-  color: #E9FEFF;
+  color: #FFF6EE;
 font-family: "Architects Daughter", italic, cursive;
   font-size: 60px;
 }

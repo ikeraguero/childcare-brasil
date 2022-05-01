@@ -1,10 +1,10 @@
 <template>
   <v-app>
-    <v-app-bar app color="#E9FEFF" dark height="100">
+    <v-app-bar app color="#FFF6EE" dark height="100">
       
       <v-btn icon min-width="250px" link to="/">
       <v-img
-        src="@/assets/imagens/logo1.png"
+        src="@/assets/imagens/logonova.png"
         max-width="300px"
         max-height="350px"
       >
@@ -12,14 +12,14 @@
       </v-btn>
       
       <v-spacer></v-spacer>
-      <v-btn icon color="#728b88" large on click link to="/perfil"><v-icon>mdi-account</v-icon></v-btn>
-      <v-app-bar-nav-icon color="#728b88" large @click.stop="sidebar = !sidebar"></v-app-bar-nav-icon>
+      <v-btn icon color="#621200" large on click link to="/perfil"><v-icon>mdi-account</v-icon></v-btn>
+      <v-app-bar-nav-icon color="#621200" large @click.stop="sidebar = !sidebar"></v-app-bar-nav-icon>
     </v-app-bar>
-    <v-navigation-drawer color="#E9FEFF" right app v-model="sidebar" :mini-variant.sync="mini">
-      <v-list dense color="#E9FEFF" dark height="100">
+    <v-navigation-drawer color="#FFF6EE" right app v-model="sidebar" :mini-variant.sync="mini">
+      <v-list dense color="#FFF6EE" dark height="100">
         <v-list-item>
           <v-list-item-action>
-            <v-icon color="#728b88" @click.stop="sidebar = !sidebar">mdi-chevron-right</v-icon>
+            <v-icon color="#621200" @click.stop="sidebar = !sidebar">mdi-chevron-right</v-icon>
           </v-list-item-action>
           <v-list-item-title>
             <h3 class="conta" >Minha Conta</h3>
@@ -62,7 +62,7 @@ export default {
         { title: "Home", icon: "mdi-home", to: "/" },
         { title: "Perfil", icon: "mdi-account-cog", to: "/perfil" },
         { title: "Quem somos", icon: "mdi-account-group", to: "/quemSomos" },
-        { title: "Contato", icon: "mdi-contacts", to: "/contato" },
+        { title: "Entre em Contato", icon: "mdi-contacts", to: "/contato" },
         { title: "Cuidados", icon: "mdi-hand-heart", to: "/cuidados" },
         { title: "FAQ", icon: "mdi-help-circle", to: "/faq" },
         { title: "Sair", icon: "mdi-exit-to-app", to: "/login" },
@@ -74,17 +74,17 @@ export default {
 
 <style>
 .fundo{
-  background-color: #287679 ;
+  background-color: #621200 ;
 }
 .conta{
   padding: auto 9px;
-  color: #287679;
+  color: #621200;
 }
 
 .v-list-item__content {
-  color: #287679;
+  color: #621200;
 }
 .v-list-item__icon {
-  color: #287679;
+  color: #621200;
 }
 </style>
