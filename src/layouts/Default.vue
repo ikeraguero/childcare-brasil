@@ -4,7 +4,7 @@
       
       <v-btn icon min-width="250px" link to="/">
       <v-img
-        src="@/assets/imagens/logonova.png"
+        src="@/assets/imagens/3a.png"
         max-width="300px"
         max-height="350px"
       >
@@ -19,10 +19,27 @@
       <v-list dense color="#FFF6EE" dark height="100">
         <v-list-item>
           <v-list-item-action>
-            <v-icon color="#621200" @click.stop="sidebar = !sidebar">mdi-chevron-right</v-icon>
+            
           </v-list-item-action>
           <v-list-item-title>
-            <h3 class="conta" >Minha Conta</h3>
+            #
+            
+    
+      
+        <v-list-item two-line>
+          <v-list-item-avatar>
+            <img src="https://randomuser.me/api/portraits/women/81.jpg">
+          </v-list-item-avatar>
+
+          <v-list-item-content>
+            <v-list-item-title>Jane Smith</v-list-item-title>
+            <v-list-item-subtitle color= "#000000">Logged In</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+        
+        
+        
+        #
           </v-list-item-title>
         </v-list-item>
       </v-list>
@@ -87,4 +104,5 @@ export default {
 .v-list-item__icon {
   color: #621200;
 }
+
 </style>

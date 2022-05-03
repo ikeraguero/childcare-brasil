@@ -30,11 +30,11 @@
           </div>
           <v-col class="d-flex justify-end">
             <v-row class="d-flex justify-center">
-              <v-btn class="config-botao" max-width="230" link to="/formulario">
+              <v-btn class="config-botao" max-width="100" link to="/formulario">
                 <v-img
-                  lazy-src="@/assets/imagens/queroadotar.png"
-                  src="@/assets/imagens/queroadotar.png"
-                  max-height="350px"
+                  lazy-src="@/assets/imagens/4a.png"
+                  src="@/assets/imagens/4a.png"
+                  max-height="250px"
                   max-width="400px"
                 ></v-img>
               </v-btn>
@@ -75,6 +75,8 @@ export default {
 }
 
 .config-botao {
-  margin-top: 120px;
+  margin-top: 100px;
+  margin-right: 100px
+  ;
 }
 </style>

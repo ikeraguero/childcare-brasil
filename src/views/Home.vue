@@ -20,19 +20,19 @@
             class="posicao"
             lazy-src="@/assets/imagens/3.png"
             max-height="225px"
-            max-width="225px"
-            src="@/assets/imagens/botao1.png" 
+            max-width="350px"
+            src="@/assets/imagens/1a.png" 
           ></v-img>
             </v-btn>
 
-            <v-btn icon min-width="200" min-height="200" link to="/ajudarcriancas">
+            <v-btn icon min-width="220" min-height="200" link to="/ajudarcriancas">
 
             <v-img
             class="posicao"
             lazy-src="@/assets/imagens/4.png"
             max-height="225px"
-            max-width="225px"
-            src="@/assets/imagens/botao2.png"
+            max-width="350px"
+            src="@/assets/imagens/2a.png"
           ></v-img>
             </v-btn> 
           </div>
@@ -82,7 +82,7 @@ export default {
 h1{
   color: #FFF6EE;
 font-family: "Architects Daughter", italic, cursive;
-  font-size: 60px;
+  font-size: 45px;
 }
 
 .titulo-resto{

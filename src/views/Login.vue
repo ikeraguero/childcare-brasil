@@ -1,6 +1,7 @@
 <template>
   <v-container class="fundo" fill-height fluid text-center>
     <v-container>
+      <v-card dark max-width="700">
       <v-row>
         <v-col
           class="primary--text text-center mx-auto pb-4"
@@ -41,6 +42,7 @@
           </v-form>
         </v-col>
       </v-row>
+       </v-card>
     </v-container>
     <v-snackbar color="red" v-model="errorLogin" danger timeout="2000">
       Usuário ou senha inválidos
@@ -123,7 +125,7 @@ export default {
 }
 
 .fundo {
-  background-color: #728b88;
+  background-color: #621200;
 }
 
 .text-white input {
