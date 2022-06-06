@@ -1,5 +1,5 @@
 <template>
-  <v-container class="pa-8" fluid>
+  <v-container class="pa-8 px-0" fluid>
     <h1 class="h1"></h1>
     <v-row>
       <v-col cols=5>
@@ -11,6 +11,7 @@
         </p>
 
         <br><br>
+        
 
           <div class="d-flex justify-space-around mt-16 ">
 
@@ -41,22 +42,33 @@
             <h1>Escolas</h1> 
             <h1>Crianças</h1>
 
+
+            
           </div>
-        
       </v-col>
       <br>
     </v-row>
+
+    <p></p>
+      <div class="box">
+        <v-col>
+        <h2 class="top">{{ reaisDoados }}</h2>
+        <h3 class="bottom">R$ doados</h3>
+        </v-col>
+        <v-col>
+          <h2 class="top">{{ materiaisDoados }}</h2>
+        <h3 class="bottom">materiais doados</h3>
+        </v-col>
+      </div>
     <v-row>
       <v-col>
         <h1 class="titulo-resto"></h1>
       </v-col>
     </v-row>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
+      
         
   </v-container>
+  
 
 </template>
 
@@ -67,6 +79,12 @@ export default {
   methods: {
     teste() {
       alert('oioioi')
+    }
+  },
+  data() {
+    return {
+      reaisDoados: 10.01,
+      materiaisDoados: 10
     }
   }
 }
@@ -92,6 +110,21 @@ font-family: "Architects Daughter", italic, cursive;
 
 .titulo-resto{
   text-align: center;
+}
+.box {
+  margin-top: 100px;
+  background-color: #FFF6EE;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 90px;
+  
+}
+.top{
+  font-size: 150px;
+}
+.bottom {
+  font-size:30px;
+
 }
 
 
