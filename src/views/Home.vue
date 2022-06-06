@@ -14,7 +14,7 @@
 
           <div class="d-flex justify-space-around mt-16 ">
 
-            <v-btn icon min-width="200" min-height="200" link to="/ajudarescolas">
+            <v-btn icon min-width="200" min-height="150" link to="/ajudarescolas">
             <v-img 
             link to="/perfil"
             class="posicao"
@@ -25,7 +25,7 @@
           ></v-img>
             </v-btn>
 
-            <v-btn icon min-width="220" min-height="200" link to="/ajudarcriancas">
+            <v-btn icon min-width="220" min-height="150" link to="/ajudarcriancas">
 
             <v-img
             class="posicao"
@@ -40,6 +40,7 @@
           <div class="d-flex justify-space-around" height="100">
             <h1>Escolas</h1> 
             <h1>Crianças</h1>
+
           </div>
         
       </v-col>
@@ -50,7 +51,11 @@
         <h1 class="titulo-resto"></h1>
       </v-col>
     </v-row>
-    
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        
   </v-container>
 
 </template>
