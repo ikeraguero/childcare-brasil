@@ -52,8 +52,10 @@
     <p></p>
       <div class="box">
         <v-col>
+        <v-container>
         <h2 class="top">{{ reaisDoados }}</h2>
         <h3 class="bottom">R$ doados</h3>
+        </v-container>
         </v-col>
         <v-col>
           <h2 class="top">{{ materiaisDoados }}</h2>
@@ -99,7 +101,7 @@ export default {
   font-family: "Architects Daughter", cursive;
   text-align: center;
   color: #FFF6EE;
-  font-size: 60px;
+  font-size: 50px;
 }
 
 h1{
@@ -116,14 +118,21 @@ font-family: "Architects Daughter", italic, cursive;
   background-color: #FFF6EE;
   box-sizing: border-box;
   width: 100%;
-  padding: 90px;
+  padding: 76px;
   
 }
 .top{
-  font-size: 150px;
+  font-size: 130px;
+  color: #621200;
+   text-align: center;
+   margin-bottom: 0;
 }
 .bottom {
-  font-size:30px;
+  font-size:25px;
+  text-align: center;
+  height: 20px;
+  padding:0px;
+
 
 }
 
