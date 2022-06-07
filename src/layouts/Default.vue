@@ -12,7 +12,7 @@
       <v-spacer>
         <h3>
         <v-list-item>
-          <v-list-item v-for="item of items" :key="item.title" link :to="item.to">
+          <v-list-item class="teste" v-for="item of items" :key="item.title" link :to="item.to">
           <div class="menu">{{item.title}}</div>
           </v-list-item>
         </v-list-item>
@@ -25,7 +25,7 @@
       <router-view></router-view>
     </v-main>
     <v-footer app class="py-1"
-      ><span class="caption">Todos os direitos reservados &copy;2022</span></v-footer
+      ><span class="caption">ChildcareBrasil &copy;2022</span></v-footer
     >
   </v-app>
 </template>
@@ -39,9 +39,9 @@ export default {
       items: [
         { title: "HOME", to: "/" },
         { title: "PERFIL", to: "/perfil" },
-        { title: "QUEM SOMOS", to: "/quemSomos" },
-        { title: "ENTRE EM CONTATO", to: "/contato" },
-        { title: "COMO DOAR", to: "/comodoar" },
+        { title: "QUEM_SOMOS", to: "/quemSomos" },
+        { title: "ENTRE_EM_CONTATO", to: "/contato" },
+        { title: "COMO_DOAR", to: "/comodoar" },
         { title: "FAQ", to: "/faq" },
       ],
     };
@@ -64,12 +64,15 @@ export default {
 .v-list-item__icon {
   color: #621200;
 }
+
 .menu{
   color:#621200;
-  display: inline;
+  display:inline;
   margin: 10px;
+  padding:0px;
 }
-.v-application{
-  color: none;
+.teste {
+  justify-content: center;
 }
+
 </style>

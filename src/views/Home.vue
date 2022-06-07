@@ -51,16 +51,17 @@
 
     <p></p>
       <div class="box">
-        <v-col>
-        <v-container>
-        <h2 class="top">{{ reaisDoados }}</h2>
+
+        <v-col >
+         <h2 class="top">{{ reaisDoados }}</h2>
         <h3 class="bottom">R$ doados</h3>
-        </v-container>
         </v-col>
+
         <v-col>
-          <h2 class="top">{{ materiaisDoados }}</h2>
+        <h2 class="top">{{ materiaisDoados }}</h2>
         <h3 class="bottom">materiais doados</h3>
         </v-col>
+
       </div>
     <v-row>
       <v-col>
@@ -116,16 +117,16 @@ font-family: "Architects Daughter", italic, cursive;
 .box {
   margin-top: 100px;
   background-color: #FFF6EE;
-  box-sizing: border-box;
   width: 100%;
-  padding: 76px;
+  padding: 60px;
+  align-content: center;
   
 }
 .top{
   font-size: 130px;
   color: #621200;
    text-align: center;
-   margin-bottom: 0;
+
 }
 .bottom {
   font-size:25px;
