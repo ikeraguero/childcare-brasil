@@ -14,6 +14,7 @@
         <v-list-item>
           <v-list-item class="teste" v-for="item of items" :key="item.title" link :to="item.to">
           <div class="menu">{{item.title}}</div>
+          <LoginButton></LoginButton>
           </v-list-item>
         </v-list-item>
         </h3>
@@ -31,21 +32,23 @@
 </template>
 
 <script>
+import LoginButton from '@/components/LoginButton';
 export default {
-  data() {
-    return {
-      sidebar: true,
-      mini: false,
-      items: [
-        { title: "HOME", to: "/" },
-        { title: "PERFIL", to: "/perfil" },
-        { title: "QUEM_SOMOS", to: "/quemSomos" },
-        { title: "ENTRE_EM_CONTATO", to: "/contato" },
-        { title: "COMO_DOAR", to: "/comodoar" },
-        { title: "FAQ", to: "/faq" },
-      ],
-    };
-  },
+    data() {
+        return {
+            sidebar: true,
+            mini: false,
+            items: [
+                { title: "HOME", to: "/" },
+                { title: "PERFIL", to: "/perfil" },
+                { title: "QUEM_SOMOS", to: "/quemSomos" },
+                { title: "ENTRE_EM_CONTATO", to: "/contato" },
+                { title: "COMO_DOAR", to: "/comodoar" },
+                { title: "FAQ", to: "/faq" },
+            ],
+        };
+    },
+    components: { LoginButton }
 };
 </script>
 

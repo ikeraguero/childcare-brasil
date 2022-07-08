@@ -8,6 +8,7 @@
     "lint": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint"
   },
   "dependencies": {
+    "@auth0/auth0-spa-js": "^1.22.1",
     "core-js": "^3.6.5",
     "firebase": "^9.6.0",
     "vue": "^2.6.11",
