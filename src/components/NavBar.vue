@@ -1,6 +1,6 @@
 <template>
   <div class="nav-container mb-3">
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-light">
       <div class="container">
         <div class="navbar-brand logo"></div>
         <MainNav />

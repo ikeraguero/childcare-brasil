@@ -1,10 +1,10 @@
 <template>
-  <button
-    class="btn btn-primary btn-block"
+  <button 
+    class="btn btn-block"
     v-if="!$auth.isAuthenticated"
     @click="login"
   >
-    Log In
+      LOGIN
   </button>
 </template>
 
@@ -18,3 +18,8 @@
     },
   };
 </script>
+<style>
+.btn{
+  color:#621200;
+};
+</style>

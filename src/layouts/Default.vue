@@ -14,12 +14,11 @@
         <v-list-item>
           <v-list-item class="teste" v-for="item of items" :key="item.title" link :to="item.to">
           <div class="menu">{{item.title}}</div>
-          <LoginButton></LoginButton>
           </v-list-item>
+          <LoginButton></LoginButton>
         </v-list-item>
         </h3>
       </v-spacer>
-      <v-btn icon color="#621200" large on click link to="/perfil"><v-icon>mdi-account</v-icon></v-btn>
     </v-app-bar>
 
     <v-main class="fundo">
