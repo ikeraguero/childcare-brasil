@@ -50,18 +50,19 @@
     </v-row>
 
     <p></p>
-      <div class="box">
-
-        <v-col >
+    <div class="boxtwo" >
+     <v-row class="counter-text" justify="center">CONTADOR:</v-row>
+     </div>
+      <div class="box" > 
+        <v-col>
          <h2 class="top">{{ reaisDoados }}</h2>
         <h3 class="bottom">R$ doados</h3>
         </v-col>
-
         <v-col>
         <h2 class="top">{{ materiaisDoados }}</h2>
         <h3 class="bottom">materiais doados</h3>
         </v-col>
-
+        
       </div>
     <v-row>
       <v-col>
@@ -76,6 +77,7 @@
 </template>
 
 <script>
+
 import MosaicoAnimais from '@/components/template/MosaicoAnimais'
 export default {
   components: {MosaicoAnimais},
@@ -90,7 +92,9 @@ export default {
       materiaisDoados: 10
     }
   }
+  
 }
+
 </script>
 
 <style>
@@ -105,6 +109,15 @@ export default {
   font-size: 50px;
 }
 
+.counter-text {
+  font-family: "Architects Daughter", cursive;
+  text-align: center;
+  color:#621200;
+  font-size: 40px;
+  min-height: 20px;
+  margin-top: 30px;
+}
+
 h1{
   color: #FFF6EE;
 font-family: "Architects Daughter", italic, cursive;
@@ -115,10 +128,20 @@ font-family: "Architects Daughter", italic, cursive;
   text-align: center;
 }
 .box {
-  margin-top: 100px;
+
+  display: flex;
   background-color: #FFF6EE;
   width: 100%;
-  padding: 60px;
+  padding: 35px;
+  align-content: center;
+  
+}
+.boxtwo {
+  margin-top: 100px;
+  display: flex;
+  background-color: #FFF6EE;
+  width: 100%;
+  padding: 10px;
   align-content: center;
   
 }

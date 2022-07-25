@@ -4,7 +4,7 @@
     v-if="!$auth.isAuthenticated"
     @click="login"
   >
-      LOGIN
+      Login
   </button>
 </template>
 
@@ -20,6 +20,10 @@
 </script>
 <style>
 .btn{
-  color:#621200;
+  color: #621200;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
 };
 </style>

@@ -9,6 +9,7 @@
         <li><a href="/contato">Contato</a></li>
         <li><a href="/comodoar">Como doar</a></li>
         <li><a href="/perfil">Perfil</a></li>
+        <li><LoginButton></LoginButton></li>
       </ul>
       <div class="burguer">
         <div class="linha1"></div>
@@ -29,6 +30,7 @@
   
 </template>
 <script>
+import LoginButton from "../components/LoginButton.vue";
 
 export default {
     data() {
@@ -45,11 +47,13 @@ export default {
             ],
         };
     },
-
+    components: { LoginButton }
 };
 </script>
 
 <style>
+
+
 *{
   margin:0px;
   padding:0px;
