@@ -20,8 +20,8 @@
             link to="/perfil"
             class="posicao"
             lazy-src="@/assets/imagens/3.png"
-            max-height="225px"
-            max-width="350px"
+            max-height="220px"
+            max-width="18%"
             src="@/assets/imagens/1a.png" 
           ></v-img>
             </v-btn>
@@ -31,8 +31,8 @@
             <v-img
             class="posicao"
             lazy-src="@/assets/imagens/4.png"
-            max-height="225px"
-            max-width="350px"
+            max-height="20%"
+            max-width="18%"
             src="@/assets/imagens/2a.png"
           ></v-img>
             </v-btn> 
