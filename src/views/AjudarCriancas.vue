@@ -1,54 +1,19 @@
 <template>
   <div class="block galleryBlock">
     <v-container>
-      <h2 class="titulo">Quero Ajudar</h2>
-      <listar-animais v-if="!detalhes" v-model="items" @adotar="adotar" />
-      <detalhes-animal v-else v-model="animalSelecionado" />
+      <h1 class="flex justify-center py-10 text-4xl text-[#15393C] font-semibold">Quero ajudar</h1>
+      <ChildrenCards class="flex drop-shadow-md mb-9" />
     </v-container>
   </div>
 </template>
 
 <script>
 
-import ListarAnimais from "@/components/adocao/ListarAnimais.vue";
-import DetalhesAnimal from "@/components/adocao/DetalhesAnimal.vue";
 
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "@/plugins/firebase";
+import ChildrenCards from "../components/ChildrenCards.vue";
+
 export default {
-  name: "AjudarCriancas",
-  data() {
-    return {
-      detalhes: false,
-      animalSelecionado: {},
-      items: [
-       
-      ],
-    };
-  },
-  
-  components: { ListarAnimais, DetalhesAnimal },
-  methods: {
-    adotar(animal) {
-      this.animalSelecionado = animal;
-      this.detalhes = true;
+      components: {
+        ChildrenCards
     },
-  },
-    async created() {
-    const querySnapshot = await getDocs(collection(db, "animais"));
-    querySnapshot.forEach((doc) => {
-      const src = doc.data().src
-      this.items.push({id: doc.id, ...doc.data(), src: require(`@/assets/imagens/${src}`)})
-    });
-  },
-};
-</script>
-
-<style>
-.titulo {
-  text-align: center;
-  font-family: "Reenie Beanie", cursive;
-  font-size: 80px;
-  color: #FFF6EE;
-}
-</style>
+  }
