@@ -24,15 +24,6 @@ Vue.use(Auth0Plugin, {
 });
 
 
-Vue.config.productionTip = false
-
-new Vue({
-  vuetify,
-  router,
-  render: h => h(App)
-}).$mount('#app')
-
-
 
 Vue.config.productionTip = false
 
@@ -41,3 +32,7 @@ new Vue({
   router,
   render: h => h(App)
 }).$mount('#app')
+
+
+Vue.component('ChildrenCards', require('./components/ChildrenCards.vue').default);
+

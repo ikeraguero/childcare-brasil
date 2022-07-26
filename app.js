@@ -22,8 +22,10 @@ counters.forEach((counter) => {
 });
 
 import MosaicoAnimais from '@/components/template/MosaicoAnimais'
+import ChildrenCards from "@/components/ChildrenCards";
+
 export default {
-  components: {MosaicoAnimais},
+  components: {MosaicoAnimais, ChildrenCards},
   methods: {
     teste() {
       alert('oioioi')

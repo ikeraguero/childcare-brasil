@@ -25,7 +25,7 @@
             src="@/assets/imagens/1a.png" 
           ></v-img>
             </v-btn>
-
+            
             <v-btn icon min-width="220" min-height="150" link to="/ajudarcriancas">
 
             <v-img

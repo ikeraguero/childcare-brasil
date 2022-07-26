@@ -3,15 +3,19 @@
     <v-container>
       <h2 class="titulo">Quero Ajudar</h2>
       <br>
-      <listar-animais v-if="!detalhes" v-model="items" @adotar="adotar" />
-      <detalhes-animal v-else v-model="animalSelecionado" />
+      <LoginButton/>
     </v-container>
   </div>
 </template>
 
 <script>
+import LoginButton from "../components/LoginButton.vue";
+
 export default {
-}
+      components: {
+        LoginButton
+    },
+  }
 </script>
 
 <style>
