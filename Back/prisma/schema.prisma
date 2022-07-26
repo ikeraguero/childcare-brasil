@@ -21,11 +21,13 @@ model Children {
   photo String
   description String
   age String
-  
 }
 
 model School {
-
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  cnpj String
+  name String
+  address String
+  city String
+  photo String
 }
-
-model User
