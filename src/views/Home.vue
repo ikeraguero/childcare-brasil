@@ -55,12 +55,16 @@
      </div>
       <div class="box" > 
         <v-col>
-         <h2 class="top">{{ reaisDoados }}</h2>
-        <h3 class="bottom">R$ doados</h3>
+         <div class="counter-container">
+      <div class="counter" data-target="1500"> {{reaisDoados }}</div>
+      <span class="bottom">R$ doados</span>
+    </div>
         </v-col>
         <v-col>
-        <h2 class="top">{{ materiaisDoados }}</h2>
-        <h3 class="bottom">materiais doados</h3>
+        <div class="counter-container">
+      <div class="counter" data-target="1500">{{ materiaisDoados }}</div>
+      <span class="bottom">Materiais doados</span>
+    </div>
         </v-col>
         
       </div>
@@ -76,25 +80,7 @@
 
 </template>
 
-<script>
-
-import MosaicoAnimais from '@/components/template/MosaicoAnimais'
-export default {
-  components: {MosaicoAnimais},
-  methods: {
-    teste() {
-      alert('oioioi')
-    }
-  },
-  data() {
-    return {
-      reaisDoados: 10.01,
-      materiaisDoados: 10
-    }
-  }
-  
-}
-
+<script src="/home/ikeraguero/ChildcareBrasil/app.js">
 </script>
 
 <style>
@@ -145,8 +131,8 @@ font-family: "Architects Daughter", italic, cursive;
   align-content: center;
   
 }
-.top{
-  font-size: 130px;
+.counter{
+  font-size: 100px;
   color: #621200;
    text-align: center;
 
@@ -156,9 +142,20 @@ font-family: "Architects Daughter", italic, cursive;
   text-align: center;
   height: 20px;
   padding:0px;
-
-
 }
+
+* {
+  box-sizing: border-box;
+}
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin:30px 50px;
+}
+
+
 
 
 </style>

@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["mongodb"]
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Children {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  cpf String
+  school String
+  name String
+  surname String
+  address String
+  photo String
+  description String
+  age String
+  
+}
+
+model School {
+
+}
+
+model User

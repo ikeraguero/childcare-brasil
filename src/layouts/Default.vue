@@ -27,7 +27,7 @@
       ><span class="caption">ChildcareBrasil &copy;2022</span></v-footer
     >
   </v-app>
-  
+
 </template>
 <script>
 import LoginButton from "../components/LoginButton.vue";
@@ -46,7 +46,8 @@ export default {
                 { title: "FAQ", to: "/faq" },
             ],
         };
-    },
+    }
+    ,
     components: { LoginButton }
 };
 </script>

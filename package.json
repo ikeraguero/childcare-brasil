@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.22.1",
+    "@prisma/client": "^4.1.0",
     "core-js": "^3.6.5",
     "firebase": "^9.6.0",
     "vue": "^2.6.11",
@@ -24,6 +25,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "prisma": "^4.1.0",
     "sass": "~1.32.0",
     "sass-loader": "^10.0.0",
     "vue-cli-plugin-vuetify": "~2.4.4",

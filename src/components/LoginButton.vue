@@ -16,6 +16,7 @@
         this.$auth.loginWithRedirect();
       },
     },
+    
   };
 </script>
 <style>
