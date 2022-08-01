@@ -10,11 +10,10 @@
 <script>
 
 
-import ChildrenCards from "../components/ChildrenCards.vue";
 
 export default {
       name:"Crianca",
       components: {
-        ChildrenCards
+
     },
   }

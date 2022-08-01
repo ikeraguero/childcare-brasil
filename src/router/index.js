@@ -55,6 +55,11 @@ const routes = [
         name: 'Formulario',
         component: () => import(/* webpackChunkName: "faq" */ '../views/Formulario.vue')
       },
+      {
+        path: '/painelcontrole',
+        name: 'Painel de Controle',
+        component: () => import(/* webpackChunkName: "faq" */ '../views/ControlPanel.vue')
+      },
       
     ]
   },

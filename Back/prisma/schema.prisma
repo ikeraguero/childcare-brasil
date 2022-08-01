@@ -3,7 +3,6 @@
 
 generator client {
   provider = "prisma-client-js"
-  previewFeatures = ["mongodb"]
 }
 
 datasource db {
@@ -11,23 +10,61 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Children {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
-  cpf String
-  school String
-  name String
-  surname String
-  address String
-  photo String
-  description String
-  age String
+model Dog {
+  id                String          @id @default(auto()) @map("_id") @db.ObjectId
+  photo             String?
+  name              String
+  gender            String?
+  fur               String?
+  temperament       String?
+  age               String
+  weight            String
+  description       String
+  owner_name        String
+  is_castrated      String?
+  is_adoptable      String?
+  observations      String?
 }
 
-model School {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
-  cnpj String
-  name String
-  address String
-  city String
-  photo String
+model Daily {
+  id                String          @id @default(auto()) @map("_id") @db.ObjectId
+  dog_id            String   
+  is_fed            String?
+  qt_fed            String?
+  observations      String?       
+  date              DateTime?
+}
+
+model Medical {
+  id                String          @id @default(auto()) @map("_id") @db.ObjectId
+  dog_id            String?
+  complaint         String?
+  appearance        String?
+  hydration_status  String?
+  suspicion         String?
+  weight            String?
+  temperature       String?
+  anotation         String?
+  diagnosis         String?
+  doctor            String?
+  date              String?
+  time              String?
+  budget            String?
+}
+
+model Comment {
+  id                String          @id @default(auto()) @map("_id") @db.ObjectId
+  author_name       String?
+  author_class      String?
+  author_year       String?
+  dog_id            String  
+  text              String
+  date              String
+}
+
+model Gallery {
+  id                String          @id @default(auto()) @map("_id") @db.ObjectId
+  dog_id            String
+  img               String[]
+  date              String
 }

@@ -1,9 +1,10 @@
-
 import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify'
 import router from './router'
 import './plugins/firebase'
+import './index.css'
+
 
 // Import the Auth0 configuration and plugin
 import { domain, clientId, audience } from '../auth_config.json';
@@ -36,3 +37,9 @@ new Vue({
 
 Vue.component('ChildrenCards', require('./components/ChildrenCards.vue').default);
 
+import axios from "axios";
+import VueAxios from "vue-axios";
+import './assets/tailwind.css'
+
+App.use(VueAxios, axios);
+App.mount("#app");
