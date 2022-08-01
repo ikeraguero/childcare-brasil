@@ -1,17 +1,14 @@
 <template>
     <div>
-        <AddButton />   
-
+        <AddForm />
     </div>
 </template>
 
 <script>
-
-import AddButton from "../components/AddButton.vue";
+import AddForm from '../components/AddForm.vue';    
 export default {
     components: {
-
-        AddButton,
+        AddForm,
     },
 };
 </script>

@@ -60,6 +60,11 @@ const routes = [
         name: 'Painel de Controle',
         component: () => import(/* webpackChunkName: "faq" */ '../views/ControlPanel.vue')
       },
+      {
+        path: '/painelcontrole/crianca',
+        name: 'Add',
+        component: () => import(/* webpackChunkName: "faq" */ '../views/Form.vue')
+      },
       
     ]
   },
