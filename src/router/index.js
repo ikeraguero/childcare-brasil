@@ -56,14 +56,24 @@ const routes = [
         component: () => import(/* webpackChunkName: "faq" */ '../views/Formulario.vue')
       },
       {
-        path: '/painelcontrole',
-        name: 'Painel de Controle',
-        component: () => import(/* webpackChunkName: "faq" */ '../views/ControlPanel.vue')
+        path: '/painelcrianca',
+        name: 'Painel de Controle Criança',
+        component: () => import(/* webpackChunkName: "faq" */ '../views/ControlPanelChild.vue')
       },
       {
-        path: '/painelcontrole/crianca',
+        path: '/painelcrianca/adicionar',
         name: 'Add',
-        component: () => import(/* webpackChunkName: "faq" */ '../views/Form.vue')
+        component: () => import(/* webpackChunkName: "faq" */ '../views/FormChild.vue')
+      },
+      {
+        path: '/painelescola',
+        name: 'Painel de Controle Escola',
+        component: () => import(/* webpackChunkName: "faq" */ '../views/ControlPanelSchool.vue')
+      },
+      {
+        path: '/painelcrianca/adicionar',
+        name: 'Add',
+        component: () => import(/* webpackChunkName: "faq" */ '../views/FormSchool.vue')
       },
       
     ]

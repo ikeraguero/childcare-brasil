@@ -1,14 +1,14 @@
 <template>
     <div>
-        <AddForm />
+        <AddFormSchool />
     </div>
 </template>
 
 <script>
-import AddForm from '../components/AddForm.vue';    
+import AddFormSchool from '../components/AddFormSchool.vue';    
 export default {
     components: {
-        AddForm,
+        AddFormSchool,
     },
 };
 </script>
