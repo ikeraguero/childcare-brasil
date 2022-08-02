@@ -13,7 +13,6 @@
                                 <h5 class="text-white text-xl font-medium mb-2">
                                     {{ card.name }}
                                 </h5>
-                                <h5 class="text-white text-xl font-medium mb-2">{{ card.age }} {{ age(card.age) }}</h5>
                             </div>
 
                             <p class="text-white text-base mb-4 h-20">
@@ -57,13 +56,7 @@ export default {
         right() {
             document.getElementById("container").scrollLeft += 320;
         },
-        age(age) {
-            if (age > 1) {
-                return "Anos";
-            } else {
-                return "Ano";
-            }
-        },
+        
     },
 
 };

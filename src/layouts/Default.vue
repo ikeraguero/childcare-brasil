@@ -9,7 +9,7 @@
         <li><a href="/contato">Contato</a></li>
         <li><a href="/comodoar">Como doar</a></li>
         <li><a href="/perfil">Perfil</a></li>
-        <li><LoginButton></LoginButton></li>
+        <li><AuthenticationButton /></li>
       </ul>
       <div class="burguer">
         <div class="linha1"></div>
@@ -30,7 +30,7 @@
 
 </template>
 <script>
-import LoginButton from "../components/LoginButton.vue";
+import AuthenticationButton from "../components/AuthenticationButton.vue";
 
 export default {
     data() {
@@ -48,7 +48,7 @@ export default {
         };
     }
     ,
-    components: { LoginButton }
+    components: { AuthenticationButton }
 };
 </script>
 
