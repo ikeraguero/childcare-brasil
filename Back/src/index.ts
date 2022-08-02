@@ -12,20 +12,13 @@ dotenv.config();
 const prisma = new PrismaClient();
 
 async function main() {
-    const dog = await prisma.dog.create({
+    const school = await prisma.school.create({
         data: {
-            photo: 'https://i.imgur.com/Fj4VbIU.png',
-            name: 'Max Verstappen',
-            gender: 'Male',
-            fur: 'IDK',
-            temperament: 'Calm',
-            age: '24',
-            weight: '80kg', //change to string
-            description: 'Formula 1 World Champion (1x)',
-            owner_name: 'Unknown',
-            is_castrated: 'No',
-            is_adoptable: 'No',
-            observations: '',
+            photo: 'https://i.imgur.com/lwM38Pe.jpg',
+            name: 'Escola Municipal Professora Lacy Luiza da Cruz Flores',
+            address: 'Rua Waldemiro José Borges, 3997',
+            city: 'Joinville',
+            state: 'Santa Catarina',
         }
     })
 }
@@ -45,6 +38,8 @@ const port = process.env.PORT || 3000;
 // GET
 app.get("/api/dogs", api.dogs);
 app.get("/api/dog/:dog_id", api.dog);
+app.get("/api/schools", api.schools);
+app.get("/api/school/:school_id", api.school);
 app.get("/api/adoptable", api.dogadoptable);
 
 

@@ -2,19 +2,19 @@
     <div>
         <AddButtonSchool />   
         <br>
-        <ChildrenCards />
+        <SchoolCards />
     </div>
 </template>
 
 <script>
 
 import AddButtonSchool from "../components/AddButtonSchool.vue";
-import ChildrenCards from "../components/ChildrenCards.vue";
+import SchoolCards from "../components/SchoolCards.vue";
 export default {
     components: {
 
         AddButtonSchool,
-        ChildrenCards,
+        SchoolCards,
     },
 };
 </script>

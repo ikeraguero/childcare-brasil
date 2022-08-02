@@ -26,6 +26,16 @@ model Dog {
   observations      String?
 }
 
+model School {
+  id      String @id @default(auto()) @map("_id") @db.ObjectId
+  photo   String?
+  name    String
+  address String
+  city    String
+  state   String
+
+}
+
 model Daily {
   id                String          @id @default(auto()) @map("_id") @db.ObjectId
   dog_id            String   

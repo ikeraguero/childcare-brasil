@@ -1,28 +1,19 @@
 <template>
   <div class="block galleryBlock">
     <v-container>
-      <h2 class="titulo">Quero Ajudar</h2>
-      <br>
-      <LoginButton/>
+      <h1 class="flex justify-center py-10 text-4xl text-[#15393C] font-semibold">Quero ajudar</h1>
+      <SchoolCards class="flex drop-shadow-md mb-9" />
     </v-container>
   </div>
 </template>
 
 <script>
-import LoginButton from "../components/LoginButton.vue";
+
+
 
 export default {
+      name:"School",
       components: {
-        LoginButton
+
     },
   }
-</script>
-
-<style>
-.titulo {
-  text-align: center;
-  font-family: "Reenie Beanie", cursive;
-  font-size: 70px;
-  color: #FFF6EE;
-}
-</style>
