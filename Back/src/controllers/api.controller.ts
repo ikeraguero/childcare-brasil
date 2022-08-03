@@ -1,20 +1,20 @@
 import { Request, Response } from 'express';
-import { getDogs, getDog, getAdoptable, getSchools, getSchool } from "../../db/searchFunctions";
-import { addDog, addRegd, addRegm, deleteDog, updateDog } from "../../db/postFunctions";
+import { getChildren, getChild, getAdoptable, getSchools, getSchool } from "../../db/searchFunctions";
+import { addChild, addRegd, deleteChild, updateChild } from "../../db/postFunctions";
 
-export const dogs = async (req: Request, res: Response) => {
-    const dogs = await getDogs();
-    res.json(dogs.content);
+export const children = async (req: Request, res: Response) => {
+    const children = await getChildren();
+    res.json(children.content);
 }
 
-export const dog = async (req: Request, res: Response) => {
-    const dog = await getDog(req.params.dog_id);
-    res.json(dog.content);
+export const child = async (req: Request, res: Response) => {
+    const child = await getChild(req.params.child_id);
+    res.json(child.content);
 }
 
-export const dogadd = async (req: Request, res: Response) => {
+export const childadd = async (req: Request, res: Response) => {
     const r = req.body;
-    const dog = await addDog(r.dogphoto, r.dogname, r.doggender,r.dogfur, r.dogtemp, r.dogage, r.dogweight, r.dogdesc, r.dogowner, r.is_castrated, r.is_adoptable, r.dogobs);
+    const child = await addChild(r.childphoto, r.childname, r.childgender,r.childfur, r.childtemp, r.childage, r.childweight, r.childdesc, r.childowner, r.is_castrated, r.is_adoptable, r.childobs);
     res.redirect("http://localhost:8080/admin");
 
 }
@@ -25,14 +25,14 @@ export const dogadoptable = async (req: Request, res: Response) => {
 }
 
 
-export const dogdelete = async (req: Request, res: Response) => {
-    const dog = await deleteDog(req.params.dog_id);
-    res.json(dog);
+export const childdelete = async (req: Request, res: Response) => {
+    const child = await deleteChild(req.params.child_id);
+    res.json(child);
 }
 
-export const dogupdate = async (req: Request, res: Response) => {
+export const childupdate = async (req: Request, res: Response) => {
     const r = req.body;
-    const dog = await updateDog(req.params.dog_id, r.dogphoto, r.dogname, r.doggender,r.dogfur, r.dogtemp, r.dogage, r.dogweight, r.dogdesc, r.dogowner, r.is_castrated, r.is_adoptable, r.dogobs);
+    const child = await updateChild(req.params.child_id, r.childphoto, r.childname, r.childgender,r.childfur, r.childtemp, r.childage, r.childweight, r.childdesc, r.childowner, r.is_castrated, r.is_adoptable, r.childobs);
     res.redirect("http://localhost:8080/admin");
 }
 
@@ -43,11 +43,6 @@ export const regdAdd = async (req: Request, res: Response) => {
 
 }
 
-export const regmAdd = async (req: Request, res: Response) => {
-    const r = req.body;
-    const dog = await addRegm(r.dog_id, r.queixa, r.aparencia, r.suspeita, r.peso, r.temperatura, r.anotacoes, r.diagnostico, r.encaminhamento, r.medico, r.data, r.hora, r.orcamento);
-    res.redirect("http://localhost:8080/admin");
-}
 
 export const schools = async (req: Request, res: Response) => {
     const schools = await getSchools();

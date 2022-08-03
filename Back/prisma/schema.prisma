@@ -25,6 +25,21 @@ model Dog {
   is_adoptable      String?
   observations      String?
 }
+model Child {
+  id                String          @id @default(auto()) @map("_id") @db.ObjectId
+  photo             String?
+  name              String
+  gender            String?
+  fur               String?
+  temperament       String?
+  age               String
+  weight            String
+  description       String
+  owner_name        String
+  is_castrated      String?
+  is_adoptable      String?
+  observations      String?
+}
 
 model School {
   id      String @id @default(auto()) @map("_id") @db.ObjectId
@@ -45,22 +60,6 @@ model Daily {
   date              DateTime?
 }
 
-model Medical {
-  id                String          @id @default(auto()) @map("_id") @db.ObjectId
-  dog_id            String?
-  complaint         String?
-  appearance        String?
-  hydration_status  String?
-  suspicion         String?
-  weight            String?
-  temperature       String?
-  anotation         String?
-  diagnosis         String?
-  doctor            String?
-  date              String?
-  time              String?
-  budget            String?
-}
 
 model Comment {
   id                String          @id @default(auto()) @map("_id") @db.ObjectId

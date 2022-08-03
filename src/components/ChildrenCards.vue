@@ -48,7 +48,7 @@ export default {
         };
     },
     mounted() {
-        axios.get("http://localhost:7777/api/dogs").then((response) => (this.cards = response));
+        axios.get("http://localhost:7777/api/children").then((response) => (this.cards = response));
     },
     methods: {
         left() {

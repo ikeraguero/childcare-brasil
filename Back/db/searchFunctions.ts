@@ -4,33 +4,33 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 // Returns all dogs
-export async function getDogs(){
+export async function getChildren(){
     await prisma.$connect();
-    const dogs = await prisma.dog.findMany();
+    const children = await prisma.child.findMany();
     
-    if (!dogs) {
+    if (!children) {
         prisma.$disconnect();
-        return new response(503, "Dogs not found");
+        return new response(503, "Children not found");
     }
 
     await prisma.$disconnect();
-    return new response(200, "Dogs found", dogs)
+    return new response(200, "Children found", children)
 }
 
 // Returns specific dog
-export async function getDog(dog_id: string) {
+export async function getChild(child_id: string) {
     await prisma.$connect();
-    const dog = await prisma.dog.findUnique({
+    const child = await prisma.child.findUnique({
         where:{
-            id: dog_id,
+            id: child_id,
         },
     });
-    if(!dog){
+    if(!child){
         prisma.$disconnect();
-        return new response(503, `Dog ${dog_id} not found!`);
+        return new response(503, `Child ${child_id} not found!`);
     }
     await prisma.$disconnect();
-    return new response(200, `Dog ${dog_id} found!`, dog);
+    return new response(200, `Child ${child_id} found!`, child);
 }
 // Returns all schools
 export async function getSchools(){
@@ -64,11 +64,11 @@ export async function getSchool(school_id: string) {
 
 export async function getAdoptable() {
     await prisma.$connect();
-    const dog = await prisma.dog.findMany({
+    const child = await prisma.child.findMany({
         where: {
             is_adoptable: "true"
         }
     });
     await prisma.$disconnect();
-    return new response(200, "Dogs found", dog);
+    return new response(200, "Children found", child);
 }

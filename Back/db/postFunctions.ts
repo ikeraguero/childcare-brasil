@@ -3,56 +3,56 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 
-export async function addDog(dogphoto: string, dogname: string, doggender: string, dogfur:string, dogtemp: string, dogage: string, dogweight: string, dogdesc: string, dogowner:string, is_castrated: string, is_adoptable: string, dogobs: string) {
+export async function addChild(childphoto: string, childname: string, childgender: string, childfur:string, childtemp: string, childage: string, childweight: string, childdesc: string, childowner:string, is_castrated: string, is_adoptable: string, childobs: string) {
     await prisma.$connect();
-    const dog = await prisma.dog.create({
+    const child = await prisma.child.create({
         data: {
-            photo: dogphoto,
-            name: dogname,
-            gender: doggender,
-            fur: dogfur,
-            temperament: dogtemp,
-            age: dogage,
-            weight: dogweight, //change to string
-            description: dogdesc,
-            owner_name: dogowner,
+            photo: childphoto,
+            name: childname,
+            gender: childgender,
+            fur: childfur,
+            temperament: childtemp,
+            age: childage,
+            weight: childweight, //change to string
+            description: childdesc,
+            owner_name: childowner,
             is_castrated: is_castrated,
             is_adoptable: is_adoptable,
-            observations: dogobs,
+            observations: childobs,
         }
     });
     await prisma.$disconnect();
 };
 
-export async function updateDog(dog_id: string, dogphoto: string, dogname: string, doggender: string, dogfur:string, dogtemp: string, dogage: string, dogweight: string, dogdesc: string, dogowner:string, is_castrated: string, is_adoptable: string, dogobs: string) {
+export async function updateChild(child_id: string, childphoto: string, childname: string, childgender: string, childfur:string, childtemp: string, childage: string, childweight: string, childdesc: string, childowner:string, is_castrated: string, is_adoptable: string, childobs: string) {
     await prisma.$connect();
-    const dog = await prisma.dog.update({
+    const child = await prisma.child.update({
         where: {
-            id: dog_id
+            id: child_id
         },
         data: {
-            photo: dogphoto,
-            name: dogname,
-            gender: doggender,
-            fur: dogfur,
-            temperament: dogtemp,
-            age: dogage,
-            weight: dogweight, //change to string
-            description: dogdesc,
-            owner_name: dogowner,
+            photo: childphoto,
+            name: childname,
+            gender: childgender,
+            fur: childfur,
+            temperament: childtemp,
+            age: childage,
+            weight: childweight, //change to string
+            description: childdesc,
+            owner_name: childowner,
             is_castrated: is_castrated,
             is_adoptable: is_adoptable,
-            observations: dogobs,
+            observations: childobs,
         }
     });
     await prisma.$disconnect();
 };
 
-export async function deleteDog (dog_id: string) {
+export async function deleteChild (child_id: string) {
     await prisma.$connect();
-    const dog = await prisma.dog.delete({
+    const child = await prisma.child.delete({
         where: {
-            id: dog_id
+            id: child_id
         }
     });
     await prisma.$disconnect();
@@ -73,37 +73,15 @@ export async function addRegd(dog_id: string, is_fed: string, qt_fed: string, ob
     await prisma.$disconnect();
 }
 
-export async function addRegm(dog_id: string, complaint: string, appearance: string, hydration_status: string, suspicion: string, weight: string, temperature: string, anotation: string, diagnosis: string, doctor: string, date: string, time: string, budget: string){
-    await prisma.$connect();
-    const dog = await prisma.medical.create({
-        data: {
-            dog_id: dog_id,
-            complaint: complaint,
-            appearance: appearance,
-            hydration_status: hydration_status,
-            suspicion: suspicion,
-            weight: weight,
-            temperature: temperature,
-            anotation: anotation,
-            diagnosis: diagnosis,
-            doctor: doctor,
-            date: date,
-            time: time,
-            budget: budget,
-        }
-    });
-    await prisma.$disconnect();
-}
-
 
 
 
 // Upload Image FUNCTION
-export async function uploadImage(dog_id: string, image: string) {
+export async function uploadImage(child_id: string, image: string) {
     await prisma.$connect();
-    const dog = await prisma.dog.update({
+    const child = await prisma.child.update({
         where: {
-            id: dog_id
+            id: child_id
         },
         data: {
             photo: image,
