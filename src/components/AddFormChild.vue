@@ -4,7 +4,7 @@
 
                 <p>{{ image }}</p>
 
-                <form class="bg-[#15393C] rounded px-12 pt-8 pb-8 mb-8" action="http://localhost:7777/api/dogadd" method="post">
+                <form class="bg-[#15393C] rounded px-12 pt-8 pb-8 mb-8" action="http://localhost:7777/api/childadd" method="post">
 
                 <div class="flex mb-4">
 
@@ -25,7 +25,7 @@
                             </label>
                             <input
                                 class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                                id="name" type="text" placeholder="Nome do Animal" name="dogname">
+                                id="name" type="text" placeholder="Nome do Animal" name="childname">
                             <label class="block text-white text-sm font-bold mb-2" for="username">
                             Sexo do Animal
                         </label>
@@ -39,7 +39,7 @@
                                 font-normal
                                 text-black
                                 bg-white 
-                                rounded" name="doggender">
+                                rounded" name="childgender">
                             <option value="macho">Macho</option>
                             <option value="femea">Femea</option>
                         </select>
@@ -54,7 +54,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                            id="age" type="text" placeholder="Idade" name="dogage">
+                            id="age" type="text" placeholder="Idade" name="childage">
                     </div>
                     <div class="mb-4 ml-10">
                         <label class="block text-white text-sm font-bold mb-2">
@@ -62,7 +62,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                            id="weight" type="text" placeholder="Peso" name="dogweight">
+                            id="weight" type="text" placeholder="Peso" name="childweight">
                     </div>
                     <div class="mb-4 ml-10">
                          <div class="mb-4">
@@ -87,7 +87,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                            id="name" type="text" placeholder="Pelagem" name="dogfur" >
+                            id="name" type="text" placeholder="Pelagem" name="childfur" >
                     </div>
                     <div class="mb-4 ml-10">
                             <label class="block text-white text-sm font-bold mb-2" for="username">
@@ -95,7 +95,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                            id="name" type="text" placeholder="Temperamento" name="dogtemp" >
+                            id="name" type="text" placeholder="Temperamento" name="childtemp" >
                     </div>
 
 
@@ -118,7 +118,7 @@
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                        id="desc" type="text" placeholder="Descrição" name="dogdesc" >
+                        id="desc" type="text" placeholder="Descrição" name="childdesc" >
                 </div>
 
                 <div class="mb-4">
@@ -127,7 +127,7 @@
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                        id="owner" type="text" placeholder="Nome do Cuidador" name="dogowner" >
+                        id="owner" type="text" placeholder="Nome do Cuidador" name="childowner" >
                 </div>
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="username">
@@ -135,7 +135,7 @@
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-full py-4 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                        id="name" type="text" placeholder="Observações" name="dogobs">
+                        id="name" type="text" placeholder="Observações" name="childobs">
                 </div>
 
                 <!-- save button -->
