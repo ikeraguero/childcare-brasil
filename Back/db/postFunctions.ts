@@ -58,6 +58,46 @@ export async function deleteChild (child_id: string) {
     await prisma.$disconnect();
 }
 
+export async function addSchool(schoolphoto: string, schoolname: string, schooladdress: string, schoolcity: string, schoolstate: string) {
+    await prisma.$connect();
+    const school = await prisma.school.create({
+        data: {
+            photo: schoolphoto,
+            name: schoolname,
+            address: schooladdress,
+            city: schoolcity,
+            state: schoolstate
+        }
+    });
+    await prisma.$disconnect();
+
+};
+export async function updateSchool(school_id: string, schoolphoto: string, schoolname: string, schooladdress: string, schoolcity: string, schoolstate: string) {
+    await prisma.$connect();
+    const school = await prisma.school.update({
+        where: {
+            id: school_id
+        },
+        data: {
+            photo: schoolphoto,
+            name: schoolname,
+            address: schooladdress,
+            city: schoolcity,
+            state: schoolstate
+        }
+    });
+    await prisma.$disconnect();
+};
+
+export async function deleteSchool (school_id: string) {
+    await prisma.$connect();
+    const school = await prisma.school.delete({
+        where: {
+            id: school_id
+        }
+    });
+    await prisma.$disconnect();
+}
 // arrumar isso
 export async function addRegd(dog_id: string, is_fed: string, qt_fed: string, obs: string) {
     prisma.$connect;

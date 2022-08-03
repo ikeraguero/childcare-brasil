@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { getChildren, getChild, getAdoptable, getSchools, getSchool } from "../../db/searchFunctions";
-import { addChild, addRegd, deleteChild, updateChild } from "../../db/postFunctions";
+import { addChild, addRegd, deleteChild, updateChild, addSchool, deleteSchool, updateSchool } from "../../db/postFunctions";
 
 export const children = async (req: Request, res: Response) => {
     const children = await getChildren();
@@ -52,6 +52,24 @@ export const schools = async (req: Request, res: Response) => {
 export const school = async (req: Request, res: Response) => {
     const school = await getSchool(req.params.school_id);
     res.json(school.content);
+}
+
+export const schooladd = async (req: Request, res: Response) => {
+    const r = req.body;
+    const school = await addSchool(r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate);
+    res.redirect("http://localhost:8080/admin");
+
+}
+
+export const schooldelete = async (req: Request, res: Response) => {
+    const school = await deleteSchool(req.params.school_id);
+    res.json(school);
+}
+
+export const schoolupdate = async (req: Request, res: Response) => {
+    const r = req.body;
+    const school = await updateSchool(req.params.school_id, r.childphoto, r.childname, r.schooladdress, r.schoolcity, r.schoolstate);
+    res.redirect("http://localhost:8080/admin");
 }
 
 
