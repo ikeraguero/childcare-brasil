@@ -8,7 +8,7 @@
 
                 <div class="flex mb-4">
 
-                    <img src="https://i.imgur.com/pMoL0kJ.png" class="rounded-lg h-48 w-52" alt="Avatar" id="img" />
+                    <img src="https://i.imgur.com/Wp6hAjO.jpg" class="rounded-lg h-48 w-52" alt="Avatar" id="img" />
 
                     <div class="px-4">
                         <label class="block text-white text-sm font-bold" for="image">
@@ -25,7 +25,7 @@
                             </label>
                             <input
                                 class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                                id="name" type="text" placeholder="Nome do Animal" name="childname">
+                                id="name" type="text" placeholder="Nome da Criança" name="childname">
                             <label class="block text-white text-sm font-bold mb-2" for="username">
                             Sexo
                         </label>
@@ -40,8 +40,8 @@
                                 text-black
                                 bg-white 
                                 rounded" name="childgender">
-                            <option value="macho">Menino</option>
-                            <option value="femea">Menina</option>
+                            <option value="menino">Menino</option>
+                            <option value="menina">Menina</option>
                         </select>
                     </div>
 
@@ -56,26 +56,21 @@
                             class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
                             id="age" type="text" placeholder="Idade" name="childage">
                     </div>
-                    <div class="mb-4 ml-10">
+                    <div class="mb-4 ml-3">
                         <label class="block text-white text-sm font-bold mb-2">
-                            Peso
+                            Escola
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                            id="weight" type="text" placeholder="Peso" name="childweight">
+                            id="weight" type="text" placeholder="Escola" name="childschool">
                     </div>
-                    <div class="mb-4 ml-10">
-                         <div class="mb-4">
-                        <label class="block text-white text-sm font-bold mb-3" for="username">
-                            Castrado
+                    <div class="mb-4 ml-5">
+                        <label class="block text-white text-sm font-bold mb-2">
+                            CPF
                         </label>
-                            <div class="flex">
-                                <input class="" type="radio" name="is_castrated" value="true" >
-                                <span class="text-white ml-2 mr-2">Sim</span>
-                                <input class="" type="radio" name="is_castrated" value="false">
-                                <span class="text-white ml-2 mr-2">Não</span>
-                            </div>
-                        </div>
+                        <input
+                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            id="age" type="text" placeholder="CPF" name="childcpf">
                     </div>
                     </div>
 
@@ -83,32 +78,29 @@
                   <div class="flex justify-start"> 
                     <div class="mb-4">
                         <label class="block text-white text-sm font-bold mb-2" for="username">
-                            Pelagem
+                            Endereço
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                            id="name" type="text" placeholder="Pelagem" name="childfur" >
+                            id="name" type="text" placeholder="Endereço" name="childaddress" >
                     </div>
-                    <div class="mb-4 ml-10">
+                    <div class="mb-4 ml-7">
                             <label class="block text-white text-sm font-bold mb-2" for="username">
-                            Temperamento
+                            Estado
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                            id="name" type="text" placeholder="Temperamento" name="childtemp" >
+                            id="name" type="text" placeholder="Estado" name="childstate" >
                     </div>
 
 
-                     <div class="mb-4 ml-10 py-">
-                        <label class="block text-white text-sm font-bold mb-3" for="username">
-                            Estará para doação?
+                     <div class="mb-4 ml-5">
+                        <label class="block text-white text-sm font-bold mb-2">
+                            Cidade
                         </label>
-                        <div class="flex">
-                            <input class="" type="radio" name="is_adoptable" value="true">
-                            <span class="text-white ml-2 mr-2">Sim</span>
-                            <input class="" type="radio" name="is_adoptable" value="false">
-                            <span class="text-white ml-2 mr-2">Não</span>
-                        </div>
+                        <input
+                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            id="age" type="text" placeholder="Cidade" name="childcity">
                     </div>
                 </div>
 

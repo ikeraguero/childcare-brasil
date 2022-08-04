@@ -8,10 +8,10 @@
 
                 <div class="flex mb-4">
 
-                    <img src="https://i.imgur.com/pMoL0kJ.png" class="rounded-lg h-48 w-52" alt="Avatar" id="img" />
+                    <img src="https://i.imgur.com/Wp6hAjO.jpg" class="rounded-lg h-48 w-52" alt="Avatar" id="img" />
 
                     <div class="px-4">
-                        <label class="block text-white text-sm font-bold" for="image">
+                        <label class="block text-white text-sm font-bold mt-10" for="image">
                                 Foto
                             </label>
                             <input
@@ -20,29 +20,13 @@
                                 @change="uploadImage($event.target.files[0])"
                                 accept="image/*"
                                 >
-                            <label class="block text-white text-sm font-bold mb-2" for="username">
-                                Nome do Animal
+                            <label class="block text-white text-sm font-bold mb-2 mt-5" for="username">
+                                Nome da Escola
                             </label>
                             <input
                                 class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                                id="name" type="text" placeholder="Nome do Animal" name="dogname">
-                            <label class="block text-white text-sm font-bold mb-2" for="username">
-                            Sexo do Animal
-                        </label>
-
-                        <select class="form-select appearance-none
-                                block
-                                w-full
-                                px-3
-                                py-2
-                                text-base
-                                font-normal
-                                text-black
-                                bg-white 
-                                rounded" name="doggender">
-                            <option value="macho">Macho</option>
-                            <option value="femea">Femea</option>
-                        </select>
+                                id="name" type="text" placeholder="Nome da Escola" name="schoolname">
+                            
                     </div>
 
                 </div>
@@ -50,32 +34,27 @@
                 <div class="flex justify-start"> 
                     <div class="mb-4">
                         <label class="block text-white text-sm font-bold mb-2">
-                            Idade
+                            CNPJ
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                            id="age" type="text" placeholder="Idade" name="dogage">
+                            id="age" type="text" placeholder="CNPJ" name="schoolcpnj">
                     </div>
-                    <div class="mb-4 ml-10">
+                    <div class="mb-4 ml-3">
                         <label class="block text-white text-sm font-bold mb-2">
-                            Peso
+                            Telefone
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                            id="weight" type="text" placeholder="Peso" name="dogweight">
+                            id="weight" type="text" placeholder="Telefone" name="schoolcellphone">
                     </div>
-                    <div class="mb-4 ml-10">
-                         <div class="mb-4">
-                        <label class="block text-white text-sm font-bold mb-3" for="username">
-                            Castrado
+                    <div class="mb-4 ml-5">
+                        <label class="block text-white text-sm font-bold mb-2" for="username">
+                            Email
                         </label>
-                            <div class="flex">
-                                <input class="" type="radio" name="is_castrated" value="true" >
-                                <span class="text-white ml-2 mr-2">Sim</span>
-                                <input class="" type="radio" name="is_castrated" value="false">
-                                <span class="text-white ml-2 mr-2">Não</span>
-                            </div>
-                        </div>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            id="name" type="text" placeholder="Email" name="schoolemail" >
                     </div>
                     </div>
 
@@ -83,32 +62,29 @@
                   <div class="flex justify-start"> 
                     <div class="mb-4">
                         <label class="block text-white text-sm font-bold mb-2" for="username">
-                            Pelagem
+                            Endereço
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                            id="name" type="text" placeholder="Pelagem" name="dogfur" >
+                            id="name" type="text" placeholder="Endereço" name="childaddress" >
                     </div>
-                    <div class="mb-4 ml-10">
+                    <div class="mb-4 ml-7">
                             <label class="block text-white text-sm font-bold mb-2" for="username">
-                            Temperamento
+                            Estado
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                            id="name" type="text" placeholder="Temperamento" name="dogtemp" >
+                            id="name" type="text" placeholder="Estado" name="childstate" >
                     </div>
 
 
-                     <div class="mb-4 ml-10 py-">
-                        <label class="block text-white text-sm font-bold mb-3" for="username">
-                            Estará para doação?
+                     <div class="mb-4 ml-5">
+                        <label class="block text-white text-sm font-bold mb-2">
+                            Cidade
                         </label>
-                        <div class="flex">
-                            <input class="" type="radio" name="is_adoptable" value="true">
-                            <span class="text-white ml-2 mr-2">Sim</span>
-                            <input class="" type="radio" name="is_adoptable" value="false">
-                            <span class="text-white ml-2 mr-2">Não</span>
-                        </div>
+                        <input
+                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            id="age" type="text" placeholder="Cidade" name="childcity">
                     </div>
                 </div>
 
@@ -121,14 +97,7 @@
                         id="desc" type="text" placeholder="Descrição" name="dogdesc" >
                 </div>
 
-                <div class="mb-4">
-                    <label class="block text-white text-sm font-bold mb-2" for="username">
-                        Nome do Cuidador
-                    </label>
-                    <input
-                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                        id="owner" type="text" placeholder="Nome do Cuidador" name="dogowner" >
-                </div>
+                
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="username">
                         Observações
