@@ -21,13 +21,13 @@
                                 accept="image/*"
                                 >
                             <label class="block text-white text-sm font-bold mb-2" for="username">
-                                Nome do Animal
+                                Nome da Criança
                             </label>
                             <input
                                 class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
                                 id="name" type="text" placeholder="Nome do Animal" name="childname">
                             <label class="block text-white text-sm font-bold mb-2" for="username">
-                            Sexo do Animal
+                            Sexo
                         </label>
 
                         <select class="form-select appearance-none
@@ -40,8 +40,8 @@
                                 text-black
                                 bg-white 
                                 rounded" name="childgender">
-                            <option value="macho">Macho</option>
-                            <option value="femea">Femea</option>
+                            <option value="macho">Menino</option>
+                            <option value="femea">Menina</option>
                         </select>
                     </div>
 

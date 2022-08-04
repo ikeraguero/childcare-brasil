@@ -13,34 +13,33 @@
         <br><br>
         
 
-          <div class="d-flex justify-space-around mt-16 ">
+          <div class="d-flex justify-space-around mt-20 ">
 
-            <v-btn icon min-width="200" min-height="150" link to="/ajudarescolas">
+            <v-btn icon min-width="200" link to="/ajudarcriancas">
             <v-img 
-            link to="/perfil"
             class="posicao"
             lazy-src="@/assets/imagens/3.png"
-            max-height="220px"
-            max-width="18%"
+            max-height="300px"
+            max-width="350px"
             src="@/assets/imagens/1a.png" 
           ></v-img>
             </v-btn>
-            
-            <v-btn icon min-width="220" min-height="150" link to="/ajudarcriancas">
+
+            <v-btn icon min-width="200" link to="/ajudarescolas">
 
             <v-img
             class="posicao"
             lazy-src="@/assets/imagens/4.png"
-            max-height="20%"
-            max-width="18%"
+            max-height="300"
+            max-width="350"
             src="@/assets/imagens/2a.png"
           ></v-img>
             </v-btn> 
           </div>
           <br>
-          <div class="d-flex justify-space-around" height="100">
-            <h1>Escolas</h1> 
-            <h1>Crianças</h1>
+          <div class="d-flex justify-space-around mt-16 text-3xl" height="100">
+            <h1>Crianças</h1> 
+            <h1>Escolas</h1>
 
 
             
@@ -106,8 +105,8 @@
 
 h1{
   color: #FFF6EE;
-font-family: "Architects Daughter", italic, cursive;
-  font-size: 45px;
+  font-family: "Architects Daughter", italic, cursive;
+  font-size: 100px;
 }
 
 .titulo-resto{
@@ -155,7 +154,10 @@ font-family: "Architects Daughter", italic, cursive;
   margin:30px 50px;
 }
 
-
+.v-btn {
+  position: relative;
+  margin: 0;
+}
 
 
 </style>

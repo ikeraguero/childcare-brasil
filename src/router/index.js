@@ -56,6 +56,11 @@ const routes = [
         component: () => import(/* webpackChunkName: "faq" */ '../views/Formulario.vue')
       },
       {
+        path: '/admin',
+        name: 'Painel de Controle',
+        component: () => import(/* webpackChunkName: "faq" */ '../views/ControlPanel.vue')
+      },
+      {
         path: '/painelcrianca',
         name: 'Painel de Controle Criança',
         component: () => import(/* webpackChunkName: "faq" */ '../views/ControlPanelChild.vue')

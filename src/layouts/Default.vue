@@ -8,7 +8,7 @@
         <li><a href="/">Home</a></li>
         <li><a href="/contato">Contato</a></li>
         <li><a href="/comodoar">Como doar</a></li>
-        <li><a v-if="$auth.isAuthenticated" href="/perfil">Perfil </a ></li>  
+        <li><a v-if="$auth.isAuthenticated" href="/perfil">Perfil </a ></li> 
         <li><AuthenticationButton /></li>
       </ul>
       <div class="burguer">
