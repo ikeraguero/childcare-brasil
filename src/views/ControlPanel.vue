@@ -1,5 +1,6 @@
 <template>
     <div>
+      <h1 class="flex justify-center py-10 text-4xl text-[#15393C] font-semibold">PAINEL DE CONTROLE</h1>
         <div class="d-flex justify-space-around mt-20 ">
 
             <v-btn icon min-width="200" link to="/adminn/criancas">
