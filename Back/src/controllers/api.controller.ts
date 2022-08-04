@@ -14,7 +14,7 @@ export const child = async (req: Request, res: Response) => {
 
 export const childadd = async (req: Request, res: Response) => {
     const r = req.body;
-    const child = await addChild(r.childphoto, r.childname, r.childgender,r.childfur, r.childtemp, r.childage, r.childweight, r.childdesc, r.childowner, r.is_castrated, r.is_adoptable, r.childobs);
+    const child = await addChild(r.childphoto, r.childname, r.childgender,r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.is_castrated, r.is_adoptable, r.childdesc);
     res.redirect("http://localhost:8080/admin");
 
 }
@@ -32,7 +32,7 @@ export const childdelete = async (req: Request, res: Response) => {
 
 export const childupdate = async (req: Request, res: Response) => {
     const r = req.body;
-    const child = await updateChild(req.params.child_id, r.childphoto, r.childname, r.childgender,r.childfur, r.childtemp, r.childage, r.childweight, r.childdesc, r.childowner, r.is_castrated, r.is_adoptable, r.childobs);
+    const child = await updateChild(req.params.child_id, r.childphoto, r.childname, r.childgender,r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.is_castrated, r.is_adoptable, r.childdesc);
     res.redirect("http://localhost:8080/admin");
 }
 
@@ -56,7 +56,7 @@ export const school = async (req: Request, res: Response) => {
 
 export const schooladd = async (req: Request, res: Response) => {
     const r = req.body;
-    const school = await addSchool(r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate);
+    const school = await addSchool(r.schoolemail, r.schoolcnpj, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate);
     res.redirect("http://localhost:8080/admin");
 
 }
@@ -68,7 +68,7 @@ export const schooldelete = async (req: Request, res: Response) => {
 
 export const schoolupdate = async (req: Request, res: Response) => {
     const r = req.body;
-    const school = await updateSchool(req.params.school_id, r.childphoto, r.childname, r.schooladdress, r.schoolcity, r.schoolstate);
+    const school = await updateSchool(req.params.school_id, r.schoolemail, r.schoolcnpj, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate);
     res.redirect("http://localhost:8080/admin");
 }
 

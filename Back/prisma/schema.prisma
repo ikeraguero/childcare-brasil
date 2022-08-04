@@ -10,44 +10,32 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Dog {
-  id                String          @id @default(auto()) @map("_id") @db.ObjectId
-  photo             String?
-  name              String
-  gender            String?
-  fur               String?
-  temperament       String?
-  age               String
-  weight            String
-  description       String
-  owner_name        String
-  is_castrated      String?
-  is_adoptable      String?
-  observations      String?
-}
 model Child {
   id                String          @id @default(auto()) @map("_id") @db.ObjectId
   photo             String?
   name              String
   gender            String?
-  fur               String?
-  temperament       String?
+  school            String?
   age               String
-  weight            String
-  description       String
-  owner_name        String
+  address           String?
+  city              String?
+  state             String?
+  cpf               String?
   is_castrated      String?
   is_adoptable      String?
-  observations      String?
+  description       String?
 }
 
 model School {
-  id      String @id @default(auto()) @map("_id") @db.ObjectId
-  photo   String?
-  name    String
-  address String
-  city    String
-  state   String
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  email     String?
+  cnpj      String?
+  cellphone String?
+  photo     String?
+  name      String?
+  address   String?
+  city      String?
+  state     String?
 
 }
 

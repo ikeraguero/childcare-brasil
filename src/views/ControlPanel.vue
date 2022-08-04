@@ -1,35 +1,35 @@
 <template>
     <div>
-        <div class="justify-space-around  p-20">
+        <div class="d-flex justify-space-around mt-20 ">
 
-            <v-btn icon min-width="200" min-height="100" link to="/ajudarescolas">
+            <v-btn icon min-width="200" link to="/adminn/criancas">
             <v-img 
             class="posicao"
             lazy-src="@/assets/imagens/3.png"
-            max-height="20%"
-            max-width="18%"
+            max-height="300px"
+            max-width="350px"
             src="@/assets/imagens/1a.png" 
           ></v-img>
-          Escolas
             </v-btn>
-          </div>
-          <div class="justify-space-around p-20">
 
-            <v-btn icon min-width="200" min-height="100" link to="/ajudarcriancas">
-            <v-img 
+            <v-btn icon min-width="200" link to="/adminn/escolas">
+
+            <v-img
             class="posicao"
-            lazy-src="@/assets/imagens/3.png"
-            max-height="20%"
-            max-width="18%"
-            src="@/assets/imagens/2a.png" 
+            lazy-src="@/assets/imagens/4.png"
+            max-height="300"
+            max-width="350"
+            src="@/assets/imagens/2a.png"
           ></v-img>
-          Crianças
-            </v-btn>
+            </v-btn> 
           </div>
-
-
           <br>
-          <div class="d-flex justify-space-around" height="100">
+          <div class="d-flex justify-space-around mt-16 text-3xl" height="100">
+            <h1>Crianças</h1> 
+            <h1>Escolas</h1>
+
+
+            
           </div>
     </div>
 </template>

@@ -3,28 +3,28 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 
-export async function addChild(childphoto: string, childname: string, childgender: string, childfur:string, childtemp: string, childage: string, childweight: string, childdesc: string, childowner:string, is_castrated: string, is_adoptable: string, childobs: string) {
+export async function addChild(childphoto: string, childname: string, childgender: string, childschool:string, childage: string, childaddress: string, childcity: string, childstate: string, childcpf:string, is_castrated: string, is_adoptable: string, childdesc: string) {
     await prisma.$connect();
     const child = await prisma.child.create({
         data: {
             photo: childphoto,
             name: childname,
             gender: childgender,
-            fur: childfur,
-            temperament: childtemp,
+            school: childschool,
             age: childage,
-            weight: childweight, //change to string
-            description: childdesc,
-            owner_name: childowner,
+            address: childaddress,
+            city: childcity, //change to string
+            state: childstate,
+            cpf: childcpf,
             is_castrated: is_castrated,
             is_adoptable: is_adoptable,
-            observations: childobs,
+            description: childdesc
         }
     });
     await prisma.$disconnect();
 };
 
-export async function updateChild(child_id: string, childphoto: string, childname: string, childgender: string, childfur:string, childtemp: string, childage: string, childweight: string, childdesc: string, childowner:string, is_castrated: string, is_adoptable: string, childobs: string) {
+export async function updateChild(child_id: string, childphoto: string, childname: string, childgender: string, childschool:string, childage: string, childaddress: string, childcity: string, childstate: string, childcpf:string, is_castrated: string, is_adoptable: string, childdesc: string) {
     await prisma.$connect();
     const child = await prisma.child.update({
         where: {
@@ -34,15 +34,15 @@ export async function updateChild(child_id: string, childphoto: string, childnam
             photo: childphoto,
             name: childname,
             gender: childgender,
-            fur: childfur,
-            temperament: childtemp,
+            school: childschool,
             age: childage,
-            weight: childweight, //change to string
-            description: childdesc,
-            owner_name: childowner,
+            address: childaddress,
+            city: childcity, //change to string
+            state: childstate,
+            cpf: childcpf,
             is_castrated: is_castrated,
             is_adoptable: is_adoptable,
-            observations: childobs,
+            description: childdesc
         }
     });
     await prisma.$disconnect();
@@ -58,10 +58,13 @@ export async function deleteChild (child_id: string) {
     await prisma.$disconnect();
 }
 
-export async function addSchool(schoolphoto: string, schoolname: string, schooladdress: string, schoolcity: string, schoolstate: string) {
+export async function addSchool(schoolemail: string, schoolcnpj: string, schoolcellphone: string, schoolphoto: string, schoolname: string, schooladdress: string, schoolcity: string, schoolstate: string) {
     await prisma.$connect();
     const school = await prisma.school.create({
         data: {
+            email: schoolemail,
+            cnpj: schoolcnpj,
+            cellphone: schoolcellphone,
             photo: schoolphoto,
             name: schoolname,
             address: schooladdress,
@@ -72,13 +75,16 @@ export async function addSchool(schoolphoto: string, schoolname: string, schoola
     await prisma.$disconnect();
 
 };
-export async function updateSchool(school_id: string, schoolphoto: string, schoolname: string, schooladdress: string, schoolcity: string, schoolstate: string) {
+export async function updateSchool(school_id: string, schoolemail: string, schoolcnpj: string, schoolcellphone: string, schoolphoto: string, schoolname: string, schooladdress: string, schoolcity: string, schoolstate: string) {
     await prisma.$connect();
     const school = await prisma.school.update({
         where: {
             id: school_id
         },
         data: {
+            email: schoolemail,
+            cnpj: schoolcnpj,
+            cellphone: schoolcellphone,
             photo: schoolphoto,
             name: schoolname,
             address: schooladdress,
