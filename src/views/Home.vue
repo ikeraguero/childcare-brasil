@@ -15,7 +15,8 @@
 
           <div class="d-flex justify-space-around mt-20 ">
 
-            <v-btn icon min-width="200" link to="/ajudarcriancas">
+            <v-btn icon min-width="200" link to="/login">
+            <router-link to="/login" v-if="$auth.isnotAuthenticated"></router-link>  
             <v-img 
             class="posicao"
             lazy-src="@/assets/imagens/3.png"
@@ -24,7 +25,6 @@
             src="@/assets/imagens/1a.png" 
           ></v-img>
             </v-btn>
-
             <v-btn icon min-width="200" link to="/ajudarescolas">
 
             <v-img

@@ -4,7 +4,7 @@
     v-if="$auth.isAuthenticated"
     @click.prevent="logout"
   >
-    Log Out
+    Sair
   </button>
 </template>
 

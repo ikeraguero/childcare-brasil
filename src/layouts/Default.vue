@@ -5,11 +5,11 @@
         <h4>Childcare Brasil</h4>
       </div>
       <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/contato">Contato</a></li>
-        <li><a href="/comodoar">Como doar</a></li>
-        <li><a v-if="$auth.isAuthenticated" href="/adminn">Admin</a ></li> 
-        <li><AuthenticationButton /></li>
+        <router-link to="/">Home</router-link>
+        <router-link to="/contato">Contato</router-link>
+        <router-link to="/comodoar">Como doar</router-link>
+        <router-link to="/perfil" v-if="$auth.isAuthenticated">Perfil</router-link > 
+        <router-link to="/login"> <AuthenticationButton/> </router-link > 
       </ul>
       <div class="burguer">
         <div class="linha1"></div>
