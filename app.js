@@ -29,7 +29,10 @@ export default {
   methods: {
     teste() {
       alert('oioioi')
-    }
+    },
+    login() {
+      this.$auth.loginWithRedirect();
+    },
   },
   data() {
     return {

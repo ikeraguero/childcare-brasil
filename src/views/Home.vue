@@ -38,7 +38,7 @@
           </div>
           <div class="d-flex justify-space-around mt-20 " v-if="!$auth.isAuthenticated">
 
-            <v-btn icon min-width="200" link to="/login">
+            <v-btn icon min-width="200" @click="login">
               
             <v-img 
             class="posicao"
@@ -48,7 +48,7 @@
             src="@/assets/imagens/1a.png" 
           ></v-img>
             </v-btn>
-            <v-btn icon min-width="200" link to="/login">
+            <v-btn icon min-width="200" @click="login">
 
             <v-img
             class="posicao"
