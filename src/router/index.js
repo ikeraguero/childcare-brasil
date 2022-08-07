@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import { authenticationGuard } from '@/auth/authenticationGuard';
 
 Vue.use(VueRouter)
 
@@ -17,6 +18,7 @@ const routes = [
       {
         path: '/perfil',
         name: 'Perfil',
+        beforeEnter: authenticationGuard,
         component: () => import(/* webpackChunkName: "perfil" */ '../views/Perfil.vue')
       },
       {
@@ -37,11 +39,13 @@ const routes = [
       {
         path: '/ajudarcriancas',
         name: 'AjudarCriancas',
+        beforeEnter: authenticationGuard,
         component: () => import(/* webpackChunkName: "doacoes" */ '../views/AjudarCriancas.vue')
       },
       {
         path: '/ajudarescolas',
         name: 'AjudarEscolas',
+        beforeEnter: authenticationGuard,
         component: () => import(/* webpackChunkName: "doacoes" */ '../views/AjudarEscolas.vue')
       },
       {
@@ -58,6 +62,7 @@ const routes = [
       {
         path: '/adminn',
         name: 'Painel de Controle',
+        beforeEnter: authenticationGuard,
         component: () => import(/* webpackChunkName: "faq" */ '../views/ControlPanel.vue')
       },
       {
