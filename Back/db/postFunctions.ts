@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 
-export async function addChild(childphoto: string, childname: string, childgender: string, childschool:string, childage: string, childaddress: string, childcity: string, childstate: string, childcpf:string, is_castrated: string, is_adoptable: string, childdesc: string) {
+export async function addChild(childphoto: string, childname: string, childgender: string, childschool:string, childage: string, childaddress: string, childcity: string, childstate: string, childcpf:string, childdesc: string) {
     await prisma.$connect();
     const child = await prisma.child.create({
         data: {
@@ -16,15 +16,13 @@ export async function addChild(childphoto: string, childname: string, childgende
             city: childcity, //change to string
             state: childstate,
             cpf: childcpf,
-            is_castrated: is_castrated,
-            is_adoptable: is_adoptable,
             description: childdesc
         }
     });
     await prisma.$disconnect();
 };
 
-export async function updateChild(child_id: string, childphoto: string, childname: string, childgender: string, childschool:string, childage: string, childaddress: string, childcity: string, childstate: string, childcpf:string, is_castrated: string, is_adoptable: string, childdesc: string) {
+export async function updateChild(child_id: string, childphoto: string, childname: string, childgender: string, childschool:string, childage: string, childaddress: string, childcity: string, childstate: string, childcpf:string, childdesc: string) {
     await prisma.$connect();
     const child = await prisma.child.update({
         where: {
@@ -40,8 +38,6 @@ export async function updateChild(child_id: string, childphoto: string, childnam
             city: childcity, //change to string
             state: childstate,
             cpf: childcpf,
-            is_castrated: is_castrated,
-            is_adoptable: is_adoptable,
             description: childdesc
         }
     });
@@ -104,21 +100,6 @@ export async function deleteSchool (school_id: string) {
     });
     await prisma.$disconnect();
 }
-// arrumar isso
-export async function addRegd(dog_id: string, is_fed: string, qt_fed: string, obs: string) {
-    prisma.$connect;
-    const dog = await prisma.daily.create({
-        data: {
-            dog_id: dog_id,
-            is_fed: is_fed,
-            qt_fed: qt_fed,
-            observations: obs,
-            date: new Date()
-        }
-    });
-    await prisma.$disconnect();
-}
-
 
 
 

@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { getChildren, getChild, getAdoptable, getSchools, getSchool } from "../../db/searchFunctions";
-import { addChild, addRegd, deleteChild, updateChild, addSchool, deleteSchool, updateSchool } from "../../db/postFunctions";
+import { getChildren, getChild, getSchools, getSchool } from "../../db/searchFunctions";
+import { addChild, deleteChild, updateChild, addSchool, deleteSchool, updateSchool } from "../../db/postFunctions";
 
 export const children = async (req: Request, res: Response) => {
     const children = await getChildren();
@@ -14,14 +14,9 @@ export const child = async (req: Request, res: Response) => {
 
 export const childadd = async (req: Request, res: Response) => {
     const r = req.body;
-    const child = await addChild(r.childphoto, r.childname, r.childgender,r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.is_castrated, r.is_adoptable, r.childdesc);
+    const child = await addChild(r.childphoto, r.childname, r.childgender,r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.is_castrated);
     res.redirect("http://localhost:8080/admin");
 
-}
-
-export const dogadoptable = async (req: Request, res: Response) => {
-    const dogs = await getAdoptable();
-    res.json(dogs.content);
 }
 
 
@@ -32,15 +27,8 @@ export const childdelete = async (req: Request, res: Response) => {
 
 export const childupdate = async (req: Request, res: Response) => {
     const r = req.body;
-    const child = await updateChild(req.params.child_id, r.childphoto, r.childname, r.childgender,r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.is_castrated, r.is_adoptable, r.childdesc);
+    const child = await updateChild(req.params.child_id, r.childphoto, r.childname, r.childgender,r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.is_castrated);
     res.redirect("http://localhost:8080/admin");
-}
-
-
-export const regdAdd = async (req: Request, res: Response) => {
-    const dog = await addRegd(req.params.dog_id, req.body.is_fed, req.body.qt_fed, req.body.obs);
-    res.redirect("http://localhost:8080/admin");
-
 }
 
 

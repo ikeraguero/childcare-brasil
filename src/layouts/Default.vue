@@ -9,7 +9,7 @@
         <router-link to="/contato">Contato</router-link>
         <router-link to="/comodoar">Como doar</router-link>
         <router-link to="/perfil" v-if="$auth.isAuthenticated">Perfil</router-link > 
-        <router-link to="/login"> <AuthenticationButton/> </router-link > 
+        <router-link to=""> <AuthenticationButton/> </router-link > 
       </ul>
       <div class="burguer">
         <div class="linha1"></div>

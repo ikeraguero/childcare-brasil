@@ -61,14 +61,3 @@ export async function getSchool(school_id: string) {
     await prisma.$disconnect();
     return new response(200, `School ${school_id} found!`, school);
 }
-
-export async function getAdoptable() {
-    await prisma.$connect();
-    const child = await prisma.child.findMany({
-        where: {
-            is_adoptable: "true"
-        }
-    });
-    await prisma.$disconnect();
-    return new response(200, "Children found", child);
-}

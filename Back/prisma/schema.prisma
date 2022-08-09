@@ -21,8 +21,6 @@ model Child {
   city              String?
   state             String?
   cpf               String?
-  is_castrated      String?
-  is_adoptable      String?
   description       String?
 }
 
@@ -37,31 +35,4 @@ model School {
   city      String?
   state     String?
 
-}
-
-model Daily {
-  id                String          @id @default(auto()) @map("_id") @db.ObjectId
-  dog_id            String   
-  is_fed            String?
-  qt_fed            String?
-  observations      String?       
-  date              DateTime?
-}
-
-
-model Comment {
-  id                String          @id @default(auto()) @map("_id") @db.ObjectId
-  author_name       String?
-  author_class      String?
-  author_year       String?
-  dog_id            String  
-  text              String
-  date              String
-}
-
-model Gallery {
-  id                String          @id @default(auto()) @map("_id") @db.ObjectId
-  dog_id            String
-  img               String[]
-  date              String
 }

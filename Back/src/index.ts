@@ -26,7 +26,6 @@ app.get("/api/children", api.children);
 app.get("/api/child/:child_id", api.child);
 app.get("/api/schools", api.schools);
 app.get("/api/school/:school_id", api.school);
-app.get("/api/adoptable", api.dogadoptable);
 
 
 // POST
@@ -34,10 +33,6 @@ app.post("/api/childadd", api.childadd);
 app.post("/api/childupdate/:child_id", api.childupdate);
 
 app.post("/api/childdel/:child_id", api.childdelete);
-
-
-// app.post("/api/commentadd/:dog_id", api.commentadd);
-app.post("/api/regdAdd/:child_id", api.regdAdd);
 
 
 // END -- FOR API
