@@ -1,114 +1,201 @@
 <template>
-  <v-container class="pa-8" fluid>
-    <h1 class="titulo">Meu perfil</h1>
-    <v-form>
-      <v-container>
-        <v-text-field
-          dark
-          class="text-white"
-          color="white"
-          label="Nome:"
-          v-model="usuario.nome"
-        ></v-text-field>
-
-        <v-text-field
-          dark
-          class="text-white"
-          color="#f8f8f2"
-          label="Sobrenome:"
-          v-model="usuario.sobrenome"
-        ></v-text-field>
-
-        <v-text-field
-          dark
-          class="text-white"
-          color="#f8f8f2"
-          label="Telefone:"
-          v-model="usuario.telefone"
-        ></v-text-field>
-
-        <v-text-field
-          dark
-          class="text-white"
-          color="#f8f8f2"
-          label="CPF:"
-          v-model="usuario.cpf"
-        ></v-text-field>
-
-        <v-text-field
-          dark
-          class="text-white"
-          color="#f8f8f2"
-          label="E-mail:"
-          v-model="usuario.email"
-        ></v-text-field>
-
-        <!-- <v-text-field
-        dark
-          class="text-white"
-          color="#f8f8f2"
-          label="Senha:"
-          v-model="usuario.senha"
-        ></v-text-field> -->
-
-        <v-btn color="#f8f8f2" @click="salvarPerfil">Salvar</v-btn>
-      </v-container>
-    </v-form>
-  </v-container>
+  <div class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+<div class="col-xl-6 col-md-12">
+                                                <div class="card user-card">
+                                                    <div class="row m-l-0 m-r-2">
+                                                        <div class="col-sm-3 bg-c-lite-green user-profile">
+                                                            <div class="card-block text-center text-white">
+                                                                <div class="m-b-25">
+                                                                    <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image">
+                                                                </div>
+                                                                <div class="color">
+                                                                <h6 class="f-w-601">Username</h6>
+                                                                <p>Role</p>
+                                                                <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-9">
+                                                            <div class="card-block">
+                                                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informações</h6>
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        <p class="m-b-10 f-w-600">Email</p>
+                                                                        <h6 class="text-muted f-w-400">rntng@gmail.com</h6>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <p class="m-b-10 f-w-600">Contato</p>
+                                                                        <h6 class="text-muted f-w-400">98979989898</h6>
+                                                                    </div>
+                                                                </div>
+                                                                <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Doações</h6>
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        <p class="m-b-10 f-w-600">Realizadas</p>
+                                                                        <h6 class="text-muted f-w-400">Sam Disuja</h6>
+                                                                    </div>
+                                                                    <div class="col-sm-5">
+                                                                        <p class="m-b-10 f-w-600">Materiais</p>
+                                                                        <h6 class="text-muted f-w-400">Dinoter husainm</h6>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <p class="m-b-10 f-w-600">Dinheiro</p>
+                                                                        <h6 class="text-muted f-w-400">Dinoter husainm</h6>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                             </div>
+                                                </div>
+                                            </div>
 </template>
 
 <script>
-import { getFirestore, collection, addDoc, query, where, getDocs } from "firebase/firestore";
-const db = getFirestore();
-import { getAuth } from "firebase/auth";
-const auth = getAuth()
 
-export default {
-  data() {
-    return {
-      usuario: {},
-    };
-  },
-  async created() {
-      const uid = auth.currentUser.uid
-      const perfisRef = collection(db, "perfis")
-      const q = query(perfisRef, where("uid", "==", uid));
-
-      const meuPerfil = await getDocs(q);
-      meuPerfil.forEach((doc) => {
-        this.usuario = {...doc.data()}
-        // Object.assign(this.usuario, doc.data())
-  // doc.data() is never undefined for query doc snapshots
-  // console.log(doc.id, " => ", doc.data());
-});
-
-  },
-  methods: {
-    async salvarPerfil() {
-      const uid = auth.currentUser.uid
-      try {
-        const docRef = await addDoc(collection(db, "perfis"), {
-          ...this.usuario,
-          uid
-        });
-        console.log("Document written with ID: ", docRef.id);
-      } catch (e) {
-        console.error("Error adding document: ", e);
-      }
-    },
-  },
-};
 </script>
 
 <style>
-.titulo {
-  text-align: center;
-  font-family: "Reenie Beanie", cursive;
-  font-size: 80px;
-  color: #f8f7f2;
+body {
+    background-color: #f9f9fa
 }
 
-.text-white input {
-  color: #f8f7f2 !important;
+.padding {
+    padding: 6rem !important
 }
+
+.user-card-full {
+    overflow: hidden;
+}
+
+.card {
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 30px;
+}
+
+.m-r-0 {
+    margin-right: 0px;
+}
+
+.m-l-0 {
+    margin-left: 0px;
+}
+
+.user-card-full .user-profile {
+    border-radius: 5px 0 0 5px;
+    border-left: 20px;
+}
+
+.bg-c-lite-green {
+        background: #FFF6EE
+}
+
+.user-profile {
+    padding: 40px 0;
+}
+
+.card-block {
+    padding: 1.25rem;
+}
+
+.m-b-25 {
+    margin-bottom: 25px;
+}
+
+.img-radius {
+    border-radius: 5px;
+}
+
+
+ 
+h6 {
+    font-size: 14px;
+}
+
+.card .card-block p {
+    line-height: 25px;
+}
+
+@media only screen and (min-width: 1400px){
+p {
+    font-size: 14px;
+}
+}
+
+.card-block {
+    padding: 1.25rem;
+}
+
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.m-b-20 {
+    margin-bottom: 20px;
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important;
+}
+
+.card .card-block p {
+    line-height: 25px;
+}
+
+.m-b-10 {
+    margin-bottom: 10px;
+}
+
+.text-muted {
+    color: #bebebe !important;
+}
+
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.f-w-600 {
+    font-weight: 600;
+    color:#FFF6EE
+}
+
+.m-b-20 {
+    margin-bottom: 20px;
+}
+
+.m-t-40 {
+    margin-top: 20px;
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important;
+}
+
+.m-b-10 {
+    margin-bottom: 10px;
+}
+
+.m-t-40 {
+    margin-top: 20px;
+}
+
+.user-card-full .social-link li {
+    display: inline-block;
+}
+
+.user-card-full .social-link li a {
+    font-size: 20px;
+    margin: 0 10px 0 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.color {
+  color:#621200
+}
+
 </style>

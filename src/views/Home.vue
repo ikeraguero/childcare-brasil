@@ -104,10 +104,10 @@ counters.forEach((counter) => {
 });
 
 import MosaicoAnimais from '@/components/template/MosaicoAnimais'
-import ChildrenCards from "@/components/ChildrenCards";
+
 
 export default {
-  components: {MosaicoAnimais, ChildrenCards},
+  components: {MosaicoAnimais},
   methods: {
     teste() {
       alert('oioioi')
