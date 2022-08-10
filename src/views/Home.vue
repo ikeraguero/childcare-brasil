@@ -3,7 +3,7 @@
     <h1 class="h1"></h1>
     <v-row>
       <v-col cols=5>
-     <mosaico-animais />
+     <mosaico/>
       </v-col>
       <v-col>
         <p class="slogan">
@@ -103,11 +103,11 @@ counters.forEach((counter) => {
     updateCounter();
 });
 
-import MosaicoAnimais from '@/components/template/MosaicoAnimais'
+import Mosaico from '@/components/template/Mosaico'
 
 
 export default {
-  components: {MosaicoAnimais},
+  components: {Mosaico},
   methods: {
     teste() {
       alert('oioioi')
@@ -169,6 +169,8 @@ h1{
 }
 .boxtwo {
   margin-top: 100px;
+  margin-left: 0%;
+  margin-right: 0%;
   display: flex;
   background-color: #FFF6EE;
   width: 100%;

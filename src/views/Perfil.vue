@@ -19,7 +19,7 @@
                                                         </div>
                                                         <div class="col-sm-9">
                                                             <div class="card-block">
-                                                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informações</h6>
+                                                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">INFORMAÇÕES</h6>
                                                                 <div class="row">
                                                                     <div class="col-sm-6">
                                                                         <p class="m-b-10 f-w-600">Email</p>
@@ -30,19 +30,19 @@
                                                                         <h6 class="text-muted f-w-400">98979989898</h6>
                                                                     </div>
                                                                 </div>
-                                                                <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Doações</h6>
+                                                                <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">DOAÇÕES</h6>
                                                                 <div class="row">
                                                                     <div class="col-sm-6">
                                                                         <p class="m-b-10 f-w-600">Realizadas</p>
-                                                                        <h6 class="text-muted f-w-400">Sam Disuja</h6>
+                                                                        <h6 class="text-muted f-w-400">10</h6>
                                                                     </div>
                                                                     <div class="col-sm-5">
                                                                         <p class="m-b-10 f-w-600">Materiais</p>
-                                                                        <h6 class="text-muted f-w-400">Dinoter husainm</h6>
+                                                                        <h6 class="text-muted f-w-400">7 doados</h6>
                                                                     </div>
                                                                     <div class="col-sm-6">
                                                                         <p class="m-b-10 f-w-600">Dinheiro</p>
-                                                                        <h6 class="text-muted f-w-400">Dinoter husainm</h6>
+                                                                        <h6 class="text-muted f-w-400">R$150 doados</h6>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -161,7 +161,11 @@ p {
 
 .f-w-600 {
     font-weight: 600;
-    color:#FFF6EE
+    color:#FFF6EE;
+    text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .m-b-20 {
