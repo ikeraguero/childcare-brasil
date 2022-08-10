@@ -2,7 +2,7 @@
   <v-app>
     <nav>
       <div class="logo">
-        <h4>Childcare Brasil</h4>
+        <router-link to="/"><h4>Childcare Brasil</h4></router-link>
       </div>
       <ul class="nav-links">
         <router-link to="/">Home</router-link>
@@ -59,6 +59,9 @@ export default {
   margin:0px;
   padding:0px;
   box-sizing: border-box;
+}
+.v-application a{
+  color: #621200;
 }
 .fundo{
   background-color: #621200 ;
