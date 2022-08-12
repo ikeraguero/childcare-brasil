@@ -80,6 +80,12 @@ const routes = [
         name: 'Add',
         component: () => import(/* webpackChunkName: "faq" */ '../views/FormSchool.vue')
       },
+      {
+        path: '/doar/',
+        name: 'Donate',
+        component: () => import(/* webpackChunkName: "faq" */ '../views/DonatePage.vue')
+      },
+      
       
     ]
   },
