@@ -5,7 +5,7 @@
                 <div class="flex px-3 m-2 snap-center">
                     <div class="rounded-lg shadow-md bg-[#15393C] w-[300px] lg:w-[410px]">
                         <a href="/">
-                            <!-- colocar imagens no banco amanhã -->
+
                             <img class="rounded-t-lg h-80 w-full" :src="card.photo" />
                         </a>
                         <div class="p-6">
