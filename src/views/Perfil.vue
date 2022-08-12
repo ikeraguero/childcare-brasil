@@ -8,11 +8,11 @@
                                                         <div class="col-sm-3 bg-c-lite-green user-profile">
                                                             <div class="card-block text-center text-white">
                                                                 <div class="m-b-25">
-                                                                    <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image">
+                                                                    <img :src="$auth.user.picture" class="img-radius" alt="User-Profile-Image" />
                                                                 </div>
                                                                 <div class="color">
-                                                                <h6 class="f-w-601">Username</h6>
-                                                                <p>Role</p>
+                                                                <span class='mt-5'>Bem-vindo(a),</span>
+                                                                <h6 class="f-w-601">{{ $auth.user.name }}!</h6>
                                                                 <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                                                                 </div>
                                                             </div>
@@ -23,7 +23,7 @@
                                                                 <div class="row">
                                                                     <div class="col-sm-6">
                                                                         <p class="m-b-10 f-w-600">Email</p>
-                                                                        <h6 class="text-muted f-w-400">rntng@gmail.com</h6>
+                                                                        <h6 class="text-muted f-w-400">{{ $auth.user.email }}</h6>
                                                                     </div>
                                                                     <div class="col-sm-6">
                                                                         <p class="m-b-10 f-w-600">Contato</p>
@@ -42,7 +42,7 @@
                                                                     </div>
                                                                     <div class="col-sm-6">
                                                                         <p class="m-b-10 f-w-600">Dinheiro</p>
-                                                                        <h6 class="text-muted f-w-400">R$150 doados</h6>
+                                                                        <h6 class="text-muted f-w-400">R$150</h6>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -55,7 +55,7 @@
                                             </div>
 </template>
 
-<script>
+<script> 
 
 </script>
 

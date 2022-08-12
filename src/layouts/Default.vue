@@ -55,11 +55,8 @@ export default {
 <style>
 
 
-*{
-  margin:0px;
-  padding:0px;
-  box-sizing: border-box;
-}
+
+
 .v-application a{
   color: #621200;
 }
