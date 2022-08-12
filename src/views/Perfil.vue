@@ -22,12 +22,12 @@
                  <h6 class="m-b-20 p-b-5 b-b-default f-w-600">INFORMAÇÕES</h6>
                     <div class="row">
                       <div class="col-sm-6">
-                 <p class="m-b-10 f-w-600">Email</p>
-                  <h6 class="text-muted f-w-400">{{ $auth.user.email }}</h6>
+                 <p class="m-b-10 f-w-600">Nome</p>
+                  <h6 class="text-muted f-w-400">{{ $auth.user.name }}</h6>
                   </div>
                  <div class="col-sm-6">
-                <p class="m-b-10 f-w-600">Contato</p>
-               <h6 class="text-muted f-w-400">98979989898</h6>
+                <p class="m-b-10 f-w-600">Email</p>
+               <h6 class="text-muted f-w-400">{{ $auth.user.email }}</h6>
                </div>
                </div>
                <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">DOAÇÕES</h6>
@@ -153,6 +153,7 @@ p {
 
 .text-muted {
     color: #bebebe !important;
+    font-size: 15px;
 }
 
 .b-b-default {
@@ -165,7 +166,7 @@ p {
     text-decoration: none;
   letter-spacing: 1px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .m-b-20 {

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import { authenticationGuard } from '@/auth/authenticationGuard';
 
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -81,7 +82,7 @@ const routes = [
         component: () => import(/* webpackChunkName: "faq" */ '../views/FormSchool.vue')
       },
       {
-        path: '/doar/',
+        path: "/doar/",
         name: 'Donate',
         component: () => import(/* webpackChunkName: "faq" */ '../views/DonatePage.vue')
       },
@@ -98,5 +99,4 @@ const router = new VueRouter({
 })
 
 
-
-export default router
+export default router 
