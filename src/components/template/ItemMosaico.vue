@@ -1,6 +1,6 @@
 <template>
   <v-col
-      class="d-flex child-flex imgAnimais"
+      class="d-flex child-flex imgMosaico"
       cols="4"
     >
       <v-img

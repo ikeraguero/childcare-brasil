@@ -37,7 +37,7 @@ export default {
 
 <style>
 
-.imgAnimais {
+.imgMosaico {
     margin: 0;
     padding: 5px !important;
 }

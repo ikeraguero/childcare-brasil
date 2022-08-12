@@ -55,11 +55,6 @@ const routes = [
       },
       
       {
-        path: '/formulario',
-        name: 'Formulario',
-        component: () => import(/* webpackChunkName: "faq" */ '../views/Formulario.vue')
-      },
-      {
         path: '/adminn',
         name: 'Painel de Controle',
         beforeEnter: authenticationGuard,
@@ -88,17 +83,7 @@ const routes = [
       
     ]
   },
-  {
-    path: '/',
-    component: () => import('@/layouts/Blank'),
-    children: [
-      {
-        path: '/login',
-        name: 'Login',
-        component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue')
-      }
-    ]
-  }
+
 ]
 const router = new VueRouter({
   mode: 'history',

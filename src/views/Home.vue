@@ -19,7 +19,6 @@
               
             <v-img 
             class="posicao"
-            lazy-src="@/assets/imagens/3.png"
             max-height="300px"
             max-width="350px"
             src="@/assets/imagens/1a.png" 
@@ -29,7 +28,6 @@
 
             <v-img
             class="posicao"
-            lazy-src="@/assets/imagens/4.png"
             max-height="300"
             max-width="350"
             src="@/assets/imagens/2a.png"
