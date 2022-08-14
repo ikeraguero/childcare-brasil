@@ -51,8 +51,8 @@
                 text-black
                 bg-white 
                 rounded" name="childgender">
-            <option value="dinheiro">Dinheiro</option>
-            <option value="material">Material Escolar</option>
+            <option value="1">Dinheiro</option>
+            <option value="2">Material Escolar</option>
         </select>
         </form>
 

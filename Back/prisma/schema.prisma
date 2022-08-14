@@ -36,3 +36,13 @@ model School {
   state     String?
 
 }
+
+model Donation {
+  id            String @id @default(auto()) @map("_id") @db.ObjectId
+  schoold_id    String?
+  children_id   String?
+  donator       String?
+  donation_type String?
+  value         String?
+  materials     String?
+}
