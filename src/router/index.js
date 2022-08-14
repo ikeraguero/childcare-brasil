@@ -38,14 +38,14 @@ const routes = [
         component: () => import(/* webpackChunkName: "comodoar" */ '../views/comoDoar.vue')
       },
       {
-        path: '/ajudarcriancas',
-        name: 'AjudarCriancas',
+        path: '/criancas',
+        name: 'Criancas',
         beforeEnter: authenticationGuard,
         component: () => import(/* webpackChunkName: "doacoes" */ '../views/AjudarCriancas.vue')
       },
       {
-        path: '/ajudarescolas',
-        name: 'AjudarEscolas',
+        path: '/escolas',
+        name: 'Escolas',
         beforeEnter: authenticationGuard,
         component: () => import(/* webpackChunkName: "doacoes" */ '../views/AjudarEscolas.vue')
       },
@@ -82,11 +82,15 @@ const routes = [
         component: () => import(/* webpackChunkName: "faq" */ '../views/FormSchool.vue')
       },
       {
-        path: "/doar/",
-        name: 'Donate',
+        path: "criancas/doar/:id",
+        name: 'Donate1',
         component: () => import(/* webpackChunkName: "faq" */ '../views/DonatePage.vue')
       },
-      
+    {
+      path: "escolas/doar/:id",
+        name: 'Donate2',
+        component: () => import(/* webpackChunkName: "faq" */ '../views/DonatePage.vue')
+      },
       
     ]
   },
