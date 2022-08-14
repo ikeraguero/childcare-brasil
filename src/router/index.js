@@ -84,12 +84,12 @@ const routes = [
       {
         path: "criancas/doar/:id",
         name: 'Donate1',
-        component: () => import(/* webpackChunkName: "faq" */ '../views/DonatePage.vue')
+        component: () => import(/* webpackChunkName: "faq" */ '../views/ChildDonateForm.vue')
       },
     {
       path: "escolas/doar/:id",
         name: 'Donate2',
-        component: () => import(/* webpackChunkName: "faq" */ '../views/DonatePage.vue')
+        component: () => import(/* webpackChunkName: "faq" */ '../views/SchoolDonateForm.vue')
       },
       
     ]
