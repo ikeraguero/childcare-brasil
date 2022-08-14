@@ -6,7 +6,7 @@
      <mosaico/>
       </v-col>
       <v-col>
-        <p class="slogan">
+        <p class="slogan mt-20">
             Faça sua doação para:  
         </p>
 
