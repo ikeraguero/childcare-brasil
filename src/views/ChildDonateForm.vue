@@ -2,7 +2,7 @@
 
        
     <v-container class="flex justify-center text-white">
-            <span class=" justify-center">Você está doando para
+            <span class="text-align-center">Você está doando para
             <div v-for="card in cards.data" :key="card.index">
                 <div class="px-3 m-5">
                     <img class="rounded-lg h-28 mt-20 justify-center" :src="card.photo" />
@@ -80,7 +80,7 @@ export default {
         };
     },
     mounted() {
-        axios.get("http://localhost:7777/api/children").then((response) => (this.cards = response));
+        axios.get("'http://localhost:7777/api/child/' + child_id").then((response) => (this.cards = response));
     },
     methods: {
         left() {

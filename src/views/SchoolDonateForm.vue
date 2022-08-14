@@ -1,37 +1,46 @@
 <template>
 
        
-    <v-container class="flex justify-center">
-        <form class="bg-[#FFF6EE] rounded px-12 pt-8 pb-8 mb-8" >
-            Nome completo
-            <label>
+    <v-container class="flex justify-center text-white">
+            <span class="text-align-center">Você está doando para
+            <div v-for="card in cards.data" :key="card.index">
+                <div class="px-3 m-5">
+                    <img class="rounded-lg h-28 mt-20 justify-center" :src="card.photo" />
+                </div>
+                </div>
+            </span>
+
+        <form class="bg-[#FFF6EE] rounded px-20 pt-8 pb-8 mb-8 ml-0" >
+            <label class='block text-white text-sm font-bold mb-3 mt-3'>
+                Nome Completo
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
-            Email para contato
             </label>
-            <label>
+            <label class='block text-white text-sm font-bold mb-3'>
+                        Email para contato
             <input 
             type="email"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
-            Telefone para contato
             </label>
-            <label>
-            <input 
-            type="text"
-            class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
-            />
-            CPF
-            </label>
-            <label>
+            <label class='block text-white text-sm font-bold mb-3'>
+                        Telefone para contato
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
-            <label>
+            <label class='block text-white text-sm font-bold mb-3'>
+                            CPF
+            <input 
+            type="text"
+            class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
+            />
+            </label>
+            <label class='block text-white text-sm font-bold mb-3'>
+                            Residência
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
@@ -60,15 +69,36 @@
 </template>
 
 <script>
+import axios from "axios";
 
 export default {
+    name: "App",
     data() {
         return {
-            nome:"Iker"
-        }
-    }
-}
+            cards: [],
+            showControls: true,
+        };
+    },
+    mounted() {
+        axios.get("'http://localhost:7777/api/school/' + school_id").then((response) => (this.cards = response));
+    },
+    methods: {
+        left() {
+            document.getElementById("container").scrollLeft -= 320;
+        },
+        right() {
+            document.getElementById("container").scrollLeft += 320;
+        },
+        age(age) {
+            if (age > 1) {
+                return "Anos";
+            } else {
+                return "Ano";
+            }
+        },
+    },
 
+};
 </script>
 
 <style>
