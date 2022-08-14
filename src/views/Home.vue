@@ -54,13 +54,13 @@
         <v-col>
          <div class="counter-container">
       <div class="counter" data-target="1500"> {{reaisDoados }}</div>
-      <span class="bottom">R$ doados</span>
+      <span class="bottom">Reais Doados</span>
     </div>
         </v-col>
         <v-col>
         <div class="counter-container">
       <div class="counter" data-target="1500">{{ materiaisDoados }}</div>
-      <span class="bottom">Materiais doados</span>
+      <span class="bottom">Materiais Doados</span>
     </div>
         </v-col>
         
@@ -132,14 +132,14 @@ export default {
 }
 
 .slogan {
-  font-family: "Architects Daughter", cursive;
+  font-family: "Proxima Nova", system-ui, sans-serif;
   text-align: center;
   color: #FFF6EE;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .counter-text {
-  font-family: "Architects Daughter", cursive;
+  font-family: "Proxima Nova", system-ui, sans-serif;
   text-align: center;
   color:#621200;
   font-size: 40px;
@@ -149,8 +149,8 @@ export default {
 
 h1{
   color: #FFF6EE;
-  font-family: "Architects Daughter", italic, cursive;
-  font-size: 100px;
+  font-family: "Proxima Nova", system-ui, sans-serif;
+  font-size: 30px;
 }
 
 .titulo-resto{
