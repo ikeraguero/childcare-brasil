@@ -3,10 +3,8 @@
        
     <v-container class="flex justify-center text-white">
             <span class="text-align-center">Você está doando para
-            <div v-for="card in cards.data" :key="card.index">
                 <div class="px-3 m-5">
-                    <img class="rounded-lg h-28 mt-20 justify-center" :src="card.photo" />
-                </div>
+                    <img class="rounded-lg h-28 mt-20 justify-center" :src="school.photo" />
                 </div>
             </span>
 
@@ -75,12 +73,15 @@ export default {
     name: "App",
     data() {
         return {
-            cards: [],
+            school: [],
             showControls: true,
         };
     },
     mounted() {
-        axios.get("'http://localhost:7777/api/school/' + school_id").then((response) => (this.cards = response));
+        axios.get("http://localhost:7777/api/school/" + this.$route.params.id)
+         .then(response => {
+                this.school = response.data;
+            })
     },
     methods: {
         left() {

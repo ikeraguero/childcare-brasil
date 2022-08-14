@@ -3,11 +3,11 @@
        
     <v-container class="flex justify-center text-white">
             <span class="text-align-center">Você está doando para
-            <div v-for="card in cards.data" :key="card.index">
+                {{ child.name }}
                 <div class="px-3 m-5">
-                    <img class="rounded-lg h-28 mt-20 justify-center" :src="card.photo" />
+                    <img class="rounded-lg h-28 mt-20 justify-center" :src="child.photo" />
                 </div>
-                </div>
+
             </span>
 
         <form class="bg-[#FFF6EE] rounded px-20 pt-8 pb-8 mb-8 ml-0" >
@@ -75,12 +75,15 @@ export default {
     name: "App",
     data() {
         return {
-            cards: [],
+            child: [],
             showControls: true,
         };
     },
     mounted() {
-        axios.get("'http://localhost:7777/api/child/' + child_id").then((response) => (this.cards = response));
+        axios.get("http://localhost:7777/api/child/" + this.$route.params.id)
+        .then(response => {
+            this.child = response.data
+        })
     },
     methods: {
         left() {
