@@ -1,23 +1,37 @@
 # projeto-adocao
 
-## Project setup
+## 1
 ```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
+cd Back
 ```
 
-### Compiles and minifies for production
+### 2
 ```
-yarn build
+npm i
 ```
 
-### Lints and fixes files
+### 3
 ```
-yarn lint
+npx prisma generate
+```
+### 4
+```
+npm run start
+```
+
+### 5
+```
+cd ..
+```
+
+### 6
+```
+npm i
+```
+
+### 7
+```
+npm run serve
 ```
 
 ### Customize configuration
