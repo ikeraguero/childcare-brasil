@@ -59,10 +59,26 @@
                 font-normal
                 text-black
                 bg-white 
-                rounded" name="childgender">
+                rounded" name="childgender" id="donationtype" @click='test'>
+            <option value="0">Selecione o tipo de doação</option>    
             <option value="1">Dinheiro</option>
             <option value="2">Material Escolar</option>
-        </select>
+                </select>
+            <label class='block text-white text-sm font-bold mb-3' name="money" id="money" style="display: none">
+                            Quantia
+            <input 
+            type="text"
+            class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
+            />
+            </label>
+            <label class='block text-white text-sm font-bold mb-3' name="materials" id="materials" style="display: none">
+                            Materiais
+            <input 
+            type="text"
+            class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
+            />
+            </label>
+
         </form>
 
     </v-container>
@@ -98,10 +114,26 @@ export default {
             } else {
                 return "Ano";
             }
-        },
-    },
+        },    
+        test() {
+            if (document.getElementById("donationtype").value == '1') {
+            document.getElementById('money').removeAttribute('style')
+            document.getElementById('materials').style.display = 'none';
+            } else {
+            document.getElementById('money').style.display = 'none';
 
-};
+
+            if (document.getElementById("donationtype").value == '2') {
+            document.getElementById('materials').removeAttribute('style')
+            document.getElementById('money').style.display = 'none';
+            } else {
+            document.getElementById('materials').style.display = 'none';
+    }
+}
+
+}
+},
+}
 </script>
 
 <style>
