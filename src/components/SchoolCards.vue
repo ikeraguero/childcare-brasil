@@ -49,15 +49,6 @@ export default {
     mounted() {
         axios.get("http://localhost:7777/api/schools").then((response) => (this.cards = response));
     },
-    methods: {
-        left() {
-            document.getElementById("container").scrollLeft -= 320;
-        },
-        right() {
-            document.getElementById("container").scrollLeft += 320;
-        },
-        
-    },
 
 };
 </script>
@@ -80,5 +71,16 @@ export default {
 }
 .right {
     right: 0;
+}
+.rounded-lg {
+    background-color: #FFF6EE
+}
+.text-white {
+    color:#621200
+}
+.inline-block {
+    color:#FFF6EE;
+    background-color: #621200;
+    
 }
 </style>

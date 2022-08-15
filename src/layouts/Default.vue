@@ -33,21 +33,6 @@
 import AuthenticationButton from "../components/AuthenticationButton.vue";
 
 export default {
-    data() {
-        return {
-            sidebar: true,
-            mini: false,
-            items: [
-                { title: "HOME", to: "/" },
-                { title: "PERFIL", to: "/perfil" },
-                { title: "QUEM_SOMOS", to: "/quemSomos" },
-                { title: "ENTRE_EM_CONTATO", to: "/contato" },
-                { title: "COMO_DOAR", to: "/comodoar" },
-                { title: "FAQ", to: "/faq" },
-            ],
-        };
-    }
-    ,
     components: { AuthenticationButton }
 };
 </script>
@@ -105,6 +90,7 @@ nav{
 }
 .nav-links a{
   color: #621200;
+  font-family: "Proxima Nova", system-ui, sans-serif;
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;

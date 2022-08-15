@@ -3,7 +3,7 @@
         <div class="flex overflow-hidden whitespace-nowrap no-scrollbar relative scroll-smooth snap-x" id="container">
             <div v-for="card in cards.data" :key="card.index">
                 <div class="flex px-3 m-2 snap-center">
-                    <div class="rounded-lg shadow-md bg-[#15393C] w-[300px] lg:w-[410px]">
+                    <div class="rounded-lg shadow-md w-[300px] lg:w-[410px]">
                         <a href="/">
 
                             <img class="rounded-t-lg h-80 w-full" :src="card.photo" />
@@ -51,17 +51,11 @@ export default {
         axios.get("http://localhost:7777/api/children").then((response) => (this.cards = response));
     },
     methods: {
-        left() {
-            document.getElementById("container").scrollLeft -= 320;
-        },
-        right() {
-            document.getElementById("container").scrollLeft += 320;
-        },
         age(age) {
             if (age > 1) {
-                return "Anos";
+                return "anos";
             } else {
-                return "Ano";
+                return "ano";
             }
         },
     },
@@ -87,5 +81,16 @@ export default {
 }
 .right {
     right: 0;
+}
+.rounded-lg {
+    background-color: #FFF6EE
+}
+.text-white {
+    color:#621200
+}
+.inline-block {
+    color:#FFF6EE;
+    background-color: #621200;
+    
 }
 </style>
