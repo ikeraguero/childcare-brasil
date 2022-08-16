@@ -1,7 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-
 const prisma = new PrismaClient();
-
 
 export async function addChild(childphoto: string, childname: string, childgender: string, childschool:string, childage: string, childaddress: string, childcity: string, childstate: string, childcpf:string, childdesc: string) {
     await prisma.$connect();
@@ -35,7 +33,7 @@ export async function updateChild(child_id: string, childphoto: string, childnam
             school: childschool,
             age: childage,
             address: childaddress,
-            city: childcity, //change to string
+            city: childcity,
             state: childstate,
             cpf: childcpf,
             description: childdesc
@@ -101,9 +99,6 @@ export async function deleteSchool (school_id: string) {
     await prisma.$disconnect();
 }
 
-
-
-// Upload Image FUNCTION
 export async function uploadImage(child_id: string, image: string) {
     await prisma.$connect();
     const child = await prisma.child.update({

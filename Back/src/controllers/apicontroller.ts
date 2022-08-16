@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { getChildren, getChild, getSchools, getSchool } from "../../db/searchFunctions";
-import { addChild, deleteChild, updateChild, addSchool, deleteSchool, updateSchool } from "../../db/postFunctions";
+import { getChildren, getChild, getSchools, getSchool } from "../../db/search";
+import { addChild, deleteChild, updateChild, addSchool, deleteSchool, updateSchool } from "../../db/post";
 
 export const children = async (req: Request, res: Response) => {
     const children = await getChildren();

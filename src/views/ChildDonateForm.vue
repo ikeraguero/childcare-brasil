@@ -60,7 +60,7 @@
                 text-black
                 bg-white 
                 rounded" name="childgender" id="donationtype" @click='test'>
-            <option value="0">Selecione o tipo de doação</option>    
+            <option value="0"></option>    
             <option value="1">Dinheiro</option>
             <option value="2">Material Escolar</option>
                 </select>

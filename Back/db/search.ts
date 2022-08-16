@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-// Returns all dogs
+// all children
 export async function getChildren(){
     await prisma.$connect();
     const children = await prisma.child.findMany();
@@ -17,7 +17,8 @@ export async function getChildren(){
     return new response(200, "Children found", children)
 }
 
-// Returns specific dog
+//specific child
+
 export async function getChild(child_id: string) {
     await prisma.$connect();
     const child = await prisma.child.findUnique({
@@ -32,7 +33,9 @@ export async function getChild(child_id: string) {
     await prisma.$disconnect();
     return new response(200, `Child ${child_id} found!`, child);
 }
-// Returns all schools
+
+//all schools
+
 export async function getSchools(){
     await prisma.$connect();
     const schools = await prisma.school.findMany();
@@ -46,7 +49,8 @@ export async function getSchools(){
     return new response(200, "Schools found", schools)
 }
 
-// Returns specific dog
+//specific school
+
 export async function getSchool(school_id: string) {
     await prisma.$connect();
     const school = await prisma.school.findUnique({
