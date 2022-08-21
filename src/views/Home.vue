@@ -51,14 +51,14 @@
         <div class="container">
         <v-col>
         <div>
-					<i class="fab fa-twitter fa-4x"></i>
+					<i class="fa-4x"></i>
 					<div class="counter" data-target="15000">0</div>
 					<h3>Materiais Doados</h3>
 				</div>
         </v-col>
         <v-col>
         <div>
-					<i class="fab fa-twitter fa-4x"></i>
+					<i class="fa-4x"></i>
 					<div class="counter" data-target="150">0</div>
 					<h3>Reais Doados</h3>
 				</div>

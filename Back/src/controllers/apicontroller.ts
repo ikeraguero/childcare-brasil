@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
-import { getChildren, getChild, getSchools, getSchool } from "../../db/search";
-import { addChild, deleteChild, updateChild, addSchool, deleteSchool, updateSchool } from "../../db/post";
+import { getChildren, getChild, getSchools, getSchool, getDonations, getDonation } from "../../db/search";
+import { addChild, deleteChild, updateChild, addSchool, deleteSchool, updateSchool, addDonation } from "../../db/post";
+
+// Children
 
 export const children = async (req: Request, res: Response) => {
     const children = await getChildren();
@@ -31,6 +33,7 @@ export const childupdate = async (req: Request, res: Response) => {
     res.redirect("http://localhost:8080/admin");
 }
 
+// Schools
 
 export const schools = async (req: Request, res: Response) => {
     const schools = await getSchools();
@@ -60,4 +63,21 @@ export const schoolupdate = async (req: Request, res: Response) => {
     res.redirect("http://localhost:8080/admin");
 }
 
+// Donations
 
+export const donations = async (req: Request, res: Response) => {
+    const donations = await getDonations();
+    res.json(donations.content);
+}
+
+export const donation = async (req: Request, res: Response) => {
+    const donation = await getDonation(req.params.donation_id);
+    res.json(donation.content);
+}
+
+export const donationadd = async (req: Request, res: Response) => {
+    const r = req.body;
+    const donation = await addDonation(r.donationdonator, r.donationemail, r.donationcpf, r.donationcpf, r.donationtype, r.donationvalue, r.donationmaterials);
+    res.redirect("http://localhost:8080/admin");
+
+}

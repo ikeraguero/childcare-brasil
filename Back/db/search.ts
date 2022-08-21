@@ -65,3 +65,34 @@ export async function getSchool(school_id: string) {
     await prisma.$disconnect();
     return new response(200, `School ${school_id} found!`, school);
 }
+
+// all children
+export async function getDonations(){
+    await prisma.$connect();
+    const donations = await prisma.donation.findMany();
+    
+    if (!donations) {
+        prisma.$disconnect();
+        return new response(503, "Donations not found");
+    }
+
+    await prisma.$disconnect();
+    return new response(200, "Donations found", donations)
+}
+
+//specific child
+
+export async function getDonation(donation_id: string) {
+    await prisma.$connect();
+    const donation = await prisma.donation.findUnique({
+        where:{
+            id: donation_id,
+        },
+    });
+    if(!donation){
+        prisma.$disconnect();
+        return new response(503, `Donation ${donation_id} not found!`);
+    }
+    await prisma.$disconnect();
+    return new response(200, `Donation ${donation_id} found!`, donation);
+}
