@@ -38,9 +38,6 @@
           <div class="d-flex justify-space-around mt-16 text-3xl" height="100">
             <h1>Crianças</h1> 
             <h1>Escolas</h1>
-
-
-            
           </div>
       </v-col>
       <br>
@@ -50,21 +47,25 @@
     <div class="boxtwo" >
      <v-row class="counter-text" justify="center">CONTADOR:</v-row>
      </div>
-      <div class="box" > 
+        <section class="counters">
+        <div class="container">
         <v-col>
-         <div class="counter-container">
-      <div class="counter" data-target="1500"> {{reaisDoados }}</div>
-      <span class="bottom">Reais Doados</span>
-    </div>
+        <div>
+					<i class="fab fa-twitter fa-4x"></i>
+					<div class="counter" data-target="15000">0</div>
+					<h3>Materiais Doados</h3>
+				</div>
         </v-col>
         <v-col>
-        <div class="counter-container">
-      <div class="counter" data-target="1500">{{ materiaisDoados }}</div>
-      <span class="bottom">Materiais Doados</span>
-    </div>
+        <div>
+					<i class="fab fa-twitter fa-4x"></i>
+					<div class="counter" data-target="150">0</div>
+					<h3>Reais Doados</h3>
+				</div>
         </v-col>
-        
-      </div>
+        </div>
+         </section>
+      
     <v-row>
       <v-col>
         <h1 class="titulo-resto"></h1>
@@ -80,25 +81,31 @@
 <script>
 
 const counters = document.querySelectorAll('.counter');
+const speed = 200; // The lower the slower
 
-counters.forEach((counter) => {
-    counter.innerText = '0';
+counters.forEach(counter => {
+	const updateCount = () => {
+		const target = +counter.getAttribute('data-target');
+		const count = +counter.innerText;
 
-    const updateCounter = () => {
-        const target = +counter.getAttribute('data-target');
-        const c = +counter.innerText;
+		// Lower inc to slow and higher to slow
+		const inc = target / speed;
 
-        const increment = target / 200;
-        
-        if (c < target) {
-        counter.innerText = `${Math.ceil(c +
-        increment)}`;
-        setTimeout(updateCounter, 1);
-    } else {
-        counter.innerText = target;
-    }
-    };
-    updateCounter();
+		// console.log(inc);
+		// console.log(count);
+
+		// Check if target is reached
+		if (count < target) {
+			// Add inc to count and output in counter
+			counter.innerText = count + inc;
+			// Call function every ms
+			setTimeout(updateCount, 1);
+		} else {
+			counter.innerText = target;
+		}
+	};
+
+	updateCount();
 });
 
 import Mosaico from '@/components/template/Mosaico'
@@ -107,18 +114,6 @@ import Mosaico from '@/components/template/Mosaico'
 export default {
   components: {Mosaico},
   methods: {
-    teste() {
-      alert('oioioi')
-    },
-    login() {
-      this.$auth.loginWithRedirect();
-    },
-  },
-  data() {
-    return {
-      reaisDoados: 10.01,
-      materiaisDoados: 10
-    }
   }
   
 };
@@ -127,6 +122,68 @@ export default {
 </script>
 
 <style>
+
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+header {
+	flex: 1;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+header h1 {
+	font-size: 60px;
+}
+
+.counters {
+	background: #FFF6EE;
+	color: #621200;
+	padding: 40px 20px;
+	border-top: 3px #621200, solid;
+}
+
+.counters .container {
+	display: flex;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 25px;
+	text-align: center;
+}
+
+.counters i {
+	color: lightskyblue;
+	margin-bottom: 5px;
+}
+
+.counters .counter {
+	font-size: 45px;
+	margin: 10px 0;
+}
+
+@media (max-width: 700px) {
+	.counters .container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.counters .container > div:nth-of-type(1),
+	.counters .container > div:nth-of-type(2) {
+		border-bottom: 1px #621200, solid;
+		padding-bottom: 20px;
+	}
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	background: lightskyblue
+		url('https://i.pinimg.com/originals/3c/24/46/3c24462450c2a902bf7e18f3d9aada81.jpg');
+	color: #fff;
+	/* Push to bottom */
+}
+
 .posicao{
   display: inline-block;
 }
