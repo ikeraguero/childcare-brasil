@@ -17,7 +17,7 @@
                             </div>
 
                             <p class="text-white text-base mb-4 h-20">
-                                {{ card.description }}
+                                {{ card.city }}, {{ card.state }}
                             </p>
                             <div class="flex justify-center flex-row">
                                 
