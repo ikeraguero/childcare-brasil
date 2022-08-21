@@ -3,8 +3,8 @@
        
     <v-container class="flex justify-center text-white">
             <span class="text-align-center">Você está doando para
-                {{ child.name }}
-                <div class="px-3 m-5">
+                <div class="px-3 m-1">
+                    {{ child.name }}
                     <img class="rounded-lg h-28 mt-20 justify-center" :src="child.photo" />
                 </div>
 
