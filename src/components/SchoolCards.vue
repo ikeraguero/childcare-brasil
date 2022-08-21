@@ -21,7 +21,7 @@
                             <div class="flex justify-center flex-row">
                                 
                                 <router-link
-                                    v-bind:to="'escolas/doar/' + card.id"
+                                    v-bind:to="'/escolas/doar/' + card.id"
                                     type="button"
                                     class="inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
                                     >Doar</router-link
