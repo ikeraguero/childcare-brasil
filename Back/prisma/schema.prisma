@@ -39,10 +39,12 @@ model School {
 
 model Donation {
   id            String @id @default(auto()) @map("_id") @db.ObjectId
+  donatortype   String?
   donator       String?
   email         String?
   cpf           String?
   cnpj          String?
+  cellphone     String?
   type          String?
   value         String?
   materials     String?

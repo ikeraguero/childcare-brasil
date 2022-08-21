@@ -62,7 +62,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                            id="weight" type="text" placeholder="Escola" name="childschool">
+                            id="school" type="text" placeholder="Escola" name="childschool">
                     </div>
                     <div class="mb-4 ml-5">
                         <label class="block text-white text-sm font-bold mb-2">
@@ -70,7 +70,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                            id="age" type="text" placeholder="CPF" name="childcpf">
+                            id="cpf" type="text" placeholder="CPF" name="childcpf">
                     </div>
                     </div>
 
@@ -82,7 +82,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                            id="name" type="text" placeholder="Endereço" name="childaddress" >
+                            id="address" type="text" placeholder="Endereço" name="childaddress" >
                     </div>
                     <div class="mb-4 ml-7">
                             <label class="block text-white text-sm font-bold mb-2" for="username">
@@ -90,7 +90,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                            id="name" type="text" placeholder="Estado" name="childstate" >
+                            id="state" type="text" placeholder="Estado" name="childstate" >
                     </div>
 
 
@@ -100,7 +100,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                            id="age" type="text" placeholder="Cidade" name="childcity">
+                            id="city" type="text" placeholder="Cidade" name="childcity">
                     </div>
                 </div>
 
@@ -110,7 +110,7 @@
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                        id="desc" type="text" placeholder="Descrição" name="childdesc" >
+                        id="description" type="text" placeholder="Descrição" name="childdesc" >
                 </div>
 
                 <div class="mb-4">
@@ -119,7 +119,7 @@
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                        id="owner" type="text" placeholder="Nome do Cuidador" name="childowner" >
+                        id="responsable" type="text" placeholder="Nome do Cuidador" name="childowner" >
                 </div>
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="username">
@@ -127,7 +127,7 @@
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-full py-4 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                        id="name" type="text" placeholder="Observações" name="childobs">
+                        id="observations" type="text" placeholder="Observações" name="childobs">
                 </div>
 
                 <!-- save button -->

@@ -111,14 +111,16 @@ export async function uploadImage(child_id: string, image: string) {
     });
     await prisma.$disconnect();
 }
-export async function addDonation(donationdonator: string, donationemail: string, donationcpf: string, donationcnpj: string, donationtype: string, donationvalue:string, donationmaterials: string) {
+export async function addDonation(donationdonatortype:string, donationdonator: string, donationemail: string, donationcpf: string, donationcnpj: string, donationcellphone: string, donationtype: string, donationvalue:string, donationmaterials: string) {
     await prisma.$connect();
     const donation = await prisma.donation.create({
         data: {
+            donatortype: donationdonatortype,
             donator: donationdonator,
             email: donationemail,
             cpf: donationcpf,
             cnpj: donationcnpj,
+            cellphone: donationcellphone,
             type: donationtype,
             value: donationvalue,
             materials: donationmaterials,

@@ -23,40 +23,40 @@
                 font-normal
                 text-black
                 bg-white 
-                rounded" name="childgender" id="donatortype" @click="test1">
+                rounded" name="donationdonatortype" id="donatortype" @click="test1">
             <option value="0"></option>    
             <option value="1">Pessoa Física</option>
             <option value="2">Empresa</option>
                 </select>
-            <label class='block text-white text-sm font-bold mb-3 mt-3' name="person" id="person" style="display: none">
+            <label class='block text-white text-sm font-bold mb-3 mt-3' name="donationcpf" id="person" style="display: none">
                             CPF
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
-            <label class='block text-white text-sm font-bold mb-3 mt-3' name="company" id="company" style="display: none">
+            <label class='block text-white text-sm font-bold mb-3 mt-3' name="donationcnpj" id="company" style="display: none">
                             CNPJ
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
-            <label class='block text-white text-sm font-bold mb-3 mt-3'>
+            <label class='block text-white text-sm font-bold mb-3 mt-3' name="donationdonator">
                 Nome Completo
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
-            <label class='block text-white text-sm font-bold mb-3'>
+            <label class='block text-white text-sm font-bold mb-3' name="donationemail">
                         Email para contato
             <input 
             type="email"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
-            <label class='block text-white text-sm font-bold mb-3'>
+            <label class='block text-white text-sm font-bold mb-3' name="donationcellphone">
                         Telefone para contato
             <input 
             type="text"
@@ -64,7 +64,7 @@
             />
             </label>
 
-            <label class='block text-white text-sm font-bold mb-3'>
+            <label class='block text-white text-sm font-bold mb-3' >
                             Residência
             <input 
             type="text"
@@ -84,19 +84,19 @@
                 font-normal
                 text-black
                 bg-white 
-                rounded" name="childgender" id="donationtype" @click='test'>
+                rounded" name="donationtype" id="donationtype" @click='test'>
             <option value="0"></option>    
             <option value="1">Dinheiro</option>
             <option value="2">Material Escolar</option>
                 </select>
-            <label class='block text-white text-sm font-bold mb-3 mt-3' name="money" id="money" style="display: none">
+            <label class='block text-white text-sm font-bold mb-3 mt-3' name="donationvalue" id="money" style="display: none">
                             Quantia
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
-            <label class='block text-white text-sm font-bold mb-3 mt-3' name="materials" id="materials" style="display: none">
+            <label class='block text-white text-sm font-bold mb-3 mt-3' name="donationmaterials" id="materials" style="display: none">
                             Materiais
             <input 
             type="text"
