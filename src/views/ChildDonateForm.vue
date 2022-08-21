@@ -11,6 +11,37 @@
             </span>
 
         <form class="bg-[#FFF6EE] rounded px-20 pt-8 pb-8 mb-8 ml-0" >
+            <label class="block text-white text-sm font-bold mb-0" for="username">
+              Doar como:
+            </label>
+            <select class="form-select appearance-none
+                block
+                w-full
+                px-3
+                py-1
+                text-base
+                font-normal
+                text-black
+                bg-white 
+                rounded" name="childgender" id="donatortype" @click="test1">
+            <option value="0"></option>    
+            <option value="1">Pessoa Física</option>
+            <option value="2">Empresa</option>
+                </select>
+            <label class='block text-white text-sm font-bold mb-3 mt-3' name="person" id="person" style="display: none">
+                            CPF
+            <input 
+            type="text"
+            class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
+            />
+            </label>
+            <label class='block text-white text-sm font-bold mb-3 mt-3' name="company" id="company" style="display: none">
+                            CNPJ
+            <input 
+            type="text"
+            class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
+            />
+            </label>
             <label class='block text-white text-sm font-bold mb-3 mt-3'>
                 Nome Completo
             <input 
@@ -32,13 +63,7 @@
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
-            <label class='block text-white text-sm font-bold mb-3'>
-                            CPF
-            <input 
-            type="text"
-            class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
-            />
-            </label>
+
             <label class='block text-white text-sm font-bold mb-3'>
                             Residência
             <input 
@@ -46,7 +71,7 @@
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
-            <label class="block text-white text-sm font-bold mb-2" for="username">
+            <label class="block text-white text-sm font-bold mb-0" for="username">
               Tipo de doação
             </label>
 
@@ -54,7 +79,7 @@
                 block
                 w-full
                 px-3
-                py-2
+                py-1
                 text-base
                 font-normal
                 text-black
@@ -64,14 +89,14 @@
             <option value="1">Dinheiro</option>
             <option value="2">Material Escolar</option>
                 </select>
-            <label class='block text-white text-sm font-bold mb-3' name="money" id="money" style="display: none">
+            <label class='block text-white text-sm font-bold mb-3 mt-3' name="money" id="money" style="display: none">
                             Quantia
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
-            <label class='block text-white text-sm font-bold mb-3' name="materials" id="materials" style="display: none">
+            <label class='block text-white text-sm font-bold mb-3 mt-3' name="materials" id="materials" style="display: none">
                             Materiais
             <input 
             type="text"
@@ -131,8 +156,25 @@ export default {
     }
 }
 
-}
 },
+        test1() {
+            if (document.getElementById("donatortype").value == '1') {
+            document.getElementById('person').removeAttribute('style')
+            document.getElementById('company').style.display = 'none';
+            } else {
+            document.getElementById('person').style.display = 'none';
+
+
+            if (document.getElementById("donatortype").value == '2') {
+            document.getElementById('company').removeAttribute('style')
+            document.getElementById('person').style.display = 'none';
+            } else {
+            document.getElementById('company').style.display = 'none';
+    }
+}
+
+},
+    }
 }
 </script>
 
