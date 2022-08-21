@@ -103,7 +103,14 @@
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
-
+            <div class="flex justify-center">
+                        <div class="mt-6">
+                        
+                            <a href="/.." class="bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</a>    
+            
+                            <input class="bg-white text-[#15393C] font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">                    
+                        </div>
+                    </div> 
         </form>
 
     </v-container>

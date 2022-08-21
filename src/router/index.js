@@ -64,31 +64,37 @@ const routes = [
       {
         path: 'adminn/criancas',
         name: 'Painel de Controle Criança',
+        beforeEnter: authenticationGuard,
         component: () => import(/* webpackChunkName: "faq" */ '../views/ControlPanelChild.vue')
       },
       {
         path: 'adminn/criancas/adicionar',
         name: 'Add',
+        beforeEnter: authenticationGuard,
         component: () => import(/* webpackChunkName: "faq" */ '../views/FormChild.vue')
       },
       {
         path: 'adminn/escolas',
         name: 'Painel de Controle Escola',
+        beforeEnter: authenticationGuard,
         component: () => import(/* webpackChunkName: "faq" */ '../views/ControlPanelSchool.vue')
       },
       {
         path: 'adminn/escolas/adicionar',
         name: 'Add',
+        beforeEnter: authenticationGuard,
         component: () => import(/* webpackChunkName: "faq" */ '../views/FormSchool.vue')
       },
       {
         path: "criancas/doar/:id",
         name: 'Donate1',
+        beforeEnter: authenticationGuard,
         component: () => import(/* webpackChunkName: "faq" */ '../views/ChildDonateForm.vue')
       },
     {
       path: "escolas/doar/:id",
         name: 'Donate2',
+        beforeEnter: authenticationGuard,
         component: () => import(/* webpackChunkName: "faq" */ '../views/SchoolDonateForm.vue')
       },
       
