@@ -6,29 +6,29 @@
                     <div class="rounded-lg shadow-md w-[300px] lg:w-[410px]">
                         <div class="p-6">
                             <div class="flex justify-between">
-                                <h5 class="text-white text-xl font-medium mb-2">Doação #{{ card.index }}
+                                <h5 class="text-xl font-medium mb-2 text-base">Doação #{{ card.index }}
                                 </h5>
-                                <h5 class="text-white text-xl font-medium mb-2"></h5>
+                                <h5 class="text-xl font-medium mb-2"></h5>
                             </div>
-                            <p class="text-white text-base mb-1 h-6">
+                            <p class="text-base mb-1 h-6">
                               <b>ID: </b>{{ card.id }}
                             </p>
-                            <p class="text-white text-base mb-1 h-6">
+                            <p class="text-base mb-1 h-6">
                                <b>Doador: </b>{{ card.donatortype }} | {{ card.donator }}
                             </p>
-                            <p class="text-white text-base mb-1 h-6">
+                            <p class="text-base mb-1 h-6">
                                 <b>CPF: </b>{{ card.cpf }}
                             </p>
-                            <p class="text-white text-base mb-1 h-6">
+                            <p class="text-base mb-1 h-6">
                                 <b>CNPJ: </b>{{ card.cnpj }}
                             </p>
-                            <p class="text-white text-base mb-1 h-6">
+                            <p class="text-base mb-1 h-6">
                                 <b>Tipo: </b>{{ card.type }}
                             </p>
-                            <p class="text-white text-base mb-1 h-6">
+                            <p class="text-base mb-1 h-6">
                                 <b>Valor: </b>R${{ card.value }}
                             </p>
-                            <p class="text-white text-base mb-1 h-6">
+                            <p class="text-base mb-1 h-6">
                                 <b>Materiais: </b> {{ card.materials }}
                             </p>
                             <div class="flex justify-center flex-row">
@@ -64,7 +64,7 @@ export default {
 .rounded-lg {
     background-color: #FFF6EE
 }
-.text-white {
+.text-base {
     color:#621200
 }
 .inline-block {
