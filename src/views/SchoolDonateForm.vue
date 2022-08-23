@@ -1,7 +1,7 @@
 <template>
 
        
-    <v-container class="flex justify-center text-white">
+    <v-container class="flex justify-center">
             <span class="text-align-center">Você está doando para
                 <div class="px-3 m-1">
                     {{ school.name }}
@@ -11,7 +11,7 @@
             </span>
 
         <form class="bg-[#FFF6EE] rounded px-20 pt-8 pb-8 mb-8 ml-0" >
-            <label class="block text-white text-sm font-bold mb-0" for="username">
+            <label class="block text-sm font-bold mb-0" for="username">
               Doar como:
             </label>
             <select class="form-select appearance-none
@@ -28,35 +28,35 @@
             <option value="1">Pessoa Física</option>
             <option value="2">Empresa</option>
                 </select>
-            <label class='block text-white text-sm font-bold mb-3 mt-3' name="donationcpf" id="person" style="display: none">
+            <label class='block text-sm font-bold mb-3 mt-3' name="donationcpf" id="person" style="display: none">
                             CPF
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
-            <label class='block text-white text-sm font-bold mb-3 mt-3' name="donationcnpj" id="company" style="display: none">
+            <label class='block text-sm font-bold mb-3 mt-3' name="donationcnpj" id="company" style="display: none">
                             CNPJ
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
-            <label class='block text-white text-sm font-bold mb-3 mt-3' name="donationdonator">
+            <label class='block text-sm font-bold mb-3 mt-3' name="donationdonator">
                 Nome Completo
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
-            <label class='block text-white text-sm font-bold mb-3' name="donationemail">
+            <label class='block text-sm font-bold mb-3' name="donationemail">
                         Email para contato
             <input 
             type="email"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
-            <label class='block text-white text-sm font-bold mb-3' name="donationcellphone">
+            <label class='block text-sm font-bold mb-3' name="donationcellphone">
                         Telefone para contato
             <input 
             type="text"
@@ -64,14 +64,14 @@
             />
             </label>
 
-            <label class='block text-white text-sm font-bold mb-3' >
+            <label class='block  text-sm font-bold mb-3' >
                             Residência
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
-            <label class="block text-white text-sm font-bold mb-0" for="username">
+            <label class="block text-sm font-bold mb-0" for="username">
               Tipo de doação
             </label>
 
@@ -89,14 +89,14 @@
             <option value="1">Dinheiro</option>
             <option value="2">Material Escolar</option>
                 </select>
-            <label class='block text-white text-sm font-bold mb-3 mt-3' name="donationvalue" id="money" style="display: none">
+            <label class='block text-sm font-bold mb-3 mt-3' name="donationvalue" id="money" style="display: none">
                             Quantia
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
-            <label class='block text-white text-sm font-bold mb-3 mt-3' name="donationmaterials" id="materials" style="display: none">
+            <label class='block text-sm font-bold mb-3 mt-3' name="donationmaterials" id="materials" style="display: none">
                             Materiais
             <input 
             type="text"
