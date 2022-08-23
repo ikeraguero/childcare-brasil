@@ -37,6 +37,7 @@ new Vue({
 
 Vue.component('ChildrenCards', require('./components/ChildrenCards.vue').default);
 Vue.component('SchoolCards', require('./components/SchoolCards.vue').default);
+Vue.component('DonationCards', require('./components/DonationCards.vue').default);
 
 import axios from "axios";
 import VueAxios from "vue-axios";
