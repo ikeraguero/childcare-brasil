@@ -60,7 +60,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 .rounded-lg {
     background-color: #FFF6EE
 }

@@ -2,7 +2,7 @@
 
        
     <v-container class="flex justify-center">
-            <span class="text-align-center">Você está doando para
+            <span class="text-align-center text-white">Você está doando para
                 <div class="px-3 m-1">
                     {{ child.name }}
                     <img class="rounded-lg h-28 mt-20 justify-center" :src="child.photo" />
@@ -12,7 +12,7 @@
 
         <form class="bg-[#FFF6EE] rounded px-20 pt-8 pb-8 mb-8 ml-0" >
             <label class="block text-white text-sm font-bold mb-0" for="username">
-              Doar como:
+              <div class="test">Doar como:</div>
             </label>
             <select class="form-select appearance-none
                 block
@@ -29,35 +29,35 @@
             <option value="2">Empresa</option>
                 </select>
             <label class='block text-white text-sm font-bold mb-3 mt-3' name="donationcpf" id="person" style="display: none">
-                            CPF
+                            <div class="test">CPF</div>
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
             <label class='block text-white text-sm font-bold mb-3 mt-3' name="donationcnpj" id="company" style="display: none">
-                            CNPJ
+                            <div class="test">CNPJ</div>
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
             <label class='block text-white text-sm font-bold mb-3 mt-3' name="donationdonator">
-                Nome Completo
+                <div class="test">Nome Completo</div>
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
             <label class='block text-white text-sm font-bold mb-3' name="donationemail">
-                        Email para contato
+                        <div class="test">Email para contato</div>
             <input 
             type="email"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
             <label class='block text-white text-sm font-bold mb-3' name="donationcellphone">
-                        Telefone para contato
+                        <div class="test">Telefone para contato</div>
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
@@ -65,14 +65,14 @@
             </label>
 
             <label class='block text-white text-sm font-bold mb-3' >
-                            Residência
+                            <div class="test">Residência</div>
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
             <label class="block text-white text-sm font-bold mb-0" for="username">
-              Tipo de doação
+              <div class="test">Tipo de doação</div>
             </label>
 
             <select class="form-select appearance-none
@@ -90,14 +90,14 @@
             <option value="2">Material Escolar</option>
                 </select>
             <label class='block text-sm font-bold mb-3 mt-3' name="donationvalue" id="money" style="display: none">
-                            Quantia
+                            <div class="test">Quantia</div>
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
             />
             </label>
             <label class='block text-sm font-bold mb-3 mt-3' name="donationmaterials" id="materials" style="display: none">
-                            Materiais
+                            <div class="test">Materiais</div>
             <input 
             type="text"
             class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
@@ -186,8 +186,13 @@ export default {
 </script>
 
 <style>
- .v-container {
-    color: #FFF6EE,
- }
+
+.block{
+    color:#621200
+}
+.test {
+    color: #FFF6EE
+}
+
     
 </style>
