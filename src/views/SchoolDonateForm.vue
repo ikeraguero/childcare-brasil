@@ -4,8 +4,8 @@
     <v-container class="flex justify-center">
             <span class="text-align-center text-white">Você está doando para
                 <div class="px-3 m-1">
-                    {{ child.name }}
-                    <img class="rounded-lg h-28 mt-20 justify-center" :src="child.photo" />
+                    {{ school.name }}
+                    <img class="rounded-lg h-28 mt-20 justify-center" :src="school.photo" />
                 </div>
 
             </span>
