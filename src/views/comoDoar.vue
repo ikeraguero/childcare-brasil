@@ -7,7 +7,7 @@
       small
     >
       <v-card>
-        <v-card-title class="brown lighten-1">
+        <v-card-title class="color">
           <v-icon
             dark
             size="42"
@@ -18,7 +18,7 @@
             Title 1
           </h2>
         </v-card-title>
-        <v-container>
+        <v-container class="color2">
           <v-row>
             <v-col
               cols="12"
@@ -46,7 +46,7 @@
       small
     >
       <v-card>
-        <v-card-title class="brown lighten-1">
+        <v-card-title class="color">
           <h2 class="text-h4 mr-4 white--text font-weight-light">
             Title 2
           </h2>
@@ -56,7 +56,7 @@
           >
           </v-icon>
         </v-card-title>
-        <v-container>
+        <v-container class="color2">
           <v-row>
             <v-col
               cols="12"
@@ -82,7 +82,7 @@
       small
     >
       <v-card>
-        <v-card-title class="brown lighten-1">
+        <v-card-title class="color">
           <v-icon
             class="mr-4"
             dark
@@ -93,7 +93,7 @@
             Title 3
           </h2>
         </v-card-title>
-        <v-container>
+        <v-container class="color2">
           <v-row>
             <v-col
               v-for="n in 3"
@@ -115,7 +115,7 @@
       small
     >
       <v-card>
-        <v-card-title class="brown lighten-1">
+        <v-card-title class="color">
           <h2 class="text-h4 mr-4 white--text font-weight-light">
             Title 4
           </h2>
@@ -152,7 +152,7 @@
       small
     >
       <v-card>
-        <v-card-title class="brown lighten-1">
+        <v-card-title class="color">
           <v-icon
             class="mr-4"
             dark
@@ -163,7 +163,7 @@
             Title 5
           </h2>
         </v-card-title>
-        <v-container>
+        <v-container class="color2">
           <v-row>
             <v-col>
               Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.
@@ -178,25 +178,19 @@
 <script>
   export default {
     data: () => ({
-      items: [
-        {
-          color: '#893C2B',
-          icon: 'mdi-book-heart-outline',
-        },
-
-        {
-          color: '#893C2B',
-          icon: 'mdi-book-heart-outline',
-        },
-        {
-          color: '#893C2B',
-          icon: 'mdi-book-heart-outline',
-        },
-        {
-          color: '#893C2B',
-          icon: 'mdi-book-heart-outline',
-        },
+      items: [  
       ],
     }),
   }
 </script>
+
+<style>
+
+.color{
+  background-color: #621200
+}
+
+.color2{
+  background-color: #FFF6EE
+}
+</style>
