@@ -48,4 +48,5 @@ model Donation {
   type          String?
   value         String?
   materials     String?
+  donatedto     String?
 }

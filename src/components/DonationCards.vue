@@ -2,7 +2,7 @@
     <span>
         <div class="flex overflow-hidden whitespace-nowrap no-scrollbar relative scroll-smooth snap-x" id="container">
             <div v-for="card in cards.data" :key="card.index">
-                <div class="flex px-3 m-2 snap-center">
+                <div class="flex px-2 m-2 snap-center">
                     <div class="rounded-lg shadow-md w-[300px] lg:w-[410px]">
                         <div class="p-6">
                             <div class="flex justify-between">
@@ -30,6 +30,9 @@
                             </p>
                             <p class="text-base mb-1 h-6">
                                 <b>Materiais: </b> {{ card.materials }}
+                            </p>
+                            <p class="text-base mb-1 h-6">
+                                <b>Para: </b> {{ card.materials }}
                             </p>
                             <div class="flex justify-center flex-row">
 
