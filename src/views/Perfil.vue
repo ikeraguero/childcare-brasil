@@ -1,11 +1,11 @@
 <template>
-  <div class="page-content page-container" id="page-content">
+  <div class="" id="page-content">
     <div class="padding">
-        <div class="row container d-flex justify-content-center">
+        <div class="">
           <div class="col-xl-6 col-md-12">
             <div class="card user-card">
-                    <div class="row m-l-0 m-r-2">
-                <div class="col-sm-3 bg-c-lite-green user-profile">
+                <div class="">
+                <div class="col-sm-3 rounded bg-c-lite-green user-profile justify-content-center">
                       <div class="card-block text-center text-white">
                     <div class="m-b-25">
                      <img :src="$auth.user.picture" class="img-radius" alt="User-Profile-Image" />
@@ -34,15 +34,15 @@
                 <div class="row">
                 <div class="col-sm-6">
                <p class="m-b-10 f-w-600">Realizadas</p>
-                  <h6 class="text-muted f-w-400">10</h6>
+                  <h6 class="text-muted f-w-400">0</h6>
               </div>
                <div class="col-sm-5">
              <p class="m-b-10 f-w-600">Materiais</p>
-         <h6 class="text-muted f-w-400">7 doados</h6>
+         <h6 class="text-muted f-w-400">0 doados</h6>
              </div>
              <div class="col-sm-6">
             <p class="m-b-10 f-w-600">Dinheiro</p>
-          <h6 class="text-muted f-w-400">R$150</h6>
+          <h6 class="text-muted f-w-400">R0.00</h6>
          </div>
       </div>
      </div>
