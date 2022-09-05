@@ -4,7 +4,7 @@
 
                 <p>{{ image }}</p>
 
-                <form class="bg-[#15393C] rounded px-12 pt-8 pb-8 mb-8" action="http://localhost:7777/api/childadd" method="post">
+                <form class="rounded px-12 pt-8 pb-8 mb-8" action="http://localhost:7777/api/childadd" method="post">
 
                 <div class="flex mb-4">
 
@@ -24,7 +24,7 @@
                                 Nome da Criança
                             </label>
                             <input
-                                class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                                 id="name" type="text" placeholder="Nome da Criança" name="childname">
                             <label class="block text-white text-sm font-bold mb-2" for="username">
                             Sexo
@@ -53,7 +53,7 @@
                             Idade
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="age" type="text" placeholder="Idade" name="childage">
                     </div>
                     <div class="mb-4 ml-3">
@@ -61,7 +61,7 @@
                             Escola
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="school" type="text" placeholder="Escola" name="childschool">
                     </div>
                     <div class="mb-4 ml-5">
@@ -69,7 +69,7 @@
                             CPF
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="cpf" type="text" placeholder="CPF" name="childcpf">
                     </div>
                     </div>
@@ -81,7 +81,7 @@
                             Endereço
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="address" type="text" placeholder="Endereço" name="childaddress" >
                     </div>
                     <div class="mb-4 ml-7">
@@ -89,7 +89,7 @@
                             Estado
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="state" type="text" placeholder="Estado" name="childstate" >
                     </div>
 
@@ -99,7 +99,7 @@
                             Cidade
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="city" type="text" placeholder="Cidade" name="childcity">
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                         Descrição
                     </label>
                     <input
-                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                         id="description" type="text" placeholder="Descrição" name="childdesc" >
                 </div>
 
@@ -118,7 +118,7 @@
                         Nome do Responsável
                     </label>
                     <input
-                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                         id="responsable" type="text" placeholder="Nome do Cuidador" name="childowner" >
                 </div>
                 <div class="mb-4">
@@ -126,7 +126,7 @@
                         Observações
                     </label>
                     <input
-                        class="shadow appearance-none border rounded w-full py-4 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                         id="observations" type="text" placeholder="Observações" name="childobs">
                 </div>
 
@@ -135,9 +135,9 @@
                         <div>
                         
                             <button @click="uploadImage()"></button>
-                            <router-link to="/adminn/criancas/" class="bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</router-link >
+                            <router-link to="/adminn/criancas/" class="bg-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</router-link >
             
-                            <input class="bg-white text-[#15393C] font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">                     
+                            <input class="bg-white font-bold py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">                     
                         </div>
                     </div>    
 
@@ -179,3 +179,9 @@ export default {
     }
 };
 </script>
+
+<style>
+.bg-white{
+    color: black;
+    }
+</style>

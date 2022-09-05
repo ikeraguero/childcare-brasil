@@ -16,7 +16,7 @@
                             </label>
                             <input
                                 type="file"
-                                class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none" 
+                                class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none bg-white" 
                                 @change="uploadImage($event.target.files[0])"
                                 accept="image/*"
                                 >
@@ -24,7 +24,7 @@
                                 Nome da Escola
                             </label>
                             <input
-                                class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                                 id="name" type="text" placeholder="Nome da Escola" name="schoolname">
                             
                     </div>
@@ -37,7 +37,7 @@
                             CNPJ
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="age" type="text" placeholder="CNPJ" name="schoolcpnj">
                     </div>
                     <div class="mb-4 ml-3">
@@ -45,7 +45,7 @@
                             Telefone
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="weight" type="text" placeholder="Telefone" name="schoolcellphone">
                     </div>
                     <div class="mb-4 ml-5">
@@ -53,7 +53,7 @@
                             Email
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="name" type="text" placeholder="Email" name="schoolemail" >
                     </div>
                     </div>
@@ -65,15 +65,15 @@
                             Endereço
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="name" type="text" placeholder="Endereço" name="childaddress" >
                     </div>
                     <div class="mb-4 ml-7">
                             <label class="block text-white text-sm font-bold mb-2" for="username">
                             Estado
                         </label>
-                        <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                        <input 
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="name" type="text" placeholder="Estado" name="childstate" >
                     </div>
 
@@ -83,7 +83,7 @@
                             Cidade
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="age" type="text" placeholder="Cidade" name="childcity">
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                         Descrição
                     </label>
                     <input
-                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                         id="desc" type="text" placeholder="Descrição" name="dogdesc" >
                 </div>
 
@@ -103,7 +103,7 @@
                         Observações
                     </label>
                     <input
-                        class="shadow appearance-none border rounded w-full py-4 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                         id="name" type="text" placeholder="Observações" name="dogobs">
                 </div>
 
@@ -114,7 +114,7 @@
                             <button @click="uploadImage()"></button>
                             <router-link to="/adminn/escolas/" class="bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</router-link >    
             
-                            <input class="bg-white text-[#15393C] font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">                     
+                            <input class="bg-white font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">                     
                         </div>
                     </div>    
 
