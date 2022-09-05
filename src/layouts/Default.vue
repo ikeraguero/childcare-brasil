@@ -41,12 +41,15 @@ export default {
 
 
 
+*{
+  margin: 0;
+}
 
 .v-application a{
   color: #621200;
 }
 .fundo{
-  background-color: #621200 ;
+  background-image: linear-gradient(120deg, #621200, #622800);
 }
 .conta{
   padding: auto 9px;

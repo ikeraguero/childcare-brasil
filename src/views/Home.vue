@@ -123,12 +123,6 @@ export default {
 
 <style>
 
-.container {
-	max-width: 1100px;
-	margin: 0 auto;
-	overflow: auto;
-}
-
 header {
 	flex: 1;
 	height: 100%;
@@ -145,11 +139,13 @@ header h1 {
 	background: #FFF6EE;
 	color: #621200;
 	padding: 40px 20px;
+  margin: 0px;
 	border-top: 3px #621200, solid;
 }
 
 .counters .container {
 	display: flex;
+  margin: 0px;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 25px;
 	text-align: center;
@@ -224,8 +220,8 @@ h1{
 }
 .boxtwo {
   margin-top: 100px;
-  margin-left: 0%;
-  margin-right: 0%;
+  margin-left: 0;
+  margin-right: 0;
   display: flex;
   background-color: #FFF6EE;
   width: 100%;
