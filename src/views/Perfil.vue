@@ -2,9 +2,9 @@
   <div class="" id="page-content">
     <div class="padding">
         <div class="">
-          <div class="col-xl-6 col-md-12">
+          <div class="">
             <div class="card user-card">
-                <div class="">
+                <div class="flex justify-center">
                 <div class="col-sm-3 rounded bg-c-lite-green user-profile justify-content-center">
                       <div class="card-block text-center text-white">
                     <div class="m-b-25">
