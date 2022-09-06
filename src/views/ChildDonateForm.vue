@@ -1,29 +1,14 @@
 <template>
-
-       
-    <v-container class="flex justify-center">
-            <span class="text-align-center text-white">Você está doando para
-                <div class="px-3 m-1">
-                    {{ child.name }}
-                    <img class="rounded-lg h-28 mt-20 justify-center" :src="child.photo" />
-                </div>
-
-            </span>
-
-        <form class="bg-[#FFF6EE] rounded px-20 pt-8 pb-8 mb-8 ml-0" >
+    <div class="flex justify-center max-w-3xl mx-auto py-10">
+        <div class="w-full h-full">
+        <form class="rounded px-12 pt-8 pb-8 mb-8" >
+            <div class="test1 mb-0 flex justify-center">Você está doando para:</div>
+            <div class="test1 mb-8 flex justify-center font-bold">{{ child.name }}</div>
             <label class="block text-white text-sm font-bold mb-0" for="username">
               <div class="test">Doar como:</div>
             </label>
             <select class="form-select appearance-none
-                block
-                w-full
-                px-3
-                py-1
-                text-base
-                font-normal
-                text-black
-                bg-white 
-                rounded" name="donationdonatortype" id="donatortype" @click="test1">
+            shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationdonatortype" id="donatortype" @click="test1">
             <option value="0"></option>    
             <option value="1">Pessoa Física</option>
             <option value="2">Empresa</option>
@@ -32,35 +17,35 @@
                             <div class="test">CPF</div>
             <input 
             type="text"
-            class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
             </label>
             <label class='block text-white text-sm font-bold mb-3 mt-3' name="donationcnpj" id="company" style="display: none">
                             <div class="test">CNPJ</div>
             <input 
             type="text"
-            class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
             </label>
             <label class='block text-white text-sm font-bold mb-3 mt-3' name="donationdonator">
                 <div class="test">Nome Completo</div>
             <input 
             type="text"
-            class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
             </label>
             <label class='block text-white text-sm font-bold mb-3' name="donationemail">
                         <div class="test">Email para contato</div>
             <input 
             type="email"
-            class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
             </label>
             <label class='block text-white text-sm font-bold mb-3' name="donationcellphone">
                         <div class="test">Telefone para contato</div>
             <input 
             type="text"
-            class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
             </label>
 
@@ -68,7 +53,7 @@
                             <div class="test">Residência</div>
             <input 
             type="text"
-            class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
             </label>
             <label class="block text-white text-sm font-bold mb-0" for="username">
@@ -76,15 +61,7 @@
             </label>
 
             <select class="form-select appearance-none
-                block
-                w-full
-                px-3
-                py-1
-                text-base
-                font-normal
-                text-black
-                bg-white 
-                rounded" name="donationtype" id="donationtype" @click='test'>
+            shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationtype" id="donationtype" @click='test'>
             <option value="0"></option>    
             <option value="1">Dinheiro</option>
             <option value="2">Material Escolar</option>
@@ -93,14 +70,14 @@
                             <div class="test">Quantia</div>
             <input 
             type="text"
-            class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
             </label>
             <label class='block text-sm font-bold mb-3 mt-3' name="donationmaterials" id="materials" style="display: none">
                             <div class="test">Materiais</div>
             <input 
             type="text"
-            class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
             </label>
             <div class="flex justify-center">
@@ -108,12 +85,13 @@
                         
                             <router-link to="/criancas/" class="bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</router-link >    
             
-                            <input class="bg-white text-[#15393C] font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Prosseguir">                    
+                            <input class="bg-white text-[#15393C] font-bold py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Prosseguir">                    
                         </div>
                     </div> 
         </form>
+    </div>
+    </div>
 
-    </v-container>
 </template>
 
 <script>
@@ -192,6 +170,10 @@ export default {
 }
 .test {
     color: #FFF6EE
+}
+.test1 {
+    color: #FFF6EE;
+    font-size: 26px
 }
 
     
