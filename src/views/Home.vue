@@ -35,7 +35,7 @@
             </v-btn> 
           </div>      
           <br>
-          <div class="d-flex justify-space-around mt-16 text-3xl" height="100">
+          <div class="d-flex justify-space-around mt-16 text-3xl font-bold" height="100">
             <h1>Crianças</h1> 
             <h1>Escolas</h1>
           </div>

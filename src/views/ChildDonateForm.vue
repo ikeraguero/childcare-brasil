@@ -173,7 +173,9 @@ export default {
 }
 .test1 {
     color: #FFF6EE;
-    font-size: 26px
+    font-family: "Proxima Nova", system-ui, sans-serif;
+    font-size: 26px;
+    
 }
 
     

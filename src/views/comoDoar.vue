@@ -15,7 +15,7 @@
           >
           </v-icon>
           <h2 class="text-h4 white--text font-weight-light">
-            Title 1
+            Passo 1
           </h2>
         </v-card-title>
         <v-container class="color2">
@@ -48,7 +48,7 @@
       <v-card>
         <v-card-title class="color">
           <h2 class="text-h4 mr-4 white--text font-weight-light">
-            Title 2
+            Passo 2
           </h2>
           <v-icon
             dark
@@ -90,7 +90,7 @@
           >
           </v-icon>
           <h2 class="text-h4 white--text font-weight-light">
-            Title 3
+            Passo 3
           </h2>
         </v-card-title>
         <v-container class="color2">
@@ -117,7 +117,7 @@
       <v-card>
         <v-card-title class="color">
           <h2 class="text-h4 mr-4 white--text font-weight-light">
-            Title 4
+            Passo 4
           </h2>
           <v-icon
             dark
@@ -160,7 +160,7 @@
           >
           </v-icon>
           <h2 class="text-h4 white--text font-weight-light">
-            Title 5
+            Passo 5
           </h2>
         </v-card-title>
         <v-container class="color2">

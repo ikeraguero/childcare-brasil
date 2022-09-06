@@ -171,7 +171,7 @@ export default {
 </script>
 
 <style>
- .v-container {
+ .v-container { 
     color: #FFF6EE,
  }
 </style>
