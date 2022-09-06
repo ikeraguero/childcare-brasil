@@ -170,7 +170,9 @@
     font-weight: bold;
     font-size: 18px;
   }
-  
+  .f-w-601 {
+    font-size: 20px;
+  }
   .m-b-20 {
       margin-bottom: 20px;
   }
@@ -202,7 +204,12 @@
       transition: all 0.3s ease-in-out;
   }
   .color {
-    color:#621200
+    color:#621200;
+    font-size: 20px;
   }
   
+  .f-w-400 {
+    font-size: 20px;
+  }
+
   </style>

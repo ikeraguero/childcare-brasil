@@ -26,7 +26,7 @@
                             <input
                                 class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                                 id="name" type="text" placeholder="Nome da Criança" name="childname">
-                            <label class="block text-white text-sm font-bold mb-2" for="username">
+                            <label class="block text-white text-sm font-bold mb-1 mt-2" for="username">
                             Sexo
                         </label>
 
@@ -184,4 +184,8 @@ export default {
 .bg-white{
     color: black;
     }
+
+.block {
+    color: #FFF6EE;
+}
 </style>

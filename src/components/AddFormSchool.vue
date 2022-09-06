@@ -156,3 +156,9 @@ export default {
     }
 };
 </script>
+
+<style>
+.block {
+color: #FFF6EE;
+}
+</style>
