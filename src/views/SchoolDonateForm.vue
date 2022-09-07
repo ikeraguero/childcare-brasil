@@ -92,10 +92,13 @@
                         <div class="mt-6 flex justify-center">
                         
                             <router-link to="/escolas/" class="bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-4" type="button" value="Cancelar">Cancelar</router-link >    
-                            <form action="https://donate.stripe.com/test_4gw03M7353JQ8Pm9AA" class="bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                             <input type="submit" value="Prosseguir" />
+                                <form action="https://donate.stripe.com/test_4gw03M7353JQ8Pm9AA" class="bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                             <input type="submit" id="moneypayment" value="Prosseguir" style="display: none" />
+                             <input class="bg-white text-[#15393C] font-bold py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
+                             id="materialpayment" type="submit" value="Prosseguir" style="display: none">
+                             <input class="bg-white text-[#15393C] font-bold py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
+                             id="nothing" type="submit" value="Prosseguir" style="display: block">
                                 </form>
-                     
                         </div>
                     </div> 
         </form>
@@ -136,17 +139,25 @@ export default {
         },    
         test() {
             if (document.getElementById("donationtype").value == '1') {
+            document.getElementById('nothing').style.display = 'none';
             document.getElementById('money').removeAttribute('style')
             document.getElementById('materials').style.display = 'none';
+            document.getElementById('moneypayment').removeAttribute('style')
+            document.getElementById('materialpayment').style.display = 'none';
             } else {
             document.getElementById('money').style.display = 'none';
+            document.getElementById('moneypayment').style.display = 'none';
 
 
             if (document.getElementById("donationtype").value == '2') {
+            document.getElementById('nothing').style.display = 'none';
             document.getElementById('materials').removeAttribute('style')
             document.getElementById('money').style.display = 'none';
+            document.getElementById('materialpayment').removeAttribute('style')
+            document.getElementById('moneypayment').style.display = 'none';
             } else {
             document.getElementById('materials').style.display = 'none';
+            document.getElementById('materialpayment').style.display = 'none';
     }
 }
 
