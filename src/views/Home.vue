@@ -52,34 +52,25 @@
         <v-col>
         <div>
 					<i class="fa-4x"></i>
-					<div class="counter" data-target="15000">0</div>
-					<h3>Materiais Doados</h3>
-				</div>
-        </v-col>
-        <v-col>
-        <div>
-					<i class="fa-4x"></i>
-					<div class="counter" data-target="150">0</div>
-					<h3>Reais Doados</h3>
+					<div class="counter"> {{cards.data.length}} </div>
+					<h3>Total de Doações Realizadas</h3>
 				</div>
         </v-col>
         </div>
-         </section>
-      
+      </section> 
     <v-row>
       <v-col>
         <h1 class="titulo-resto"></h1>
       </v-col>
     </v-row>
       
-        
+  
   </v-container>
   
 
 </template>
 
 <script>
-
 const counters = document.querySelectorAll('.counter');
 const speed = 200; // The lower the slower
 
@@ -109,12 +100,21 @@ counters.forEach(counter => {
 });
 
 import Mosaico from '@/components/template/Mosaico'
-
+import axios from "axios";
 
 export default {
   components: {Mosaico},
   methods: {
-  }
+  },
+  data() {
+        return {
+            cards: [],
+            showControls: true,
+        };
+    },
+    mounted() {
+        axios.get("http://localhost:7777/api/donations").then((response) => (this.cards = response));
+    },
   
 };
 
