@@ -74,13 +74,8 @@
             <option value="1">Dinheiro</option>
             <option value="2">Material Escolar</option>
                 </select>
-            <label class='block text-sm font-bold mb-3 mt-3' name="donationvalue" id="money" style="display: none">
-                            <div class="test">Quantia</div>
-            <input 
-            type="text"
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            />
-            </label>
+            <label class='block text-sm font-bold mb-3 mt-3' name="donationvalue" id="money" style="display: none"/>
+
             <label class='block text-sm font-bold mb-3 mt-3' name="donationmaterials" id="materials" style="display: none">
                             <div class="test">Materiais</div>
             <input 
@@ -147,6 +142,7 @@ export default {
             } else {
             document.getElementById('money').style.display = 'none';
             document.getElementById('moneypayment').style.display = 'none';
+            document.getElementById('nothing').style.display = 'block';
 
 
             if (document.getElementById("donationtype").value == '2') {
@@ -158,6 +154,7 @@ export default {
             } else {
             document.getElementById('materials').style.display = 'none';
             document.getElementById('materialpayment').style.display = 'none';
+            document.getElementById('nothing').style.display = 'block';
     }
 }
 
