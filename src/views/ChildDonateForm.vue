@@ -81,11 +81,13 @@
             />
             </label>
             <div class="flex justify-center">
-                        <div class="mt-6">
+                        <div class="mt-6 flex justify-center">
                         
-                            <router-link to="/criancas/" class="bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</router-link >    
-            
-                            <input class="bg-white text-[#15393C] font-bold py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Prosseguir">                    
+                            <router-link to="/criancas/" class="bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-4" type="button" value="Cancelar">Cancelar</router-link >    
+                            <form action="https://donate.stripe.com/test_4gw03M7353JQ8Pm9AA" class="bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                             <input type="submit" value="Prosseguir" />
+                                </form>
+                     
                         </div>
                     </div> 
         </form>
@@ -95,6 +97,7 @@
 </template>
 
 <script>
+
 import axios from "axios";
 
 export default {
@@ -169,7 +172,8 @@ export default {
     color:#621200
 }
 .test {
-    color: #FFF6EE
+    color: #FFF6EE;
+    font-size: 17px;
 }
 .test1 {
     color: #FFF6EE;

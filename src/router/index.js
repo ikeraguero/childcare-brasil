@@ -20,79 +20,94 @@ const routes = [
         path: '/perfil',
         name: 'Profile',
         beforeEnter: authenticationGuard,
-        component: () => import(/* webpackChunkName: "perfil" */ '../views/Perfil.vue')
+        component: () => import('../views/Perfil.vue')
       },
       {
         path: '/contato',
         name: 'Contact',
-        component: () => import(/* webpackChunkName: "contato" */ '../views/Contato.vue')
+        component: () => import('../views/Contato.vue')
       },
       {
         path: '/comodoar',
         name: 'How to Donate',
-        component: () => import(/* webpackChunkName: "comodoar" */ '../views/comoDoar.vue')
+        component: () => import('../views/comoDoar.vue')
       },
       {
         path: '/criancas',
         name: 'Children',
         beforeEnter: authenticationGuard,
-        component: () => import(/* webpackChunkName: "doacoes" */ '../views/AjudarCriancas.vue')
+        component: () => import('../views/AjudarCriancas.vue')
       },
       {
         path: '/escolas',
         name: 'Schools',
         beforeEnter: authenticationGuard,
-        component: () => import(/* webpackChunkName: "doacoes" */ '../views/AjudarEscolas.vue')
+        component: () => import('../views/AjudarEscolas.vue')
       },
       {
         path: '/adminn',
         name: 'Controll Panel',
         beforeEnter: authenticationGuard,
-        component: () => import(/* webpackChunkName: "faq" */ '../views/ControlPanel.vue')
+        component: () => import('../views/ControlPanel.vue')
       },
       {
         path: 'adminn/criancas',
         name: 'Children Controll Panel',
         beforeEnter: authenticationGuard,
-        component: () => import(/* webpackChunkName: "faq" */ '../views/ControlPanelChild.vue')
+        component: () => import('../views/ControlPanelChild.vue')
       },
       {
         path: 'adminn/criancas/adicionar',
         name: 'AddChildren',
         beforeEnter: authenticationGuard,
-        component: () => import(/* webpackChunkName: "faq" */ '../views/FormChild.vue')
+        component: () => import('../views/FormChild.vue')
       },
       {
         path: 'adminn/escolas',
         name: 'Schools Controll Panel',
         beforeEnter: authenticationGuard,
-        component: () => import(/* webpackChunkName: "faq" */ '../views/ControlPanelSchool.vue')
+        component: () => import('../views/ControlPanelSchool.vue')
       },
       {
         path: 'adminn/escolas/adicionar',
         name: 'AddSchools',
         beforeEnter: authenticationGuard,
-        component: () => import(/* webpackChunkName: "faq" */ '../views/FormSchool.vue')
+        component: () => import('../views/FormSchool.vue')
       },
       {
         path: "criancas/doar/:id",
         name: 'DonateChild',
         beforeEnter: authenticationGuard,
-        component: () => import(/* webpackChunkName: "faq" */ '../views/ChildDonateForm.vue')
+        component: () => import('../views/ChildDonateForm.vue')
       },
     {
       path: "escolas/doar/:id",
         name: 'DonateSchool',
         beforeEnter: authenticationGuard,
-        component: () => import(/* webpackChunkName: "faq" */ '../views/SchoolDonateForm.vue')
+        component: () => import('../views/SchoolDonateForm.vue')
       },
       {
       path: "adminn/doacoes",
       name: 'Donations',
       beforeEnter: authenticationGuard,
-      component: () => import(/* webpackChunkName: "faq" */ '../views/Donations.vue')
+      component: () => import('../views/Donations.vue')
       
-      }
+      },
+      {
+        path: "/success",
+        name: 'Success',
+        beforeEnter: authenticationGuard,
+        component: () => import('../views/Success.vue')
+        
+        },
+        {
+          path: "/error",
+          name: 'Error',
+          beforeEnter: authenticationGuard,
+          component: () => import('../views/Error.vue')
+          
+          },
+      
     ]
   },
 

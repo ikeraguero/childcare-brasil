@@ -89,11 +89,13 @@
             />
             </label>
             <div class="flex justify-center">
-                        <div class="mt-6">
+                        <div class="mt-6 flex justify-center">
                         
-                            <router-link to="/escolas/" class="bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</router-link >    
-            
-                            <input class="bg-white text-[#15393C] font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Prosseguir">                    
+                            <router-link to="/escolas/" class="bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-4" type="button" value="Cancelar">Cancelar</router-link >    
+                            <form action="https://donate.stripe.com/test_4gw03M7353JQ8Pm9AA" class="bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                             <input type="submit" value="Prosseguir" />
+                                </form>
+                     
                         </div>
                     </div> 
         </form>
@@ -174,4 +176,10 @@ export default {
  .v-container { 
     color: #FFF6EE,
  }
+ .test1 {
+    color: #FFF6EE;
+    font-family: "Proxima Nova", system-ui, sans-serif;
+    font-size: 26px;
+    
+}
 </style>

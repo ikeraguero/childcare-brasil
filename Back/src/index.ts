@@ -10,24 +10,6 @@ const app = express();
 dotenv.config();
 const prisma = new PrismaClient();
 
-async function main() {
-    const donation = await prisma.donation.create({
-        data: {
-            donatortype: "Pessoa Física ",
-            donator: "Iker Aguero Pires",
-            email: "ikerpires407@gmail.com",
-            cpf: "07714937971",
-            cnpj: "",
-            cellphone: "47999632311",
-            type: "Dinheiro",
-            value: "100",
-            materials: "",
-        }
-    })
-}
-
-main();
-
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
