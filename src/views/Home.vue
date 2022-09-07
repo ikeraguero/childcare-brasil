@@ -52,8 +52,8 @@
         <v-col>
         <div>
 					<i class="fa-4x"></i>
-					<div class="counter"> {{cards.data.length}} </div>
-					<h3>Total de Doações Realizadas</h3>
+					<div class="counter mb-4"> 0{{cards.data.length}} </div>
+					<h3 class="text-2xl">Total de Doações Realizadas</h3>
 				</div>
         </v-col>
         </div>
@@ -157,8 +157,8 @@ header h1 {
 }
 
 .counters .counter {
-	font-size: 45px;
-	margin: 10px 0;
+	font-size: 55px;
+
 }
 
 @media (max-width: 700px) {
@@ -197,7 +197,7 @@ body {
   color:#621200;
   font-size: 40px;
   min-height: 20px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 h1{
