@@ -10,6 +10,7 @@ const app = express();
 dotenv.config();
 const prisma = new PrismaClient();
 
+console.log(Object.keys('http://localhost:7777/api/donations').length)
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
