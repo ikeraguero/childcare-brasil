@@ -1,0 +1,1 @@
+web: nodemon build/src/index.ts && npx prisma generate
