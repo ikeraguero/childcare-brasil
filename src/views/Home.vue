@@ -113,7 +113,7 @@ export default {
         };
     },
     mounted() {
-        axios.get("https://childcarebr.herokuapp.com/api/donations").then((response) => (this.cards = response));
+        axios.get("http://localhost:7777/api/donations").then((response) => (this.cards = response));
     },
   
 };

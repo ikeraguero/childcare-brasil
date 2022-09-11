@@ -32,21 +32,21 @@
             <input 
             type="text"
             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            />
+            required>
             </label>
             <label class='block text-white text-sm font-bold mb-3' name="donationemail">
                         <div class="test">Email para contato</div>
             <input 
             type="email"
             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            />
+            required>
             </label>
             <label class='block text-white text-sm font-bold mb-3' name="donationcellphone">
                         <div class="test">Telefone para contato</div>
             <input 
             type="text"
             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            />
+            required>
             </label>
 
             <label class='block text-white text-sm font-bold mb-3' >
@@ -54,7 +54,7 @@
             <input 
             type="text"
             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            />
+            required>
             </label>
             <label class="block text-white text-sm font-bold mb-0" for="username">
               <div class="test">Tipo de doação</div>
