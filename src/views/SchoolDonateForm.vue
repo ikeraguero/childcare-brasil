@@ -4,7 +4,7 @@
             <form class="rounded px-18 pt-8 pb-8 mb-8" >
             <div class="test1 mb-0 flex justify-center">Você está doando para:</div>
             <div class="test1 mb-8 flex justify-center font-bold">{{ school.name }}</div>
-            <label class="block text-white text-sm font-bold mb-0" for="username">s
+            <label class="block text-white text-sm font-bold mb-0" for="username">
               <div class="test">Doar como:</div>
             </label>
             <select class="form-select appearance-none

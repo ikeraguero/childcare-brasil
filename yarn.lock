@@ -2,6 +2,15 @@
 # yarn lockfile v1
 
 
+"@achrinza/node-ipc@9.2.2":
+  "integrity" "sha512-b90U39dx0cU6emsOvy5hxU4ApNXnE3+Tuo8XQZfiKTGelDwpMwBVgBP7QX6dGTcJgu/miyJuNJ/2naFBliNWEw=="
+  "resolved" "https://registry.npmjs.org/@achrinza/node-ipc/-/node-ipc-9.2.2.tgz"
+  "version" "9.2.2"
+  dependencies:
+    "@node-ipc/js-queue" "2.0.3"
+    "event-pubsub" "4.3.0"
+    "js-message" "1.0.7"
+
 "@auth0/auth0-spa-js@^1.22.1":
   "integrity" "sha512-l0FCmiN3XubpgCtB3U0ds4h+5WQNTnIF4eLT/fudHEtcyrT65QF/03LybGVdLyuvqdIF/D6OQsfjwYw0Ms605Q=="
   "resolved" "https://registry.npmjs.org/@auth0/auth0-spa-js/-/auth0-spa-js-1.22.1.tgz"
@@ -1365,6 +1374,13 @@
     "call-me-maybe" "^1.0.1"
     "glob-to-regexp" "^0.3.0"
 
+"@node-ipc/js-queue@2.0.3":
+  "integrity" "sha512-fL1wpr8hhD5gT2dA1qifeVaoDFlQR5es8tFuKqjHX+kdOtdNHnxkVZbtIrR2rxnMFvehkjaZRNV2H/gPXlb0hw=="
+  "resolved" "https://registry.npmjs.org/@node-ipc/js-queue/-/js-queue-2.0.3.tgz"
+  "version" "2.0.3"
+  dependencies:
+    "easy-stack" "1.0.1"
+
 "@nodelib/fs.scandir@2.1.5":
   "integrity" "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="
   "resolved" "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz"
@@ -1826,10 +1842,10 @@
     "@vue/babel-plugin-transform-vue-jsx" "^1.2.1"
     "camelcase" "^5.0.0"
 
-"@vue/cli-overlay@^4.5.15":
-  "integrity" "sha512-0zI0kANAVmjFO2LWGUIzdGPMeE3+9k+KeRDXsUqB30YfRF7abjfiiRPq5BU9pOzlJbVdpRkisschBrvdJqDuDg=="
-  "resolved" "https://registry.npmjs.org/@vue/cli-overlay/-/cli-overlay-4.5.15.tgz"
-  "version" "4.5.15"
+"@vue/cli-overlay@^4.5.19":
+  "integrity" "sha512-GdxvNSmOw7NHIazCO8gTK+xZbaOmScTtxj6eHVeMbYpDYVPJ+th3VMLWNpw/b6uOjwzzcyKlA5dRQ1DAb+gF/g=="
+  "resolved" "https://registry.npmjs.org/@vue/cli-overlay/-/cli-overlay-4.5.19.tgz"
+  "version" "4.5.19"
 
 "@vue/cli-plugin-babel@~4.5.0":
   "integrity" "sha512-hBLrwYfFkHldEe34op/YNgPhpOWI5n5DB2Qt9I/1Epeif4M4iFaayrgjvOR9AVM6WbD3Yx7WCFszYpWrQZpBzQ=="
@@ -1856,22 +1872,22 @@
     "webpack" "^4.0.0"
     "yorkie" "^2.0.0"
 
-"@vue/cli-plugin-router@^4.5.15", "@vue/cli-plugin-router@~4.5.0":
-  "integrity" "sha512-q7Y6kP9b3k55Ca2j59xJ7XPA6x+iSRB+N4ac0ZbcL1TbInVQ4j5wCzyE+uqid40hLy4fUdlpl4X9fHJEwuVxPA=="
-  "resolved" "https://registry.npmjs.org/@vue/cli-plugin-router/-/cli-plugin-router-4.5.15.tgz"
-  "version" "4.5.15"
+"@vue/cli-plugin-router@^4.5.19", "@vue/cli-plugin-router@~4.5.0":
+  "integrity" "sha512-3icGzH1IbVYmMMsOwYa0lal/gtvZLebFXdE5hcQJo2mnTwngXGMTyYAzL56EgHBPjbMmRpyj6Iw9k4aVInVX6A=="
+  "resolved" "https://registry.npmjs.org/@vue/cli-plugin-router/-/cli-plugin-router-4.5.19.tgz"
+  "version" "4.5.19"
   dependencies:
-    "@vue/cli-shared-utils" "^4.5.15"
+    "@vue/cli-shared-utils" "^4.5.19"
 
-"@vue/cli-plugin-vuex@^4.5.15":
-  "integrity" "sha512-fqap+4HN+w+InDxlA3hZTOGE0tzBTgXhKLoDydhywqgmhQ1D9JA6Feh94ze6tG8DsWX58/ujYUqA8jAz17FJtg=="
-  "resolved" "https://registry.npmjs.org/@vue/cli-plugin-vuex/-/cli-plugin-vuex-4.5.15.tgz"
-  "version" "4.5.15"
+"@vue/cli-plugin-vuex@^4.5.19":
+  "integrity" "sha512-DUmfdkG3pCdkP7Iznd87RfE9Qm42mgp2hcrNcYQYSru1W1gX2dG/JcW8bxmeGSa06lsxi9LEIc/QD1yPajSCZw=="
+  "resolved" "https://registry.npmjs.org/@vue/cli-plugin-vuex/-/cli-plugin-vuex-4.5.19.tgz"
+  "version" "4.5.19"
 
 "@vue/cli-service@^3.0.0 || ^4.0.0-0", "@vue/cli-service@~4.5.0":
-  "integrity" "sha512-sFWnLYVCn4zRfu45IcsIE9eXM0YpDV3S11vlM2/DVbIPAGoYo5ySpSof6aHcIvkeGsIsrHFpPHzNvDZ/efs7jA=="
-  "resolved" "https://registry.npmjs.org/@vue/cli-service/-/cli-service-4.5.15.tgz"
-  "version" "4.5.15"
+  "integrity" "sha512-+Wpvj8fMTCt9ZPOLu5YaLkFCQmB4MrZ26aRmhhKiCQ/4PMoL6mLezfqdt6c+m2htM+1WV5RunRo+0WHl2DfwZA=="
+  "resolved" "https://registry.npmjs.org/@vue/cli-service/-/cli-service-4.5.19.tgz"
+  "version" "4.5.19"
   dependencies:
     "@intervolga/optimize-cssnano-plugin" "^1.0.5"
     "@soda/friendly-errors-webpack-plugin" "^1.7.1"
@@ -1879,10 +1895,10 @@
     "@types/minimist" "^1.2.0"
     "@types/webpack" "^4.0.0"
     "@types/webpack-dev-server" "^3.11.0"
-    "@vue/cli-overlay" "^4.5.15"
-    "@vue/cli-plugin-router" "^4.5.15"
-    "@vue/cli-plugin-vuex" "^4.5.15"
-    "@vue/cli-shared-utils" "^4.5.15"
+    "@vue/cli-overlay" "^4.5.19"
+    "@vue/cli-plugin-router" "^4.5.19"
+    "@vue/cli-plugin-vuex" "^4.5.19"
+    "@vue/cli-shared-utils" "^4.5.19"
     "@vue/component-compiler-utils" "^3.1.2"
     "@vue/preload-webpack-plugin" "^1.1.0"
     "@vue/web-component-wrapper" "^1.2.0"
@@ -1931,17 +1947,17 @@
   optionalDependencies:
     "vue-loader-v16" "npm:vue-loader@^16.1.0"
 
-"@vue/cli-shared-utils@^4.5.15":
-  "integrity" "sha512-SKaej9hHzzjKSOw1NlFmc6BSE0vcqUQMQiv1cxQ2DhVyy4QxZXBmzmiLBUBe+hYZZs1neXW7n//udeN9bCAY+Q=="
-  "resolved" "https://registry.npmjs.org/@vue/cli-shared-utils/-/cli-shared-utils-4.5.15.tgz"
-  "version" "4.5.15"
+"@vue/cli-shared-utils@^4.5.15", "@vue/cli-shared-utils@^4.5.19":
+  "integrity" "sha512-JYpdsrC/d9elerKxbEUtmSSU6QRM60rirVubOewECHkBHj+tLNznWq/EhCjswywtePyLaMUK25eTqnTSZlEE+g=="
+  "resolved" "https://registry.npmjs.org/@vue/cli-shared-utils/-/cli-shared-utils-4.5.19.tgz"
+  "version" "4.5.19"
   dependencies:
+    "@achrinza/node-ipc" "9.2.2"
     "@hapi/joi" "^15.0.1"
     "chalk" "^2.4.2"
     "execa" "^1.0.0"
     "launch-editor" "^2.2.1"
     "lru-cache" "^5.1.1"
-    "node-ipc" "^9.1.1"
     "open" "^6.3.0"
     "ora" "^3.4.0"
     "read-pkg" "^5.1.1"
@@ -4101,7 +4117,7 @@
     "readable-stream" "^2.0.0"
     "stream-shift" "^1.0.0"
 
-"easy-stack@^1.0.1":
+"easy-stack@1.0.1":
   "integrity" "sha512-wK2sCs4feiiJeFXn3zvY0p41mdU5VUgbgs1rNsc/y5ngFUijdWd+iIN8eoyuZHKB8xN6BL4PdWmzqFmxNg6V2w=="
   "resolved" "https://registry.npmjs.org/easy-stack/-/easy-stack-1.0.1.tgz"
   "version" "1.0.1"
@@ -5946,13 +5962,6 @@
   "resolved" "https://registry.npmjs.org/js-message/-/js-message-1.0.7.tgz"
   "version" "1.0.7"
 
-"js-queue@2.0.2":
-  "integrity" "sha512-pbKLsbCfi7kriM3s1J4DDCo7jQkI58zPLHi0heXPzPlj0hjUsm+FesPUbE0DSbIVIK503A36aUBoCN7eMFedkA=="
-  "resolved" "https://registry.npmjs.org/js-queue/-/js-queue-2.0.2.tgz"
-  "version" "2.0.2"
-  dependencies:
-    "easy-stack" "^1.0.1"
-
 "js-tokens@^4.0.0":
   "integrity" "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="
   "resolved" "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz"
@@ -6682,15 +6691,6 @@
   "integrity" "sha512-PPmu8eEeG9saEUvI97fm4OYxXVB6bFvyNTyiUOBichBpFG8A1Ljw3bY62+5oOjDEMHRnd0Y7HQ+x7uzxOzC6JA=="
   "resolved" "https://registry.npmjs.org/node-forge/-/node-forge-0.10.0.tgz"
   "version" "0.10.0"
-
-"node-ipc@^9.1.1":
-  "integrity" "sha512-mJzaM6O3xHf9VT8BULvJSbdVbmHUKRNOH7zDDkCrA1/T+CVjq2WVIDfLt0azZRXpgArJtl3rtmEozrbXPZ9GaQ=="
-  "resolved" "https://registry.npmjs.org/node-ipc/-/node-ipc-9.2.1.tgz"
-  "version" "9.2.1"
-  dependencies:
-    "event-pubsub" "4.3.0"
-    "js-message" "1.0.7"
-    "js-queue" "2.0.2"
 
 "node-libs-browser@^2.2.1":
   "integrity" "sha512-h/zcD8H9kaDZ9ALUWwlBUDo6TKF8a7qBSCSEGfjTVIYeqsioSKaAX+BN7NgiMGp6iSIXZ3PxgCu8KS3b71YK5Q=="
