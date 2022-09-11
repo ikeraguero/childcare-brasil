@@ -20,14 +20,14 @@ model Child {
   address           String?
   city              String?
   state             String?
-  cpf               String?
+  cpf               String?          @unique
   description       String?
 }
 
 model School {
-  id        String @id @default(auto()) @map("_id") @db.ObjectId
-  email     String?
-  cnpj      String?
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  email     String? 
+  cnpj      String? @unique
   cellphone String?
   photo     String?
   name      String?
@@ -42,11 +42,12 @@ model Donation {
   donatortype   String?
   donator       String?
   email         String?
-  cpf           String?
-  cnpj          String?
+  cpf           String? @unique
+  cnpj          String? @unique
   cellphone     String?
   type          String?
   value         String?
   materials     String?
   donatedto     String?
+  data          DateTime @default(now())
 }
