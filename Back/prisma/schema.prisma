@@ -18,36 +18,36 @@ model Child {
   school            String?
   age               String
   address           String?
-  city              String?
-  state             String?
-  cpf               String?          @unique
+  city              String
+  state             String
+  cpf               String          @unique
   description       String?
 }
 
 model School {
   id        String  @id @default(auto()) @map("_id") @db.ObjectId
-  email     String? 
-  cnpj      String? @unique
+  email     String 
+  cnpj      String @unique
   cellphone String?
   photo     String?
-  name      String?
+  name      String
   address   String?
-  city      String?
-  state     String?
+  city      String
+  state     String
 
 }
 
 model Donation {
   id            String @id @default(auto()) @map("_id") @db.ObjectId
-  donatortype   String?
-  donator       String?
-  email         String?
+  donatortype   String
+  donator       String
+  email         String
   cpf           String? @unique
   cnpj          String? @unique
   cellphone     String?
-  type          String?
+  type          String
   value         String?
-  materials     String?
+  materials     String
   donatedto     String?
   data          DateTime @default(now())
 }
