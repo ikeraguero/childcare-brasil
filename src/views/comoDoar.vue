@@ -24,7 +24,7 @@
               cols="12"
               md="10"
             >
-              Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit.
+            O primeiro passo para realizar a doação é, após abrir a página de crianças disponíveis e selecionar a que mais se encaixa com você.
             </v-col>
             <v-col
               class="hidden-sm-and-down text-right"
@@ -52,7 +52,7 @@
           </h2>
           <v-icon
             dark
-            size="42"
+            size="4"
           >
           </v-icon>
         </v-card-title>
@@ -62,14 +62,9 @@
               cols="12"
               md="8"
             >
-              Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit.
+              Ao selecionar você é redirecionado á página de cadastro de doador, para realizar o cadastro de doador você deve se atentar á preencher seus dados corretamente.
             </v-col>
-            <v-col
-              cols="12"
-              md="4"
-            >
-              Lorem ipsum dolor sit amet, no nam oblique veritus.
-            </v-col>
+            
           </v-row>
         </v-container>
       </v-card>
@@ -96,12 +91,11 @@
         <v-container class="color2">
           <v-row>
             <v-col
-              v-for="n in 3"
               :key="n"
               cols="12"
               md="4"
             >
-              Lorem ipsum dolor sit amet, no nam oblique veritus no nam oblique.
+            Após juntar suas doações, as empacote de uma forma que não danifique os objetos doados.
             </v-col>
           </v-row>
         </v-container>
@@ -138,7 +132,7 @@
               cols="12"
               md="10"
             >
-              Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus.
+              Você deve enviar o comprovante de envio como especificado no cadastro.
             </v-col>
           </v-row>
         </v-container>
@@ -166,7 +160,7 @@
         <v-container class="color2">
           <v-row>
             <v-col>
-              Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.
+              Você deve enviar o comprovante de envio como especificado no cadastro.
             </v-col>
           </v-row>
         </v-container>
