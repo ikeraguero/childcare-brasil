@@ -49,7 +49,7 @@ export default {
   color: #621200;
 }
 .fundo{
-  background-image: linear-gradient(120deg, #621200, #622800);
+  background-image: linear-gradient(120deg, #621200, #7c3403);
 }
 .conta{
   padding: auto 9px;

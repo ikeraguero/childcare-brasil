@@ -15,25 +15,16 @@
           >
           </v-icon>
           <h2 class="text-h4 white--text font-weight-light">
-            Passo 1
+
+
+            <div class="steps font-semibold">Passo 1</div>
           </h2>
         </v-card-title>
-        <v-container class="color2">
-          <v-row>
-            <v-col
-              cols="12"
-              md="10"
-            >
+        <v-container class="color2 font-semibold">
+          <v-row class="mb-2 mt-2">
+            
             O primeiro passo para realizar a doação é, após abrir a página de crianças disponíveis e selecionar a que mais se encaixa com você.
-            </v-col>
-            <v-col
-              class="hidden-sm-and-down text-right"
-              md="2"
-            >
-              <v-icon size="64">
-
-              </v-icon>
-            </v-col>
+            
           </v-row>
         </v-container>
       </v-card>
@@ -48,7 +39,11 @@
       <v-card>
         <v-card-title class="color">
           <h2 class="text-h4 mr-4 white--text font-weight-light">
-            Passo 2
+
+
+
+
+            <div class="steps font-semibold">Passo 2</div>
           </h2>
           <v-icon
             dark
@@ -56,14 +51,9 @@
           >
           </v-icon>
         </v-card-title>
-        <v-container class="color2">
-          <v-row>
-            <v-col
-              cols="12"
-              md="8"
-            >
+        <v-container class="color2 font-semibold">
+          <v-row class="mb-2 mt-2">
               Ao selecionar você é redirecionado á página de cadastro de doador, para realizar o cadastro de doador você deve se atentar á preencher seus dados corretamente.
-            </v-col>
             
           </v-row>
         </v-container>
@@ -78,25 +68,25 @@
     >
       <v-card>
         <v-card-title class="color">
+          <h2 class="text-h4 mr-4 white--text font-weight-light">
+
+
+
+
+            <div class="steps font-semibold">Passo 3</div>
+          </h2>
           <v-icon
-            class="mr-4"
             dark
-            size="42"
+            size="4"
           >
           </v-icon>
-          <h2 class="text-h4 white--text font-weight-light">
-            Passo 3
-          </h2>
         </v-card-title>
-        <v-container class="color2">
-          <v-row>
-            <v-col
-              :key="n"
-              cols="12"
-              md="4"
-            >
-            Após juntar suas doações, as empacote de uma forma que não danifique os objetos doados.
+        <v-container class="color2 font-semibold">
+          <v-row class="mb-2 mt-2">
+            <v-col>
+              Após juntar suas doações, as empacote de uma forma que não danifique os objetos doados.
             </v-col>
+
           </v-row>
         </v-container>
       </v-card>
@@ -111,29 +101,23 @@
       <v-card>
         <v-card-title class="color">
           <h2 class="text-h4 mr-4 white--text font-weight-light">
-            Passo 4
+
+
+
+            <div class="steps font-semibold">Passo 4</div>
           </h2>
           <v-icon
             dark
-            size="42"
+
           >
           </v-icon>
         </v-card-title>
-        <v-container>
-          <v-row>
-            <v-col
-              class="hidden-sm-and-down"
-              md="2"
-            >
-              <v-icon size="64">
-              </v-icon>
-            </v-col>
-            <v-col
-              cols="12"
-              md="10"
-            >
-              Você deve enviar o comprovante de envio como especificado no cadastro.
-            </v-col>
+        <v-container class="color2 font-semibold">
+          <v-row class="mb-2 mt-2">
+              <v-col>
+                Você deve enviar o comprovante de envio como especificado no cadastro.
+              </v-col>
+
           </v-row>
         </v-container>
       </v-card>
@@ -154,11 +138,15 @@
           >
           </v-icon>
           <h2 class="text-h4 white--text font-weight-light">
-            Passo 5
+
+
+
+
+            <div class="steps font-semibold">Passo 5</div>
           </h2>
         </v-card-title>
-        <v-container class="color2">
-          <v-row>
+        <v-container class="color2 font-semibold">
+          <v-row class="mb-2 mt-2">
             <v-col>
               Você deve enviar o comprovante de envio como especificado no cadastro.
             </v-col>
@@ -167,6 +155,9 @@
       </v-card>
     </v-timeline-item>
   </v-timeline>
+
+
+
 </template>
 
 <script>
@@ -185,6 +176,15 @@
 }
 
 .color2{
-  background-color: #FFF6EE
+  background-color: #FFF6EE;
+  font-family: "Proxima Nova", system-ui, sans-serif;
+  text-align: center;
+  color:#621200;
+}
+
+.steps {
+  font-family: "Proxima Nova", system-ui, sans-serif;
+  text-align: center;
+  color: #FFF6EE;
 }
 </style>
