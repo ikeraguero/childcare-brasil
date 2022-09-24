@@ -17,7 +17,7 @@
           <h2 class="text-h4 white--text font-weight-light">
 
 
-            <div class="steps font-semibold">Passo 1</div>
+            <div class="steps font-semibold text-center">Passo 1</div>
           </h2>
         </v-card-title>
         <v-container class="color2 font-semibold">
@@ -184,6 +184,7 @@
 
 .steps {
   font-family: "Proxima Nova", system-ui, sans-serif;
+  justify-content: center;
   text-align: center;
   color: #FFF6EE;
 }
