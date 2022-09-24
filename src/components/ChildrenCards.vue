@@ -6,7 +6,7 @@
                     <div class="rounded-lg shadow-md w-[300px] lg:w-[410px]">
                         <a href="/">
 
-                            <img class="rounded-t-lg h-80 w-full" :src="card.photo" />
+                            <img class="rounded-t-lg h-80 w-96" :src="card.photo" />
                         </a>
                         <div class="p-6">
                             <div class="flex justify-between">
@@ -16,7 +16,7 @@
                                 <h5 class="text-white text-xl font-medium mb-2">{{ card.age }} {{ age(card.age) }}</h5>
                             </div>
 
-                            <p class="text-white text-base mb-4 h-20">
+                            <p class="text-white text-base mb-4 h-20 w-fit">
                                 {{ card.city }}, {{ card.state }}
                             </p>
                             <div class="flex justify-center flex-row">
@@ -93,4 +93,5 @@ export default {
     background-color: #621200;
     
 }
+
 </style>
