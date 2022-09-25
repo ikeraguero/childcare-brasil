@@ -78,6 +78,6 @@ export const donation = async (req: Request, res: Response) => {
 export const donationadd = async (req: Request, res: Response) => {
     const r = req.body;
     const donation = await addDonation(r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials);
-    res.redirect("http://localhost:8080/admin");
+    res.redirect("http://localhost:8080/");
 
 }

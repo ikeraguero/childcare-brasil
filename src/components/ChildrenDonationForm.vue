@@ -13,37 +13,42 @@
             <option value="1">Pessoa Física</option>
             <option value="2">Empresa</option>
                 </select>
-            <label class='block text-sm font-bold mb-3 mt-3' name="donationcpf" id="person" style="display: none">
+            <label class='block text-sm font-bold mb-3 mt-3' id="person" style="display: none">
                             <div class="test">CPF</div>
             <input 
+            name="donationcpf"
             type="text"
             class="shadow appearance-none border font-medium rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             >
             </label>
-            <label class='block  text-sm font-bold mb-3 mt-3' name="donationcnpj" id="company" style="display: none">
+            <label class='block  text-sm font-bold mb-3 mt-3' id="company" style="display: none">
                             <div class="test">CNPJ</div>
-            <input 
+            <input
+            name="donationcnpj" 
             type="text"
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
             </label>
-            <label class='block text-sm font-bold mb-3 mt-3' name="donationdonator" id="donator">
+            <label class='block text-sm font-bold mb-3 mt-3' id="donator">
                 <div class="test">Nome Completo</div>
             <input 
+            name="donationdonator"
             type="text"
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             </label>
-            <label class='block text-sm font-bold mb-3' name="donationemail">
+            <label class='block text-sm font-bold mb-3'>
                         <div class="test">Email para contato</div>
             <input 
+            name="donationemail"
             type="email"
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             </label>
-            <label class='block  text-sm font-bold mb-3' name="donationcellphone">
+            <label class='block  text-sm font-bold mb-3'>
                         <div class="test">Telefone para contato</div>
-            <input 
+            <input
+            name="donationcellphone" 
             type="text"
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
@@ -68,9 +73,10 @@
                 </select>
             <label class='block text-sm font-bold mb-3 mt-3' name="donationvalue" id="money" style="display: none" />
 
-            <label class='block text-sm font-bold mb-3 mt-3' name="donationmaterials" id="materials" style="display: none">
+            <label class='block text-sm font-bold mb-3 mt-3' id="materials" style="display: none">
                             <div class="test">Materiais</div>
-            <input 
+            <input
+            name="donationmaterials" 
             type="text"
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
@@ -82,8 +88,8 @@
                             <form action="https://donate.stripe.com/test_4gw03M7353JQ8Pm9AA" class="ml-2 bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" id="moneypayment" style="display: none" >
                          <input type="submit" value="Prosseguir"/>
                              </form>
-                             <router-link v-bind:to="'/criancas/doar/' + child.id + '/sucesso'" ><input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
-                         id="materialpayment" type="submit" value="Prosseguir" style="display: none"></router-link>
+                             <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
+                         id="materialpayment" type="submit" value="Prosseguir" style="display: none">
 
                          <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
                          id="nothing" type="submit" value="Prosseguir" style="display: block">
@@ -95,7 +101,6 @@
 </template>
 
 <script>
-
 import axios from "axios";
 
 export default {
@@ -172,8 +177,8 @@ export default {
 }
 
 },
+  }
     }
-}
 </script>
 
 <style>

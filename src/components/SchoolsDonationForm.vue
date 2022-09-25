@@ -13,37 +13,42 @@
         <option value="1">Pessoa Física</option>
         <option value="2">Empresa</option>
             </select>
-        <label class='block text-sm font-bold mb-3 mt-3' name="donationcpf" id="person" style="display: none">
+        <label class='block text-sm font-bold mb-3 mt-3' id="person" style="display: none">
                         <div class="test">CPF</div>
-        <input 
+        <input
+        name="donationcpf" 
         type="text"
         class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
         />
         </label>
-        <label class='block text-sm font-bold mb-3 mt-3' name="donationcnpj" id="company" style="display: none">
+        <label class='block text-sm font-bold mb-3 mt-3' id="company" style="display: none">
                         <div class="test">CNPJ</div>
         <input 
+        name="donationcnpj"
         type="text"
         class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
         />
         </label>
-        <label class='block text-sm font-bold mb-3 mt-3' name="donationdonator">
+        <label class='block text-sm font-bold mb-3 mt-3'>
             <div class="test">Nome Completo</div>
-        <input 
+        <input
+        name="donationdonator" 
         type="text"
         class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
         required>
         </label>
-        <label class='block text-sm font-bold mb-3' name="donationemail">
+        <label class='block text-sm font-bold mb-3'>
                     <div class="test">Email para contato</div>
-        <input 
+        <input
+        name="donationemail" 
         type="email"
         class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
         required>
         </label>
-        <label class='block text-sm font-bold mb-3' name="donationcellphone">
+        <label class='block text-sm font-bold mb-3'>
                     <div class="test">Telefone para contato</div>
-        <input 
+        <input
+        name="donationcellphone" 
         type="text"
         class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
         required>
@@ -76,9 +81,10 @@
             </select>
         <label class='block text-sm font-bold mb-3 mt-3' name="donationvalue" id="money" style="display: none"/>
 
-        <label class='block text-sm font-bold mb-3 mt-3' name="donationmaterials" id="materials" style="display: none">
+        <label class='block text-sm font-bold mb-3 mt-3' id="materials" style="display: none">
                         <div class="test">Materiais</div>
-        <input 
+        <input
+        name="donationmaterials" 
         type="text"
         class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
         />
