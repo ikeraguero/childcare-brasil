@@ -4,7 +4,7 @@
 
                 <p>{{ image }}</p>
 
-                <form class="bg-[#15393C] rounded px-12 pt-8 pb-8 mb-8" action="https://childcarebrasiltest.herokuapp.com/api/schooladd" method="post">
+                <form class="bg-[#15393C] rounded px-12 pt-8 pb-8 mb-8" action="http://localhost:7777/api/schooladd" method="post">
 
                 <div class="flex mb-4">
 

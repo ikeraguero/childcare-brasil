@@ -2,11 +2,11 @@
     <span>
         <div class="grid gap-1 grid-cols-4 grid-rows-0 overflow whitespace-nowrap no-scrollbar relative scroll-smooth snap-x" id="container">
             <div v-for="card in cards.data" :key="card.index">
-                <div class="px-3 m-2 snap-center">
+                <div class="px-3 m-2 snap-center ">
                     <div class="rounded-lg shadow-md w-[300px] lg:w-[410px]">
                         <a href="/">
 
-                            <img class="rounded-t-lg h-80 w-96" :src="card.photo" />
+                            <img class="rounded-t-lg h-80" :src="card.photo" />
                         </a>
                         <div class="p-6">
                             <div class="flex justify-between">
@@ -92,6 +92,9 @@ export default {
     color:#FFF6EE;
     background-color: #621200;
     
+}
+.rounded-t-lg {
+    width: 388px;
 }
 
 </style>

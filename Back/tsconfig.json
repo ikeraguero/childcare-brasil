@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "noImplicitAny": false,
     "sourceMap": true,
     "outDir": "dist",
     "strict": true,

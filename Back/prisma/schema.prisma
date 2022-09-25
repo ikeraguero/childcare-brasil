@@ -47,7 +47,8 @@ model Donation {
   cellphone     String?
   type          String
   value         String?
-  materials     String
+  materials     String?
   donatedto     String?
+  donatedtoid   String?
   data          DateTime @default(now())
 }
