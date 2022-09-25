@@ -78,13 +78,13 @@ const routes = [
         path: "criancas/doar/:id",
         name: 'DonateChild',
         beforeEnter: authenticationGuard,
-        component: () => import('../views/ChildDonateForm.vue')
+        component: () => import('../views/ChildDonationPage.vue')
       },
     {
       path: "escolas/doar/:id",
         name: 'DonateSchool',
         beforeEnter: authenticationGuard,
-        component: () => import('../views/SchoolDonateForm.vue')
+        component: () => import('../views/SchoolDonationPage.vue')
       },
       {
       path: "adminn/doacoes",
