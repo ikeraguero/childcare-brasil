@@ -33,6 +33,8 @@ export default {
             this.child = response.data
         })
     },
+
+    
     methods: {
         left() {
             document.getElementById("container").scrollLeft -= 320;

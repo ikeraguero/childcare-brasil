@@ -48,7 +48,7 @@ export const school = async (req: Request, res: Response) => {
 export const schooladd = async (req: Request, res: Response) => {
     const r = req.body;
     const school = await addSchool(r.schoolemail, r.schoolcnpj, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate);
-    res.redirect("http://localhost:8080/admin");
+    res.redirect("http://localhost:8080/adminn");
 
 }
 
@@ -60,7 +60,7 @@ export const schooldelete = async (req: Request, res: Response) => {
 export const schoolupdate = async (req: Request, res: Response) => {
     const r = req.body;
     const school = await updateSchool(req.params.school_id, r.schoolemail, r.schoolcnpj, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate);
-    res.redirect("http://localhost:8080/admin");
+    res.redirect("http://localhost:8080/adminn");
 }
 
 // Donations
@@ -77,7 +77,7 @@ export const donation = async (req: Request, res: Response) => {
 
 export const donationadd = async (req: Request, res: Response) => {
     const r = req.body;
-    const donation = await addDonation(r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials);
-    res.redirect("http://localhost:8080/");
+    const donation = await addDonation(r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials, r.donationdonatedto, r.donationdonatedtoid);
+    res.redirect("http://localhost:8080/adminn");
 
 }

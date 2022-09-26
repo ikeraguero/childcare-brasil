@@ -52,6 +52,26 @@
             type="text"
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
+            </label> 
+
+                <label class='block text-sm font-bold mb-3' id="donatedto" style="display: none">
+                            <div class="test"></div>
+            <input
+            name="donationdonatedto" 
+            type="text"
+            v-bind:value=child.name
+            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            required>
+            </label>
+            
+            <label class='block text-sm font-bold mb-3' id="donatedtoid" style="display: none">
+                            <div class="test"></div>
+            <input
+            name="donationdonatedtoid" 
+            type="text"
+            v-bind:value=child.id
+            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            required>
             </label>
 
             <label class='block text-sm font-bold mb-3' >
@@ -89,7 +109,7 @@
                          <input type="submit" value="Prosseguir"/>
                              </form>
                              <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
-                         id="materialpayment" type="submit" value="Prosseguir" style="display: none">
+                         id="materialpayment" type="submit" value="Prosseguir" style="display: none"><router-link v-bind:to="'/criancas/doar/' + child.id + '/sucesso'" ></router-link>
 
                          <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
                          id="nothing" type="submit" value="Prosseguir" style="display: block">

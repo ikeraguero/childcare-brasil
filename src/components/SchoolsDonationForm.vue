@@ -45,7 +45,7 @@
         class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
         required>
         </label>
-        <label class='block text-sm font-bold mb-3'>
+        <label class='block text-sm font-bold mb-3' >
                     <div class="test">Telefone para contato</div>
         <input
         name="donationcellphone" 
@@ -53,6 +53,26 @@
         class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
         required>
         </label>
+
+        <label class='block text-sm font-bold mb-3' id="donatedto" style="display: none">
+                            <div class="test"></div>
+            <input
+            name="donationdonatedto" 
+            type="text"
+            v-bind:value=school.name
+            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            required>
+            </label>
+            
+            <label class='block text-sm font-bold mb-3' id="donatedtoid" style="display: none">
+                            <div class="test"></div>
+            <input
+            name="donationdonatedtoid" 
+            type="text"
+            v-bind:value=school.id
+            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            required>
+            </label>
 
         <label class='block text-sm font-bold mb-3' >
                         <div class="test">Residência</div>
@@ -96,8 +116,8 @@
                             <form action="https://donate.stripe.com/test_4gw03M7353JQ8Pm9AA" class="ml-2 bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" id="moneypayment" style="display: none" >
                          <input type="submit" value="Prosseguir"/>
                              </form>
-                         <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
-                         id="materialpayment" type="submit" value="Prosseguir" style="display: none">
+                             <router-link v-bind:to="'/criancas/doar/' + child.id + '/sucesso'" ><input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
+                         id="materialpayment" type="submit" value="Prosseguir" style="display: none"></router-link>
 
                          <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
                          id="nothing" type="submit" value="Prosseguir" style="display: block">
