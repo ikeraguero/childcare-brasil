@@ -10,12 +10,14 @@
             <select class="form-select appearance-none
             shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationdonatortype" id="donatortype" @click="test1">
             <option value="0"></option>    
-            <option value="1">Pessoa Física</option>
-            <option value="2">Empresa</option>
+            <option value="Pessoa">Pessoa Física</option>
+            <option value="Empresa">Empresa</option>
                 </select>
             <label class='block text-sm font-bold mb-3 mt-3' id="person" style="display: none">
                             <div class="test">CPF</div>
-            <input 
+            <input
+            maxlength="11"
+            placeholder="XXX.XXX.XXX-XX" 
             name="donationcpf"
             type="text"
             class="shadow appearance-none border font-medium rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
@@ -24,7 +26,9 @@
             <label class='block  text-sm font-bold mb-3 mt-3' id="company" style="display: none">
                             <div class="test">CNPJ</div>
             <input
-            name="donationcnpj" 
+            maxlength="14"
+            placeholder="XX.XXX.XXX/0001-XX" 
+            name="donationcnpj"
             type="text"
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
@@ -33,6 +37,7 @@
                 <div class="test">Nome Completo</div>
             <input 
             name="donationdonator"
+            placeholder="Seu Nome e Sobrenome"
             type="text"
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
@@ -42,6 +47,7 @@
             <input 
             name="donationemail"
             type="email"
+            placeholder="email@contato.com"
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             </label>
@@ -49,6 +55,9 @@
                         <div class="test">Telefone para contato</div>
             <input
             name="donationcellphone" 
+            id="phone"
+            maxlength="11"
+            placeholder="(DD)XXXXX-XXXX"
             type="text"
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
@@ -77,6 +86,7 @@
             <label class='block text-sm font-bold mb-3' >
                             <div class="test">Residência</div>
             <input 
+            placeholder="Rua, número, cidade, estado"
             type="text"
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
@@ -88,14 +98,15 @@
             <select class="form-select appearance-none
             shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationtype" id="donationtype" @click='test'>
             <option value="0"></option>    
-            <option value="1">Dinheiro</option>
-            <option value="2">Material Escolar</option>
+            <option value="Dinheiro">Dinheiro</option>
+            <option value="Material">Material Escolar</option>
                 </select>
             <label class='block text-sm font-bold mb-3 mt-3' name="donationvalue" id="money" style="display: none" />
 
             <label class='block text-sm font-bold mb-3 mt-3' id="materials" style="display: none">
                             <div class="test">Materiais</div>
             <input
+            placeholder="Caneta, Borracha, Caderno..."
             name="donationmaterials" 
             type="text"
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
@@ -154,7 +165,7 @@ export default {
         },    
         test(){
 
-            if (document.getElementById("donationtype").value == '1') {
+            if (document.getElementById("donationtype").value == 'Dinheiro') {
             document.getElementById('nothing').style.display = 'none';
             document.getElementById('money').removeAttribute('style')
             document.getElementById('materials').style.display = 'none';
@@ -166,7 +177,7 @@ export default {
             document.getElementById('nothing').style.display = 'block';
 
 
-            if (document.getElementById("donationtype").value == '2') {
+            if (document.getElementById("donationtype").value == 'Material') {
             document.getElementById('nothing').style.display = 'none';
             document.getElementById('materials').removeAttribute('style')
             document.getElementById('money').style.display = 'none';
@@ -181,14 +192,14 @@ export default {
 
 },
         test1() {
-            if (document.getElementById("donatortype").value == '1') {
+            if (document.getElementById("donatortype").value == 'Pessoa') {
             document.getElementById('person').removeAttribute('style')
             document.getElementById('company').style.display = 'none';
             } else {
             document.getElementById('person').style.display = 'none';
 
 
-            if (document.getElementById("donatortype").value == '2') {
+            if (document.getElementById("donatortype").value == 'Empresa') {
             document.getElementById('company').removeAttribute('style')
             document.getElementById('person').style.display = 'none';
             } else {
@@ -215,5 +226,8 @@ export default {
     
 }
 
+select:hover {
+    cursor: pointer;
+}
     
 </style>

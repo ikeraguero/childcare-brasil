@@ -7,59 +7,68 @@
         <label class="block text-white text-sm font-bold mb-0" for="username">
           <div class="test">Doar como:</div>
         </label>
-        <select class="form-select appearance-none
-        shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationdonatortype" id="donatortype" @click="test1">
-        <option value="0"></option>    
-        <option value="1">Pessoa Física</option>
-        <option value="2">Empresa</option>
-            </select>
-        <label class='block text-sm font-bold mb-3 mt-3' id="person" style="display: none">
-                        <div class="test">CPF</div>
-        <input
-        name="donationcpf" 
-        type="text"
-        class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-        />
-        </label>
-        <label class='block text-sm font-bold mb-3 mt-3' id="company" style="display: none">
-                        <div class="test">CNPJ</div>
-        <input 
-        name="donationcnpj"
-        type="text"
-        class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-        />
-        </label>
-        <label class='block text-sm font-bold mb-3 mt-3'>
-            <div class="test">Nome Completo</div>
-        <input
-        name="donationdonator" 
-        type="text"
-        class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-        required>
-        </label>
-        <label class='block text-sm font-bold mb-3'>
-                    <div class="test">Email para contato</div>
-        <input
-        name="donationemail" 
-        type="email"
-        class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-        required>
-        </label>
-        <label class='block text-sm font-bold mb-3' >
-                    <div class="test">Telefone para contato</div>
-        <input
-        name="donationcellphone" 
-        type="text"
-        class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-        required>
-        </label>
+            <select class="form-select appearance-none
+            shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationdonatortype" id="donatortype" @click="test1">
+            <option value="0"></option>    
+            <option value="Pessoa">Pessoa Física</option>
+            <option value="Empresa">Empresa</option>
+                </select>
+            <label class='block text-sm font-bold mb-3 mt-3' id="person" style="display: none">
+                            <div class="test">CPF</div>
+            <input
+            maxlength="11"
+            placeholder="XXX.XXX.XXX-XX" 
+            name="donationcpf"
+            type="text"
+            class="shadow appearance-none border font-medium rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            >
+            </label>
+            <label class='block  text-sm font-bold mb-3 mt-3' id="company" style="display: none">
+                            <div class="test">CNPJ</div>
+            <input
+            maxlength="14"
+            placeholder="XX.XXX.XXX/0001-XX" 
+            name="donationcnpj"
+            type="text"
+            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            />
+            </label>
+            <label class='block text-sm font-bold mb-3 mt-3' id="donator">
+                <div class="test">Nome Completo</div>
+            <input 
+            name="donationdonator"
+            placeholder="Seu Nome e Sobrenome"
+            type="text"
+            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            required>
+            </label>
+            <label class='block text-sm font-bold mb-3'>
+                        <div class="test">Email para contato</div>
+            <input 
+            name="donationemail"
+            type="email"
+            placeholder="email@contato.com"
+            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            required>
+            </label>
+            <label class='block  text-sm font-bold mb-3'>
+                        <div class="test">Telefone para contato</div>
+            <input
+            name="donationcellphone" 
+            id="phone"
+            maxlength="11"
+            placeholder="(DD)XXXXX-XXXX"
+            type="text"
+            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            required>
+            </label> 
 
-        <label class='block text-sm font-bold mb-3' id="donatedto" style="display: none">
+                <label class='block text-sm font-bold mb-3' id="donatedto" style="display: none">
                             <div class="test"></div>
             <input
             name="donationdonatedto" 
             type="text"
-            v-bind:value=school.name
+            v-bind:value=child.name
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             </label>
@@ -69,48 +78,42 @@
             <input
             name="donationdonatedtoid" 
             type="text"
-            v-bind:value=school.id
+            v-bind:value=child.id
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             </label>
 
-        <label class='block text-sm font-bold mb-3' >
-                        <div class="test">Residência</div>
-        <input 
-        type="text"
-        class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-        required>
-        </label>
-        <label class="block text-sm font-bold mb-0" for="username">
-          <div class="test">Tipo de doação</div>
-        </label>
+            <label class='block text-sm font-bold mb-3' >
+                            <div class="test">Residência</div>
+            <input 
+            placeholder="Rua, número, cidade, estado"
+            type="text"
+            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            required>
+            </label>
+            <label class="block text-white text-sm font-bold mb-0" for="username">
+              <div class="test">Tipo de doação</div>
+            </label>
 
-        <select class="form-select appearance-none
-            block
-            w-full
-            px-3
-            py-1
-            text-base
-            font-normal
-            text-black
-            bg-white 
-            rounded" name="donationtype" id="donationtype" @click='test'>
-        <option value="0"></option>    
-        <option value="1">Dinheiro</option>
-        <option value="2">Material Escolar</option>
-            </select>
-        <label class='block text-sm font-bold mb-3 mt-3' name="donationvalue" id="money" style="display: none"/>
+            <select class="form-select appearance-none
+            shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationtype" id="donationtype" @click='test'>
+            <option value="0"></option>    
+            <option value="Dinheiro">Dinheiro</option>
+            <option value="Material">Material Escolar</option>
+                </select>
+            <label class='block text-sm font-bold mb-3 mt-3' name="donationvalue" id="money" style="display: none" />
 
-        <label class='block text-sm font-bold mb-3 mt-3' id="materials" style="display: none">
-                        <div class="test">Materiais</div>
-        <input
-        name="donationmaterials" 
-        type="text"
-        class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-        />
-        </label>
-        <div class="flex justify-center">
-                    <div class="mt-6 flex justify-center">
+            <label class='block text-sm font-bold mb-3 mt-3' id="materials" style="display: none">
+                            <div class="test">Materiais</div>
+            <input
+            placeholder="Caneta, Borracha, Caderno..."
+            name="donationmaterials" 
+            type="text"
+            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            />
+            </label>
+            <div class="flex justify-center">
+                <div class="mt-6 flex justify-center">
                     
                         <router-link to="/escolas/" class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Cancelar">Cancelar</router-link >    
                             <form action="https://donate.stripe.com/test_4gw03M7353JQ8Pm9AA" class="ml-2 bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" id="moneypayment" style="display: none" >
@@ -174,7 +177,7 @@ methods: {
         
 
 
-        if (document.getElementById("donationtype").value == '1') {
+        if (document.getElementById("donationtype").value == 'Dinheiro') {
         document.getElementById('nothing').style.display = 'none';
         document.getElementById('money').removeAttribute('style')
         document.getElementById('materials').style.display = 'none';
@@ -188,7 +191,7 @@ methods: {
         
 
 
-        if (document.getElementById("donationtype").value == '2') {
+        if (document.getElementById("donationtype").value == 'Material') {
         document.getElementById('nothing').style.display = 'none';
         document.getElementById('materials').removeAttribute('style')
         document.getElementById('money').style.display = 'none';
@@ -203,14 +206,14 @@ methods: {
 }
 },
     test1() {
-        if (document.getElementById("donatortype").value == '1') {
+        if (document.getElementById("donatortype").value == 'Pessoa') {
         document.getElementById('person').removeAttribute('style')
         document.getElementById('company').style.display = 'none';
         } else {
         document.getElementById('person').style.display = 'none';
 
 
-        if (document.getElementById("donatortype").value == '2') {
+        if (document.getElementById("donatortype").value == 'Empresa') {
         document.getElementById('company').removeAttribute('style')
         document.getElementById('person').style.display = 'none';
         } else {
