@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
 
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -38,41 +39,49 @@ const routes = [
       {
         path: '/escolas',
         name: 'Schools',
+        
         component: () => import('../views/AjudarEscolas.vue')
       },
       {
         path: '/adminn',
         name: 'Controll Panel',
+
         component: () => import('../views/ControlPanel.vue')
       },
       {
         path: 'adminn/criancas',
         name: 'Children Controll Panel',
+
         component: () => import('../views/ControlPanelChild.vue')
       },
       {
         path: 'adminn/criancas/adicionar',
         name: 'AddChildren',
+
         component: () => import('../views/FormChild.vue')
       },
       {
         path: 'adminn/escolas',
         name: 'Schools Controll Panel',
+
         component: () => import('../views/ControlPanelSchool.vue')
       },
       {
         path: 'adminn/escolas/adicionar',
         name: 'AddSchools',
+
         component: () => import('../views/FormSchool.vue')
       },
       {
         path: "criancas/doar/:id/",
         name: 'DonateChild',
+
         component: () => import('../views/ChildDonationPage.vue')
       },
     {
       path: "escolas/doar/:id/",
         name: 'DonateSchool',
+
         component: () => import('../views/SchoolDonationPage.vue')
       },
       {

@@ -17,7 +17,9 @@ const jwksRsa = require("jwks-rsa");
 // Set up Auth0 configuration
 const authConfig = {
   domain: "dev-hhi6hna9.us.auth0.com",
-  audience: "https://childcare-brasil-api.com"
+  audience: "https://childcare-brasil-api.com",
+  useRefreshTokens: true,
+  cacheLocation: 'localstorage'
 };
 
 // Create middleware to validate the JWT using express-jwt

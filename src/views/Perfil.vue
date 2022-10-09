@@ -7,12 +7,12 @@
                   <div class="flex justify-center">
                   <div class="col-sm-3 rounded bg-c-lite-green user-profile justify-content-center">
                         <div class="card-block text-center text-white">
-                      <div class="m-b-25 flex justify-center">
+                      <div class="m-b-25 flex justify-center mt-10">
                        <img :src="$auth.user.picture" class="img-radius" alt="User-Profile-Image" />
                       </div>
                         <div class="color">
                          <span class='mt-5'>Bem-vindo(a),</span>
-                         <h6 class="f-w-601">{{ $auth.user.name }}!</h6>
+                         <h6 class="f-w-601">{{ $auth.user.nickname }}!</h6>
                           <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                         </div>
                        </div>
@@ -22,13 +22,18 @@
                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600">INFORMAÇÕES</h6>
                       <div class="row">
                         <div class="col-sm-6">
-                   <p class="m-b-10 f-w-600">Nome</p>
-                    <h6 class="text-muted f-w-400">{{ $auth.user.name }}</h6>
+                   <p class="m-b-10 f-w-600">Nome de Usuário</p>
+                    <h6 class="text-muted f-w-400">{{ $auth.user.nickname }}</h6>
                     </div>
                    <div class="col-sm-6">
                   <p class="m-b-10 f-w-600">Email</p>
                  <h6 class="text-muted f-w-400">{{ $auth.user.email }}</h6>
                  </div>
+                 <div class="col-sm-6">
+                  <p class="m-b-10 f-w-600">ID</p>
+                 <h6 class="text-muted f-w-400">{{ $auth.user.sub }}</h6>
+                 </div>
+                 
                  </div>
                  <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">DOAÇÕES</h6>
                   <div class="row">
@@ -44,6 +49,13 @@
               <p class="m-b-10 f-w-600">Dinheiro</p>
             <h6 class="text-muted f-w-400">R$0.00 doados</h6>
            </div>
+            <!--  <div class="row" display: none>
+      <pre class="col-12 text-light bg-dark p-4">
+{{
+        JSON.stringify($auth.user, null, 2)
+      }}</pre
+      > 
+    </div> -->
         </div>
        </div>
       </div>
