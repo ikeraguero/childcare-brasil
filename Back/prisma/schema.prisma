@@ -22,6 +22,7 @@ model Child {
   state             String
   cpf               String          @unique
   description       String?
+  materialsreceived String?
 }
 
 model School {

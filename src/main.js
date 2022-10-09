@@ -5,26 +5,25 @@ import router from './router'
 import './plugins/firebase'
 import './index.css'
 
+// Import the Auth0 configuration
+import { domain, clientId, audience } from "../auth_config.json";
 
-// Import the Auth0 configuration and plugin
-import { domain, clientId, audience } from '../auth_config.json';
-import { Auth0Plugin } from '@/auth/auth0-plugin';
+// Import the plugin here
+import { Auth0Plugin } from "./auth";
 
-// Install the authentication plugin
+// Install the authentication plugin here
 Vue.use(Auth0Plugin, {
   domain,
   clientId,
   audience,
-  onRedirectCallback: (appState) => {
+  onRedirectCallback: appState => {
     router.push(
       appState && appState.targetUrl
         ? appState.targetUrl
-        : window.location.pathname,
+        : window.location.pathname
     );
-  },
-});
-
-
+  }
+})
 
 Vue.config.productionTip = false
 

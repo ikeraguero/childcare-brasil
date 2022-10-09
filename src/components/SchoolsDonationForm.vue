@@ -120,7 +120,7 @@
                          <input type="submit" value="Prosseguir"/>
                              </form>
                              <router-link v-bind:to="'/criancas/doar/' + child.id + '/sucesso'" ><input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
-                         id="materialpayment" type="submit" value="Prosseguir" style="display: none"></router-link>
+                         id="materialpayment" type="button" style="display: none">Prosseguir</router-link>
 
                          <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
                          id="nothing" type="submit" value="Prosseguir" style="display: block">

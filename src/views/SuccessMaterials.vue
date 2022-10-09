@@ -1,14 +1,18 @@
 <template>
     <v-container class="pa-8 content-align-center">
       <div>
-            Sua doação de materiais para {{ child.name }} foi registrada com sucesso!
+            Quase lá!
       </div>
       <div>
-            Para completá-la, envie os materiais ({{}}) para o seguinte endereço:
+            Para completar sua doação para <b>{{ child.name }}</b>, envie os materiais informados para o seguinte endereço:
       </div>
       <div>
             {{child.address}}, {{child.city}}, {{child.state}}
       </div>
+      <form action="http://localhost:7777/api/donationadd" method="post">
+      <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
+                         id="materialpayment" type="submit" value="Prosseguir">
+                        </form>
     <div class="align-itens-center">
       <u></u>
     </div>

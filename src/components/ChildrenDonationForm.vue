@@ -107,7 +107,7 @@
                             <div class="test">Materiais</div>
             <input
             placeholder="Caneta, Borracha, Caderno..."
-            name="donationmaterials" 
+            name="donationmaterials"
             type="text"
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
@@ -115,12 +115,12 @@
             <div class="flex justify-center">
                 <div class="mt-6 flex justify-center">
                         
-                        <router-link to="/criancas/" class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Cancelar">Cancelar</router-link >    
+                    <router-link to="/criancas/" class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Cancelar">Cancelar</router-link >    
                             <form action="https://donate.stripe.com/test_4gw03M7353JQ8Pm9AA" class="ml-2 bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" id="moneypayment" style="display: none" >
                          <input type="submit" value="Prosseguir"/>
                              </form>
                              <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
-                         id="materialpayment" type="submit" value="Prosseguir" style="display: none"><router-link v-bind:to="'/criancas/doar/' + child.id + '/sucesso'" ></router-link>
+                         id="materialpayment" type="submit" value="Prosseguir" style="display: none">
 
                          <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
                          id="nothing" type="submit" value="Prosseguir" style="display: block">
@@ -130,9 +130,9 @@
 </div>
 </div>
 </template>
-
 <script>
 import axios from "axios";
+import emailjs from '@emailjs/browser';
 
 export default {
     name: "App",
@@ -150,6 +150,15 @@ export default {
         })
     },
     methods: {
+        sendEmail() {
+          emailjs.sendForm('service_i1j4gv7', 'template_u3j7r4m', this.$refs.form, 'KioHXliWOJ2QqIjb-')
+            .then((result) => {
+                console.log('SUCCESS!', result.text);
+            }, (error) => {
+                console.log('FAILED...', error.text);
+            });
+        },
+      
         left() {
             document.getElementById("container").scrollLeft -= 320;
         },
@@ -208,8 +217,11 @@ export default {
 }
 
 },
-  }
+    redirecting() {
+        window.location.href="http://localhost:8080/";
     }
+}
+}
 </script>
 
 <style>

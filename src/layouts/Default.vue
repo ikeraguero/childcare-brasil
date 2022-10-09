@@ -5,12 +5,13 @@
         <router-link to="/"><h4>Childcare Brasil</h4></router-link>
       </div>
       <ul class="nav-links">
-        <router-link to="/adminn" v-if="$auth.isAdmin">Admin</router-link > 
+        <router-link to="/adminn">Admin</router-link > 
         <router-link to="/">Home</router-link>
         <router-link to="/contato">Contato</router-link>
         <router-link to="/comodoar">Como doar</router-link>
-        <router-link to="/perfil" v-if="$auth.isAuthenticated">Perfil</router-link > 
-        <router-link to=""> <AuthenticationButton/> </router-link > 
+        <router-link to="/perfil">Perfil</router-link > 
+        <a v-if="!$auth.isAuthenticated" @click="login" class="button is-dark"><strong>Entrar</strong></a>
+        <a v-if="$auth.isAuthenticated" @click="logout" class="button is-dark"><strong>Sair</strong></a>
       </ul>
       <div class="burguer">
         <div class="linha1"></div>
@@ -31,11 +32,21 @@
 
 </template>
 <script>
-import AuthenticationButton from "../components/AuthenticationButton.vue";
-
 export default {
-    components: { AuthenticationButton }
-};
+  name: 'Nav',
+  methods: {
+  // Log the user in
+  login() {
+    this.$auth.loginWithRedirect();
+  },
+  // Log the user out
+  logout() {
+    this.$auth.logout({
+      returnTo: window.location.origin
+    });
+  }
+  }
+}
 </script>
 
 <style>

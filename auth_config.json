@@ -1,6 +1,5 @@
 {
     "domain": "dev-hhi6hna9.us.auth0.com",
     "clientId": "nP47mEfp6uGeQoJJTWLyWpAo5hyPxtn4",
-    "audience": "https://childcare-brasil-api.com",
-    "serverUrl": ""
+    "audience": "https://childcare-brasil-api.com"
   }

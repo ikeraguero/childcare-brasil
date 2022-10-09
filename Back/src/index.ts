@@ -1,39 +1,93 @@
 import { PrismaClient } from '@prisma/client';
-import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import { auth } from 'express-openid-connect';
-import { config } from "../auth/authConfig";
 import * as api from "./controllers/apicontroller"; 
 
-const jwtAuthz = require('express-jwt-authz');
 
-require('dotenv').config();
-const ManagementClient = require('auth0').ManagementClient;
-
+const express = require("express");
 const app = express();
 dotenv.config();
 const prisma = new PrismaClient();
 
+const bodyParser = require("body-parser");
+const { expressjwt: jwt } = require("express-jwt");
+const jwksRsa = require("jwks-rsa");
+
+
+// Set up Auth0 configuration
 const authConfig = {
   domain: "dev-hhi6hna9.us.auth0.com",
-  audience: process.env.AUDIENCE,
-  clientId: process.env.CLIENTID,
-  clientSecret: process.env.SECRET
+  audience: "https://childcare-brasil-api.com"
 };
 
-const managementAPI = new ManagementClient({
-  domain: authConfig.domain,
-  clientId: authConfig.clientId,
-  clientSecret: authConfig.clientSecret
+// Create middleware to validate the JWT using express-jwt
+const checkJwt = jwt({
+  // Provide a signing key based on the key identifier in the header and the signing keys provided by your Auth0 JWKS endpoint.
+  secret: jwksRsa.expressJwtSecret({
+    cache: true,
+    rateLimit: true,
+    jwksRequestsPerMinute: 5,
+    jwksUri: `https://${authConfig.domain}/.well-known/jwks.json`
+  }),
+
+  // Validate the audience (Identifier) and the issuer (Domain).
+  audience: authConfig.audience,
+  issuer: `https://${authConfig.domain}/`,
+  algorithms: ["RS256"]
+});
+
+// mock data to send to our frontend
+let events = [
+  {
+    id: 1,
+    name: "Charity Ball",
+    category: "Fundraising",
+    description:
+      "Spend an elegant night of dinner and dancing with us as we raise money for our new rescue farm.",
+    featuredImage: "https://placekitten.com/500/500",
+    images: [
+      "https://placekitten.com/500/500",
+      "https://placekitten.com/500/500",
+      "https://placekitten.com/500/500"
+    ],
+    location: "1234 Fancy Ave",
+    date: "12-25-2019",
+    time: "11:30"
+  },
+  {
+    id: 2,
+    name: "Rescue Center Goods Drive",
+    category: "Adoptions",
+    description:
+      "Come to our donation drive to help us replenish our stock of pet food, toys, bedding, etc. We will have live bands, games, food trucks, and much more.",
+    featuredImage: "https://placekitten.com/500/500",
+    images: ["https://placekitten.com/500/500"],
+    location: "1234 Dog Alley",
+    date: "11-21-2019",
+    time: "12:00"
+  }
+];
+
+// get all events
+app.get("/events", (req, res) => {
+  res.send(events);
+});
+
+app.get("/events/:id", checkJwt, (req, res) => {
+  const id = Number(req.params.id);
+  const event = events.find(event => event.id === id);
+  res.send(event);
+});
+
+app.get("/", (req, res) => {
+  res.send(`Hi! Server is listening on port ${port}`);
 });
 
 
-
-app.use(express.json());
+app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-app.use(auth(config));
+
 
 const port = process.env.PORT || 3000;
 

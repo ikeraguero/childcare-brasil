@@ -8,8 +8,7 @@
     "lint": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint"
   },
   "dependencies": {
-    "@auth0/auth0-spa-js": "^1.22.1",
-    "@auth0/auth0-vue": "^1.0.2",
+    "@auth0/auth0-spa-js": "^1.22.4",
     "@emailjs/browser": "^3.7.0",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@heroicons/vue": "^1.0.6",

@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
 import { getChildren, getChild, getSchools, getSchool, getDonations, getDonation } from "../../db/search";
 import { addChild, deleteChild, updateChild, addSchool, deleteSchool, updateSchool, addDonation } from "../../db/post";
+import { appendFile } from 'fs';
+
 
 // Children
 
@@ -16,8 +18,8 @@ export const child = async (req: Request, res: Response) => {
 
 export const childadd = async (req: Request, res: Response) => {
     const r = req.body;
-    const child = await addChild(r.childphoto, r.childname, r.childgender,r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.is_castrated);
-    res.redirect("http://localhost:8080/admin");
+    const child = await addChild(r.childphoto, r.childname, r.childgender,r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.childdesc, r.childmaterialsreceived);
+    res.redirect("http://localhost:8080/adminn");
 
 }
 
@@ -29,7 +31,7 @@ export const childdelete = async (req: Request, res: Response) => {
 
 export const childupdate = async (req: Request, res: Response) => {
     const r = req.body;
-    const child = await updateChild(req.params.child_id, r.childphoto, r.childname, r.childgender,r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.is_castrated);
+    const child = await updateChild(req.params.child_id, r.childphoto, r.childname, r.childgender,r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.childdesc, r.childmaterialsreceived);
     res.redirect("http://localhost:8080/admin");
 }
 
@@ -78,6 +80,4 @@ export const donation = async (req: Request, res: Response) => {
 export const donationadd = async (req: Request, res: Response) => {
     const r = req.body;
     const donation = await addDonation(r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials, r.donationdonatedto, r.donationdonatedtoid);
-    res.redirect("http://localhost:8080/adminn");
-
 }
