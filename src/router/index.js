@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-
+import { authGuard } from "../auth/authGuard"
 
 
 Vue.use(VueRouter)
@@ -19,6 +19,7 @@ const routes = [
       {
         path: '/perfil',
         name: 'Profile',
+        beforeEnter: authGuard,
         component: () => import('../views/Perfil.vue')
       },
       {
@@ -34,60 +35,61 @@ const routes = [
       {
         path: '/criancas',
         name: 'Children',
+        beforeEnter: authGuard,
         component: () => import('../views/AjudarCriancas.vue')
       },
       {
         path: '/escolas',
         name: 'Schools',
-        
+        beforeEnter: authGuard,
         component: () => import('../views/AjudarEscolas.vue')
       },
       {
         path: '/adminn',
         name: 'Controll Panel',
-
+        beforeEnter: authGuard,
         component: () => import('../views/ControlPanel.vue')
       },
       {
         path: 'adminn/criancas',
         name: 'Children Controll Panel',
-
+        beforeEnter: authGuard,
         component: () => import('../views/ControlPanelChild.vue')
       },
       {
         path: 'adminn/criancas/adicionar',
         name: 'AddChildren',
-
+        beforeEnter: authGuard,
         component: () => import('../views/FormChild.vue')
       },
       {
         path: 'adminn/escolas',
         name: 'Schools Controll Panel',
-
+        beforeEnter: authGuard,
         component: () => import('../views/ControlPanelSchool.vue')
       },
       {
         path: 'adminn/escolas/adicionar',
         name: 'AddSchools',
-
+        beforeEnter: authGuard,
         component: () => import('../views/FormSchool.vue')
       },
       {
         path: "criancas/doar/:id/",
         name: 'DonateChild',
-
+        beforeEnter: authGuard,
         component: () => import('../views/ChildDonationPage.vue')
       },
     {
       path: "escolas/doar/:id/",
         name: 'DonateSchool',
-
+        beforeEnter: authGuard,
         component: () => import('../views/SchoolDonationPage.vue')
       },
       {
       path: "adminn/doacoes",
       name: 'Donations',
-
+      beforeEnter: authGuard,
       component: () => import('../views/Donations.vue')
       
       },
@@ -108,7 +110,7 @@ const routes = [
           {
             path: "criancas/doar/:id/sucesso",
             name: 'SuccessMaterials',
-
+            beforeEnter: authGuard,
             component: () => import('../views/SuccessMaterials.vue')
             
             },

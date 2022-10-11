@@ -80,7 +80,7 @@ export async function getDonations(){
     return new response(200, "Donations found", donations)
 }
 
-//specific child
+//specific donation
 
 export async function getDonation(donation_id: string) {
     await prisma.$connect();

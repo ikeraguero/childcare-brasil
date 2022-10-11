@@ -5,7 +5,7 @@
         <router-link to="/"><h4>Childcare Brasil</h4></router-link>
       </div>
       <ul class="nav-links">
-        <router-link to="/adminn">Admin</router-link > 
+        <router-link v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'" to="/adminn">Admin</router-link > 
         <router-link to="/">Home</router-link>
         <router-link to="/contato">Contato</router-link>
         <router-link to="/comodoar">Como doar</router-link>

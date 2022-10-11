@@ -20,6 +20,7 @@
   "dependencies": {
     "@prisma/client": "^4.3.1",
     "@vue/cli-service": "^5.0.8",
+    "auth0": "^2.43.0",
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
