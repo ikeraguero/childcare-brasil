@@ -2,7 +2,7 @@
     <div class="flex justify-center max-w-3xl mx-auto py-10">
         <div class="w-full h-full">
             <div class="pa-8 content-align-center" id="message" style="display: none">
-        <div>
+        <div class="font-semibold">
             Quase lá!
       </div>
       <div>
@@ -11,7 +11,12 @@
       <div>
             {{child.address}}, {{child.city}}, {{child.state}}
       </div>
-        </div>ss
+
+      <div class="mt-24">
+            Após isso, envie o comprovante de envio para o email childcarebrasil@gmail.com e conclua a doação
+      </div>
+      
+        </div>
         <form class="rounded px-18 pt-8 pb-8 mb-8" action="http://localhost:7777/api/donationadd" method="post" id="testform" style="display: block">
             <div class="formcomponents" id="componentsform">
             <div class="test1 mb-0 flex justify-center">Você está doando para:</div>
@@ -125,7 +130,7 @@
             />
             </label>
             </div>
-            <div class="flex justify-center mt-96" style="display: none" id="submitbuttons">
+            <div class="flex justify-center mt-6" style="display: none" id="submitbuttons">
                 <div class="mt-6 flex justify-center">
                         
                     <router-link to="/criancas/" class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Cancelar">Cancelar</router-link >    
