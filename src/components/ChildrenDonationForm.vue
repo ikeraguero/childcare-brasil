@@ -1,7 +1,19 @@
 <template>
     <div class="flex justify-center max-w-3xl mx-auto py-10">
         <div class="w-full h-full">
-        <form class="rounded px-18 pt-8 pb-8 mb-8" action="http://localhost:7777/api/donationadd" method="post">
+            <div class="pa-8 content-align-center" id="message" style="display: none">
+        <div>
+            Quase lá!
+      </div>
+      <div>
+            Para completar sua doação para <b>{{ child.name }}</b>, envie os materiais informados para o seguinte endereço:
+      </div>
+      <div>
+            {{child.address}}, {{child.city}}, {{child.state}}
+      </div>
+        </div>ss
+        <form class="rounded px-18 pt-8 pb-8 mb-8" action="http://localhost:7777/api/donationadd" method="post" id="testform" style="display: block">
+            <div class="formcomponents" id="componentsform">
             <div class="test1 mb-0 flex justify-center">Você está doando para:</div>
             <div class="test1 mb-8 flex justify-center font-bold">{{ child.name }}</div>
             <label class="block text-white text-sm font-bold mb-0" for="username">
@@ -112,7 +124,8 @@
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
             </label>
-            <div class="flex justify-center">
+            </div>
+            <div class="flex justify-center mt-96" style="display: none" id="submitbuttons">
                 <div class="mt-6 flex justify-center">
                         
                     <router-link to="/criancas/" class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Cancelar">Cancelar</router-link >    
@@ -120,13 +133,21 @@
                          <input type="submit" value="Prosseguir"/>
                              </form>
                              <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
-                         id="materialpayment" type="submit" value="Prosseguir" style="display: none">
+                         id="materialpayment" type="submit" value="Concluir doação" style="display: none">
 
                          <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
                          id="nothing" type="submit" value="Prosseguir" style="display: block">
                     </div>
                 </div> 
-    </form>
+        </form>
+
+            <div class="flex justify-center" id="fakesubmit">
+                <div class="mt-6 flex justify-center">
+                   <router-link to="/criancas/" class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Cancelar">Cancelar</router-link >    
+                    <button class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
+                         @click='hideForm' style="display: block">Prosseguir</button>
+                  </div>
+                </div> 
 </div>
 </div>
 </template>
@@ -219,7 +240,13 @@ export default {
 },
     redirecting() {
         window.location.href="http://localhost:8080/";
-    }
+    },
+    hideForm() {
+    document.getElementById("componentsform").style.display = "none";
+    document.getElementById("fakesubmit").style.display = "none";
+    document.getElementById("submitbuttons").removeAttribute('style')
+    document.getElementById("message").removeAttribute('style')
+}
 }
 }
 </script>
@@ -241,5 +268,12 @@ export default {
 select:hover {
     cursor: pointer;
 }
+
+.pa-8 {
+    color: #FFF6EE;
+    font-size: 26px;
+    font-family: "Proxima Nova", system-ui, sans-serif;
+    text-align: center;
+  }
     
 </style>

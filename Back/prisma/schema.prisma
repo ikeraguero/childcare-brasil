@@ -39,17 +39,17 @@ model School {
 }
 
 model Donation {
-  id            String @id @default(auto()) @map("_id") @db.ObjectId
-  donatortype   String
-  donator       String
-  email         String
-  cpf           String? @unique
-  cnpj          String? @unique
-  cellphone     String?
-  type          String
-  value         String?
-  materials     String?
-  donatedto     String?
-  donatedtoid   String?
-  data          DateTime @default(now())
+  id                String @id @default(auto()) @map("_id") @db.ObjectId
+  donatortype       String
+  donator           String
+  email             String
+  cpf               String? @unique
+  cnpj              String? @unique
+  cellphone         String?
+  type              String
+  value             String?
+  materials         String?
+  donatedto         String?
+  donatedtoid       String?
+  data              DateTime @default(now())
 }
