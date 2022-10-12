@@ -134,14 +134,9 @@
                 <div class="mt-6 flex justify-center">
                         
                     <router-link to="/criancas/" class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Cancelar">Cancelar</router-link >    
-                            <form action="https://donate.stripe.com/test_4gw03M7353JQ8Pm9AA" class="ml-2 bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" id="moneypayment" style="display: none" >
-                         <input type="submit" value="Prosseguir"/>
-                             </form>
                              <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
-                         id="materialpayment" type="submit" value="Concluir doação" style="display: none">
+                          type="submit" value="Concluir doação">
 
-                         <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
-                         id="nothing" type="submit" value="Prosseguir" style="display: block">
                     </div>
                 </div> 
         </form>
@@ -149,8 +144,24 @@
             <div class="flex justify-center" id="fakesubmit">
                 <div class="mt-6 flex justify-center">
                    <router-link to="/criancas/" class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Cancelar">Cancelar</router-link >    
+                    <div>
+                        <stripe-checkout
+                        ref="checkoutRef"
+                        mode="payment"
+                        :pk="publishableKey"
+                        :line-items="lineItems"
+                        :success-url="successURL"
+                        :cancel-url="cancelURL"
+                        @loading="v => loading = v"
+                        />
                     <button class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
-                         @click='hideForm' style="display: block">Prosseguir</button>
+                        id="moneypayment" @click='pagar' style="display: none">Prosseguir</button>
+                    </div>
+                    <button class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
+                    id="materialpayment" @click='hideForm' style="display: none">Prosseguir</button>
+
+                         <button class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
+                         id="nothing" style="display: block">Prosseguir</button>
                   </div>
                 </div> 
 </div>
@@ -158,16 +169,31 @@
 </template>
 <script>
 import axios from "axios";
+import { StripeCheckout } from '@vue-stripe/vue-stripe';
 import emailjs from '@emailjs/browser';
 
 export default {
     name: "App",
+    components: {
+        StripeCheckout
+    },
     data() {
+        this.publishableKey = "pk_test_51LfBunLGKNPym7INdYrZYYBfkoip5ZT1SCkbt6qsu7bD3dtD2KurfWhN5gART5oaVYdoXSh5BnhhWVNjSrOeVhFu00ve0FMVtG";
         return {
             child: [],
             showControls: true,
+            loading: false,
+      lineItems: [
+        {
+          price: 'prod_MOA9HToElEiXTI', // The id of the one-time price you created in your Stripe dashboard
+          quantity: 1,
+        },
+      ],
+      successURL: 'http://localhost:8080/',
+      cancelURL: 'http://localhost:8080/criancas',
 
         };
+        
     },
     mounted() {
         axios.get("http://localhost:7777/api/child/" + this.$route.params.id)
@@ -251,8 +277,12 @@ export default {
     document.getElementById("fakesubmit").style.display = "none";
     document.getElementById("submitbuttons").removeAttribute('style')
     document.getElementById("message").removeAttribute('style')
+},
+    pagar () {
+      // You will be redirected to Stripe's secure checkout page
+      this.$refs.checkoutRef.redirectToCheckout();
 }
-}
+    }
 }
 </script>
 
