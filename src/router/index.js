@@ -11,11 +11,7 @@ const routes = [
     path: '/',
     component: () => import('@/layouts/Default'),
     children: [
-      {
-        path: '/testpage',
-        name: 'Area for tests',
-        component: () => import('../views/TestView.vue')
-      },
+      
       {
         path: '',
         name: 'Home',

@@ -1,6 +1,21 @@
 <template>
     <div class="flex justify-center max-w-3xl mx-auto py-10">
         <div class="w-full h-full">
+            <div class="pa-8 mb-0 content-align-center" id="paypalpayment" style="display: none">
+        <div class="font-semibold">
+            <v-container class="content-align-center">
+        <div v-if="!paidFor">
+            <h1> Finalize a sua doação de R${{ product.price }} para {{child.name}} </h1>
+            <p> {{ product.description }} </p>        
+        </div>
+        <div v-if="paidFor">
+            <h1> Sua doação foi registrada com sucesso!</h1>
+               </div>
+        <div class="pay mt-16" ref="paypal"></div>
+    </v-container>
+            </div>    
+
+      </div>
             <div class="pa-8 content-align-center" id="message" style="display: none">
         <div class="font-semibold">
             Quase lá!
@@ -118,8 +133,15 @@
             <option value="Dinheiro">Dinheiro</option>
             <option value="Material">Material Escolar</option>
                 </select>
-            <label class='block text-sm font-bold mb-3 mt-3' name="donationvalue" id="money" style="display: none" />
-
+            <label class='block text-sm font-bold mb-3 mt-3' id="money" style="display: none" >
+                    <div class="test">Valor</div>
+            <input
+            placeholder="..."
+            name="donationmoney"
+            type="text"
+            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            />
+        </label>
             <label class='block text-sm font-bold mb-3 mt-3' id="materials" style="display: none">
                             <div class="test">Materiais</div>
             <input
@@ -144,72 +166,76 @@
             <div class="flex justify-center" id="fakesubmit">
                 <div class="mt-6 flex justify-center">
                    <router-link to="/criancas/" class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Cancelar">Cancelar</router-link >    
-                    <div>
-                        <stripe-checkout
-                        ref="checkoutRef"
-                        mode="payment"
-                        :pk="publishableKey"
-                        :line-items="lineItems"
-                        :success-url="successURL"
-                        :cancel-url="cancelURL"
-                        @loading="v => loading = v"
-                        />
+
                     <button class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
-                        id="moneypayment" @click='pagar' style="display: none">Prosseguir</button>
-                    </div>
+                        id="moneypayment" @click='hideForm2' style="display: none">Prosseguir</button>
+
                     <button class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
-                    id="materialpayment" @click='hideForm' style="display: none">Prosseguir</button>
+                    id="materialpayment" @click='hideForm1' style="display: none">Prosseguir</button>
 
                          <button class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
                          id="nothing" style="display: block">Prosseguir</button>
                   </div>
-                </div> 
+                </div>
+    
 </div>
 </div>
 </template>
 <script>
 import axios from "axios";
-import { StripeCheckout } from '@vue-stripe/vue-stripe';
-import emailjs from '@emailjs/browser';
 
 export default {
     name: "App",
     components: {
-        StripeCheckout
     },
     data() {
-        this.publishableKey = "pk_test_51LfBunLGKNPym7INdYrZYYBfkoip5ZT1SCkbt6qsu7bD3dtD2KurfWhN5gART5oaVYdoXSh5BnhhWVNjSrOeVhFu00ve0FMVtG";
         return {
             child: [],
             showControls: true,
             loading: false,
-      lineItems: [
-        {
-          price: 'prod_MOA9HToElEiXTI', // The id of the one-time price you created in your Stripe dashboard
-          quantity: 1,
-        },
-      ],
-      successURL: 'http://localhost:8080/',
-      cancelURL: 'http://localhost:8080/criancas',
+            paidFor: false,
+            product: {
+                price: 100.00,
+                description: "teste"
+            }
 
         };
         
     },
-    mounted() {
+    mounted: function () {
+        const script = document.createElement("script");
+        script.src = 
+            "https://www.paypal.com/sdk/js?client-id=AaIk2-K08izmXx-aWrDAHLE4lRF0et7X1fFaZKbN4GBfM7h5x6H03WszIU6UmWdWU8X7f3Bz_4FXGghH"
+        script.addEventListener("load", this.setLoaded);
+        document.body.appendChild(script)
+    
         axios.get("http://localhost:7777/api/child/" + this.$route.params.id)
         .then(response => {
             this.child = response.data
         })
     },
     methods: {
-        sendEmail() {
-          emailjs.sendForm('service_i1j4gv7', 'template_u3j7r4m', this.$refs.form, 'KioHXliWOJ2QqIjb-')
-            .then((result) => {
-                console.log('SUCCESS!', result.text);
-            }, (error) => {
-                console.log('FAILED...', error.text);
-            });
+        setLoaded: function() {
+            this.loaded = true
+            window.paypal
+            .Buttons({
+                createOrder: (data, actions) => {
+                    return actions.order.create ({
+                        purchase_units: [
+                            {
+                                description: this.product.description,
+                                amount: {
+                                    currency_code: "USD",
+                                    value: this.product.price
+                                }
+                            }
+                        ]
+                    })
+                }
+            })
+            .render(this.$refs.paypal)
         },
+    
       
         left() {
             document.getElementById("container").scrollLeft -= 320;
@@ -272,18 +298,22 @@ export default {
     redirecting() {
         window.location.href="http://localhost:8080/";
     },
-    hideForm() {
+    hideForm1() {
     document.getElementById("componentsform").style.display = "none";
     document.getElementById("fakesubmit").style.display = "none";
     document.getElementById("submitbuttons").removeAttribute('style')
     document.getElementById("message").removeAttribute('style')
 },
-    pagar () {
-      // You will be redirected to Stripe's secure checkout page
-      this.$refs.checkoutRef.redirectToCheckout();
+    hideForm2() {
+    document.getElementById("componentsform").style.display = "none";
+    document.getElementById("fakesubmit").style.display = "none";
+    document.getElementById("submitbuttons").removeAttribute('style')
+    document.getElementById("paypalpayment").removeAttribute('style')
+},
+
+},
 }
-    }
-}
+
 </script>
 
 <style>

@@ -7,7 +7,7 @@
         <div v-if="paidFor">
             <h1> Sua doação foi registrada com sucesso!</h1>
                </div>
-        <div ref="paypal"></div>
+        <div class="pay p-8" ref="paypal"></div>
     </v-container>
   </template>
   
@@ -59,5 +59,7 @@
     }
   </script>
   <style >
-
+.pay {
+    background-color: antiquewhite;
+}
   </style>
