@@ -1,9 +1,9 @@
 <template>
-  <v-container class="pa-8 px-0" fluid>
+  <div class="pa-8 px-0" fluid>
     <h1 class="h1"></h1>
     <v-row>
       <v-col cols=5>
-     <mosaico/>
+     <mosaico class="mt-4 ml-3" />
       </v-col>
       <v-col>
         <p class="slogan mt-20">
@@ -13,7 +13,7 @@
         <br><br>
         
 
-          <div class="d-flex justify-space-around mt-20 ">
+          <div class="d-flex justify-space-around mt-20 ml-8">
 
             <v-btn icon min-width="200" link to="/criancas">
               
@@ -35,7 +35,7 @@
             </v-btn> 
           </div>      
           <br>
-          <div class="d-flex justify-space-around mt-16 text-3xl font-bold" height="100">
+          <div class="d-flex justify-space-around mt-16 text-3xl font-bold ml-7" height="100">
             <h1>Crianças</h1> 
             <h1>Escolas</h1>
           </div>
@@ -48,20 +48,18 @@
      <v-row class="counter-text" justify="center">CONTADOR:</v-row>
      </div>
         <section class="counters">
-        <div class="container">
+        
         <v-col>
         <div v-if="cards.data.length <= 9">
-					<i class="fa-4x"></i>
 					<div class="counter mb-4"> 0{{cards.data.length}} </div>
 					<h3 class="text-2xl">Total de Doações Realizadas</h3>
 				</div>
         <div v-else>
-					<i class="fa-4x"></i>
 					<div class="counter mb-4">{{cards.data.length}} </div>
 					<h3 class="text-2xl">Total de Doações Realizadas</h3>
 				</div>
         </v-col>
-        </div>
+        
       </section> 
     <v-row>
       <v-col>
@@ -70,7 +68,7 @@
     </v-row>
       
   
-  </v-container>
+  </div>
   
 
 </template>
