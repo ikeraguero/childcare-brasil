@@ -5,13 +5,13 @@
         <div class="font-semibold">
             <v-container class="content-align-center">
         <div v-if="!paidFor">
-            <h1> Finalize a sua doação de R${{ product.price }} para {{child.name}} </h1>
-            <p> {{ product.description }} </p>        
+            <h1 class="test1 mb-0 flex justify-center"> Quase lá! </h1>
+            <p class="test1 mb-0 flex justify-center"> Finalize a sua doação de R${{ product.price }} para {{child.name}} </p>        
         </div>
         <div v-if="paidFor">
             <h1> Sua doação foi registrada com sucesso!</h1>
                </div>
-        <div class="pay mt-16" ref="paypal"></div>
+        <div class="pay mt-16 bg-antiquewhite" ref="paypal"></div>
     </v-container>
             </div>    
 
@@ -152,10 +152,17 @@
             />
             </label>
             </div>
-            <div class="flex justify-center mt-6" style="display: none" id="submitbuttons">
+            <div class="flex justify-center mt-6" style="display: none" id="submitbuttons1">
                 <div class="mt-6 flex justify-center">
-                        
-                    <router-link to="/criancas/" class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Cancelar">Cancelar</router-link >    
+                         <button @click='unhideForm1' class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Voltar">Voltar</button>    
+                             <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
+                          type="submit" value="Concluir doação">
+                   </div>
+                </div>
+
+                    <div class="flex justify-center mt-6" style="display: none" id="submitbuttons2">
+                <div class="mt-6 flex justify-center">               
+                    <button @click='unhideForm2' class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Voltar">Voltar</button>    
                              <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
                           type="submit" value="Concluir doação">
 
@@ -301,15 +308,28 @@ export default {
     hideForm1() {
     document.getElementById("componentsform").style.display = "none";
     document.getElementById("fakesubmit").style.display = "none";
-    document.getElementById("submitbuttons").removeAttribute('style')
+    document.getElementById("submitbuttons1").removeAttribute('style')
     document.getElementById("message").removeAttribute('style')
 },
+    unhideForm1() {
+    document.getElementById("componentsform").removeAttribute('style');
+    document.getElementById("fakesubmit").removeAttribute('style');
+    document.getElementById("submitbuttons1").style.display = "none"
+    document.getElementById("message").style.display = "none"
+    },
     hideForm2() {
     document.getElementById("componentsform").style.display = "none";
     document.getElementById("fakesubmit").style.display = "none";
-    document.getElementById("submitbuttons").removeAttribute('style')
+    document.getElementById("submitbuttons2").removeAttribute('style')
     document.getElementById("paypalpayment").removeAttribute('style')
 },
+    unhideForm2() {
+    document.getElementById("componentsform").removeAttribute('style');
+    document.getElementById("fakesubmit").removeAttribute('style');
+    document.getElementById("submitbuttons2").style.display = "none"
+    document.getElementById("paypalpayment").style.display = "none"
+    },
+    
 
 },
 }
@@ -341,4 +361,5 @@ select:hover {
     text-align: center;
   }
     
+
 </style>

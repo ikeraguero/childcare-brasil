@@ -1,12 +1,44 @@
 <template>
     <div class="flex justify-center max-w-3xl mx-auto py-10">
-    <div class="w-full h-full">
-        <form class="rounded px-18 pt-8 pb-8 mb-8" action="http://localhost:7777/api/donationadd" method="post">
-        <div class="test1 mb-0 flex justify-center">Você está doando para:</div>
-        <div class="test1 mb-8 flex justify-center font-bold">{{ school.name }}</div>
-        <label class="block text-white text-sm font-bold mb-0" for="username">
-          <div class="test">Doar como:</div>
-        </label>
+        <div class="w-full h-full">
+            <div class="pa-8 mb-0 content-align-center" id="paypalpayment" style="display: none">
+        <div class="font-semibold">
+            <v-container class="content-align-center">
+        <div v-if="!paidFor">
+            <h1 class="test1 mb-0 flex justify-center"> Quase lá! </h1>
+            <p class="test1 mb-0 flex justify-center"> Finalize a sua doação de R${{ product.price }} para {{school.name}} </p>        
+        </div>
+        <div v-if="paidFor">
+            <h1> Sua doação foi registrada com sucesso!</h1>
+               </div>
+        <div class="pay mt-16 bg-antiquewhite" ref="paypal"></div>
+    </v-container>
+            </div>    
+
+      </div>
+            <div class="pa-8 content-align-center" id="message" style="display: none">
+        <div class="font-semibold">
+            Quase lá!
+      </div>
+      <div>
+            Para completar sua doação para <b>{{ school.name }}</b>, envie os materiais informados para o seguinte endereço:
+      </div>
+      <div>
+            {{school.address}}, {{school.city}}, {{school.state}}
+      </div>
+
+      <div class="mt-24">
+            Após isso, envie o comprovante de envio para o email childcarebrasil@gmail.com e conclua a doação
+      </div>
+      
+        </div>
+        <form class="rounded px-18 pt-8 pb-8 mb-8" action="http://localhost:7777/api/donationadd" method="post" id="testform" style="display: block">
+            <div class="formcomponents" id="componentsform">
+            <div class="test1 mb-0 flex justify-center">Você está doando para:</div>
+            <div class="test1 mb-8 flex justify-center font-bold">{{ school.name }}</div>
+            <label class="block text-white text-sm font-bold mb-0" for="username">
+              <div class="test">Doar como:</div>
+            </label>
             <select class="form-select appearance-none
             shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationdonatortype" id="donatortype" @click="test1">
             <option value="0"></option>    
@@ -68,7 +100,7 @@
             <input
             name="donationdonatedto" 
             type="text"
-            v-bind:value=child.name
+            v-bind:value=school.name
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             </label>
@@ -78,7 +110,7 @@
             <input
             name="donationdonatedtoid" 
             type="text"
-            v-bind:value=child.id
+            v-bind:value=school.id
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             </label>
@@ -101,139 +133,233 @@
             <option value="Dinheiro">Dinheiro</option>
             <option value="Material">Material Escolar</option>
                 </select>
-            <label class='block text-sm font-bold mb-3 mt-3' name="donationvalue" id="money" style="display: none" />
-
+            <label class='block text-sm font-bold mb-3 mt-3' id="money" style="display: none" >
+                    <div class="test">Valor</div>
+            <input
+            placeholder="..."
+            name="donationmoney"
+            type="text"
+            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            />
+        </label>
             <label class='block text-sm font-bold mb-3 mt-3' id="materials" style="display: none">
                             <div class="test">Materiais</div>
             <input
             placeholder="Caneta, Borracha, Caderno..."
-            name="donationmaterials" 
+            name="donationmaterials"
             type="text"
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
             </label>
-            <div class="flex justify-center">
+            </div>
+            <div class="flex justify-center mt-6" style="display: none" id="submitbuttons1">
                 <div class="mt-6 flex justify-center">
-                    
-                        <router-link to="/escolas/" class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Cancelar">Cancelar</router-link >    
-                            <form action="https://donate.stripe.com/test_4gw03M7353JQ8Pm9AA" class="ml-2 bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" id="moneypayment" style="display: none" >
-                         <input type="submit" value="Prosseguir"/>
-                             </form>
-                             <router-link v-bind:to="'/criancas/doar/' + child.id + '/sucesso'" ><input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
-                         id="materialpayment" type="button" style="display: none">Prosseguir</router-link>
+                         <button @click='unhideForm1' class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Voltar">Voltar</button>    
+                             <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
+                          type="submit" value="Concluir doação">
+                   </div>
+                </div>
 
-                         <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
-                         id="nothing" type="submit" value="Prosseguir" style="display: block">
+                    <div class="flex justify-center mt-6" style="display: none" id="submitbuttons2">
+                <div class="mt-6 flex justify-center">               
+                    <button @click='unhideForm2' class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Voltar">Voltar</button>    
+                             <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
+                          type="submit" value="Concluir doação">
+
                     </div>
                 </div> 
-    </form>
+        </form>
+
+            <div class="flex justify-center" id="fakesubmit">
+                <div class="mt-6 flex justify-center">
+                   <router-link to="/criancas/" class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Cancelar">Cancelar</router-link >    
+
+                    <button class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
+                        id="moneypayment" @click='hideForm2' style="display: none">Prosseguir</button>
+
+                    <button class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
+                    id="materialpayment" @click='hideForm1' style="display: none">Prosseguir</button>
+
+                         <button class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
+                         id="nothing" style="display: block">Prosseguir</button>
+                  </div>
+                </div>
+    
 </div>
 </div>
 </template>
-
 <script>
 import axios from "axios";
 
 export default {
-name: "App",
-data() {
-    return {
-        school: [],
-        showControls: true,
-    };
-},
-mounted() {
-    axios.get("http://localhost:7777/api/school/" + this.$route.params.id)
-    .then(response => {
-        this.school = response.data
-    })
-},
-methods: {
-    left() {
-        document.getElementById("container").scrollLeft -= 320;
+    name: "App",
+    components: {
     },
-    right() {
-        document.getElementById("container").scrollLeft += 320;
+    data() {
+        return {
+            school: [],
+            showControls: true,
+            loading: false,
+            paidFor: false,
+            product: {
+                price: 100.00,
+                description: "teste"
+            }
+
+        };
+        
     },
-    age(age) {
-        if (age > 1) {
-            return "Anos";
-        } else {
-            return "Ano";
-        }
-    },    
-    test() {
-        
-        if (document.getElementById("donationtype").value == '0') {
-        document.getElementById('money').removeAttribute('style')
-        document.getElementById('materials').style.display = 'none';
-        document.getElementById('nothing').removeAttribute('style')
-        document.getElementById('materialpayment').style.display = 'none';
-        document.getElementById('moneypayment').style.display = 'none';
-        } else {
-        document.getElementById('money').style.display = 'none';
-        document.getElementById('moneypayment').style.display = 'none';
-        document.getElementById('nothing').style.display = 'none';
-        
+    mounted: function () {
+        const script = document.createElement("script");
+        script.src = 
+            "https://www.paypal.com/sdk/js?client-id=AaIk2-K08izmXx-aWrDAHLE4lRF0et7X1fFaZKbN4GBfM7h5x6H03WszIU6UmWdWU8X7f3Bz_4FXGghH"
+        script.addEventListener("load", this.setLoaded);
+        document.body.appendschool(script)
+    
+        axios.get("http://localhost:7777/api/school/" + this.$route.params.id)
+        .then(response => {
+            this.school = response.data
+        })
+    },
+    methods: {
+        setLoaded: function() {
+            this.loaded = true
+            window.paypal
+            .Buttons({
+                createOrder: (data, actions) => {
+                    return actions.order.create ({
+                        purchase_units: [
+                            {
+                                description: this.product.description,
+                                amount: {
+                                    currency_code: "USD",
+                                    value: this.product.price
+                                }
+                            }
+                        ]
+                    })
+                }
+            })
+            .render(this.$refs.paypal)
+        },
+    
+      
+        left() {
+            document.getElementById("container").scrollLeft -= 320;
+        },
+        right() {
+            document.getElementById("container").scrollLeft += 320;
+        },
+        age(age) {
+            if (age > 1) {
+                return "Anos";
+            } else {
+                return "Ano";
+            }
+        },    
+        test(){
+
+            if (document.getElementById("donationtype").value == 'Dinheiro') {
+            document.getElementById('nothing').style.display = 'none';
+            document.getElementById('money').removeAttribute('style')
+            document.getElementById('materials').style.display = 'none';
+            document.getElementById('moneypayment').removeAttribute('style')
+            document.getElementById('materialpayment').style.display = 'none';
+            } else {
+            document.getElementById('money').style.display = 'none';
+            document.getElementById('moneypayment').style.display = 'none';
+            document.getElementById('nothing').style.display = 'block';
 
 
-        if (document.getElementById("donationtype").value == 'Dinheiro') {
-        document.getElementById('nothing').style.display = 'none';
-        document.getElementById('money').removeAttribute('style')
-        document.getElementById('materials').style.display = 'none';
-        document.getElementById('moneypayment').removeAttribute('style')
-        document.getElementById('materialpayment').style.display = 'none';
-        } else {
-        document.getElementById('money').style.display = 'none';
-        document.getElementById('moneypayment').style.display = 'none';
-        document.getElementById('nothing').style.display = 'block';
-
-        
-
-
-        if (document.getElementById("donationtype").value == 'Material') {
-        document.getElementById('nothing').style.display = 'none';
-        document.getElementById('materials').removeAttribute('style')
-        document.getElementById('money').style.display = 'none';
-        document.getElementById('materialpayment').removeAttribute('style')
-        document.getElementById('moneypayment').style.display = 'none';
-        } else {
-        document.getElementById('materials').style.display = 'none';
-        document.getElementById('materialpayment').style.display = 'none';
-        document.getElementById('nothing').style.display = 'block';
+            if (document.getElementById("donationtype").value == 'Material') {
+            document.getElementById('nothing').style.display = 'none';
+            document.getElementById('materials').removeAttribute('style')
+            document.getElementById('money').style.display = 'none';
+            document.getElementById('materialpayment').removeAttribute('style')
+            document.getElementById('moneypayment').style.display = 'none';
+            } else {
+            document.getElementById('materials').style.display = 'none';
+            document.getElementById('materialpayment').style.display = 'none';
+            document.getElementById('nothing').style.display = 'block';
+    }
 }
-}
-}
+
 },
-    test1() {
-        if (document.getElementById("donatortype").value == 'Pessoa') {
-        document.getElementById('person').removeAttribute('style')
-        document.getElementById('company').style.display = 'none';
-        } else {
-        document.getElementById('person').style.display = 'none';
+        test1() {
+            if (document.getElementById("donatortype").value == 'Pessoa') {
+            document.getElementById('person').removeAttribute('style')
+            document.getElementById('company').style.display = 'none';
+            } else {
+            document.getElementById('person').style.display = 'none';
 
 
-        if (document.getElementById("donatortype").value == 'Empresa') {
-        document.getElementById('company').removeAttribute('style')
-        document.getElementById('person').style.display = 'none';
-        } else {
-        document.getElementById('company').style.display = 'none';
-}
+            if (document.getElementById("donatortype").value == 'Empresa') {
+            document.getElementById('company').removeAttribute('style')
+            document.getElementById('person').style.display = 'none';
+            } else {
+            document.getElementById('company').style.display = 'none';
+    }
 }
 
 },
+    redirecting() {
+        window.location.href="http://localhost:8080/";
+    },
+    hideForm1() {
+    document.getElementById("componentsform").style.display = "none";
+    document.getElementById("fakesubmit").style.display = "none";
+    document.getElementById("submitbuttons1").removeAttribute('style')
+    document.getElementById("message").removeAttribute('style')
+},
+    unhideForm1() {
+    document.getElementById("componentsform").removeAttribute('style');
+    document.getElementById("fakesubmit").removeAttribute('style');
+    document.getElementById("submitbuttons1").style.display = "none"
+    document.getElementById("message").style.display = "none"
+    },
+    hideForm2() {
+    document.getElementById("componentsform").style.display = "none";
+    document.getElementById("fakesubmit").style.display = "none";
+    document.getElementById("submitbuttons2").removeAttribute('style')
+    document.getElementById("paypalpayment").removeAttribute('style')
+},
+    unhideForm2() {
+    document.getElementById("componentsform").removeAttribute('style');
+    document.getElementById("fakesubmit").removeAttribute('style');
+    document.getElementById("submitbuttons2").style.display = "none"
+    document.getElementById("paypalpayment").style.display = "none"
+    },
+    
+
+},
 }
-}
+
 </script>
 
 <style>
-.v-container { 
-color: #FFF6EE,
+
+
+.test {
+    color: #FFF6EE;
+    font-size: 17px;
 }
 .test1 {
-color: #FFF6EE;
-font-family: "Proxima Nova", system-ui, sans-serif;
-font-size: 26px;
-
+    color: #FFF6EE;
+    font-family: "Proxima Nova", system-ui, sans-serif;
+    font-size: 26px;
+    
 }
+
+select:hover {
+    cursor: pointer;
+}
+
+.pa-8 {
+    color: #FFF6EE;
+    font-size: 26px;
+    font-family: "Proxima Nova", system-ui, sans-serif;
+    text-align: center;
+  }
+    
+
 </style>
