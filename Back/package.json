@@ -1,10 +1,11 @@
 {
-  "name": "back",
+  "name": "back-childcarebrasil",
   "version": "1.0.0",
   "description": "",
   "main": "/src/index.ts",
   "scripts": {
     "start": "nodemon ./src/index.ts",
+    "postinstall": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

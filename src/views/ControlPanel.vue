@@ -29,7 +29,7 @@
             class="posicao"
             lazy-src="@/assets/imagens/4.png"
             max-height="300"
-            max-width="350"
+            max-width="370"
             src="@/assets/imagens/donation.png"
             ></v-img>
             </v-btn> 
