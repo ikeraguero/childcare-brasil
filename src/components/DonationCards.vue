@@ -2,7 +2,7 @@
     <span>
         <div class="grid gap-1 grid-cols-5 grid-rows-0 overflow-hidden whitespace-nowrap no-scrollbar scroll-smooth snap-x" id="container">
             <div v-for="card in cards.data" :key="card.index">
-                <div class="flex px-2 m-2 snap-center">
+                <div class="px-0 m-2 snap-center">
                     <div class="rounded-lg shadow-md w-[300px] lg:w-[410px]">
                         <div class="p-6">
                             <div class="flex justify-between">
@@ -16,19 +16,19 @@
                             <p class="text-base mb-1 h-6">
                                <b>Doador: </b> {{card.donatortype }} | {{ card.donator }}
                             </p>
-                            <p class="text-base mb-1 h-6">
+                            <p v-if="card.cpf" class="text-base mb-1 h-6">
                                 <b> CPF: </b>{{ card.cpf }}
                             </p>
-                            <p class="text-base mb-1 h-6">
+                            <p v-if="card.cnpj" class="text-base mb-1 h-6">
                                 <b>CNPJ: </b>{{ card.cnpj }}
                             </p>
                             <p class="text-base mb-1 h-6">
                                 <b>Tipo: </b>{{ card.type }}
                             </p>
-                            <p class="text-base mb-1 h-6">
+                            <p v-if="card.value" class="text-base mb-1 h-6">
                                 <b>Valor: </b>R${{ card.value }}
                             </p>
-                            <p class="text-base mb-1 h-6">
+                            <p v-if="card.materials" class="text-base mb-1 h-6">
                                 <b>Materiais: </b> {{ card.materials }}
                             </p>
                             <p class="text-base mb-1 h-6" >
@@ -38,7 +38,7 @@
                                 <b>Data: </b> {{ card.data}}
                             </p>
                             <div class="flex justify-center flex-row">
-                                <button @click="excluir(card.id)" class="inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md" type="button" value="Excluir">Excluir</button>
+                                <button @click="excluir(card.id)" class="inline-block mt-2 px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md" type="button" value="Excluir">Excluir</button>
                             </div>
                         </div>
                     </div>
@@ -77,6 +77,8 @@ export default {
 </script>
 
 <style scoped>
+
+div:empty { display: none }
 .rounded-lg {
     background-color: #FFF6EE
 }
