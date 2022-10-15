@@ -132,3 +132,13 @@ export async function addDonation(donationdonatortype:string, donationdonator: s
     });
     await prisma.$disconnect();
 };
+
+export async function deleteDonation (donation_id: string) {
+    await prisma.$connect();
+    const donation = await prisma.donation.delete({
+        where: {
+            id: donation_id
+        }
+    });
+    await prisma.$disconnect();
+}

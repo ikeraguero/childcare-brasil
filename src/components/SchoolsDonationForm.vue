@@ -32,11 +32,12 @@
       </div>
       
         </div>
-        <form class="rounded px-18 pt-8 pb-8 mb-8" action="http://localhost:7777/api/donationadd" method="post" id="testform" style="display: block">
+        <div class="test1 mb-0 flex justify-center" id="componentsform">Você está doando para:</div>
+            <div class="test1 mb-8 flex justify-center font-bold" id="componenstsform">{{ school.name }}</div>
+        <form class="rounded px-16 pt-16 pb-16 mb-16" action="http://localhost:7777/api/donationadd" method="post" id="testform" style="display: block">
             <div class="formcomponents" id="componentsform">
-            <div class="test1 mb-0 flex justify-center">Você está doando para:</div>
-            <div class="test1 mb-8 flex justify-center font-bold">{{ school.name }}</div>
             <label class="block text-white text-sm font-bold mb-0" for="username">
+                <div class="background"></div>
               <div class="test">Doar como:</div>
             </label>
             <select class="form-select appearance-none
@@ -214,7 +215,7 @@ export default {
         script.src = 
             "https://www.paypal.com/sdk/js?client-id=AaIk2-K08izmXx-aWrDAHLE4lRF0et7X1fFaZKbN4GBfM7h5x6H03WszIU6UmWdWU8X7f3Bz_4FXGghH"
         script.addEventListener("load", this.setLoaded);
-        document.body.appendschool(script)
+        document.body.appendSchool(script)
     
         axios.get("http://localhost:7777/api/school/" + this.$route.params.id)
         .then(response => {
@@ -336,17 +337,18 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 
 
 .test {
-    color: #FFF6EE;
+    color: #621200;
     font-size: 17px;
 }
 .test1 {
     color: #FFF6EE;
     font-family: "Proxima Nova", system-ui, sans-serif;
     font-size: 26px;
+
     
 }
 
@@ -361,5 +363,10 @@ select:hover {
     text-align: center;
   }
     
-
+form{
+    background-color: #FFF6EE;
+}
+.block {
+    color: #621200;
+}
 </style>

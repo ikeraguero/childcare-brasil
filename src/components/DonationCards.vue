@@ -38,7 +38,7 @@
                                 <b>Data: </b> {{ card.data}}
                             </p>
                             <div class="flex justify-center flex-row">
-                                
+                                <button @click="excluir(card.id)" class="inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md" type="button" value="Excluir">Excluir</button>
                             </div>
                         </div>
                     </div>
@@ -63,6 +63,14 @@ export default {
     mounted() {
         axios.get("http://localhost:7777/api/donations").then((response) => (this.cards = response));
     },
+    methods: {
+        excluir(card_id) {
+            axios.post(`http://localhost:7777/api/donationdel/${card_id}`).then(response => {
+                this.$router.push('/adminn');
+                return response.data;
+            })
+        }
+    }
     
 }
 
