@@ -157,8 +157,25 @@ export default {
 };
 </script>
 
-<style>
+
+<style scoped>
+.bg-white{
+    color: black;
+    }
+
+form {
+    background-color: #FFF6EE;
+}
+
 .block {
-color: #FFF6EE;
+    color: #621200
+}
+.v-application a {
+    color: #FFF6EE
+}
+
+.btn {
+    background-color: #621200;
+    color: #FFF6EE
 }
 </style>
