@@ -39,6 +39,8 @@ Vue.component('SchoolCards', require('./components/SchoolCards.vue').default);
 Vue.component('DonationCards', require('./components/DonationCards.vue').default);
 Vue.component('ChildrenDonationForm', require('./components/ChildrenDonationForm.vue').default);
 Vue.component('SchoolsDonationForm', require('./components/SchoolsDonationForm.vue').default);
+Vue.component('EditFormChildren', require('./components/EditFormChildren.vue').default);
+Vue.component('EditFormSchool', require('./components/EditFormSchool.vue').default);
 
 import axios from "axios";
 import VueAxios from "vue-axios";

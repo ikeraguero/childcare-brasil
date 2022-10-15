@@ -100,21 +100,32 @@ const routes = [
 
         component: () => import('../views/Success.vue')
         
-        },
-        {
-          path: "/error",
-          name: 'Error',
+      },
+      {
+        path: "/error",
+        name: 'Error',
 
-          component: () => import('../views/Error.vue')
+        component: () => import('../views/Error.vue')
           
-          },
-          {
-            path: "criancas/doar/:id/sucesso",
-            name: 'SuccessMaterials',
-            beforeEnter: authGuard,
-            component: () => import('../views/SuccessMaterials.vue')
-            
-            },
+      },
+      {
+        path: "criancas/doar/:id/sucesso",
+        name: 'SuccessMaterials',
+        beforeEnter: authGuard,
+        component: () => import('../views/SuccessMaterials.vue')
+      },
+      {
+        path: "/adminn/criancas/:id",
+        name: "UpdateChild",
+        beforeEnter: authGuard,
+        component: () => import("../views/UpdateChild.vue"),
+      },
+      {
+        path: "/adminn/escolas/:id",
+        name: "UpdateSchool",
+        beforeEnter: authGuard,
+        component: () => import("../views/UpdateSchool.vue"),
+    },
       
     ]
   },
