@@ -52,11 +52,11 @@
         <v-col>
         <div v-if="cards.data.length <= 9">
 					<div class="counter mb-4"> 0{{cards.data.length}} </div>
-					<h3 class="text-2xl">Total de Doações Realizadas</h3>
+					<h3 class="text-2xl text-center">Total de Doações Realizadas</h3>
 				</div>
         <div v-else>
 					<div class="counter mb-4">{{cards.data.length}} </div>
-					<h3 class="text-2xl">Total de Doações Realizadas</h3>
+					<h3 class="text-2xl text-center">Total de Doações Realizadas</h3>
 				</div>
         </v-col>
         

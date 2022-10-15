@@ -102,13 +102,6 @@ const routes = [
         
       },
       {
-        path: "/error",
-        name: 'Error',
-
-        component: () => import('../views/Error.vue')
-          
-      },
-      {
         path: "criancas/doar/:id/sucesso",
         name: 'SuccessMaterials',
         beforeEnter: authGuard,
