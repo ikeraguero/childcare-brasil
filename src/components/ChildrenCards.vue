@@ -1,6 +1,6 @@
 <template>
     <span>
-        <div class="grid gap-1 grid-cols-4 grid-rows-0 overflow whitespace-nowrap no-scrollbar relative scroll-smooth snap-x" id="container">
+        <div class="grid gap-0 grid-cols-4 grid-rows-0 overflow whitespace-nowrap no-scrollbar relative scroll-smooth snap-x" id="container">
             <div v-for="card in cards.data" :key="card.index">
                 <div class="px-3 m-2 snap-center ">
                     <div class="rounded-lg shadow-md w-[300px] lg:w-[410px]">

@@ -34,7 +34,7 @@
         </div>
         <div class="test1 mb-0 flex justify-center" id="componentsform">Você está doando para:</div>
             <div class="test1 mb-8 flex justify-center font-bold" id="componenstsform">{{ school.name }}</div>
-        <form class="rounded px-16 pt-16 pb-16 mb-16" action="http://localhost:7777/api/donationadd" method="post" id="testform" style="display: block">
+        <form class="rounded px-8 pt-16 pb-16 mb-0 mt-8" action="http://localhost:7777/api/donationadd" method="post" id="testform" style="display: block">
             <div class="formcomponents" id="componentsform">
             <label class="block text-white text-sm font-bold mb-0" for="username">
                 <div class="background"></div>
