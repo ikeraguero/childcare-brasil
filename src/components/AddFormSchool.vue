@@ -112,9 +112,9 @@
                         <div>
                         
                             <button @click="uploadImage()"></button>
-                            <router-link to="/adminn/escolas/" class="bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</router-link >    
+                            <router-link to="/adminn/escolas/" class="btn bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</router-link >    
             
-                            <input class="bg-white font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">                     
+                            <input class="btn bg-white font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">                     
                         </div>
                     </div>    
 
@@ -176,6 +176,6 @@ form {
 
 .btn {
     background-color: #621200;
-    color: #FFF6EE
+    color:  #FFF6EE
 }
 </style>

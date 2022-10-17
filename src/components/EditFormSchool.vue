@@ -18,7 +18,7 @@
                 accept="image/*"
                 >
             <label class="block text-white text-sm font-bold mb-2" for="username">
-                Nome da Criança
+                Nome da Escola
             </label>
             <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
