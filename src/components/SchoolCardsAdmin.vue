@@ -1,6 +1,6 @@
 <template>
     <span>
-        <div class="grid gap-0 grid-cols-4 grid-rows-0 overflow whitespace-nowrap no-scrollbar relative scroll-smooth snap-x" id="container">
+        <div class="grid gap-1 grid-cols-4 grid-rows-0 overflow whitespace-nowrap no-scrollbar relative scroll-smooth snap-x" id="container">
             <div v-for="card in cards.data" :key="card.index">
                 <div class="flex px-3 m-2 snap-center ">
                     <div class="rounded-lg shadow-md w-[300px] lg:w-[410px]">
@@ -13,7 +13,7 @@
                                 <h5 class="text-white text-xl font-medium mb-2">
                                     {{ card.name }}
                                 </h5>
-                                <h5 class="text-white text-xl font-medium mb-2">{{ card.age }} {{ age(card.age) }}</h5>
+                            
                             </div>
 
                             <p class="text-white text-base mb-4 h-20 w-fit">
@@ -49,7 +49,7 @@ export default {
         };
     },
     mounted() {
-        axios.get("http://localhost:7777/api/children").then((response) => (this.cards = response));
+        axios.get("http://localhost:7777/api/schools").then((response) => (this.cards = response));
     },
     methods: {
         age(age) {
@@ -60,7 +60,7 @@ export default {
             }
         },
         excluir(card_id) {
-            axios.post(`http://localhost:7777/api/childdel/${card_id}`).then(response => {
+            axios.post(`http://localhost:7777/api/schooldel/${card_id}`).then(response => {
                 this.$router.push('/adminn');
                 return response.data;
             })
