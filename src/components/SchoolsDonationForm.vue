@@ -32,8 +32,8 @@
       </div>
       
         </div>
-        <div class="test1 mb-0 flex justify-center" id="l1">Você está doando para:</div>
-            <div class="test1 mb-5 flex justify-center font-bold" id="l2">{{ school.name }}</div>
+        <div class="test1 mb-0 flex justify-center" id="l3">Você está doando para:</div>
+            <div class="test1 mb-5 flex justify-center font-bold" id="l4">{{ school.name }}</div>
         <form class="rounded px-8 pt-16 pb-16 mb-0 mt-8" action="http://localhost:7777/api/donationadd" method="post" id="testform" style="display: block">
             <div id="formcomponents">
             <label class="block text-white text-sm font-bold mb-0" for="username">
@@ -156,7 +156,7 @@
             <div class="flex justify-center mt-6" style="display: none" id="submitbuttons1">
                 <div class="mt-6 flex justify-center">
                          <button @click='unhideForm1' class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Voltar">Voltar</button>    
-                             <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
+                             <input class="bg-white text-[#15393C] font-medium  px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
                           type="submit" value="Concluir doação">
                    </div>
                 </div>
@@ -216,7 +216,7 @@ export default {
         script.src = 
             "https://www.paypal.com/sdk/js?client-id=AaIk2-K08izmXx-aWrDAHLE4lRF0et7X1fFaZKbN4GBfM7h5x6H03WszIU6UmWdWU8X7f3Bz_4FXGghH"
         script.addEventListener("load", this.setLoaded);
-        document.body.appendSchool(script)
+        document.body.appendChild(script)
     
         axios.get("http://localhost:7777/api/school/" + this.$route.params.id)
         .then(response => {
@@ -310,8 +310,8 @@ export default {
     hideForm1() {
     document.getElementById('testform').style.backgroundColor = "transparent";
     document.getElementById("formcomponents").style.display = "none";
-    document.getElementById("l1").style.display = "none";
-    document.getElementById("l2").style.display = "none";
+    document.getElementById("l3").style.display = "none";
+    document.getElementById("l4").style.display = "none";
     document.getElementById("fakesubmit").style.display = "none";
     document.getElementById("submitbuttons1").removeAttribute('style')
     document.getElementById("message").removeAttribute('style')
@@ -320,16 +320,16 @@ export default {
     document.getElementById('testform').style.backgroundColor ="#FFF6EE";
     document.getElementById("formcomponents").removeAttribute('style');
     document.getElementById("fakesubmit").removeAttribute('style');
-    document.getElementById("l1").removeAttribute('style');
-    document.getElementById("l2").removeAttribute('style');
+    document.getElementById("l3").removeAttribute('style');
+    document.getElementById("l4").removeAttribute('style');
     document.getElementById("submitbuttons1").style.display = "none"
     document.getElementById("message").style.display = "none"
     },
     hideForm2() {
     document.getElementById('testform').style.backgroundColor = "transparent";
     document.getElementById("formcomponents").style.display = "none";
-    document.getElementById("l1").style.display = "none";
-    document.getElementById("l2").style.display = "none";
+    document.getElementById("l3").style.display = "none";
+    document.getElementById("l4").style.display = "none";
     document.getElementById("fakesubmit").style.display = "none";
     document.getElementById("submitbuttons2").removeAttribute('style')
     document.getElementById("paypalpayment").removeAttribute('style')
@@ -338,8 +338,8 @@ export default {
     document.getElementById('testform').style.backgroundColor ="#FFF6EE";
     document.getElementById("formcomponents").removeAttribute('style');
     document.getElementById("fakesubmit").removeAttribute('style');
-    document.getElementById("l1").removeAttribute('style');
-    document.getElementById("l2").removeAttribute('style');
+    document.getElementById("l3").removeAttribute('style');
+    document.getElementById("l4").removeAttribute('style');
     document.getElementById("submitbuttons2").style.display = "none"
     document.getElementById("paypalpayment").style.display = "none"
     },
