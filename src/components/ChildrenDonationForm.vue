@@ -32,10 +32,10 @@
       </div>
       
         </div>
-        <div class="test1 mb-0 flex justify-center" id="componentsform">Você está doando para:</div>
-            <div class="test1 mb-5 flex justify-center font-bold" id="componenstsform">{{ child.name }}</div>
+        <div class="test1 mb-0 flex justify-center" id="l1">Você está doando para:</div>
+            <div class="test1 mb-5 flex justify-center font-bold" id="l2">{{ child.name }}</div>
         <form class="rounded px-8 pt-16 pb-16 mb-0 mt-8" action="http://localhost:7777/api/donationadd" method="post" id="testform" style="display: block">
-            <div class="formcomponents" id="componentsform">
+            <div id="formcomponents">
             <label class="block text-white text-sm font-bold mb-0" for="username">
                 <div class="background"></div>
               <div class="test">Doar como:</div>
@@ -170,6 +170,7 @@
                     </div>
                 </div> 
         </form>
+        
 
             <div class="flex justify-center" id="fakesubmit">
                 <div class="mt-6 flex justify-center">
@@ -307,26 +308,38 @@ export default {
         window.location.href="http://localhost:8080/";
     },
     hideForm1() {
-    document.getElementById("componentsform").style.display = "none";
+    document.getElementById('testform').style.backgroundColor = "transparent";
+    document.getElementById("formcomponents").style.display = "none";
+    document.getElementById("l1").style.display = "none";
+    document.getElementById("l2").style.display = "none";
     document.getElementById("fakesubmit").style.display = "none";
     document.getElementById("submitbuttons1").removeAttribute('style')
     document.getElementById("message").removeAttribute('style')
 },
     unhideForm1() {
-    document.getElementById("componentsform").removeAttribute('style');
+    document.getElementById('testform').style.backgroundColor ="#FFF6EE";
+    document.getElementById("formcomponents").removeAttribute('style');
     document.getElementById("fakesubmit").removeAttribute('style');
+    document.getElementById("l1").removeAttribute('style');
+    document.getElementById("l2").removeAttribute('style');
     document.getElementById("submitbuttons1").style.display = "none"
     document.getElementById("message").style.display = "none"
     },
     hideForm2() {
-    document.getElementById("componentsform").style.display = "none";
+    document.getElementById('testform').style.backgroundColor = "transparent";
+    document.getElementById("formcomponents").style.display = "none";
+    document.getElementById("l1").style.display = "none";
+    document.getElementById("l2").style.display = "none";
     document.getElementById("fakesubmit").style.display = "none";
     document.getElementById("submitbuttons2").removeAttribute('style')
     document.getElementById("paypalpayment").removeAttribute('style')
 },
     unhideForm2() {
-    document.getElementById("componentsform").removeAttribute('style');
+    document.getElementById('testform').style.backgroundColor ="#FFF6EE";
+    document.getElementById("formcomponents").removeAttribute('style');
     document.getElementById("fakesubmit").removeAttribute('style');
+    document.getElementById("l1").removeAttribute('style');
+    document.getElementById("l2").removeAttribute('style');
     document.getElementById("submitbuttons2").style.display = "none"
     document.getElementById("paypalpayment").style.display = "none"
     },
