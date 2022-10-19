@@ -34,6 +34,9 @@
                             <p class="text-base mb-1 h-6" >
                                 <b>Para: </b> {{ card.donatedto}}
                             </p>
+                            <p class="yellow text-base mb-1 h-6" >
+                                <b> Status: </b> {{ card.status}}
+                            </p>
                             <p class="text-base mb-1 h-6" >
                                 <b>Data: </b> {{ card.data}}
                             </p>
@@ -88,6 +91,10 @@ div:empty { display: none }
 .inline-block {
     color:#FFF6EE;  
     background-color: #621200;
+    
+}
+
+.yellow {
     
 }
 </style>

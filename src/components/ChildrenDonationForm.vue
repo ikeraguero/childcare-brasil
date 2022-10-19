@@ -105,6 +105,16 @@
             class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             </label>
+
+            <label class='block text-sm font-bold mb-3' id="donatedto" style="display: none">
+                            <div class="test"></div>
+            <input
+            name="donationstatus" 
+            type="text"
+            value="Pendente"
+            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            required>
+            </label>
             
             <label class='block text-sm font-bold mb-3' id="donatedtoid" style="display: none">
                             <div class="test"></div>

@@ -51,5 +51,6 @@ model Donation {
   materials         String?
   donatedto         String?
   donatedtoid       String?
+  status            String?
   data              DateTime @default(now())
 }
