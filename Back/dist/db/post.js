@@ -254,7 +254,7 @@ function uploadImage(child_id, image) {
     });
 }
 exports.uploadImage = uploadImage;
-function addDonation(donationdonatortype, donationdonator, donationemail, donationcpf, donationcnpj, donationcellphone, donationtype, donationvalue, donationmaterials, donationdonatedto, donationdonatedtoid) {
+function addDonation(donationdonatortype, donationdonator, donationemail, donationcpf, donationcnpj, donationcellphone, donationtype, donationvalue, donationmaterials, donationdonatedto, donationdonatedtoid, donationstatus) {
     return __awaiter(this, void 0, void 0, function () {
         var donation;
         return __generator(this, function (_a) {
@@ -274,7 +274,8 @@ function addDonation(donationdonatortype, donationdonator, donationemail, donati
                                 value: donationvalue,
                                 materials: donationmaterials,
                                 donatedto: donationdonatedto,
-                                donatedtoid: donationdonatedtoid
+                                donatedtoid: donationdonatedtoid,
+                                status: donationstatus
                             }
                         })];
                 case 2:

@@ -212,7 +212,7 @@ var donationadd = function (req, res) { return __awaiter(void 0, void 0, void 0,
         switch (_a.label) {
             case 0:
                 r = req.body;
-                return [4 /*yield*/, (0, post_1.addDonation)(r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials, r.donationdonatedto, r.donationdonatedtoid)];
+                return [4 /*yield*/, (0, post_1.addDonation)(r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials, r.donationdonatedto, r.donationdonatedtoid, r.donationstatus)];
             case 1:
                 donation = _a.sent();
                 res.redirect("http://localhost:8080/success");

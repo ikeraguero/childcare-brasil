@@ -1,14 +1,14 @@
 <template>
     <div class="flex justify-center max-w-3xl mx-auto py-10">
         <div class="w-full h-full ">
-            <form class="rounded px-12 pt-8 pb-8 mt-8 mb-8" action="http://localhost:7777/api/schoolupdate" method="post">
+            <form class="rounded px-12 pt-8 pb-8 mt-8 mb-8" v-bind:action='"http://localhost:7777/api/schoolupdate/" + school.id' method="post">
 
 <div class="flex mb-4">
 
     <img :src="school.photo" class="rounded-lg h-48 w-52" alt="Avatar" id="img" />
 
     <div class="px-4">
-        <label class="block text-white text-sm font-bold" for="image">
+        <label class="block text-white text-sm font-bold mt-10" for="image">
                 Foto
             </label>
             <input
@@ -23,23 +23,6 @@
             <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                 id="name" type="text" placeholder="Nome da Criança" name="schoolname" v-model="school.name">
-            <label class="block text-white text-sm font-bold mb-1 mt-2" for="username">
-            Sexo
-        </label>
-
-        <select class="form-select appearance-none
-                block
-                w-full
-                px-3
-                py-2
-                text-base
-                font-normal
-                text-black
-                bg-white 
-                rounded" name="schoolgender" v-model="school.gender">
-            <option value="menino">Menino</option>
-            <option value="menina">Menina</option>
-        </select>
     </div>
 
 </div>
@@ -47,27 +30,27 @@
 <div class="flex justify-start"> 
     <div class="mb-4">
         <label class="block text-white text-sm font-bold mb-2">
-            Idade
+            CNPJ
         </label>
         <input
             class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            id="age" type="text" placeholder="Idade" name="schoolage" v-model="school.age">
+            id="age" type="text" placeholder="CNPJ" name="schoolage" v-model="school.age">
     </div>
     <div class="mb-4 ml-3">
         <label class="block text-white text-sm font-bold mb-2">
-            Escola
+            Telefone
         </label>
         <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            id="school" type="text" placeholder="Escola" name="schoolschool" v-model="school.school">
+            id="school" type="text" placeholder="Telefone" name="schoolschool" v-model="school.school">
     </div>
     <div class="mb-4 ml-5">
         <label class="block text-white text-sm font-bold mb-2">
-            CPF
+            Email
         </label>
         <input
             class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            id="cpf" type="text" placeholder="CPF" name="schoolcpf" v-model="school.cpf">
+            id="cpf" type="text" placeholder="Email" name="schoolcpf" v-model="school.cpf">
     </div>
     </div>
 
@@ -111,12 +94,6 @@
 </div>
 
 <div class="mb-4">
-    <label class="block text-white text-sm font-bold mb-2" for="username">
-        Nome do Responsável
-    </label>
-    <input
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-        id="responsable" type="text" placeholder="Nome do Responsável" name="schoolowner" >
 </div>
 <div class="mb-4">
     <label class="block text-white text-sm font-bold mb-2" for="username">
@@ -132,7 +109,7 @@
         <div>
         
             <button @click="uploadImage()"></button>
-            <router-link to="/adminn/criancas/" class="btn bg-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</router-link >
+            <router-link to="/adminn/escolas/" class="btn bg-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</router-link >
 
             <input class="btn bg-white font-bold py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">                     
         </div>

@@ -32,7 +32,7 @@ export const childdelete = async (req: Request, res: Response) => {
 export const childupdate = async (req: Request, res: Response) => {
     const r = req.body;
     const child = await updateChild(req.params.child_id, r.childphoto, r.childname, r.childgender,r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.childdesc, r.childmaterialsreceived);
-    res.redirect("http://localhost:8080/admin");
+    res.redirect("http://localhost:8080/adminn");
 }
 
 // Schools

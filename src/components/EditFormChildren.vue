@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-center max-w-3xl mx-auto py-10">
         <div class="w-full h-full ">
-            <form class="rounded px-12 pt-8 pb-8 mt-8 mb-8" action="http://localhost:7777/api/childupdate" method="post">
+            <form class="rounded px-12 pt-8 pb-8 mt-8 mb-8" v-bind:action="'http://localhost:7777/api/childupdate/' + child.id" method="post">
 
 <div class="flex mb-4">
 

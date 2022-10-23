@@ -22,7 +22,7 @@
                             <div class="flex justify-center flex-row">
                                 
                                 <a  
-                                v-bind:href="'/adminn/criancas/'+ card.id"
+                                v-bind:href="'/adminn/escolas/'+ card.id"
                                 type="button"
                                 class="inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
                                 >Editar</a

@@ -13,7 +13,7 @@
                             <p class="text-base mb-1 h-6">
                               <b>ID: </b>{{ card.id }}
                             </p>
-                            <p class="text-base mb-1 h-6">
+                            <p class="capitalize text-base mb-1 h-6">
                                <b>Doador: </b> {{card.donatortype }} | {{ card.donator }}
                             </p>
                             <p v-if="card.cpf" class="text-base mb-1 h-6">
@@ -34,11 +34,11 @@
                             <p class="text-base mb-1 h-6" >
                                 <b>Para: </b> {{ card.donatedto}}
                             </p>
-                            <p class="yellow text-base mb-1 h-6" >
-                                <b> Status: </b> {{ card.status}}
-                            </p>
                             <p class="text-base mb-1 h-6" >
                                 <b>Data: </b> {{ card.data}}
+                            </p>
+                            <p class="text-base uppercase mb-1 h-6" >
+                                <b class="capitalize"> Status: </b> <b class="text-green-700 ">{{ card.status}}</b>
                             </p>
                             <div class="flex justify-center flex-row">
                                 <button @click="excluir(card.id)" class="inline-block mt-2 px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md" type="button" value="Excluir">Excluir</button>
@@ -72,6 +72,9 @@ export default {
                 this.$router.push('/adminn');
                 return response.data;
             })
+        },
+        concluir() {
+
         }
     }
     
@@ -94,7 +97,4 @@ div:empty { display: none }
     
 }
 
-.yellow {
-    
-}
 </style>
