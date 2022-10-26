@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { getChildren, getChild, getSchools, getSchool, getDonations, getDonation } from "../../db/search";
-import { addChild, deleteChild, updateChild, addSchool, deleteSchool, updateSchool, addDonation, deleteDonation } from "../../db/post";
+import { addChild, deleteChild, updateChild, addSchool, deleteSchool, updateSchool, addDonation, deleteDonation, updateDonation } from "../../db/post";
 import { appendFile } from 'fs';
 
 
@@ -86,4 +86,10 @@ export const donationadd = async (req: Request, res: Response) => {
 export const donationdelete = async (req: Request, res: Response) => {
     const donation = await deleteDonation(req.params.donation_id);
     res.json(donation);
+}
+
+export const donationupdate = async (req: Request, res: Response) => {
+    const r = req.body;
+    const donation = await updateDonation(req.params.donation_id, r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials, r.donationdonatedto, r.donationdonatedtoid, r.donationstatus);
+    res.redirect("http://localhost:8080/adminn");
 }

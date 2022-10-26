@@ -42,6 +42,7 @@
                             </p>
                             <div class="flex justify-center flex-row">
                                 <button @click="excluir(card.id)" class="inline-block mt-2 px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md" type="button" value="Excluir">Excluir</button>
+                                <button @click="concluir(card.id)" class="inline-block mt-2 px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md" type="button" value="Concluir">Concluir</button>
                             </div>
                         </div>
                     </div>
@@ -73,7 +74,10 @@ export default {
                 return response.data;
             })
         },
-        concluir() {
+        concluir(card_id) {
+            fetch(`http://localhost:7777/api/donation/${card_id}`, {
+             status: "Aprovada"
+            });
 
         }
     }

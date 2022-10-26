@@ -143,3 +143,27 @@ export async function deleteDonation (donation_id: string) {
     });
     await prisma.$disconnect();
 }
+
+export async function updateDonation(donation_id: string, donationdonatortype:string, donationdonator: string, donationemail: string, donationcpf: string, donationcnpj: string, donationcellphone: string, donationtype: string, donationvalue:string, donationmaterials: string, donationdonatedto: string, donationdonatedtoid: string, donationstatus: string) {
+    await prisma.$connect();
+    const donation = await prisma.donation.update({
+        where: {
+            id: donation_id
+        },
+        data: {
+            donatortype: donationdonatortype,
+            donator: donationdonator,
+            email: donationemail,
+            cpf: donationcpf,
+            cnpj: donationcnpj,
+            cellphone: donationcellphone,
+            type: donationtype,
+            value: donationvalue,
+            materials: donationmaterials,
+            donatedto: donationdonatedto,
+            donatedtoid: donationdonatedtoid,
+            status: donationstatus
+        }
+    });
+    await prisma.$disconnect();
+};

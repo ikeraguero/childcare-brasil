@@ -103,7 +103,7 @@ var childupdate = function (req, res) { return __awaiter(void 0, void 0, void 0,
                 return [4 /*yield*/, (0, post_1.updateChild)(req.params.child_id, r.childphoto, r.childname, r.childgender, r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.childdesc, r.childmaterialsreceived)];
             case 1:
                 child = _a.sent();
-                res.redirect("http://localhost:8080/admin");
+                res.redirect("http://localhost:8080/adminn");
                 return [2 /*return*/];
         }
     });
