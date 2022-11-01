@@ -73,7 +73,7 @@ export const donations = async (req: Request, res: Response) => {
 }
 
 export const donation = async (req: Request, res: Response) => {
-    const donation = await getDonation(req.params.donation_id);
+    const donation = await getDonation(req.params.donation_id, );
     res.json(donation.content);
 }
 
@@ -91,5 +91,5 @@ export const donationdelete = async (req: Request, res: Response) => {
 export const donationupdate = async (req: Request, res: Response) => {
     const r = req.body;
     const donation = await updateDonation(req.params.donation_id, r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials, r.donationdonatedto, r.donationdonatedtoid, r.donationstatus);
-    res.redirect("http://localhost:8080/adminn");
+    res.json(donation);
 }

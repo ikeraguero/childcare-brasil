@@ -36,7 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-exports.donationdelete = exports.donationadd = exports.donation = exports.donations = exports.schoolupdate = exports.schooldelete = exports.schooladd = exports.school = exports.schools = exports.childupdate = exports.childdelete = exports.childadd = exports.child = exports.children = void 0;
+exports.donationupdate = exports.donationdelete = exports.donationadd = exports.donation = exports.donations = exports.schoolupdate = exports.schooldelete = exports.schooladd = exports.school = exports.schools = exports.childupdate = exports.childdelete = exports.childadd = exports.child = exports.children = void 0;
 var search_1 = require("../../db/search");
 var post_1 = require("../../db/post");
 // Children
@@ -234,4 +234,19 @@ var donationdelete = function (req, res) { return __awaiter(void 0, void 0, void
     });
 }); };
 exports.donationdelete = donationdelete;
+var donationupdate = function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    var r, donation;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                r = req.body;
+                return [4 /*yield*/, (0, post_1.updateDonation)(req.params.donation_id, r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials, r.donationdonatedto, r.donationdonatedtoid, r.donationstatus)];
+            case 1:
+                donation = _a.sent();
+                res.redirect("http://localhost:8080/adminn");
+                return [2 /*return*/];
+        }
+    });
+}); };
+exports.donationupdate = donationupdate;
 //# sourceMappingURL=apicontroller.js.map

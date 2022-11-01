@@ -66,7 +66,7 @@ export async function getSchool(school_id: string) {
     return new response(200, `School ${school_id} found!`, school);
 }
 
-// all children
+// all donations
 export async function getDonations(){
     await prisma.$connect();
     const donations = await prisma.donation.findMany();

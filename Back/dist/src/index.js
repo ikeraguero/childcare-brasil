@@ -119,6 +119,7 @@ app.post("/api/childupdate/:child_id", api.childupdate);
 app.post("/api/childdel/:child_id", api.childdelete);
 app.post("/api/donationadd", api.donationadd);
 app.post("/api/donationdel/:donation_id", api.donationdelete);
+app.post("/api/donationupdate/:donation_id", api.donationupdate);
 //
 app.listen(port, function () {
     console.log("Port: http://localhost:".concat(port, "."));

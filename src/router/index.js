@@ -118,7 +118,19 @@ const routes = [
         name: "UpdateSchool",
         beforeEnter: authGuard,
         component: () => import("../views/UpdateSchool.vue"),
-    },
+      },
+      {
+        path: "/criancas/perfil/:id",
+        name: "Child Info",
+        beforeEnter: authGuard,
+        component: () => import("../views/ChildInfo.vue"),
+      },
+      {
+        path: "/escolas/perfil/:id",
+        name: "School Info",
+        beforeEnter: authGuard,
+        component: () => import("../views/SchoolInfo.vue"),
+      },
       
     ]
   },

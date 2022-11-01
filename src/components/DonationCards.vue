@@ -75,13 +75,15 @@ export default {
             })
         },
         concluir(card_id) {
-            fetch(`http://localhost:7777/api/donation/${card_id}`, {
-             status: "Aprovada"
-            });
+            axios.put(`http://localhost:7777/api/donation/${card_id}`, {
+            status: 'Aprovada'}).then(response => {
+            this.$router.push('/adminn');   
+            return response.data;
 
+})
         }
+
     }
-    
 }
 
 </script>

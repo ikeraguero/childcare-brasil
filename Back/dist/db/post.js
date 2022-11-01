@@ -36,7 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-exports.deleteDonation = exports.addDonation = exports.uploadImage = exports.deleteSchool = exports.updateSchool = exports.addSchool = exports.deleteChild = exports.updateChild = exports.addChild = void 0;
+exports.updateDonation = exports.deleteDonation = exports.addDonation = exports.uploadImage = exports.deleteSchool = exports.updateSchool = exports.addSchool = exports.deleteChild = exports.updateChild = exports.addChild = void 0;
 var client_1 = require("@prisma/client");
 var prisma = new client_1.PrismaClient();
 function addChild(childphoto, childname, childgender, childschool, childage, childaddress, childcity, childstate, childcpf, childdesc, childmaterialsreceived) {
@@ -314,4 +314,43 @@ function deleteDonation(donation_id) {
     });
 }
 exports.deleteDonation = deleteDonation;
+function updateDonation(donation_id, donationdonatortype, donationdonator, donationemail, donationcpf, donationcnpj, donationcellphone, donationtype, donationvalue, donationmaterials, donationdonatedto, donationdonatedtoid, donationstatus) {
+    return __awaiter(this, void 0, void 0, function () {
+        var donation;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, prisma.$connect()];
+                case 1:
+                    _a.sent();
+                    return [4 /*yield*/, prisma.donation.update({
+                            where: {
+                                id: donation_id
+                            },
+                            data: {
+                                donatortype: donationdonatortype,
+                                donator: donationdonator,
+                                email: donationemail,
+                                cpf: donationcpf,
+                                cnpj: donationcnpj,
+                                cellphone: donationcellphone,
+                                type: donationtype,
+                                value: donationvalue,
+                                materials: donationmaterials,
+                                donatedto: donationdonatedto,
+                                donatedtoid: donationdonatedtoid,
+                                status: donationstatus
+                            }
+                        })];
+                case 2:
+                    donation = _a.sent();
+                    return [4 /*yield*/, prisma.$disconnect()];
+                case 3:
+                    _a.sent();
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
+exports.updateDonation = updateDonation;
+;
 //# sourceMappingURL=post.js.map
