@@ -12,7 +12,7 @@
                       </div>
                         <div class="color">
                          <span class='mt-5 font-bold'>{{child.name}}</span>
-                         <h6 class="f-w-601">{{ child.address}}</h6>
+                         <h6 class="f-w-601">{{ child.age}} anos</h6>
                          
  
                         </div>

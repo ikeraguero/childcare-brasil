@@ -38,7 +38,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-                            id="age" type="text" placeholder="CNPJ" name="schoolcpnj">
+                            id="age" type="text" placeholder="CNPJ" maxlength="14" name="schoolcpnj">
                     </div>
                     <div class="mb-4 ml-3">
                         <label class="block text-white text-sm font-bold mb-2">
@@ -46,7 +46,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-                            id="weight" type="text" placeholder="Telefone" name="schoolcellphone">
+                            id="weight" type="text" placeholder="Telefone" maxlength="9" name="schoolcellphone">
                     </div>
                     <div class="mb-4 ml-5">
                         <label class="block text-white text-sm font-bold mb-2" for="username">
@@ -74,7 +74,7 @@
                         </label>
                         <input 
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-                            id="name" type="text" placeholder="Estado" name="childstate" >
+                            id="name" type="text" placeholder="Estado" maxlength="2" name="childstate" >
                     </div>
 
 

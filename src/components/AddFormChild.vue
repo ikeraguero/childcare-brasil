@@ -40,8 +40,8 @@
                                 text-black
                                 bg-white 
                                 rounded" name="childgender">
-                            <option value="menino">Menino</option>
-                            <option value="menina">Menina</option>
+                            <option value="Masculino">Menino</option>
+                            <option value="Feminino">Menina</option>
                         </select>
                     </div>
 
@@ -54,7 +54,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-                            id="age" type="text" placeholder="Idade" name="childage">
+                            id="age" type="text" placeholder="Idade" maxlength="2" name="childage">
                     </div>
                     <div class="mb-4 ml-3">
                         <label class="block text-white text-sm font-bold mb-2">
@@ -70,7 +70,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-                            id="cpf" type="text" placeholder="CPF" name="childcpf">
+                            id="cpf" type="text" placeholder="CPF" maxlength="11" name="childcpf">
                     </div>
                     </div>
 
@@ -90,7 +90,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-                            id="state" type="text" placeholder="Estado" name="childstate" >
+                            id="state" type="text" placeholder="Estado" maxlength="2" name="childstate" >
                     </div>
 
 
