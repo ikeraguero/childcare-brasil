@@ -24,10 +24,10 @@
                                 <a  
                                 v-bind:href="'/adminn/escolas/'+ card.id"
                                 type="button"
-                                class="inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
+                                class="edit inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
                                 >Editar</a
                             >
-                                <button @click="excluir(card.id)" class="inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md" type="button" value="Excluir">Excluir</button>
+                                <button @click="excluir(card.id)" class="del inline-block px-6 py-2.5 ml-3 text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md" type="button" value="Excluir">Deletar</button>
                             </div>
                         </div>
                     </div>
@@ -62,6 +62,7 @@ export default {
         excluir(card_id) {
             axios.post(`http://localhost:7777/api/schooldel/${card_id}`).then(response => {
                 this.$router.push('/adminn');
+                alert("Escola removida com sucesso")
                 return response.data;
             })
         }
@@ -95,11 +96,18 @@ export default {
 .text-white {
     color:#621200
 }
-.inline-block {
+.edit{
     color:#FFF6EE;
     background-color: #621200;
     
 }
+
+.del{
+    color:#FFF6EE;
+    background-color: #bd0000;
+    
+}
+
 .rounded-t-lg {
     width: 388px;
 }

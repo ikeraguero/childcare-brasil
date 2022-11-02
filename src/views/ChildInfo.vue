@@ -8,12 +8,12 @@
                   <div class="col-sm-3 rounded bg-c-lite-green user-profile justify-content-center">
                         <div class="card-block text-center text-white">
                       <div class="m-b-25 flex justify-center mt-10">
-                       <img :src="child.photo" class="img-radius" alt="User-Profile-Image" />
+                       <img :src="child.photo" class="rounded-lg h-48 w-52" alt="User-Profile-Image" />
                       </div>
                         <div class="color">
                          <span class='mt-5 font-bold'>{{child.name}}</span>
-                         <h6 class="f-w-601">{{ child.age}} anos</h6>
-                         
+                         <h6 class="f-w-601">{{ child.city}}, {{child.state}}</h6>
+                         <router-link v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'"  v-bind:to="'/adminn/criancas/'+ child.id" class="mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></router-link>
  
                         </div>
                        </div>

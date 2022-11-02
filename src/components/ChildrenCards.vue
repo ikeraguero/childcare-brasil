@@ -31,7 +31,7 @@
                                     v-bind:to="'/criancas/perfil/' + card.id"
                                     type="button"
                                     class="inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
-                                    >Perfil</router-link
+                                    >Informações</router-link
                                 >
                             </div>
                         </div>
