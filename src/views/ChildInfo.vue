@@ -27,8 +27,8 @@
                     <h6 class="text-muted f-w-400">{{child.name}}</h6>
                     </div>
                    <div class="col-sm-6">
-                  <p class="m-b-10 f-w-600">Endereço</p>
-                 <h6 class="text-muted f-w-400">{{ child.address}}, {{ child.city }}, {{ child.state }}</h6>
+                  <p class="m-b-10 f-w-600">Localização</p>
+                 <h6 class="text-muted f-w-400">{{ child.city }}, {{ child.state }}</h6>
                  </div>
                  <div class="col-sm-6">
                   <p class="m-b-10 f-w-600">Gênero</p>
@@ -42,11 +42,11 @@
                  <p class="m-b-10 f-w-600">Escola</p>
                     <h6 class="text-muted f-w-400">{{ child.school }}</h6>
                 </div>
-                <div class="col-sm-5">
+                <div class="col-sm-5" v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'" >
                <p class="m-b-10 f-w-600">CPF</p>
            <h6 class="text-muted f-w-400">{{ child.cpf}}</h6>
                </div>
-                 <div class="col-sm-6">
+                 <div class="col-sm-6" v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'" >
                   <p class="m-b-10 f-w-600">ID</p>
                  <h6 class="text-muted f-w-400">{{ child.id }}</h6>
                  </div>

@@ -13,7 +13,6 @@
                         <div class="color">
                          <span class='mt-5'>Bem-vindo(a),</span>
                          <h6 class="f-w-601">{{ $auth.user.nickname }}!</h6>
-                          <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                         </div>
                        </div>
                       </div>

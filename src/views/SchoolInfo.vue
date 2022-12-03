@@ -12,7 +12,7 @@
                       </div>
                         <div class="color">
                          <span class='mt-5 font-bold'>{{school.name}}</span>
-                         <h6 class="f-w-601">{{ school.address}}</h6>
+                         <h6 class="f-w-601">{{ school.city }}, {{ school.state }}</h6>
                          <router-link v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'" v-bind:to="'/adminn/escolas/'+ school.id" class="mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></router-link>
  
                         </div>
@@ -35,8 +35,8 @@
                  <h6 class="text-muted f-w-400">{{ school.email }}</h6>
                  </div>
                  <div class="col-sm-6">
-                  <p class="m-b-10 f-w-600">ID</p>
-                 <h6 class="text-muted f-w-400">{{ school.id }}</h6>
+                  <p class="m-b-10 f-w-600">Telefone</p>
+                 <h6 class="text-muted f-w-400">{{ school.cellphone }}</h6>
                  </div>
                  
                  </div>
@@ -45,9 +45,9 @@
                  <p class="m-b-10 f-w-600">CNPJ</p>
                     <h6 class="text-muted f-w-400">{{ school.cnpj }}</h6>
                 </div>
-                 <div class="col-sm-5">
-               <p class="m-b-10 f-w-600">Telefone</p>
-           <h6 class="text-muted f-w-400">{{ school.cellphone }}</h6>
+                 <div class="col-sm-5" v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'">
+               <p class="m-b-10 f-w-600">ID</p>
+           <h6 class="text-muted f-w-400">{{ school.id }}</h6>
                </div>
 
             <!--  <div class="row" display: none>

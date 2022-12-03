@@ -4,8 +4,6 @@ import cors from 'cors';
 import * as api from "./controllers/apicontroller"; 
 
 
-
-
 const express = require("express");
 const app = express();
 dotenv.config();
@@ -23,7 +21,6 @@ const authConfig = {
   useRefreshTokens: true,
   cacheLocation: 'localstorage'
 };
-
 
 
 app.get("/", (req, res) => {

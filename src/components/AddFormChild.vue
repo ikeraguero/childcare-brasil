@@ -20,13 +20,13 @@
                                 @change="uploadImage($event.target.files[0])"
                                 accept="image/*"
                                 >
-                            <label class="block text-white text-sm font-bold mb-2" for="username">
+                            <label class="block text-white text-sm font-bold mb-2">
                                 Nome da Criança
                             </label>
                             <input
                                 class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                                 id="name" type="text" placeholder="Nome da Criança" name="childname">
-                            <label class="block text-white text-sm font-bold mb-1 mt-2" for="username">
+                            <label class="block text-white text-sm font-bold mb-1 mt-2">
                             Sexo
                         </label>
 
@@ -77,7 +77,7 @@
 
                   <div class="flex justify-start"> 
                     <div class="mb-4">
-                        <label class="block text-white text-sm font-bold mb-2" for="username">
+                        <label class="block text-white text-sm font-bold mb-2">
                             Endereço
                         </label>
                         <input
@@ -85,7 +85,7 @@
                             id="address" type="text" placeholder="Endereço" name="childaddress" >
                     </div>
                     <div class="mb-4 ml-7">
-                            <label class="block text-white text-sm font-bold mb-2" for="username">
+                            <label class="block text-white text-sm font-bold mb-2">
                             Estado
                         </label>
                         <input
@@ -130,7 +130,6 @@
                         id="observations" type="text" placeholder="Observações" name="childobs">
                 </div>
 
-                <!-- save button -->
                 <div class="flex justify-center">
                         <div>
                         
