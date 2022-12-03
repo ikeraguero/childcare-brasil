@@ -27,7 +27,7 @@
             Sexo
         </label>
 
-        <select class="form-select appearance-none
+        <select class=" shadow form-select appearance-none
                 block
                 w-full
                 px-3
@@ -37,8 +37,8 @@
                 text-black
                 bg-white 
                 rounded" name="childgender" v-model="child.gender">
-            <option value="menino">Menino</option>
-            <option value="menina">Menina</option>
+            <option value="Masculino">Menino</option>
+            <option value="Feminino">Menina</option>
         </select>
     </div>
 
@@ -81,51 +81,70 @@
             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             id="address" type="text" placeholder="Endereço" name="childaddress" v-model="child.address">
     </div>
-    <div class="mb-4 ml-7">
-            <label class="block text-white text-sm font-bold mb-2" for="username">
-            Estado
-        </label>
-        <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            id="state" type="text" placeholder="Estado" name="childstate" v-model="child.state">
-    </div>
+    <div class="mb-4 ml-4">
+                            <label class="block text-white text-sm font-bold mb-2">
+                            Estado
+                        </label>
+                            <select class="shadow appearance-none border rounded w-full py-2 px-4 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+                            id="state" placeholder="Estado" name="childstate" v-model="child.state">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
 
 
-     <div class="mb-4 ml-5">
-        <label class="block text-white text-sm font-bold mb-2">
-            Cidade
-        </label>
-        <input
-            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            id="city" type="text" placeholder="Cidade" name="childcity" v-model="child.city">
-    </div>
+                     <div class="mb-4 ml-9">
+                        <label class="block text-white text-sm font-bold mb-2">
+                            Cidade
+                        </label>
+                        <input
+                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+                            id="city" type="text" placeholder="Cidade" name="childcity">
+                    </div>
 </div>
 
 <div class="mb-4">
-    <label class="block text-white text-sm font-bold mb-2">
-        Descrição
-    </label>
-    <input
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-        id="description" type="text" placeholder="Descrição" name="childdesc" v-model="child.description">
-</div>
+                    <label class="block text-white text-sm font-bold mb-2">
+                        Materiais Necessitados
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+                        id="description" type="text" placeholder="Materias Necessitados" name="childmaterialsneeded" v-model="child.materialsneeded">
+                </div>
 
-<div class="mb-4">
-    <label class="block text-white text-sm font-bold mb-2" for="username">
-        Nome do Responsável
-    </label>
-    <input
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-        id="responsable" type="text" placeholder="Nome do Responsável" name="childowner" >
-</div>
-<div class="mb-4">
-    <label class="block text-white text-sm font-bold mb-2" for="username">
-        Observações
-    </label>
-    <input
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-        id="observations" type="text" placeholder="Observações" name="childobs">
-</div>
+                <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Nome do Responsável
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+                        id="responsable" type="text" placeholder="Nome do Responsável" name="childresponsables" v-model="child.responsables">
+                </div>
+
 
 <!-- save button -->
 <div class="flex justify-center">
