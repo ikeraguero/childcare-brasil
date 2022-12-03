@@ -7,7 +7,7 @@
       </v-col>
       <v-col>
         <p class="slogan mt-24">
-            Faça sua doação para:  
+            Faça sua doação para  
         </p>
 
         <br><br>

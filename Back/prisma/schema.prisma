@@ -21,21 +21,22 @@ model Child {
   city              String
   state             String
   cpf               String          @unique
-  description       String?
-  materialsreceived String?
+  materialsneeded   String?
+  responsables      String?
 }
 
 model School {
-  id        String  @id @default(auto()) @map("_id") @db.ObjectId
-  email     String 
-  cnpj      String @unique
-  cellphone String?
-  photo     String?
-  name      String
-  address   String?
-  city      String
-  state     String
-
+  id               String  @id @default(auto()) @map("_id") @db.ObjectId
+  email            String 
+  cnpj             String @unique
+  cellphone        String?
+  photo            String?
+  name             String
+  address          String?
+  city             String
+  state            String
+  materialsneeded  String?
+  director         String?
 }
 
 model Donation {

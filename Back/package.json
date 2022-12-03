@@ -22,7 +22,7 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "@prisma/client": "^4.3.1",
+    "@prisma/client": "^4.7.1",
     "@vue/cli-service": "^5.0.8",
     "auth0": "^2.43.0",
     "body-parser": "^1.20.0",

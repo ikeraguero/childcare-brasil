@@ -59,52 +59,78 @@
                     </div>
 
 
-                  <div class="flex justify-start"> 
+                    <div class="flex justify-start"> 
                     <div class="mb-4">
-                        <label class="block text-white text-sm font-bold mb-2" for="username">
+                        <label class="block text-white text-sm font-bold mb-2">
                             Endereço
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-                            id="name" type="text" placeholder="Endereço" name="childaddress" >
+                            id="address" type="text" placeholder="Endereço" name="schooladdress" >
                     </div>
-                    <div class="mb-4 ml-7">
-                            <label class="block text-white text-sm font-bold mb-2" for="username">
+                    <div class="mb-4 ml-4">
+                            <label class="block text-white text-sm font-bold mb-2">
                             Estado
                         </label>
-                        <input 
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-                            id="name" type="text" placeholder="Estado" maxlength="2" name="childstate" >
+                            <select class="shadow appearance-none border rounded w-full py-2 px-4 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+                            id="state" placeholder="Estado" name="schoolstate">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
                     </div>
 
 
-                     <div class="mb-4 ml-5">
+                     <div class="mb-4 ml-9">
                         <label class="block text-white text-sm font-bold mb-2">
                             Cidade
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-                            id="age" type="text" placeholder="Cidade" name="childcity">
+                            id="city" type="text" placeholder="Cidade" name="schoolcity">
                     </div>
                 </div>
 
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2">
-                        Descrição
+                        Materiais Necessitados
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-                        id="desc" type="text" placeholder="Descrição" name="dogdesc" >
+                        id="desc" type="text" placeholder="Materiais Necessitados" name="schoolmaterialsneeded" >
                 </div>
 
                 
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="username">
-                        Observações
+                        Diretor(a)
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-                        id="name" type="text" placeholder="Observações" name="dogobs">
+                        id="name" type="text" placeholder="Diretor(a)" name="schooldirector">
                 </div>
 
                 <!-- save button -->
@@ -114,7 +140,7 @@
                             <button @click="uploadImage()"></button>
                             <router-link to="/adminn/escolas/" class="btn bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</router-link >    
             
-                            <input class="btn bg-white font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">                     
+                                <input class="btn bg-white font-bold py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">                   
                         </div>
                     </div>    
 

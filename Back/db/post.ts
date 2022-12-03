@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-export async function addChild(childphoto: string, childname: string, childgender: string, childschool:string, childage: string, childaddress: string, childcity: string, childstate: string, childcpf:string, childdesc: string, childmaterialsreceived: string) {
+export async function addChild(childphoto: string, childname: string, childgender: string, childschool:string, childage: string, childaddress: string, childcity: string, childstate: string, childcpf:string, childmaterialsneeded: string, childresponsables: string) {
     await prisma.$connect();
     const child = await prisma.child.create({
         data: {
@@ -14,14 +14,14 @@ export async function addChild(childphoto: string, childname: string, childgende
             city: childcity, //change to string
             state: childstate,
             cpf: childcpf,
-            description: childdesc,
-            materialsreceived: childmaterialsreceived
+            materialsneeded: childmaterialsneeded,
+            responsables: childresponsables
         }
     });
     await prisma.$disconnect();
 };
 
-export async function updateChild(child_id: string, childphoto: string, childname: string, childgender: string, childschool:string, childage: string, childaddress: string, childcity: string, childstate: string, childcpf:string, childdesc: string, childmaterialsreceived: string) {
+export async function updateChild(child_id: string, childphoto: string, childname: string, childgender: string, childschool:string, childage: string, childaddress: string, childcity: string, childstate: string, childcpf:string, childmaterialsneeded: string, childresponsables: string) {
     await prisma.$connect();
     const child = await prisma.child.update({
         where: {
@@ -37,8 +37,8 @@ export async function updateChild(child_id: string, childphoto: string, childnam
             city: childcity,
             state: childstate,
             cpf: childcpf,
-            description: childdesc,
-            materialsreceived: childmaterialsreceived
+            materialsneeded: childmaterialsneeded,
+            responsables: childresponsables
         }
     });
     await prisma.$disconnect();
@@ -54,7 +54,7 @@ export async function deleteChild (child_id: string) {
     await prisma.$disconnect();
 }
 
-export async function addSchool(schoolemail: string, schoolcnpj: string, schoolcellphone: string, schoolphoto: string, schoolname: string, schooladdress: string, schoolcity: string, schoolstate: string) {
+export async function addSchool(schoolemail: string, schoolcnpj: string, schoolcellphone: string, schoolphoto: string, schoolname: string, schooladdress: string, schoolcity: string, schoolstate: string, schoolmaterialsneeded: string, schooldirector: string)  {
     await prisma.$connect();
     const school = await prisma.school.create({
         data: {
@@ -65,13 +65,15 @@ export async function addSchool(schoolemail: string, schoolcnpj: string, schoolc
             name: schoolname,
             address: schooladdress,
             city: schoolcity,
-            state: schoolstate
+            state: schoolstate,
+            materialsneeded: schoolmaterialsneeded,
+            director: schooldirector
         }
     });
     await prisma.$disconnect();
 
 };
-export async function updateSchool(school_id: string, schoolemail: string, schoolcnpj: string, schoolcellphone: string, schoolphoto: string, schoolname: string, schooladdress: string, schoolcity: string, schoolstate: string) {
+export async function updateSchool(school_id: string, schoolemail: string, schoolcnpj: string, schoolcellphone: string, schoolphoto: string, schoolname: string, schooladdress: string, schoolcity: string, schoolstate: string, schoolmaterialsneeded: string, schooldirector: string) {
     await prisma.$connect();
     const school = await prisma.school.update({
         where: {
@@ -85,7 +87,9 @@ export async function updateSchool(school_id: string, schoolemail: string, schoo
             name: schoolname,
             address: schooladdress,
             city: schoolcity,
-            state: schoolstate
+            state: schoolstate,
+            materialsneeded: schoolmaterialsneeded,
+            director: schooldirector
         }
     });
     await prisma.$disconnect();

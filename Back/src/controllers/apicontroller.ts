@@ -18,7 +18,7 @@ export const child = async (req: Request, res: Response) => {
 
 export const childadd = async (req: Request, res: Response) => {
     const r = req.body;
-    const child = await addChild(r.childphoto, r.childname, r.childgender,r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.childdesc, r.childmaterialsreceived);
+    const child = await addChild(r.childphoto, r.childname, r.childgender, r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.childmaterialsneeded, r.childresponsables);
     res.redirect("http://localhost:8080/adminn");
 
 }
@@ -31,7 +31,7 @@ export const childdelete = async (req: Request, res: Response) => {
 
 export const childupdate = async (req: Request, res: Response) => {
     const r = req.body;
-    const child = await updateChild(req.params.child_id, r.childphoto, r.childname, r.childgender,r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.childdesc, r.childmaterialsreceived);
+    const child = await updateChild(req.params.child_id, r.childphoto, r.childname, r.childgender, r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.childmaterialsneeded, r.childresponsables);
     res.redirect("http://localhost:8080/adminn");
 }
 
@@ -49,7 +49,7 @@ export const school = async (req: Request, res: Response) => {
 
 export const schooladd = async (req: Request, res: Response) => {
     const r = req.body;
-    const school = await addSchool(r.schoolemail, r.schoolcnpj, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate);
+    const school = await addSchool(r.schoolemail, r.schoolcnpj, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate, r.schoolmaterialsneeded, r.schooldirector);
     res.redirect("http://localhost:8080/adminn");
 
 }
@@ -61,7 +61,7 @@ export const schooldelete = async (req: Request, res: Response) => {
 
 export const schoolupdate = async (req: Request, res: Response) => {
     const r = req.body;
-    const school = await updateSchool(req.params.school_id, r.schoolemail, r.schoolcnpj, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate);
+    const school = await updateSchool(req.params.school_id, r.schoolemail, r.schoolcnpj, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate, r.schoolmaterialsneeded, r.schooldirector);
     res.redirect("http://localhost:8080/adminn");
 }
 
