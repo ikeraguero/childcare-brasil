@@ -45,6 +45,14 @@
                  <p class="m-b-10 f-w-600">CNPJ</p>
                     <h6 class="text-muted f-w-400">{{ school.cnpj }}</h6>
                 </div>
+                <div class="col-sm-6">
+                 <p class="m-b-10 f-w-600">Materiais Necessitados</p>
+                    <h6 class="text-muted f-w-400">{{ school.materialsneeded }}</h6>
+                </div>
+                <div class="col-sm-6">
+                 <p class="m-b-10 f-w-600">Diretor(a)</p>
+                    <h6 class="text-muted f-w-400">{{ school.director }}</h6>
+                </div>
                  <div class="col-sm-5" v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'">
                <p class="m-b-10 f-w-600">ID</p>
            <h6 class="text-muted f-w-400">{{ school.id }}</h6>

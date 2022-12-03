@@ -14,7 +14,7 @@
                               <b>ID: </b>{{ card.id }}
                             </p>
                             <p class="capitalize text-base mb-1 h-6">
-                               <b>Doador: </b> {{card.donatortype }} | {{ card.donator }}
+                               <b>Doador: </b> {{ card.donator }} ({{ card.donatortype }})
                             </p>
                             <p v-if="card.cpf" class="text-base mb-1 h-6">
                                 <b> CPF: </b>{{ card.cpf }}
@@ -36,9 +36,6 @@
                             </p>
                             <p class="text-base mb-1 h-6" >
                                 <b>Data: </b> {{ card.data}}
-                            </p>
-                            <p class="text-base uppercase mb-1 h-6" >
-                                <b class="capitalize"> Status: </b> <b class="text-green-700 ">{{ card.status}}</b>
                             </p>
                             <div class="flex justify-center flex-row">
                                 <button @click="excluir(card.id)" class="inline-block mt-2 px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md" type="button" value="Excluir">Excluir</button>
