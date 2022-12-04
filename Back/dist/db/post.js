@@ -39,7 +39,7 @@ exports.__esModule = true;
 exports.updateDonation = exports.deleteDonation = exports.addDonation = exports.uploadImage = exports.deleteSchool = exports.updateSchool = exports.addSchool = exports.deleteChild = exports.updateChild = exports.addChild = void 0;
 var client_1 = require("@prisma/client");
 var prisma = new client_1.PrismaClient();
-function addChild(childphoto, childname, childgender, childschool, childage, childaddress, childcity, childstate, childcpf, childdesc, childmaterialsreceived) {
+function addChild(childphoto, childname, childgender, childschool, childage, childaddress, childcity, childstate, childcpf, childmaterialsneeded, childresponsables) {
     return __awaiter(this, void 0, void 0, function () {
         var child;
         return __generator(this, function (_a) {
@@ -58,8 +58,8 @@ function addChild(childphoto, childname, childgender, childschool, childage, chi
                                 city: childcity,
                                 state: childstate,
                                 cpf: childcpf,
-                                description: childdesc,
-                                materialsreceived: childmaterialsreceived
+                                materialsneeded: childmaterialsneeded,
+                                responsables: childresponsables
                             }
                         })];
                 case 2:
@@ -74,7 +74,7 @@ function addChild(childphoto, childname, childgender, childschool, childage, chi
 }
 exports.addChild = addChild;
 ;
-function updateChild(child_id, childphoto, childname, childgender, childschool, childage, childaddress, childcity, childstate, childcpf, childdesc, childmaterialsreceived) {
+function updateChild(child_id, childphoto, childname, childgender, childschool, childage, childaddress, childcity, childstate, childcpf, childmaterialsneeded, childresponsables) {
     return __awaiter(this, void 0, void 0, function () {
         var child;
         return __generator(this, function (_a) {
@@ -96,8 +96,8 @@ function updateChild(child_id, childphoto, childname, childgender, childschool, 
                                 city: childcity,
                                 state: childstate,
                                 cpf: childcpf,
-                                description: childdesc,
-                                materialsreceived: childmaterialsreceived
+                                materialsneeded: childmaterialsneeded,
+                                responsables: childresponsables
                             }
                         })];
                 case 2:
@@ -136,7 +136,7 @@ function deleteChild(child_id) {
     });
 }
 exports.deleteChild = deleteChild;
-function addSchool(schoolemail, schoolcnpj, schoolcellphone, schoolphoto, schoolname, schooladdress, schoolcity, schoolstate) {
+function addSchool(schoolemail, schoolcnpj, schoolcellphone, schoolphoto, schoolname, schooladdress, schoolcity, schoolstate, schoolmaterialsneeded, schooldirector) {
     return __awaiter(this, void 0, void 0, function () {
         var school;
         return __generator(this, function (_a) {
@@ -153,7 +153,9 @@ function addSchool(schoolemail, schoolcnpj, schoolcellphone, schoolphoto, school
                                 name: schoolname,
                                 address: schooladdress,
                                 city: schoolcity,
-                                state: schoolstate
+                                state: schoolstate,
+                                materialsneeded: schoolmaterialsneeded,
+                                director: schooldirector
                             }
                         })];
                 case 2:
@@ -168,7 +170,7 @@ function addSchool(schoolemail, schoolcnpj, schoolcellphone, schoolphoto, school
 }
 exports.addSchool = addSchool;
 ;
-function updateSchool(school_id, schoolemail, schoolcnpj, schoolcellphone, schoolphoto, schoolname, schooladdress, schoolcity, schoolstate) {
+function updateSchool(school_id, schoolemail, schoolcnpj, schoolcellphone, schoolphoto, schoolname, schooladdress, schoolcity, schoolstate, schoolmaterialsneeded, schooldirector) {
     return __awaiter(this, void 0, void 0, function () {
         var school;
         return __generator(this, function (_a) {
@@ -188,7 +190,9 @@ function updateSchool(school_id, schoolemail, schoolcnpj, schoolcellphone, schoo
                                 name: schoolname,
                                 address: schooladdress,
                                 city: schoolcity,
-                                state: schoolstate
+                                state: schoolstate,
+                                materialsneeded: schoolmaterialsneeded,
+                                director: schooldirector
                             }
                         })];
                 case 2:

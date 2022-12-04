@@ -72,7 +72,7 @@ var childadd = function (req, res) { return __awaiter(void 0, void 0, void 0, fu
         switch (_a.label) {
             case 0:
                 r = req.body;
-                return [4 /*yield*/, (0, post_1.addChild)(r.childphoto, r.childname, r.childgender, r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.childdesc, r.childmaterialsreceived)];
+                return [4 /*yield*/, (0, post_1.addChild)(r.childphoto, r.childname, r.childgender, r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.childmaterialsneeded, r.childresponsables)];
             case 1:
                 child = _a.sent();
                 res.redirect("http://localhost:8080/adminn");
@@ -100,7 +100,7 @@ var childupdate = function (req, res) { return __awaiter(void 0, void 0, void 0,
         switch (_a.label) {
             case 0:
                 r = req.body;
-                return [4 /*yield*/, (0, post_1.updateChild)(req.params.child_id, r.childphoto, r.childname, r.childgender, r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.childdesc, r.childmaterialsreceived)];
+                return [4 /*yield*/, (0, post_1.updateChild)(req.params.child_id, r.childphoto, r.childname, r.childgender, r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.childmaterialsneeded, r.childresponsables)];
             case 1:
                 child = _a.sent();
                 res.redirect("http://localhost:8080/adminn");
@@ -142,7 +142,7 @@ var schooladd = function (req, res) { return __awaiter(void 0, void 0, void 0, f
         switch (_a.label) {
             case 0:
                 r = req.body;
-                return [4 /*yield*/, (0, post_1.addSchool)(r.schoolemail, r.schoolcnpj, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate)];
+                return [4 /*yield*/, (0, post_1.addSchool)(r.schoolemail, r.schoolcnpj, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate, r.schoolmaterialsneeded, r.schooldirector)];
             case 1:
                 school = _a.sent();
                 res.redirect("http://localhost:8080/adminn");
@@ -170,7 +170,7 @@ var schoolupdate = function (req, res) { return __awaiter(void 0, void 0, void 0
         switch (_a.label) {
             case 0:
                 r = req.body;
-                return [4 /*yield*/, (0, post_1.updateSchool)(req.params.school_id, r.schoolemail, r.schoolcnpj, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate)];
+                return [4 /*yield*/, (0, post_1.updateSchool)(req.params.school_id, r.schoolemail, r.schoolcnpj, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate, r.schoolmaterialsneeded, r.schooldirector)];
             case 1:
                 school = _a.sent();
                 res.redirect("http://localhost:8080/adminn");
@@ -243,7 +243,7 @@ var donationupdate = function (req, res) { return __awaiter(void 0, void 0, void
                 return [4 /*yield*/, (0, post_1.updateDonation)(req.params.donation_id, r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials, r.donationdonatedto, r.donationdonatedtoid, r.donationstatus)];
             case 1:
                 donation = _a.sent();
-                res.redirect("http://localhost:8080/adminn");
+                res.json(donation);
                 return [2 /*return*/];
         }
     });

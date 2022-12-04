@@ -148,7 +148,7 @@ function getSchool(school_id) {
     });
 }
 exports.getSchool = getSchool;
-// all children
+// all donations
 function getDonations() {
     return __awaiter(this, void 0, void 0, function () {
         var donations;
