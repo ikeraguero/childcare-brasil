@@ -45,7 +45,7 @@
 
     <p></p>
     <div class="boxtwo rounded-sm" >
-     <v-row class="counter-text" justify="center">CONTADOR:</v-row>
+     <v-row class="counter-text" justify="center">CONTADOR</v-row>
      </div>
         <section class="counters">
         
