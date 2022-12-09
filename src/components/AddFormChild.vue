@@ -8,17 +8,14 @@
 
                 <div class="flex mb-4">
 
-                    <img src="https://i.imgur.com/Wp6hAjO.jpg" class="rounded-lg h-48 w-52" alt="Avatar" id="img" />
+                    <img src="https://i.imgur.com/Wp6hAjO.jpg" class="rounded-lg h-48 w-52" alt="Avatar" id="img-preview" />
 
                     <div class="px-4">
                         <label class="block text-white text-sm font-bold" for="image">
-                                Foto
+                                Link da Imagem
                             </label>
                             <input
-                                type="file"
-                                class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none" 
-                                @change="uploadImage($event.target.files[0])"
-                                accept="image/*"
+                                class="shadow block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none" 
                                 name="childphoto"
                                 >
                             <label class="block text-white text-sm font-bold mb-2">
@@ -164,38 +161,13 @@
     </div>
 </template>
 
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
-// import axios from 'axios';
 export default {
     name: "AddForm",
-    
-    data() {
-        return {
-            image: "",
-        };
-    },
-    methods: {
-        uploadImage(image) {
-            
-            var myHeaders = new Headers();
-            myHeaders.append("Authorization", "Client-ID 483db59972b36f5");
-            var formdata = new FormData();
-            formdata.append("image", image);
-            var requestOptions = {
-            method: 'POST',
-            headers: myHeaders,
-            body: formdata,
-            redirect: 'follow'
-            };
-            fetch("https://api.imgur.com/3/image", requestOptions)
-            .then(data => data.json()).then(data => {
-                this.image = data.data.link;
-            })
-            .then(result => console.log(result))
-            .catch(error => console.log('error', error));
-        }
-    }
-};
+}
+
+
 </script>
 
 <style scoped>

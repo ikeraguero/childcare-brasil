@@ -11,14 +11,12 @@
                     <img src="https://i.imgur.com/Wp6hAjO.jpg" class="rounded-lg h-48 w-52" alt="Avatar" id="img" />
 
                     <div class="px-4">
-                        <label class="block text-white text-sm font-bold mt-10" for="image">
-                                Foto
+                        <label class="block text-white text-sm font-bold" for="image">
+                                Link da Imagem
                             </label>
                             <input
-                                type="file"
-                                class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none bg-white" 
-                                @change="uploadImage($event.target.files[0])"
-                                accept="image/*"
+                                class="shadow block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none" 
+                                name="schoolphoto"
                                 >
                             <label class="block text-white text-sm font-bold mb-2 mt-5" for="username">
                                 Nome da Escola
