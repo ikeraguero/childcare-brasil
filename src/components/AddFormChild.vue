@@ -58,9 +58,13 @@
                         <label class="block text-white text-sm font-bold mb-2">
                             Escola
                         </label>
-                        <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+                        <select
+                            class="shadow appearance-none border rounded w-full py-2 px-14 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="school" type="text" placeholder="Escola" name="childschool">
+                            <option v-for="card in cards.data" :key="card.index"
+          >
+            {{ card.name }}</option>
+                        </select>
                     </div>
                     <div class="mb-4 ml-5">
                         <label class="block text-white text-sm font-bold mb-2">
@@ -161,12 +165,22 @@
     </div>
 </template>
 
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
+import axios from "axios";
 export default {
     name: "AddForm",
-}
 
+
+data() {
+        return {
+            cards: [],
+            showControls: true,
+        };
+    },
+    mounted() {
+        axios.get("http://localhost:7777/api/schools").then((response) => (this.cards = response));
+    },
+}
 
 </script>
 
