@@ -19,7 +19,7 @@ export const child = async (req: Request, res: Response) => {
 export const childadd = async (req: Request, res: Response) => {
     const r = req.body;
     const child = await addChild(r.childphoto, r.childname, r.childgender, r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.childmaterialsneeded, r.childresponsables);
-    res.redirect("http://localhost:8080/adminn");
+    res.redirect("http://localhost:8080/adminn/criancas");
 
 }
 
@@ -32,7 +32,7 @@ export const childdelete = async (req: Request, res: Response) => {
 export const childupdate = async (req: Request, res: Response) => {
     const r = req.body;
     const child = await updateChild(req.params.child_id, r.childphoto, r.childname, r.childgender, r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.childmaterialsneeded, r.childresponsables);
-    res.redirect("http://localhost:8080/adminn");
+    res.redirect("http://localhost:8080/adminn/criancas");
 }
 
 // Schools
@@ -50,7 +50,7 @@ export const school = async (req: Request, res: Response) => {
 export const schooladd = async (req: Request, res: Response) => {
     const r = req.body;
     const school = await addSchool(r.schoolemail, r.schoolinepcode, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate, r.schoolmaterialsneeded, r.schooldirector);
-    res.redirect("http://localhost:8080/adminn");
+    res.redirect("http://localhost:8080/adminn/escolas");
 
 }
 

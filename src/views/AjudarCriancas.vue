@@ -1,9 +1,7 @@
 <template>
-  <div class="block galleryBlock">
-    <v-container>
+  <div>
       <h1 class="flex justify-center py-10 text-4xl text-[#15393C] font-semibold">Crianças</h1>
-      <ChildrenCards class="flex drop-shadow-md mb-9" />
-    </v-container>
+      <ChildrenCards/>
   </div>
 </template>
 

@@ -15,6 +15,7 @@
                                 class="shadow appearance-none border rounded w-96 py-2 px-3 mb-2 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" 
                                 placeholder="Link da Imagem"
                                 name="childphoto"
+                                v-model="child.photo"
                                 >
             <label class="block text-white text-sm font-bold mb-2" for="username">
                 Nome da Criança
@@ -87,7 +88,7 @@
                             Estado
                         </label>
                         <select class="shadow appearance-none border rounded w-56 py-2 px-2 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white mr-0"
-                            id="state" placeholder="Estado" name="childstate">
+                            id="state" placeholder="Estado" name="childstate" v-model="child.state">
                             <option v-for="state in states.data" :key="state.index">{{ state.name }}</option>
                         </select>
                     </div>
@@ -99,7 +100,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-48 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-                            id="city" type="text" placeholder="Cidade" name="childcity">
+                            id="city" type="text" placeholder="Cidade" name="childcity" v-model="child.city">
                     </div>
 </div>
 

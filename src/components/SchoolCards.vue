@@ -125,7 +125,7 @@ export default {
             <div v-for="card in cards.data" :key="card.index">
                 <div class="px-2 m-2 " style="overflow-wrap: anywhere;">
 
-                    <div class="teste rounded-lg shadow-md w-96lg:w-410" style="overflow-wrap: anywhere;">
+                    <div class="teste rounded-lg shadow-md w-96lg:w-410 overflow-hidden " style="overflow-wrap: anywhere;">
                         <a href="/">
                             
                             <router-link v-bind:to="'/escolas/perfil/' + card.id"><img class="rounded-t-lg h-80" :src="card.photo" /></router-link>

@@ -184,7 +184,7 @@
 
             <div class="flex justify-center" id="fakesubmit">
                 <div class="mt-6 flex justify-center">
-                   <router-link to="/criancas/" class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Cancelar">Cancelar</router-link >    
+                   <router-link to="/escolas/" class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Cancelar">Cancelar</router-link >    
 
                     <button class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
                         id="moneypayment" @click='hideForm2' style="display: none">Prosseguir</button>

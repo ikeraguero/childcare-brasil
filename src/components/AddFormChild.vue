@@ -71,7 +71,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-                            id="cpf" type="text" placeholder="CPF" maxlength="11" name="childcpf">
+                            id="cpf" type="text" placeholder="CPF" maxlength="14" name="childcpf">
                     </div>
                     </div>
 
