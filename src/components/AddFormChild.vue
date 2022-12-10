@@ -39,8 +39,8 @@
                                 text-black
                                 bg-white 
                                 rounded" name="childgender">
-                            <option value="Masculino">Menino</option>
-                            <option value="Feminino">Menina</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
                         </select>
                     </div>
 
@@ -65,12 +65,12 @@
                             <option v-for="card in cards.data" :key="card.index">{{ card.name }}</option>
                         </select>
                     </div>
-                    <div class="mb-4 ml-5">
+                    <div class="mb-4 ml-4">
                         <label class="block text-white text-sm font-bold mb-2">
                             CPF
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-48 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="cpf" type="text" placeholder="CPF" maxlength="11" name="childcpf">
                     </div>
                     </div>
@@ -85,23 +85,23 @@
                             class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="address" type="text" placeholder="Endereço" name="childaddress" >
                     </div>
-                    <div class="mb-4 ml-4">
+                    <div class="mb-4 ml-3">
                             <label class="block text-white text-sm font-bold mb-2">
                             Estado
                         </label>
-                            <select class="shadow appearance-none border rounded w-56 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white mr-0"
+                            <select class="shadow appearance-none border rounded w-56 py-2 px-2 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white mr-0"
                             id="state" placeholder="Estado" name="childstate">
                             <option v-for="state in states.data" :key="state.index">{{ state.name }}</option>
                         </select>
                     </div>
 
 
-                     <div class="mb-4 ml-5">
+                     <div class="mb-4 ml-4">
                         <label class="block text-white text-sm font-bold mb-2">
                             Cidade
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-48 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="city" type="text" placeholder="Cidade" name="childcity">
                     </div>
                 </div>
@@ -128,7 +128,7 @@
                         <div>
                         
                             <button @click="uploadImage()"></button>
-                            <router-link to="/adminn/criancas/" class="btn bg-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</router-link >
+                            <router-link to="/adminn/criancas/" class="btn bg-white font-bold py-2.5 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</router-link >
             
                             <input class="btn bg-white font-bold py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">                     
                         </div>

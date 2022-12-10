@@ -8,15 +8,14 @@
     <img :src="child.photo" class="rounded-lg h-48 w-52" alt="Avatar" id="img" />
 
     <div class="px-4">
-        <label class="block text-white text-sm font-bold" for="image">
-                Foto
-            </label>
-            <input
-                type="file"
-                class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none" 
-                @change="uploadImage($event.target.files[0])"
-                accept="image/*"
-                >
+        <label class="block text-white text-sm font-bold mb-2" for="image">
+                                Link da Imagem
+                            </label>
+                            <input
+                                class="shadow appearance-none border rounded w-96 py-2 px-3 mb-2 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" 
+                                placeholder="Link da Imagem"
+                                name="childphoto"
+                                >
             <label class="block text-white text-sm font-bold mb-2" for="username">
                 Nome da Criança
             </label>
@@ -37,8 +36,8 @@
                 text-black
                 bg-white 
                 rounded" name="childgender" v-model="child.gender">
-            <option value="Masculino">Menino</option>
-            <option value="Feminino">Menina</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
         </select>
     </div>
 
@@ -57,16 +56,18 @@
         <label class="block text-white text-sm font-bold mb-2">
             Escola
         </label>
-        <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            id="school" type="text" placeholder="Escola" name="childschool" v-model="child.school">
+        <select
+                            class="shadow appearance-none border rounded w-56 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+                            id="school" type="text" placeholder="Escola" name="childschool">
+                            <option v-for="card in cards.data" :key="card.index">{{ card.name }}</option>
+                        </select>
     </div>
     <div class="mb-4 ml-5">
         <label class="block text-white text-sm font-bold mb-2">
             CPF
         </label>
         <input
-            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none border rounded w-48 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             id="cpf" type="text" placeholder="CPF" name="childcpf" v-model="child.cpf">
     </div>
     </div>
@@ -78,51 +79,26 @@
             Endereço
         </label>
         <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             id="address" type="text" placeholder="Endereço" name="childaddress" v-model="child.address">
     </div>
     <div class="mb-4 ml-4">
                             <label class="block text-white text-sm font-bold mb-2">
                             Estado
                         </label>
-                            <select class="shadow appearance-none border rounded w-full py-2 px-4 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-                            id="state" placeholder="Estado" name="childstate" v-model="child.state">
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
+                        <select class="shadow appearance-none border rounded w-56 py-2 px-2 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white mr-0"
+                            id="state" placeholder="Estado" name="childstate">
+                            <option v-for="state in states.data" :key="state.index">{{ state.name }}</option>
                         </select>
                     </div>
 
 
-                     <div class="mb-4 ml-9">
+                     <div class="mb-4 ml-4">
                         <label class="block text-white text-sm font-bold mb-2">
                             Cidade
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+                            class="shadow appearance-none border rounded w-48 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="city" type="text" placeholder="Cidade" name="childcity">
                     </div>
 </div>
@@ -151,7 +127,7 @@
         <div>
         
             <button @click="uploadImage()"></button>
-            <router-link to="/adminn/criancas/" class="btn bg-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</router-link >
+            <router-link to="/adminn/criancas/" class="btn bg-white font-bold py-2.5 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</router-link >
 
             <input class="btn bg-white font-bold py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">                     
         </div>
@@ -168,9 +144,13 @@ export default {
     data() {
         return {
             child: [],
+            cards: [],
+            states: []
         };
     },
     mounted() {
+        axios.get("http://localhost:7777/api/schools").then((response) => (this.cards = response));
+        axios.get("http://localhost:7777/api/states").then((response) => (this.states = response));
         axios.get("http://localhost:7777/api/child/" + this.$route.params.id)
             .then(response => {
                 this.child = response.data;

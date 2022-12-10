@@ -67,11 +67,11 @@
                             class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="address" type="text" placeholder="Endereço" name="schooladdress" >
                     </div>
-                    <div class="mb-4 ml-4">
+                    <div class="mb-4 ml-3">
                             <label class="block text-white text-sm font-bold mb-2">
                             Estado
                         </label>
-                            <select class="shadow appearance-none border rounded w-56 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+                            <select class="shadow appearance-none border rounded w-56 py-2 px-2 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="state" placeholder="Estado" name="schoolstate">
                             <option v-for="state in states.data" :key="state.index">{{ state.name }}</option>
                         </select>
@@ -83,7 +83,7 @@
                             Cidade
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-48 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="city" type="text" placeholder="Cidade" name="schoolcity">
                     </div>
                 </div>
