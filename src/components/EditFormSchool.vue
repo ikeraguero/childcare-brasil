@@ -15,6 +15,7 @@
                                 class="shadow appearance-none border rounded w-96 py-2 px-3 mb-2 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" 
                                 placeholder="Link da Imagem"
                                 name="schoolphoto"
+                                v-model="school.photo"
                                 >
             <label class="block text-white text-sm font-bold mb-2 mt-5" for="username">
                 Nome da Escola
@@ -29,11 +30,11 @@
 <div class="flex justify-start"> 
     <div class="mb-4">
         <label class="block text-white text-sm font-bold mb-2">
-            CNPJ
+            Código INEP
         </label>
         <input
             class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            id="age" type="text" placeholder="CNPJ" name="schoolage" v-model="school.cnpj">
+            id="age" type="text" placeholder="CNPJ" name="schoolage" v-model="school.inepcode">
     </div>
     <div class="mb-4 ml-3">
         <label class="block text-white text-sm font-bold mb-2">

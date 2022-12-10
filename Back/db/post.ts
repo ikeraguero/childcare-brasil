@@ -54,12 +54,12 @@ export async function deleteChild (child_id: string) {
     await prisma.$disconnect();
 }
 
-export async function addSchool(schoolemail: string, schoolcnpj: string, schoolcellphone: string, schoolphoto: string, schoolname: string, schooladdress: string, schoolcity: string, schoolstate: string, schoolmaterialsneeded: string, schooldirector: string)  {
+export async function addSchool(schoolemail: string, schoolinepcode: string, schoolcellphone: string, schoolphoto: string, schoolname: string, schooladdress: string, schoolcity: string, schoolstate: string, schoolmaterialsneeded: string, schooldirector: string)  {
     await prisma.$connect();
     const school = await prisma.school.create({
         data: {
             email: schoolemail,
-            cnpj: schoolcnpj,
+            inepcode: schoolinepcode,
             cellphone: schoolcellphone,
             photo: schoolphoto,
             name: schoolname,
@@ -73,7 +73,7 @@ export async function addSchool(schoolemail: string, schoolcnpj: string, schoolc
     await prisma.$disconnect();
 
 };
-export async function updateSchool(school_id: string, schoolemail: string, schoolcnpj: string, schoolcellphone: string, schoolphoto: string, schoolname: string, schooladdress: string, schoolcity: string, schoolstate: string, schoolmaterialsneeded: string, schooldirector: string) {
+export async function updateSchool(school_id: string, schoolemail: string, schoolinepcode: string, schoolcellphone: string, schoolphoto: string, schoolname: string, schooladdress: string, schoolcity: string, schoolstate: string, schoolmaterialsneeded: string, schooldirector: string) {
     await prisma.$connect();
     const school = await prisma.school.update({
         where: {
@@ -81,7 +81,7 @@ export async function updateSchool(school_id: string, schoolemail: string, schoo
         },
         data: {
             email: schoolemail,
-            cnpj: schoolcnpj,
+            inepcode: schoolinepcode,
             cellphone: schoolcellphone,
             photo: schoolphoto,
             name: schoolname,

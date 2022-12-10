@@ -1,25 +1,27 @@
 <template>
     <span>
-        <div class="grid gap-1 grid-cols-4 grid-rows-0 overflow whitespace-nowrap no-scrollbar relative scroll-smooth snap-x" id="container">
+        <div class="grid gap-1 grid-cols-4 grid-rows-0 whitespace-nowrap" id="container">
             <div v-for="card in cards.data" :key="card.index">
-                <div class="flex px-3 m-2 snap-center ">
-                    <div class="rounded-lg shadow-md w-[300px] lg:w-[410px]">
+                <div class=" px-2 m-2 " style="overflow-wrap: anywhere;">
+                    
+                    <div class="teste rounded-lg shadow-md w-96lg:w-410 overflow-hidden " style="overflow-wrap: anywhere;">
                         <a href="/">
 
                             <router-link v-bind:to="'/escolas/perfil/' + card.id"><img class="rounded-t-lg h-80" :src="card.photo" /></router-link>
                         </a>
                         <div class="p-6">
                             <div class="flex justify-between">
-                                <h5 class="text-white text-xl font-medium mb-2">
+                                <h5 class="text-white text-xl font-medium mb-2 ">
                                     {{ card.name }}
                                 </h5>
                             
                             </div>
 
-                            <p class="text-white text-base mb-4 h-20 w-fit">
+                            <p class="text-white text-base absolute w-fit">
                                 {{ card.city }}, {{ card.state }}
                             </p>
-                            <div class="flex justify-center flex-row">
+                        </div>
+                        <div class="buttons flex justify-center mb-2 mt-14 h-fit">
                                 
                                 <a  
                                 v-bind:href="'/adminn/escolas/'+ card.id"
@@ -29,7 +31,6 @@
                             >
                                 <button @click="excluir(card.id)" class="del inline-block px-6 py-2.5 ml-3 text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md" type="button" value="Excluir">Deletar</button>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -112,4 +113,10 @@ export default {
     width: 388px;
 }
 
+.teste {
+    height: 550px;
+}
+#container {
+    overflow: auto;
+}
 </style>

@@ -49,7 +49,7 @@ export const school = async (req: Request, res: Response) => {
 
 export const schooladd = async (req: Request, res: Response) => {
     const r = req.body;
-    const school = await addSchool(r.schoolemail, r.schoolcnpj, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate, r.schoolmaterialsneeded, r.schooldirector);
+    const school = await addSchool(r.schoolemail, r.schoolinepcode, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate, r.schoolmaterialsneeded, r.schooldirector);
     res.redirect("http://localhost:8080/adminn");
 
 }
@@ -61,8 +61,8 @@ export const schooldelete = async (req: Request, res: Response) => {
 
 export const schoolupdate = async (req: Request, res: Response) => {
     const r = req.body;
-    const school = await updateSchool(req.params.school_id, r.schoolemail, r.schoolcnpj, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate, r.schoolmaterialsneeded, r.schooldirector);
-    res.redirect("http://localhost:8080/adminn");
+    const school = await updateSchool(req.params.school_id, r.schoolemail, r.schoolinepcode, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate, r.schoolmaterialsneeded, r.schooldirector);
+    res.redirect("http://localhost:8080/adminn/escolas");
 }
 
 // Donations

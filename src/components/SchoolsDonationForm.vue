@@ -214,7 +214,7 @@ export default {
             loading: false,
             paidFor: false,
             product: {
-                price: 100.00,
+                price: 1,
                 description: "teste"
             }
 

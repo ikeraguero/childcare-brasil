@@ -42,8 +42,8 @@
                  </div>
                   <div class="row">
                   <div class="col-sm-6">
-                 <p class="m-b-10 f-w-600">CNPJ</p>
-                    <h6 class="text-muted f-w-400">{{ school.cnpj }}</h6>
+                 <p class="m-b-10 f-w-600">Código INEP</p>
+                    <h6 class="text-muted f-w-400">{{ school.inepcode }}</h6>
                 </div>
                 <div class="col-sm-6">
                  <p class="m-b-10 f-w-600">Materiais Necessitados</p>

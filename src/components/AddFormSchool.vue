@@ -33,11 +33,11 @@
                 <div class="flex justify-start"> 
                     <div class="mb-4">
                         <label class="block text-white text-sm font-bold mb-2">
-                            CNPJ
+                            Código INEP
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-                            id="age" type="text" placeholder="CNPJ" maxlength="14" name="schoolcpnj">
+                            id="age" type="text" placeholder="Código INEP" maxlength="18" name="schoolinepcode">
                     </div>
                     <div class="mb-4 ml-3">
                         <label class="block text-white text-sm font-bold mb-2">
@@ -45,7 +45,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-56 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-                            id="weight" type="text" placeholder="Telefone" maxlength="9" name="schoolcellphone">
+                            id="weight" type="text" placeholder="Telefone" maxlength="14" name="schoolcellphone">
                     </div>
                     <div class="mb-4 ml-5">
                         <label class="block text-white text-sm font-bold mb-2" for="username">
