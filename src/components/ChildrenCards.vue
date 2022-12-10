@@ -6,7 +6,7 @@
                     <div class="rounded-lg shadow-md w-[300px] lg:w-[410px]">
                         <a href="/">
 
-                            <img class="rounded-t-lg h-80" :src="card.photo" />
+                            <router-link v-bind:to="'/criancas/perfil/' + card.id"><img class="rounded-t-lg h-80" :src="card.photo" /></router-link>
                         </a>
                         <div class="p-6">
                             <div class="flex justify-between">
