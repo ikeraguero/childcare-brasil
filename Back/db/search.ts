@@ -96,3 +96,34 @@ export async function getDonation(donation_id: string) {
     await prisma.$disconnect();
     return new response(200, `Donation ${donation_id} found!`, donation);
 }
+
+// all states
+export async function getStates(){
+    await prisma.$connect();
+    const states = await prisma.state.findMany();
+    
+    if (!states) {
+        prisma.$disconnect();
+        return new response(503, "States not found");
+    }
+
+    await prisma.$disconnect();
+    return new response(200, "States found", states)
+}
+
+//specific state
+
+export async function getState(state_id: string) {
+    await prisma.$connect();
+    const state = await prisma.state.findUnique({
+        where:{
+            id: state_id,
+        },
+    });
+    if(!state){
+        prisma.$disconnect();
+        return new response(503, `Child ${state_id} not found!`);
+    }
+    await prisma.$disconnect();
+    return new response(200, `Child ${state_id} found!`, state);
+}

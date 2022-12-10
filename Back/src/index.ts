@@ -51,6 +51,9 @@ app.get("/api/school/:school_id", api.school)
 app.get("/api/donations", api.donations,);
 app.get("/api/donation/:donation_id", api.donation);
 
+app.get("/api/states", api.states,);
+app.get("/api/state/:state_id", api.state);
+
 // POST
 app.post("/api/schooladd", api.schooladd);
 app.post("/api/schoolupdate/:school_id", api.schoolupdate);
@@ -64,9 +67,6 @@ app.post("/api/donationadd", api.donationadd);
 app.post("/api/donationdel/:donation_id", api.donationdelete)
 app.post("/api/donationupdate/:donation_id", api.donationupdate)
 app.put("/api/donation/:donation_id", api.donation);
-
-
-
 
 //
 

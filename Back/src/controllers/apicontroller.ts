@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { getChildren, getChild, getSchools, getSchool, getDonations, getDonation } from "../../db/search";
+import { getChildren, getChild, getSchools, getSchool, getDonations, getDonation, getStates, getState } from "../../db/search";
 import { addChild, deleteChild, updateChild, addSchool, deleteSchool, updateSchool, addDonation, deleteDonation, updateDonation } from "../../db/post";
 import { appendFile } from 'fs';
 
@@ -92,4 +92,16 @@ export const donationupdate = async (req: Request, res: Response) => {
     const r = req.body;
     const donation = await updateDonation(req.params.donation_id, r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials, r.donationdonatedto, r.donationdonatedtoid, r.donationstatus);
     res.json(donation);
+}
+
+// States
+
+export const states = async (req: Request, res: Response) => {
+    const states = await getStates();
+    res.json(states.content);
+}
+
+export const state = async (req: Request, res: Response) => {
+    const state = await getState(req.params.state_id);
+    res.json(state.content);
 }

@@ -55,3 +55,9 @@ model Donation {
   status            String?
   data              DateTime @default(now())
 }
+
+model State {
+  id              String @id @default(auto()) @map("_id") @db.ObjectId
+  name            String
+  abbreviation     String              
+}

@@ -10,12 +10,13 @@
 
                     <img src="https://i.imgur.com/Wp6hAjO.jpg" class="rounded-lg h-48 w-52" alt="Avatar" id="img" />
 
-                    <div class="px-4">
-                        <label class="block text-white text-sm font-bold" for="image">
+                    <div class="px-4 mt-3">
+                        <label class="block text-white text-sm font-bold mb-2" for="image">
                                 Link da Imagem
                             </label>
                             <input
-                                class="shadow block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none" 
+                                class="shadow appearance-none border rounded w-96 py-2 px-3 mb-2 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" 
+                                placeholder="Link da Imagem"
                                 name="schoolphoto"
                                 >
                             <label class="block text-white text-sm font-bold mb-2 mt-5" for="username">
@@ -43,7 +44,7 @@
                             Telefone
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+                            class="shadow appearance-none border rounded w-56 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="weight" type="text" placeholder="Telefone" maxlength="9" name="schoolcellphone">
                     </div>
                     <div class="mb-4 ml-5">
@@ -63,51 +64,26 @@
                             Endereço
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="address" type="text" placeholder="Endereço" name="schooladdress" >
                     </div>
                     <div class="mb-4 ml-4">
                             <label class="block text-white text-sm font-bold mb-2">
                             Estado
                         </label>
-                            <select class="shadow appearance-none border rounded w-full py-2 px-4 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+                            <select class="shadow appearance-none border rounded w-56 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="state" placeholder="Estado" name="schoolstate">
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
+                            <option v-for="state in states.data" :key="state.index">{{ state.name }}</option>
                         </select>
                     </div>
 
 
-                     <div class="mb-4 ml-9">
+                     <div class="mb-4 ml-5">
                         <label class="block text-white text-sm font-bold mb-2">
                             Cidade
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+                            class="shadow appearance-none border rounded w-48 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                             id="city" type="text" placeholder="Cidade" name="schoolcity">
                     </div>
                 </div>
@@ -148,37 +124,23 @@
 </template>
 
 <script>
-// import axios from 'axios';
+import axios from "axios";
 export default {
     name: "AddForm",
-    
-    data() {
+
+
+data() {
         return {
-            image: "",
+
+            states: [],
+            showControls: true,
         };
     },
-    methods: {
-        uploadImage(image) {
-            
-            var myHeaders = new Headers();
-            myHeaders.append("Authorization", "Client-ID 483db59972b36f5");
-            var formdata = new FormData();
-            formdata.append("image", image);
-            var requestOptions = {
-            method: 'POST',
-            headers: myHeaders,
-            body: formdata,
-            redirect: 'follow'
-            };
-            fetch("https://api.imgur.com/3/image", requestOptions)
-            .then(data => data.json()).then(data => {
-                this.image = data.data.link;
-            })
-            .then(result => console.log(result))
-            .catch(error => console.log('error', error));
-        }
-    }
-};
+    mounted() {
+
+        axios.get("http://localhost:7777/api/states").then((response) => (this.states = response));
+    },
+}
 </script>
 
 
