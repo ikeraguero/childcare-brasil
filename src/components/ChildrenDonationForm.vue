@@ -4,12 +4,13 @@
             <div class="pa-8 mb-0 content-align-center" id="paypalpayment" style="display: none">
         <div class="font-semibold">
             <v-container class="content-align-center">
-        <div v-if="!paidFor">
+                <div v-if="paidFor==false">
             <h1 class="test1 mb-0 flex justify-center"> Quase lá! </h1>
-            <p class="test1 mb-0 flex justify-center"> Finalize a sua doação para {{child.name}} </p>        
+            <p class="test1 mb-0 flex justify-center"> Finalize a sua doação para {{school.name}} </p>       
         </div>
-        <div v-if="paidFor">
-            <h1> Sua doação foi registrada com sucesso!</h1>
+        <div v-if="paidFor==true">
+            <h1> Pagamento realizado com sucesso!</h1>
+            <h1> Conclua a doação para finalizar</h1>
                </div>
         <div class="pay mt-16 bg-antiquewhite" ref="paypal"></div>
     </v-container>
@@ -23,7 +24,7 @@
       <div>
             Para completar sua doação para <b>{{ child.name }}</b>, envie os materiais informados para o seguinte endereço:
       </div>
-      <div>
+      <div class="mt-16">
             {{child.address}}, {{child.city}}, {{child.state}}
       </div>
 
@@ -89,7 +90,7 @@
             <input
             name="donationcellphone" 
             id="phone"
-            maxlength="11"
+            maxlength="14"
             placeholder="(DD)XXXXX-XXXX"
             type="text"
             class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
@@ -173,6 +174,7 @@
             type="text"
             class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             >
+            <option value=""></option>
             <option value="0.26">R$1.00</option>
             <option value="2.57">R$10.00</option>
             <option value="7.71">R$30.00</option>
@@ -200,10 +202,10 @@
                    </div>
                 </div>
 
-                    <div class="flex justify-center mt-6" style="display: none" id="submitbuttons2">
-                <div class="mt-6 flex justify-center">               
+                    <div class="flex justify-center" style="display: none" id="submitbuttons2">
+                <div class="flex justify-center">               
                     <button @click='unhideForm2' class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Voltar">Voltar</button>    
-                             <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
+                             <input v-if="paidFor==true" class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
                           type="submit" value="Concluir doação">
 
                     </div>
@@ -213,7 +215,7 @@
 
             <div class="flex justify-center" id="fakesubmit">
                 <div class="mt-6 flex justify-center">
-                   <router-link to="/escolas/" class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Cancelar">Cancelar</router-link >    
+                   <router-link to="/criancas/" class="bg-white text-[#15393C] font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" type="button" value="Cancelar">Cancelar</router-link >    
 
                     <button class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
                         id="moneypayment" @click='hideForm2' style="display: none">Prosseguir</button>
@@ -281,7 +283,15 @@ export default {
                             }
                         ]
                     })
-                }
+                },
+                onApprove: async (data, actions) => {
+                        const order = await actions.order.capture();
+                        this.paidFor= true;
+                        console.log(order);
+                    },
+                    onError: err => {
+                        console.log(err);
+                    }
             })
             .render(this.$refs.paypal)
         },

@@ -44,8 +44,8 @@ model Donation {
   donatortype       String
   donator           String
   email             String
-  cpf               String? @unique
-  cnpj              String? @unique
+  cpf               String? 
+  cnpj              String? 
   cellphone         String?
   type              String
   value             String?
