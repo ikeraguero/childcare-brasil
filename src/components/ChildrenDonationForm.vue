@@ -173,14 +173,13 @@
             type="text"
             class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             >
-            <option value="1.00">R$1.00</option>
-            <option value="10.00">R$10.00</option>
-            <option value="30.00">R$30.00</option>
-            <option value="50.00">R$50.00</option>
-            <option value="100.00">R$100.00</option>
-            <option value="250.00">R$250.00</option>
-            <option value="500.00">R$500.00</option>
-            <option value="1000.00">R$1,000.00</option>
+            <option value="0.26">R$1.00</option>
+            <option value="2.57">R$10.00</option>
+            <option value="7.71">R$30.00</option>
+            <option value="12.86">R$50.00</option>
+            <option value="25.72">R$100.00</option>
+            <option value="64.30">R$250.00</option>
+            <option value="257.18">R$1,000.00</option>
         </select>
         </label>
             <label class='block text-sm font-bold mb-3 mt-3' id="materials" style="display: none">
