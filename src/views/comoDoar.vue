@@ -23,7 +23,7 @@
         <v-container class="color2 font-semibold">
           <v-row class="mb-2 mt-2">
             
-            O primeiro passo para realizar a doação é, após abrir a página de crianças disponíveis e selecionar a que mais se encaixa com você.
+            Abra a página de crianças/escolas disponíveis e selecionar a que mais se encaixa com você.
             
           </v-row>
         </v-container>
@@ -84,7 +84,7 @@
         <v-container class="color2 font-semibold">
           <v-row class="mb-2 mt-2">
             <v-col>
-              Após juntar suas doações, as empacote de uma forma que não danifique os objetos doados.
+              Em caso de doação de materiais, junte suas doações, as empacote de uma forma que não danifique os objetos doados.
             </v-col>
 
           </v-row>
@@ -115,7 +115,7 @@
         <v-container class="color2 font-semibold">
           <v-row class="mb-2 mt-2">
               <v-col>
-                Você deve enviar o comprovante de envio como especificado no cadastro.
+                Você deve enviar o comprovante de envio por email como especificado no cadastro.
               </v-col>
 
           </v-row>
@@ -148,7 +148,7 @@
         <v-container class="color2 font-semibold">
           <v-row class="mb-2 mt-2">
             <v-col>
-              Você deve enviar o comprovante de envio como especificado no cadastro.
+              Ao receber o comprovante, nossa equipe confirma que a doação e o envio foram realizados corretamente.
             </v-col>
           </v-row>
         </v-container>

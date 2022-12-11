@@ -22,7 +22,7 @@
             </label>
             <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-                id="name" type="text" placeholder="Nome da Criança" name="schoolname" v-model="school.name">
+                id="name" type="text" placeholder="Nome da Escola" name="schoolname" v-model="school.name">
     </div>
 
 </div>
@@ -34,7 +34,7 @@
         </label>
         <input
             class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            id="age" type="text" placeholder="CNPJ" name="schoolage" v-model="school.inepcode">
+            id="age" type="text" placeholder="Código INEP" name="schoolage" v-model="school.inepcode">
     </div>
     <div class="mb-4 ml-3">
         <label class="block text-white text-sm font-bold mb-2">

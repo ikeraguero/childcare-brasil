@@ -6,7 +6,7 @@
             <v-container class="content-align-center">
         <div v-if="!paidFor">
             <h1 class="test1 mb-0 flex justify-center"> Quase lá! </h1>
-            <p class="test1 mb-0 flex justify-center"> Finalize a sua doação de R${{ product.price }} para {{school.name}} </p>        
+            <p class="test1 mb-0 flex justify-center"> Finalize a sua doação para {{school.name}} </p>        
         </div>
         <div v-if="paidFor">
             <h1> Sua doação foi registrada com sucesso!</h1>
@@ -41,7 +41,7 @@
               <div class="test">Doar como:</div>
             </label>
             <select class="form-select appearance-none
-            shadow appearance-none border rounded w-full mt-1.5 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationdonatortype" id="donatortype" @click="test1">
+            shadow appearance-none border font-normal rounded w-full mt-1.5 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationdonatortype" id="donatortype" @click="test1">
             <option value="0"></option>    
             <option value="Pessoa">Pessoa Física</option>
             <option value="Empresa">Empresa</option>
@@ -53,7 +53,7 @@
             placeholder="XXX.XXX.XXX-XX" 
             name="donationcpf"
             type="text"
-            class="shadow appearance-none border mt-1.5 font-medium rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none border mt-1.5 font-normal rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             >
             </label>
             <label class='block  text-sm font-bold mb-3 mt-3' id="company" style="display: none">
@@ -63,7 +63,7 @@
             placeholder="XX.XXX.XXX/0001-XX" 
             name="donationcnpj"
             type="text"
-            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
             </label>
             <label class='block text-sm font-bold mb-3 mt-3' id="donator">
@@ -72,19 +72,19 @@
             name="donationdonator"
             placeholder="Nome e Sobrenome"
             type="text"
-            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             </label>
-            <label class='block text-sm font-bold mb-3'>
+            <label class='block text-sm font-bold mb-3' id="email">
                         <div class="test">Email para contato</div>
             <input 
             name="donationemail"
             type="email"
             placeholder="email@contato.com"
-            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             </label>
-            <label class='block  text-sm font-bold mb-3'>
+            <label class='block  text-sm font-bold mb-3' id="cellphone">
                         <div class="test">Telefone para contato</div>
             <input
             name="donationcellphone" 
@@ -92,10 +92,10 @@
             maxlength="11"
             placeholder="(DD)XXXXX-XXXX"
             type="text"
-            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             </label>
-            <label class="block text-white text-sm font-bold mb-0" for="username">
+            <label class="block text-white text-sm font-bold mb-0" >
                 <div class="background"></div>
               <div class="test">Estado</div>
             </label>
@@ -111,7 +111,7 @@
             name="donationdonatedto" 
             type="text"
             v-bind:value=school.name
-            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             </label>
 
@@ -121,7 +121,7 @@
             name="donationstatus" 
             type="text"
             value="Pendente"
-            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             </label>
             
@@ -131,27 +131,27 @@
             name="donationdonatedtoid" 
             type="text"
             v-bind:value=school.id
-            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             </label>
 
-            <label class='block text-sm font-bold mb-3 mt-3' >
+            <label class='block text-sm font-bold mb-3 mt-3' id="city">
                             <div class="test">Cidade</div>
             <input 
             name="donationcity"
             placeholder="Cidade"
             type="text"
-            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             
             </label>
-            <label class='block text-sm font-bold mb-3' >
+            <label class='block text-sm font-bold mb-3' id="address">
                             <div class="test">Endereço</div>
             <input
             name="donationaddress" 
             placeholder="Rua, número"
             type="text"
-            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             
             </label>
@@ -422,5 +422,9 @@ form{
 }
 .block {
     color: #621200;
+}
+
+#donator, #city, #address, #person, #company, #email, #cellphone, #valuemoney, #materials {
+    color: black;
 }
 </style>

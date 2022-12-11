@@ -7,7 +7,7 @@
                   <div class="flex justify-center">
                   <div class="col-sm-3 rounded bg-c-lite-green user-profile justify-content-center">
                         <div class="card-block text-center text-white">
-                      <div class="m-b-25 flex justify-center mt-10">
+                      <div class="m-b-25 flex justify-center ">
                        <img :src="$auth.user.picture" class="img-radius" alt="User-Profile-Image" />
                       </div>
                         <div class="color">
@@ -33,21 +33,11 @@
                  <h6 class="text-muted f-w-400">{{ $auth.user.sub }}</h6>
                  </div>
                  
-                 </div>
-                 <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">DOAÇÕES</h6>
-                  <div class="row">
-                  <div class="col-sm-6">
-                 <p class="m-b-10 f-w-600">Realizadas</p>
-                    <h6 class="text-muted f-w-400">0</h6>
-                </div>
-                 <div class="col-sm-5">
-               <p class="m-b-10 f-w-600">Materiais</p>
-           <h6 class="text-muted f-w-400">0 doados</h6>
-               </div>
-               <div class="col-sm-6">
-              <p class="m-b-10 f-w-600">Dinheiro</p>
-            <h6 class="text-muted f-w-400">R$0.00 doados</h6>
-           </div>
+        </div>
+       </div>
+       <div class="card-block">
+                   <h6 class="m-b-20 p-b-5 b-b-default f-w-600"></h6>
+                      <div class="row">
             <!--  <div class="row" display: none>
       <pre class="col-12 text-light bg-dark p-4">
 {{
@@ -55,9 +45,10 @@
       }}</pre
       > 
     </div> -->
-        </div>
-       </div>
+    </div>
+    </div>
       </div>
+      
        </div>
      </div>
       </div>
