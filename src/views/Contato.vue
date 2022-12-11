@@ -1,7 +1,7 @@
 <template>
   <v-container class="pa-8 content-align-center">
     <div class="mt-20 font-medium">
-      <h1>Redes Sociais do ChildcareBrasil: </h1>
+      <h1>Redes Sociais do Childcare Brasil: </h1>
           <div class="icons flex justify-center space-x-24 mt-10 text-base">
             <a href="https://twitter.com" ><li><Icon icon="entypo-social:twitter" color="#fff6ee" width="70" height="70"/>Twitter</li></a>
             <a href="https://instagram.com/childcarebr/" ><li><Icon icon="entypo-social:instagram" color="#fff6ee" width="70" height="70"/>Instagram</li></a>

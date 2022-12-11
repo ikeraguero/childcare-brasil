@@ -1,9 +1,9 @@
 <template>
     <span>
-        <div class="grid gap-1 grid-cols-5 grid-rows-0 overflow-hidden whitespace-nowrap no-scrollbar scroll-smooth snap-x" id="container">
+        <div class="grid gap-1 grid-cols-4 grid-rows-0 whitespace-nowrap no-scrollbar scroll-smooth snap-x" id="container">
             <div v-for="card in cards.data" :key="card.index">
                 <div class="px-0 m-2 snap-center">
-                    <div class="rounded-lg shadow-md w-[300px] lg:w-[410px]">
+                    <div class="rounded-lg shadow-md w-[300px] lg:w-[410px] overflow-hidden">
                         <div class="p-6">
                             <div class="flex justify-between">
                                 <h5 class="text-xl font-medium mb-2 text-base">Doação #{{ card.index }}
@@ -14,7 +14,7 @@
                               <b>ID: </b>{{ card.id }}
                             </p>
                             <p class="capitalize text-base mb-1 h-6">
-                               <b>Doador: </b> {{ card.donator }} ({{ card.donatortype }})
+                               <b>Doador: </b> {{ card.donator }}
                             </p>
                             <p v-if="card.cpf" class="text-base mb-1 h-6">
                                 <b> CPF: </b>{{ card.cpf }}
