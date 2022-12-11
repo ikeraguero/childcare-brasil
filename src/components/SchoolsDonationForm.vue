@@ -41,7 +41,7 @@
               <div class="test">Doar como:</div>
             </label>
             <select class="form-select appearance-none
-            shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationdonatortype" id="donatortype" @click="test1">
+            shadow appearance-none border rounded w-full mt-1.5 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationdonatortype" id="donatortype" @click="test1">
             <option value="0"></option>    
             <option value="Pessoa">Pessoa Física</option>
             <option value="Empresa">Empresa</option>
@@ -53,7 +53,7 @@
             placeholder="XXX.XXX.XXX-XX" 
             name="donationcpf"
             type="text"
-            class="shadow appearance-none border font-medium rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none border mt-1.5 font-medium rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             >
             </label>
             <label class='block  text-sm font-bold mb-3 mt-3' id="company" style="display: none">
@@ -63,16 +63,16 @@
             placeholder="XX.XXX.XXX/0001-XX" 
             name="donationcnpj"
             type="text"
-            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
             </label>
             <label class='block text-sm font-bold mb-3 mt-3' id="donator">
                 <div class="test">Nome Completo</div>
             <input 
             name="donationdonator"
-            placeholder="Seu Nome e Sobrenome"
+            placeholder="Nome e Sobrenome"
             type="text"
-            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             </label>
             <label class='block text-sm font-bold mb-3'>
@@ -81,7 +81,7 @@
             name="donationemail"
             type="email"
             placeholder="email@contato.com"
-            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             </label>
             <label class='block  text-sm font-bold mb-3'>
@@ -92,9 +92,18 @@
             maxlength="11"
             placeholder="(DD)XXXXX-XXXX"
             type="text"
-            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
-            </label> 
+            </label>
+            <label class="block text-white text-sm font-bold mb-0" for="username">
+                <div class="background"></div>
+              <div class="test">Estado</div>
+            </label>
+            <select class="form-select appearance-none
+            shadow appearance-none border rounded w-full mt-1.5 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationstate">
+            <option v-for="state in states.data" :key="state.index">{{ state.name }}</option>
+            </select>
+            
 
                 <label class='block text-sm font-bold mb-3' id="donatedto" style="display: none">
                             <div class="test"></div>
@@ -102,7 +111,7 @@
             name="donationdonatedto" 
             type="text"
             v-bind:value=school.name
-            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             </label>
 
@@ -112,7 +121,7 @@
             name="donationstatus" 
             type="text"
             value="Pendente"
-            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             </label>
             
@@ -122,36 +131,56 @@
             name="donationdonatedtoid" 
             type="text"
             v-bind:value=school.id
-            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
             </label>
 
-            <label class='block text-sm font-bold mb-3' >
-                            <div class="test">Residência</div>
+            <label class='block text-sm font-bold mb-3 mt-3' >
+                            <div class="test">Cidade</div>
             <input 
-            placeholder="Rua, número, cidade, estado"
+            name="donationcity"
+            placeholder="Cidade"
             type="text"
-            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required>
+            
+            </label>
+            <label class='block text-sm font-bold mb-3' >
+                            <div class="test">Endereço</div>
+            <input
+            name="donationaddress" 
+            placeholder="Rua, número"
+            type="text"
+            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            required>
+            
             </label>
             <label class="block text-white text-sm font-bold mb-0" for="username">
               <div class="test">Tipo de doação</div>
             </label>
 
             <select class="form-select appearance-none
-            shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationtype" id="donationtype" @click='test'>
+            shadow appearance-none border rounded w-full mt-1.5 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationtype" id="donationtype" @click='test'>
             <option value="0"></option>    
             <option value="Dinheiro">Dinheiro</option>
             <option value="Material">Material Escolar</option>
                 </select>
             <label class='block text-sm font-bold mb-3 mt-3' id="money" style="display: none" >
                     <div class="test">Valor</div>
-            <input
+                    <select
+            id="valuemoney"
             placeholder="..."
             name="donationmoney"
             type="text"
-            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            />
+            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            >
+            <option value="0.00">R$0.00</option>
+            <option value="10.00">R$10.00</option>
+            <option value="30.00">R$30.00</option>
+            <option value="50.00">R$50.00</option>
+            <option value="100.00">R$100.00</option>
+            <option value="250.00">R$250.00</option>
+        </select>
         </label>
             <label class='block text-sm font-bold mb-3 mt-3' id="materials" style="display: none">
                             <div class="test">Materiais</div>
@@ -159,7 +188,7 @@
             placeholder="Caneta, Borracha, Caderno..."
             name="donationmaterials"
             type="text"
-            class="shadow appearance-none font-medium border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
             </label>
             </div>
@@ -209,6 +238,7 @@ export default {
     },
     data() {
         return {
+            states:[],
             school: [],
             showControls: true,
             loading: false,
@@ -228,6 +258,7 @@ export default {
         script.addEventListener("load", this.setLoaded);
         document.body.appendChild(script)
     
+        axios.get("http://localhost:7777/api/states").then((response) => (this.states = response));
         axios.get("http://localhost:7777/api/school/" + this.$route.params.id)
         .then(response => {
             this.school = response.data
@@ -245,7 +276,7 @@ export default {
                                 description: this.product.description,
                                 amount: {
                                     currency_code: "USD",
-                                    value: this.product.price
+                                    value: (document.getElementById("valuemoney").value)
                                 }
                             }
                         ]

@@ -79,7 +79,7 @@ export const donation = async (req: Request, res: Response) => {
 
 export const donationadd = async (req: Request, res: Response) => {
     const r = req.body;
-    const donation = await addDonation(r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials, r.donationdonatedto, r.donationdonatedtoid, r.donationstatus);
+    const donation = await addDonation(r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials, r.donationdonatedto, r.donationdonatedtoid, r.donationstate, r.donationcity, r.donationaddress, r.donationstatus);
     res.redirect("http://localhost:8080/success")
 }
 
@@ -90,7 +90,7 @@ export const donationdelete = async (req: Request, res: Response) => {
 
 export const donationupdate = async (req: Request, res: Response) => {
     const r = req.body;
-    const donation = await updateDonation(req.params.donation_id, r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials, r.donationdonatedto, r.donationdonatedtoid, r.donationstatus);
+    const donation = await updateDonation(req.params.donation_id, r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials, r.donationdonatedto, r.donationdonatedtoid, r.donationstate, r.donationcity, r.donationaddress, r.donationstatus);
     res.json(donation);
 }
 

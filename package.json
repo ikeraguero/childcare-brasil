@@ -10,7 +10,8 @@
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.22.4",
     "@emailjs/browser": "^3.7.0",
-    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@heroicons/vue": "^1.0.6",
     "@prisma/client": "^4.1.0",
     "@tailwindcss/postcss7-compat": "^2.2.17",
@@ -26,6 +27,7 @@
     "vue": "^2.6.11",
     "vue-axios": "^3.4.1",
     "vue-router": "^3.2.0",
+    "vue-select": "^3.20.0",
     "vue3-autocounter": "^1.0.6",
     "vuetify": "^2.4.0"
   },

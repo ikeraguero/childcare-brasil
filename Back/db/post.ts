@@ -117,7 +117,7 @@ export async function uploadImage(child_id: string, image: string) {
     });
     await prisma.$disconnect();
 }
-export async function addDonation(donationdonatortype:string, donationdonator: string, donationemail: string, donationcpf: string, donationcnpj: string, donationcellphone: string, donationtype: string, donationvalue:string, donationmaterials: string, donationdonatedto: string, donationdonatedtoid: string, donationstatus: string) {
+export async function addDonation(donationdonatortype:string, donationdonator: string, donationemail: string, donationcpf: string, donationcnpj: string, donationcellphone: string, donationtype: string, donationvalue:string, donationmaterials: string, donationdonatedto: string, donationdonatedtoid: string, donationstate:string, donationcity:string, donationaddress:string, donationstatus: string) {
     await prisma.$connect();
     const donation = await prisma.donation.create({
         data: {
@@ -132,6 +132,9 @@ export async function addDonation(donationdonatortype:string, donationdonator: s
             materials: donationmaterials,
             donatedto: donationdonatedto,
             donatedtoid: donationdonatedtoid,
+            state: donationstate,
+            city: donationcity,
+            address: donationaddress,
             status: donationstatus
         }
     });
@@ -148,7 +151,7 @@ export async function deleteDonation (donation_id: string) {
     await prisma.$disconnect();
 }
 
-export async function updateDonation(donation_id: string, donationdonatortype:string, donationdonator: string, donationemail: string, donationcpf: string, donationcnpj: string, donationcellphone: string, donationtype: string, donationvalue:string, donationmaterials: string, donationdonatedto: string, donationdonatedtoid: string, donationstatus: string) {
+export async function updateDonation(donation_id: string, donationdonatortype:string, donationdonator: string, donationemail: string, donationcpf: string, donationcnpj: string, donationcellphone: string, donationtype: string, donationvalue:string, donationmaterials: string, donationdonatedto: string, donationdonatedtoid: string, donationstate:string, donationcity:string, donationaddress:string, donationstatus: string) {
     await prisma.$connect();
     const donation = await prisma.donation.update({
         where: {

@@ -1,5 +1,8 @@
 <template>
+    
     <span>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
         <div class="grid gap-1 grid-cols-4 grid-rows-0 whitespace-nowrap" id="container">
             <div v-for="card in cards.data" :key="card.index">
                 <div class=" px-2 m-2 " style="overflow-wrap: anywhere;">
@@ -138,7 +141,7 @@ export default {
                             </div>
 
                             <p class="text-white text-base absolute w-fit">
-                                {{ card.city }}, {{card.state}}
+                                <i class="fa fa-map-pin" aria-hidden="true"></i> {{ card.city }}, {{card.state}}
                             </p>
                             <div class="buttons flex justify-center mt-20 h-fit">
                                 
