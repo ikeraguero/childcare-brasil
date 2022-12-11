@@ -120,6 +120,12 @@ const routes = [
         component: () => import("../views/UpdateSchool.vue"),
       },
       {
+        path: "/adminn/doacoes/:id",
+        name: "UpdateDonation",
+        beforeEnter: authGuard,
+        component: () => import("../views/UpdateDonation.vue"),
+      },
+      {
         path: "/criancas/perfil/:id",
         name: "Child Info",
         beforeEnter: authGuard,

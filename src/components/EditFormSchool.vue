@@ -111,7 +111,7 @@
             <button @click="uploadImage()"></button>
             <router-link to="/adminn/escolas/" class="btn bg-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</router-link >
 
-            <input class="btn bg-white font-bold py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">                     
+            <input class="btn bg-white font-bold py-1 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">                     
         </div>
     </div>    
 

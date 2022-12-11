@@ -25,8 +25,26 @@
                             <p class="text-base mb-1 h-6">
                                 <b>Tipo: </b>{{ card.type }}
                             </p>
-                            <p v-if="card.value" class="text-base mb-1 h-6">
-                                <b>Valor: </b>R${{ card.value }}
+                            <p v-if="card.value=='0.26'" class="text-base mb-1 h-6">
+                                <b>Valor: </b> R$1.00
+                            </p>
+                            <p v-if="card.value=='2.57'" class="text-base mb-1 h-6">
+                                <b>Valor: </b> R$10.00
+                            </p>
+                            <p v-if="card.value=='7.71'" class="text-base mb-1 h-6">
+                                <b>Valor: </b> R$30.00
+                            </p>
+                            <p v-if="card.value=='12.86'" class="text-base mb-1 h-6">
+                                <b>Valor: </b> R$50.00
+                            </p>
+                            <p v-if="card.value=='25.72'" class="text-base mb-1 h-6">
+                                <b>Valor: </b> R$100.00
+                            </p>
+                            <p v-if="card.value=='64.30'" class="text-base mb-1 h-6">
+                                <b>Valor: </b> R$250.00
+                            </p>
+                            <p v-if="card.value=='257.18'" class="text-base mb-1 h-6">
+                                <b>Valor: </b> R$1,000.00
                             </p>
                             <p v-if="card.materials" class="text-base mb-1 h-6">
                                 <b>Materiais: </b> {{ card.materials }}
@@ -39,7 +57,7 @@
                             </p>
                             <div class="flex justify-center flex-row">
                                 <button @click="excluir(card.id)" class="inline-block mt-2 px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md" type="button" value="Excluir">Excluir</button>
-                                <button @click="concluir(card.id)" class="inline-block mt-2 px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md" type="button" value="Concluir">Concluir</button>
+                                
                             </div>
                         </div>
                     </div>
@@ -50,8 +68,8 @@
 </template>
 
 <script>
-import axios from "axios";
 
+import axios from "axios";
 
 export default {
     name: "App",
@@ -67,20 +85,19 @@ export default {
     methods: {
         excluir(card_id) {
             axios.post(`http://localhost:7777/api/donationdel/${card_id}`).then(response => {
-                this.$router.push('/adminn');
+                this.$router.push("/adminn");
                 return response.data;
-            })
+            });
         },
         concluir(card_id) {
             axios.put(`http://localhost:7777/api/donation/${card_id}`, {
-            status: 'Aprovada'}).then(response => {
-            this.$router.push('/adminn');   
-            return response.data;
-
-})
+                status: "Aprovada"
+            }).then(response => {
+                this.$router.push("/adminn");
+                return response.data;
+            });
         }
-
-    }
+    },
 }
 
 </script>

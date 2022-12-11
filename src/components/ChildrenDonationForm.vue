@@ -169,7 +169,7 @@
                     <select
             id="valuemoney"
             placeholder="..."
-            name="donationmoney"
+            name="donationvalue"
             type="text"
             class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             >

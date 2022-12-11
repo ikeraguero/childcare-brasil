@@ -108,7 +108,7 @@
 
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2">
-                        Materiais Necessitados
+                        Materiais Necessitados (opcional)
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
@@ -117,7 +117,7 @@
 
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="username">
-                        Nome do Responsável
+                        Nome do Responsável (opcional)
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
