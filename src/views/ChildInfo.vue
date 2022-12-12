@@ -20,7 +20,7 @@
                       </div>
                     <div class="col-sm-9">
                     <div class="card-block">
-                   <h6 class="m-b-20 p-b-5 b-b-default f-w-600">INFORMAÇÕES</h6>
+                   <h6 class="m-b-20 p-b-5 b-b-default f-w-600">INFORMAÇÕES DA CRIANÇA</h6>
                       <div class="row">
                         <div class="col-sm-6">
                    <p class="m-b-10 f-w-600">Nome</p>

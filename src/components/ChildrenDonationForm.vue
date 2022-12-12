@@ -6,7 +6,8 @@
             <v-container class="content-align-center">
                 <div v-if="paidFor==false">
             <h1 class="test1 mb-0 flex justify-center"> Quase lá! </h1>
-            <p class="test1 mb-0 flex justify-center"> Finalize a sua doação para {{school.name}} </p>       
+            <p class="test1 mb-0 flex justify-center"> Finalize a sua doação para {{child.name}} </p>
+            <div class="pay mt-16 bg-antiquewhite" ref="paypal"></div>       
         </div>
         <div v-if="paidFor==true">
             <h1> Pagamento realizado com sucesso!</h1>
@@ -24,8 +25,8 @@
       <div>
             Para completar sua doação para <b>{{ child.name }}</b>, envie os materiais informados para o seguinte endereço:
       </div>
-      <div class="mt-16">
-            {{child.address}}, {{child.city}}, {{child.state}}
+      <div class="mt-16 font-medium">
+            <i>{{child.address}}, {{child.city}}, {{child.state}}</i>
       </div>
 
       <div class="mt-24">

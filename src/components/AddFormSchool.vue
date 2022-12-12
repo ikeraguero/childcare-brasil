@@ -90,7 +90,7 @@
 
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2">
-                        Materiais Necessitados
+                        Materiais Necessitados (opcional)
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
@@ -100,8 +100,9 @@
                 
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="username">
-                        Diretor(a)
+                        Diretor(a) (opcional)
                     </label>
+                    
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                         id="name" type="text" placeholder="Diretor(a)" name="schooldirector">
@@ -112,7 +113,7 @@
                         <div>
                         
                             <button @click="uploadImage()"></button>
-                            <router-link to="/adminn/escolas/" class="btn bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</router-link >    
+                            <router-link to="/adminn/escolas/" class="btn bg-white text-[#15393C] font-bold py-2.5 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</router-link >    
             
                                 <input class="btn bg-white font-bold py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">                   
                         </div>

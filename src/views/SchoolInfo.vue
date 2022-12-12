@@ -20,7 +20,7 @@
                       </div>
                     <div class="col-sm-9">
                     <div class="card-block">
-                   <h6 class="m-b-20 p-b-5 b-b-default f-w-600">INFORMAÇÕES</h6>
+                   <h6 class="m-b-20 p-b-5 b-b-default f-w-600">INFORMAÇÕES DA ESCOLA</h6>
                       <div class="row">
                         <div class="col-sm-6">
                    <p class="m-b-10 f-w-600">Nome</p>
@@ -45,6 +45,10 @@
                  <p class="m-b-10 f-w-600">Código INEP</p>
                     <h6 class="text-muted f-w-400">{{ school.inepcode }}</h6>
                 </div>
+                <div class="col-sm-5" v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'">
+               <p class="m-b-10 f-w-600">ID</p>
+           <h6 class="text-muted f-w-400">{{ school.id }}</h6>
+               </div>
                 <div class="col-sm-6">
                  <p class="m-b-10 f-w-600">Materiais Necessitados</p>
                     <h6 class="text-muted f-w-400">{{ school.materialsneeded }}</h6>
@@ -53,10 +57,7 @@
                  <p class="m-b-10 f-w-600">Diretor(a)</p>
                     <h6 class="text-muted f-w-400">{{ school.director }}</h6>
                 </div>
-                 <div class="col-sm-5" v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'">
-               <p class="m-b-10 f-w-600">ID</p>
-           <h6 class="text-muted f-w-400">{{ school.id }}</h6>
-               </div>
+                 
 
             <!--  <div class="row" display: none>
       <pre class="col-12 text-light bg-dark p-4">

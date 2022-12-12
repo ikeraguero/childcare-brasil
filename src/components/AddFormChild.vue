@@ -38,7 +38,7 @@
                                 font-normal
                                 text-black
                                 bg-white 
-                                rounded" name="childgender">
+                                rounded" name="childgender" id="gender">
                             <option value="Masculino">Masculino</option>
                             <option value="Feminino">Feminino</option>
                         </select>
@@ -117,7 +117,7 @@
 
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="username">
-                        Nome do Responsável 
+                        Nome do Responsável (opcional)
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
@@ -179,5 +179,9 @@ form {
 .btn {
     background-color: #621200;
     color:  #FFF6EE
+}
+
+#gender {
+    color: black;
 }
 </style>
