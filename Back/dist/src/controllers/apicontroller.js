@@ -36,7 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-exports.donationupdate = exports.donationdelete = exports.donationadd = exports.donation = exports.donations = exports.schoolupdate = exports.schooldelete = exports.schooladd = exports.school = exports.schools = exports.childupdate = exports.childdelete = exports.childadd = exports.child = exports.children = void 0;
+exports.state = exports.states = exports.donationupdate = exports.donationdelete = exports.donationadd = exports.donation = exports.donations = exports.schoolupdate = exports.schooldelete = exports.schooladd = exports.school = exports.schools = exports.childupdate = exports.childdelete = exports.childadd = exports.child = exports.children = void 0;
 var search_1 = require("../../db/search");
 var post_1 = require("../../db/post");
 // Children
@@ -75,7 +75,7 @@ var childadd = function (req, res) { return __awaiter(void 0, void 0, void 0, fu
                 return [4 /*yield*/, (0, post_1.addChild)(r.childphoto, r.childname, r.childgender, r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.childmaterialsneeded, r.childresponsables)];
             case 1:
                 child = _a.sent();
-                res.redirect("http://localhost:8080/adminn");
+                res.redirect("http://localhost:8080/adminn/criancas");
                 return [2 /*return*/];
         }
     });
@@ -103,7 +103,7 @@ var childupdate = function (req, res) { return __awaiter(void 0, void 0, void 0,
                 return [4 /*yield*/, (0, post_1.updateChild)(req.params.child_id, r.childphoto, r.childname, r.childgender, r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.childmaterialsneeded, r.childresponsables)];
             case 1:
                 child = _a.sent();
-                res.redirect("http://localhost:8080/adminn");
+                res.redirect("http://localhost:8080/adminn/criancas");
                 return [2 /*return*/];
         }
     });
@@ -142,10 +142,10 @@ var schooladd = function (req, res) { return __awaiter(void 0, void 0, void 0, f
         switch (_a.label) {
             case 0:
                 r = req.body;
-                return [4 /*yield*/, (0, post_1.addSchool)(r.schoolemail, r.schoolcnpj, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate, r.schoolmaterialsneeded, r.schooldirector)];
+                return [4 /*yield*/, (0, post_1.addSchool)(r.schoolemail, r.schoolinepcode, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate, r.schoolmaterialsneeded, r.schooldirector)];
             case 1:
                 school = _a.sent();
-                res.redirect("http://localhost:8080/adminn");
+                res.redirect("http://localhost:8080/adminn/escolas");
                 return [2 /*return*/];
         }
     });
@@ -170,10 +170,10 @@ var schoolupdate = function (req, res) { return __awaiter(void 0, void 0, void 0
         switch (_a.label) {
             case 0:
                 r = req.body;
-                return [4 /*yield*/, (0, post_1.updateSchool)(req.params.school_id, r.schoolemail, r.schoolcnpj, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate, r.schoolmaterialsneeded, r.schooldirector)];
+                return [4 /*yield*/, (0, post_1.updateSchool)(req.params.school_id, r.schoolemail, r.schoolinepcode, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate, r.schoolmaterialsneeded, r.schooldirector)];
             case 1:
                 school = _a.sent();
-                res.redirect("http://localhost:8080/adminn");
+                res.redirect("http://localhost:8080/adminn/escolas");
                 return [2 /*return*/];
         }
     });
@@ -212,7 +212,7 @@ var donationadd = function (req, res) { return __awaiter(void 0, void 0, void 0,
         switch (_a.label) {
             case 0:
                 r = req.body;
-                return [4 /*yield*/, (0, post_1.addDonation)(r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials, r.donationdonatedto, r.donationdonatedtoid, r.donationstatus)];
+                return [4 /*yield*/, (0, post_1.addDonation)(r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials, r.donationdonatedto, r.donationdonatedtoid, r.donationstate, r.donationcity, r.donationaddress, r.donationstatus)];
             case 1:
                 donation = _a.sent();
                 res.redirect("http://localhost:8080/success");
@@ -240,7 +240,7 @@ var donationupdate = function (req, res) { return __awaiter(void 0, void 0, void
         switch (_a.label) {
             case 0:
                 r = req.body;
-                return [4 /*yield*/, (0, post_1.updateDonation)(req.params.donation_id, r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials, r.donationdonatedto, r.donationdonatedtoid, r.donationstatus)];
+                return [4 /*yield*/, (0, post_1.updateDonation)(req.params.donation_id, r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials, r.donationdonatedto, r.donationdonatedtoid, r.donationstate, r.donationcity, r.donationaddress, r.donationstatus)];
             case 1:
                 donation = _a.sent();
                 res.json(donation);
@@ -249,4 +249,31 @@ var donationupdate = function (req, res) { return __awaiter(void 0, void 0, void
     });
 }); };
 exports.donationupdate = donationupdate;
+// States
+var states = function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    var states;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, (0, search_1.getStates)()];
+            case 1:
+                states = _a.sent();
+                res.json(states.content);
+                return [2 /*return*/];
+        }
+    });
+}); };
+exports.states = states;
+var state = function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    var state;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, (0, search_1.getState)(req.params.state_id)];
+            case 1:
+                state = _a.sent();
+                res.json(state.content);
+                return [2 /*return*/];
+        }
+    });
+}); };
+exports.state = state;
 //# sourceMappingURL=apicontroller.js.map

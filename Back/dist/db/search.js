@@ -36,7 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-exports.getDonation = exports.getDonations = exports.getSchool = exports.getSchools = exports.getChild = exports.getChildren = void 0;
+exports.getState = exports.getStates = exports.getDonation = exports.getDonations = exports.getSchool = exports.getSchools = exports.getChild = exports.getChildren = void 0;
 var responseConstructor_1 = require("../lib/responseConstructor");
 var client_1 = require("@prisma/client");
 var prisma = new client_1.PrismaClient();
@@ -202,4 +202,58 @@ function getDonation(donation_id) {
     });
 }
 exports.getDonation = getDonation;
+// all states
+function getStates() {
+    return __awaiter(this, void 0, void 0, function () {
+        var states;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, prisma.$connect()];
+                case 1:
+                    _a.sent();
+                    return [4 /*yield*/, prisma.state.findMany()];
+                case 2:
+                    states = _a.sent();
+                    if (!states) {
+                        prisma.$disconnect();
+                        return [2 /*return*/, new responseConstructor_1.response(503, "States not found")];
+                    }
+                    return [4 /*yield*/, prisma.$disconnect()];
+                case 3:
+                    _a.sent();
+                    return [2 /*return*/, new responseConstructor_1.response(200, "States found", states)];
+            }
+        });
+    });
+}
+exports.getStates = getStates;
+//specific state
+function getState(state_id) {
+    return __awaiter(this, void 0, void 0, function () {
+        var state;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, prisma.$connect()];
+                case 1:
+                    _a.sent();
+                    return [4 /*yield*/, prisma.state.findUnique({
+                            where: {
+                                id: state_id
+                            }
+                        })];
+                case 2:
+                    state = _a.sent();
+                    if (!state) {
+                        prisma.$disconnect();
+                        return [2 /*return*/, new responseConstructor_1.response(503, "Child ".concat(state_id, " not found!"))];
+                    }
+                    return [4 /*yield*/, prisma.$disconnect()];
+                case 3:
+                    _a.sent();
+                    return [2 /*return*/, new responseConstructor_1.response(200, "Child ".concat(state_id, " found!"), state)];
+            }
+        });
+    });
+}
+exports.getState = getState;
 //# sourceMappingURL=search.js.map

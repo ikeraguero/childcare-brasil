@@ -136,7 +136,7 @@ function deleteChild(child_id) {
     });
 }
 exports.deleteChild = deleteChild;
-function addSchool(schoolemail, schoolcnpj, schoolcellphone, schoolphoto, schoolname, schooladdress, schoolcity, schoolstate, schoolmaterialsneeded, schooldirector) {
+function addSchool(schoolemail, schoolinepcode, schoolcellphone, schoolphoto, schoolname, schooladdress, schoolcity, schoolstate, schoolmaterialsneeded, schooldirector) {
     return __awaiter(this, void 0, void 0, function () {
         var school;
         return __generator(this, function (_a) {
@@ -147,7 +147,7 @@ function addSchool(schoolemail, schoolcnpj, schoolcellphone, schoolphoto, school
                     return [4 /*yield*/, prisma.school.create({
                             data: {
                                 email: schoolemail,
-                                cnpj: schoolcnpj,
+                                inepcode: schoolinepcode,
                                 cellphone: schoolcellphone,
                                 photo: schoolphoto,
                                 name: schoolname,
@@ -170,7 +170,7 @@ function addSchool(schoolemail, schoolcnpj, schoolcellphone, schoolphoto, school
 }
 exports.addSchool = addSchool;
 ;
-function updateSchool(school_id, schoolemail, schoolcnpj, schoolcellphone, schoolphoto, schoolname, schooladdress, schoolcity, schoolstate, schoolmaterialsneeded, schooldirector) {
+function updateSchool(school_id, schoolemail, schoolinepcode, schoolcellphone, schoolphoto, schoolname, schooladdress, schoolcity, schoolstate, schoolmaterialsneeded, schooldirector) {
     return __awaiter(this, void 0, void 0, function () {
         var school;
         return __generator(this, function (_a) {
@@ -184,7 +184,7 @@ function updateSchool(school_id, schoolemail, schoolcnpj, schoolcellphone, schoo
                             },
                             data: {
                                 email: schoolemail,
-                                cnpj: schoolcnpj,
+                                inepcode: schoolinepcode,
                                 cellphone: schoolcellphone,
                                 photo: schoolphoto,
                                 name: schoolname,
@@ -258,7 +258,7 @@ function uploadImage(child_id, image) {
     });
 }
 exports.uploadImage = uploadImage;
-function addDonation(donationdonatortype, donationdonator, donationemail, donationcpf, donationcnpj, donationcellphone, donationtype, donationvalue, donationmaterials, donationdonatedto, donationdonatedtoid, donationstatus) {
+function addDonation(donationdonatortype, donationdonator, donationemail, donationcpf, donationcnpj, donationcellphone, donationtype, donationvalue, donationmaterials, donationdonatedto, donationdonatedtoid, donationstate, donationcity, donationaddress, donationstatus) {
     return __awaiter(this, void 0, void 0, function () {
         var donation;
         return __generator(this, function (_a) {
@@ -279,6 +279,9 @@ function addDonation(donationdonatortype, donationdonator, donationemail, donati
                                 materials: donationmaterials,
                                 donatedto: donationdonatedto,
                                 donatedtoid: donationdonatedtoid,
+                                state: donationstate,
+                                city: donationcity,
+                                address: donationaddress,
                                 status: donationstatus
                             }
                         })];
@@ -318,7 +321,7 @@ function deleteDonation(donation_id) {
     });
 }
 exports.deleteDonation = deleteDonation;
-function updateDonation(donation_id, donationdonatortype, donationdonator, donationemail, donationcpf, donationcnpj, donationcellphone, donationtype, donationvalue, donationmaterials, donationdonatedto, donationdonatedtoid, donationstatus) {
+function updateDonation(donation_id, donationdonatortype, donationdonator, donationemail, donationcpf, donationcnpj, donationcellphone, donationtype, donationvalue, donationmaterials, donationdonatedto, donationdonatedtoid, donationstate, donationcity, donationaddress, donationstatus) {
     return __awaiter(this, void 0, void 0, function () {
         var donation;
         return __generator(this, function (_a) {
