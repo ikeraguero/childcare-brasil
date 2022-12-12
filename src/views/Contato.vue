@@ -3,9 +3,9 @@
     <div class="mt-20 font-medium">
       <h1>Redes Sociais do Childcare Brasil: </h1>
           <div class="icons flex justify-center space-x-24 mt-10 text-base">
-            <a href="https://twitter.com" ><li><Icon icon="entypo-social:twitter" color="#fff6ee" width="70" height="70"/>Twitter</li></a>
-            <a href="https://instagram.com/childcarebr/" ><li><Icon icon="entypo-social:instagram" color="#fff6ee" width="70" height="70"/>Instagram</li></a>
-            <a href="https://facebook.com" ><li><Icon icon="entypo-social:facebook" color="#fff6ee" width="70" height="70" />Facebook</li></a>
+            <a href="https://twitter.com" id="twitter"><li><Icon icon="entypo-social:twitter" color="#fff6ee" width="70" height="70"/>Twitter</li></a>
+            <a href="https://instagram.com/childcarebr/" id="instagram" ><li><Icon icon="entypo-social:instagram" color="#fff6ee" width="70" height="70"/>Instagram</li></a>
+            <a href="https://facebook.com" id="facebook" ><li><Icon icon="entypo-social:facebook" color="#fff6ee" width="70" height="70" />Facebook</li></a>
           </div>
     </div>
     <div class="mt-36">
@@ -44,6 +44,10 @@ export default {
 }
 
 a:link {
+  color: #FFF6EE;
+}
+
+#twitter, #instagram, #facebook {
   color: #FFF6EE;
 }
 </style>
