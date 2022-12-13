@@ -4,7 +4,8 @@
   "description": "",
   "main": "/src/index.ts",
   "scripts": {
-    "start": "nodemon ./src/index.ts",
+    "start": "vercel dev",
+    "deploy" : "vercel deploy --prod",
     "postinstall": "tsc",
     "dev": "nodemon ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
