@@ -105,18 +105,6 @@ export async function deleteSchool (school_id: string) {
     await prisma.$disconnect();
 }
 
-export async function uploadImage(child_id: string, image: string) {
-    await prisma.$connect();
-    const child = await prisma.child.update({
-        where: {
-            id: child_id
-        },
-        data: {
-            photo: image,
-        }
-    });
-    await prisma.$disconnect();
-}
 export async function addDonation(donationdonatortype:string, donationdonator: string, donationemail: string, donationcpf: string, donationcnpj: string, donationcellphone: string, donationtype: string, donationvalue:string, donationmaterials: string, donationdonatedto: string, donationdonatedtoid: string, donationstate:string, donationcity:string, donationaddress:string, donationstatus: string) {
     await prisma.$connect();
     const donation = await prisma.donation.create({

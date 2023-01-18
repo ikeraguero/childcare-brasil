@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-// all children
+// get all children
 export async function getChildren(){
     await prisma.$connect();
     const children = await prisma.child.findMany();
@@ -17,7 +17,7 @@ export async function getChildren(){
     return new response(200, "Children found", children)
 }
 
-//specific child
+//get specific child
 
 export async function getChild(child_id: string) {
     await prisma.$connect();
@@ -34,7 +34,7 @@ export async function getChild(child_id: string) {
     return new response(200, `Child ${child_id} found!`, child);
 }
 
-//all schools
+//get all schools
 
 export async function getSchools(){
     await prisma.$connect();
@@ -49,7 +49,7 @@ export async function getSchools(){
     return new response(200, "Schools found", schools)
 }
 
-//specific school
+//get specific school
 
 export async function getSchool(school_id: string) {
     await prisma.$connect();
@@ -66,7 +66,7 @@ export async function getSchool(school_id: string) {
     return new response(200, `School ${school_id} found!`, school);
 }
 
-// all donations
+//get all donations
 export async function getDonations(){
     await prisma.$connect();
     const donations = await prisma.donation.findMany();
@@ -80,7 +80,7 @@ export async function getDonations(){
     return new response(200, "Donations found", donations)
 }
 
-//specific donation
+//get specific donation
 
 export async function getDonation(donation_id: string) {
     await prisma.$connect();
@@ -97,7 +97,7 @@ export async function getDonation(donation_id: string) {
     return new response(200, `Donation ${donation_id} found!`, donation);
 }
 
-// all states
+//get all states
 export async function getStates(){
     await prisma.$connect();
     const states = await prisma.state.findMany();
@@ -111,7 +111,7 @@ export async function getStates(){
     return new response(200, "States found", states)
 }
 
-//specific state
+//get specific state
 
 export async function getState(state_id: string) {
     await prisma.$connect();

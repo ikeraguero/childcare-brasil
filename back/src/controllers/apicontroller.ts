@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
 import { getChildren, getChild, getSchools, getSchool, getDonations, getDonation, getStates, getState } from "../../db/search";
 import { addChild, deleteChild, updateChild, addSchool, deleteSchool, updateSchool, addDonation, deleteDonation, updateDonation } from "../../db/post";
-import { appendFile } from 'fs';
 
 
-// Children
+
+// Children's APIs
 
 export const children = async (req: Request, res: Response) => {
     const children = await getChildren();
@@ -35,7 +35,7 @@ export const childupdate = async (req: Request, res: Response) => {
     res.redirect("http://localhost:8080/adminn/criancas");
 }
 
-// Schools
+// Schools' APIs
 
 export const schools = async (req: Request, res: Response) => {
     const schools = await getSchools();
@@ -65,7 +65,7 @@ export const schoolupdate = async (req: Request, res: Response) => {
     res.redirect("http://localhost:8080/adminn/escolas");
 }
 
-// Donations
+// Donations' APIs
 
 export const donations = async (req: Request, res: Response) => {
     const donations = await getDonations();
@@ -94,7 +94,7 @@ export const donationupdate = async (req: Request, res: Response) => {
     res.json(donation);
 }
 
-// States
+// States' API
 
 export const states = async (req: Request, res: Response) => {
     const states = await getStates();
