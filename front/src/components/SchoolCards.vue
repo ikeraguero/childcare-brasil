@@ -1,15 +1,11 @@
 <template>
-    
     <span>
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
         <div class="grid gap-1 grid-cols-4 grid-rows-0 whitespace-nowrap" id="container">
             <div v-for="card in cards.data" :key="card.index">
-                <div class=" px-2 m-2 " style="overflow-wrap: anywhere;">
-                    
+                <div class=" px-2 m-2 " style="overflow-wrap: anywhere;"> 
                     <div class="teste rounded-lg shadow-md w-96lg:w-410 overflow-hidden " style="overflow-wrap: anywhere;">
                         <a href="/">
-
                             <router-link v-bind:to="'/escolas/perfil/' + card.id"><img class="rounded-t-lg h-80" :src="card.photo" /></router-link>
                         </a>
                         <div class="p-6">
@@ -17,15 +13,12 @@
                                 <h5 class="text-white text-xl font-medium mb-2 ">
                                     {{ card.name }}
                                 </h5>
-                            
                             </div>
-
                             <p class="text-white text-base absolute w-fit">
                                 {{ card.city }}, {{ card.state }}
                             </p>
                         </div>
                         <div class="buttons flex justify-center mb-2 mt-14 h-fit">
-                                
                                 <a  
                                 v-bind:href="'/adminn/escolas/'+ card.id"
                                 type="button"
