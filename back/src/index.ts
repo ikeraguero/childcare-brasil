@@ -10,23 +10,6 @@ dotenv.config();
 const prisma = new PrismaClient();
 
 const bodyParser = require("body-parser");
-const { expressjwt: jwt } = require("express-jwt");
-const jwksRsa = require("jwks-rsa");
-
-
-// Set up Auth0 configuration
-const authConfig = {
-  domain: "dev-hhi6hna9.us.auth0.com",
-  audience: "https://childcare-brasil-api.com",
-  useRefreshTokens: true,
-  cacheLocation: 'localstorage'
-};
-
-
-app.get("/", (req, res) => {
-  res.send(`Hi! Server is listening on port ${port}`);
-});
-
 
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
@@ -37,9 +20,6 @@ app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Headers', '*');
   next();
 });
-
-const port = process.env.PORT || 3000;
-
 
 // GET
 app.get("/api/children", api.children);
@@ -69,6 +49,8 @@ app.post("/api/donationupdate/:donation_id", api.donationupdate)
 app.put("/api/donation/:donation_id", api.donation);
 
 //
+const port = process.env.PORT || 3000;
+
 
 app.listen(port, () => {
   console.log( `Port: http://localhost:${ port }.` );
