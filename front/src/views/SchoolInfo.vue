@@ -1,81 +1,70 @@
 <template>
     <div class="" id="page-content">
-      <div class="padding">
-          <div class="">
+        <div class="padding">
             <div class="">
-              <div class="card user-card">
-                  <div class="flex justify-center">
-                  <div class="col-sm-3 rounded bg-c-lite-green user-profile justify-content-center">
-                        <div class="card-block text-center text-white">
-                      <div class="m-b-25 flex justify-center mt-10">
-                       <img :src="school.photo" class="rounded-lg h-48 w-52" alt="User-Profile-Image" />
-                      </div>
-                        <div class="color">
-                         <span class='mt-5 font-bold'>{{school.name}}</span>
-                         <h6 class="f-w-601">{{ school.city }}, {{ school.state }}</h6>
-                         <router-link v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'" v-bind:to="'/adminn/escolas/'+ school.id" class="mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></router-link>
- 
+                <div class="">
+                    <div class="card user-card">
+                        <div class="flex justify-center">
+                            <div class="col-sm-3 rounded bg-c-lite-green user-profile justify-content-center">
+                                <div class="card-block text-center text-white">
+                                    <div class="m-b-25 flex justify-center mt-10">
+                                        <img :src="school.photo" class="rounded-lg h-48 w-52" alt="User-Profile-Image" />
+                                    </div>
+                                <div class="color">
+                                    <span class='mt-5 font-bold'>{{school.name}}</span>
+                                    <h6 class="f-w-601">{{ school.city }}, {{ school.state }}</h6>
+                                    <router-link v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'" v-bind:to="'/adminn/escolas/'+ school.id" class="mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></router-link>
+                                </div>
+                            </div>
                         </div>
-                       </div>
-                      </div>
-                    <div class="col-sm-9">
-                    <div class="card-block">
-                   <h6 class="m-b-20 p-b-5 b-b-default f-w-600">INFORMAÇÕES DA ESCOLA</h6>
-                      <div class="row">
-                        <div class="col-sm-6">
-                   <p class="m-b-10 f-w-600">Nome</p>
-                    <h6 class="text-muted f-w-400">{{school.name}}</h6>
+                        <div class="col-sm-9">
+                            <div class="card-block">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">INFORMAÇÕES DA ESCOLA</h6>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Nome</p>
+                                        <h6 class="text-muted f-w-400">{{school.name}}</h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Endereço</p>
+                                        <h6 class="text-muted f-w-400">{{ school.address}}, {{ school.city }}, {{ school.state }}</h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Email</p>
+                                        <h6 class="text-muted f-w-400">{{ school.email }}</h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Telefone</p>
+                                        <h6 class="text-muted f-w-400">{{ school.cellphone }}</h6>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Código INEP</p>
+                                        <h6 class="text-muted f-w-400">{{ school.inepcode }}</h6>
+                                    </div>
+                                    <div class="col-sm-5" v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'">
+                                        <p class="m-b-10 f-w-600">ID</p>
+                                        <h6 class="text-muted f-w-400">{{ school.id }}</h6>
+                                    </div>
+                                        <div class="col-sm-6">
+                                            <p class="m-b-10 f-w-600">Materiais Necessitados</p>
+                                            <h6 class="text-muted f-w-400">{{ school.materialsneeded }}</h6>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="m-b-10 f-w-600">Diretor(a)</p>
+                                            <h6 class="text-muted f-w-400">{{ school.director }}</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                   <div class="col-sm-6">
-                  <p class="m-b-10 f-w-600">Endereço</p>
-                 <h6 class="text-muted f-w-400">{{ school.address}}, {{ school.city }}, {{ school.state }}</h6>
-                 </div>
-                 <div class="col-sm-6">
-                  <p class="m-b-10 f-w-600">Email</p>
-                 <h6 class="text-muted f-w-400">{{ school.email }}</h6>
-                 </div>
-                 <div class="col-sm-6">
-                  <p class="m-b-10 f-w-600">Telefone</p>
-                 <h6 class="text-muted f-w-400">{{ school.cellphone }}</h6>
-                 </div>
-                 
-                 </div>
-                  <div class="row">
-                  <div class="col-sm-6">
-                 <p class="m-b-10 f-w-600">Código INEP</p>
-                    <h6 class="text-muted f-w-400">{{ school.inepcode }}</h6>
                 </div>
-                <div class="col-sm-5" v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'">
-               <p class="m-b-10 f-w-600">ID</p>
-           <h6 class="text-muted f-w-400">{{ school.id }}</h6>
-               </div>
-                <div class="col-sm-6">
-                 <p class="m-b-10 f-w-600">Materiais Necessitados</p>
-                    <h6 class="text-muted f-w-400">{{ school.materialsneeded }}</h6>
-                </div>
-                <div class="col-sm-6">
-                 <p class="m-b-10 f-w-600">Diretor(a)</p>
-                    <h6 class="text-muted f-w-400">{{ school.director }}</h6>
-                </div>
-                 
-
-            <!--  <div class="row" display: none>
-      <pre class="col-12 text-light bg-dark p-4">
-{{
-        JSON.stringify($auth.user, null, 2)
-      }}</pre
-      > 
-    </div> -->
+            </div>
         </div>
-       </div>
-      </div>
-       </div>
-     </div>
-      </div>
-  </div>
     </div>
-   </div>
-  </template>
+</template>
   
   <script> 
   import axios from "axios";

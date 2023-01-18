@@ -1,21 +1,21 @@
 <template>
     <v-container class="pa-8 content-align-center">
-      <div>
+        <div>
             Quase lá!
-      </div>
-      <div>
+        </div>
+        <div>
             Para completar sua doação para <b>{{ child.name }}</b>, envie os materiais informados para o seguinte endereço:
-      </div>
-      <div>
+        </div>
+        <div>
             {{child.address}}, {{child.city}}, {{child.state}}
-      </div>
-      <form action="http://localhost:7777/api/donationadd" method="post">
-      <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
-                         id="materialpayment" type="submit" value="Prosseguir">
-                        </form>
-    <div class="align-itens-center">
-      <u></u>
-    </div>
+        </div>
+        <form action="http://localhost:7777/api/donationadd" method="post">
+            <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
+            id="materialpayment" type="submit" value="Prosseguir">
+        </form>
+        <div class="align-itens-center">
+            <u></u>
+        </div>
     </v-container>
   </template>
   

@@ -21,29 +21,29 @@ const routes = [
         path: '/perfil',
         name: 'Profile',
         beforeEnter: authGuard,
-        component: () => import('../views/Perfil.vue')
+        component: () => import('../views/Profile.vue')
       },
       {
         path: '/contato',
         name: 'Contact',
-        component: () => import('../views/Contato.vue')
+        component: () => import('../views/Contact.vue')
       },
       {
         path: '/comodoar',
         name: 'How to Donate',
-        component: () => import('../views/comoDoar.vue')
+        component: () => import('../views/HowToDonate.vue')
       },
       {
         path: '/criancas',
         name: 'Children',
         beforeEnter: authGuard,
-        component: () => import('../views/AjudarCriancas.vue')
+        component: () => import('../views/HelpChildren.vue')
       },
       {
         path: '/escolas',
         name: 'Schools',
         beforeEnter: authGuard,
-        component: () => import('../views/AjudarEscolas.vue')
+        component: () => import('../views/HelpSchools.vue')
       },
       {
         path: '/adminn',

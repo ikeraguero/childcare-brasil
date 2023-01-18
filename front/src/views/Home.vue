@@ -3,53 +3,47 @@
     <h1 class="h1"></h1>
     <v-row>
       <v-col cols=5>
-     <mosaico class="mt-4 ml-3" />
+        <mosaico class="mt-4 ml-3" />
       </v-col>
       <v-col>
         <p class="slogan mt-24">
-            Faça sua doação para  
+          Faça sua doação para  
         </p>
-
         <br><br>
-        
-
-          <div class="d-flex justify-space-around mt-20 ml-8">
-
-            <v-btn icon min-width="200" link to="/criancas">
-              
+        <div class="d-flex justify-space-around mt-20 ml-8">
+          <v-btn icon min-width="200" link to="/criancas">  
             <v-img 
             class="posicao"
             max-height="300px"
             max-width="350px"
             src="@/assets/imagens/1a.png" 
-          ></v-img>
-            </v-btn>
-            <v-btn icon min-width="200" link to="/escolas">
-
+            >
+            </v-img>
+          </v-btn>
+          <v-btn icon min-width="200" link to="/escolas">
             <v-img
             class="posicao"
             max-height="300"
             max-width="350"
             src="@/assets/imagens/2a.png"
-          ></v-img>
-            </v-btn> 
-          </div>      
-          <br>
-          <div class="d-flex justify-space-around mt-16 text-3xl font-bold ml-7" height="100">
-            <h1>Crianças</h1> 
-            <h1>Escolas</h1>
-          </div>
+            >
+            </v-img>
+          </v-btn> 
+        </div>      
+        <br>
+        <div class="d-flex justify-space-around mt-16 text-3xl font-bold ml-7" height="100">
+          <h1>Crianças</h1> 
+          <h1>Escolas</h1>
+        </div>
       </v-col>
       <br>
     </v-row>
-
     <p></p>
     <div class="boxtwo rounded-sm" >
-     <v-row class="counter-text" justify="center">CONTADOR</v-row>
-     </div>
-        <section class="counters">
-        
-        <v-col>
+      <v-row class="counter-text" justify="center">CONTADOR</v-row>
+    </div>
+    <section class="counters"> 
+      <v-col>
         <div v-if="cards.data.length <= 9">
 					<div class="counter mb-4"> 0{{cards.data.length}} </div>
 					<h3 class="text-2xl text-center">Total de Doações Realizadas</h3>
@@ -58,19 +52,14 @@
 					<div class="counter mb-4">{{cards.data.length}} </div>
 					<h3 class="text-2xl text-center">Total de Doações Realizadas</h3>
 				</div>
-        </v-col>
-        
-      </section> 
+      </v-col>
+    </section> 
     <v-row>
       <v-col>
         <h1 class="titulo-resto"></h1>
       </v-col>
     </v-row>
-      
-  
   </div>
-  
-
 </template>
 
 <script>

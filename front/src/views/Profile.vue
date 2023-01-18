@@ -7,52 +7,36 @@
                         <div class="flex justify-center">
                             <div class="col-sm-3 rounded bg-c-lite-green user-profile justify-content-center">
                                 <div class="card-block text-center text-white">
-                                    <div class="m-b-25 flex justify-center mt-10">
-                                        <img :src="child.photo" class="rounded-lg h-48 w-52" alt="User-Profile-Image" />
+                                    <div class="m-b-25 flex justify-center ">
+                                        <img :src="$auth.user.picture" class="img-radius" alt="User-Profile-Image" />
                                     </div>
                                     <div class="color">
-                                        <span class='mt-5 font-bold'>{{child.name}}</span>
-                                        <h6 class="f-w-601">{{ child.city}}, {{child.state}}</h6>
-                                        <router-link v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'"  v-bind:to="'/adminn/criancas/'+ child.id" class="mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></router-link>
+                                        <span class='mt-5'>Bem-vindo(a),</span>
+                                        <h6 class="f-w-601">{{ $auth.user.nickname }}!</h6>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-9">
                                 <div class="card-block">
-                                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600">INFORMAÇÕES DA CRIANÇA</h6>
+                                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600">INFORMAÇÕES</h6>
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <p class="m-b-10 f-w-600">Nome</p>
-                                            <h6 class="text-muted f-w-400">{{child.name}}</h6>
+                                            <p class="m-b-10 f-w-600">Nome de Usuário</p>
+                                            <h6 class="text-muted f-w-400">{{ $auth.user.nickname }}</h6>
                                         </div>
                                         <div class="col-sm-6">
-                                            <p class="m-b-10 f-w-600">Localização</p>
-                                            <h6 class="text-muted f-w-400">{{ child.city }}, {{ child.state }}</h6>
+                                            <p class="m-b-10 f-w-600">Email</p>
+                                            <h6 class="text-muted f-w-400">{{ $auth.user.email }}</h6>
                                         </div>
                                         <div class="col-sm-6">
-                                            <p class="m-b-10 f-w-600">Gênero</p>
-                                            <h6 class="text-muted f-w-400">{{ child.gender }}</h6>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="m-b-10 f-w-600">Idade</p>
-                                            <h6 class="text-muted f-w-400">{{ child.age }} anos</h6>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="m-b-10 f-w-600">Escola</p>
-                                            <h6 class="text-muted f-w-400">{{ child.school }}</h6>
-                                        </div>
-                                        <div class="col-sm-5">
-                                            <p class="m-b-10 f-w-600">Materiais Necessitados</p>
-                                            <h6 class="text-muted f-w-400">{{ child.materialsneeded }}</h6>
-                                        </div>
-                                        <div class="col-sm-6" v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'">
-                                            <p class="m-b-10 f-w-600">CPF</p>
-                                            <h6 class="text-muted f-w-400">{{ child.cpf }}</h6>
-                                        </div>
-                                        <div class="col-sm-5" v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'">
-                                            <p class="m-b-10 f-w-600" >ID</p>
-                                            <h6 class="text-muted f-w-400">{{ child.id }}</h6>
-                                        </div>  
+                                            <p class="m-b-10 f-w-600">ID</p>
+                                            <h6 class="text-muted f-w-400">{{ $auth.user.sub }}</h6>
+                                        </div>          
+                                    </div>
+                                </div>
+                                <div class="card-block">
+                                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600"></h6>
+                                    <div class="row">
                                     </div>
                                 </div>
                             </div>
@@ -65,23 +49,7 @@
 </template>
   
   <script> 
-  import axios from "axios";
-
-export default {
-    name: "App",
-    data() {
-        return {
-            child: [],
-            showControls: true,
-        };
-    },
-    mounted() {
-        axios.get("http://localhost:7777/api/child/" + this.$route.params.id)
-        .then(response => {
-            this.child = response.data;
-        })
-    },
-}
+  
   </script>
   
   <style>
