@@ -1,0 +1,66 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Child {
+  id                String          @id @default(auto()) @map("_id") @db.ObjectId
+  photo             String?
+  name              String
+  gender            String?
+  school            String?
+  age               String
+  address           String?
+  city              String
+  state             String
+  cpf               String          @unique
+  materialsneeded   String?
+  responsables      String?
+}
+
+model School {
+  id               String  @id @default(auto()) @map("_id") @db.ObjectId
+  email            String 
+  inepcode         String?   @unique
+  cellphone        String?
+  photo            String?
+  name             String
+  address          String?
+  city             String
+  state            String
+  materialsneeded  String?
+  director         String?
+}
+
+model Donation {
+  id                String @id @default(auto()) @map("_id") @db.ObjectId
+  donatortype       String
+  donator           String
+  email             String
+  cpf               String? 
+  cnpj              String? 
+  cellphone         String?
+  type              String
+  value             String?
+  materials         String?
+  donatedto         String?
+  donatedtoid       String?
+  status            String?
+  state             String?
+  city              String?
+  address           String?
+  data              DateTime @default(now())
+}
+
+model State {
+  id              String @id @default(auto()) @map("_id") @db.ObjectId
+  name            String
+  abbreviation     String              
+}
