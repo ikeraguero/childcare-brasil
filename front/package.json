@@ -1,0 +1,70 @@
+{
+  "name": "projeto-adocao",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
+    "lint": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint"
+  },
+  "dependencies": {
+    "@auth0/auth0-spa-js": "^1.22.4",
+    "@emailjs/browser": "^3.7.0",
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@heroicons/vue": "^1.0.6",
+    "@prisma/client": "^4.1.0",
+    "@tailwindcss/postcss7-compat": "^2.2.17",
+    "@vue-stripe/vue-stripe": "^4.4.4",
+    "autoprefixer": "^9.8.8",
+    "axios": "^0.27.2",
+    "core-js": "^3.6.5",
+    "emailjs-com": "^3.2.0",
+    "firebase": "^9.6.0",
+    "postcss": "^7.0.39",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
+    "uninstall": "^0.0.0",
+    "vue": "^2.6.11",
+    "vue-axios": "^3.4.1",
+    "vue-router": "^3.2.0",
+    "vue-select": "^3.20.0",
+    "vue3-autocounter": "^1.0.6",
+    "vuetify": "^2.4.0"
+  },
+  "devDependencies": {
+    "@iconify/vue2": "^2.0.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "prisma": "^4.1.0",
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-tailwind": "~3.0.0",
+    "vue-cli-plugin-vuetify": "~2.4.4",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.7.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
