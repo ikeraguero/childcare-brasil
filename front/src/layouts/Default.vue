@@ -5,11 +5,11 @@
         <router-link to="/"><h4>Childcare Brasil</h4></router-link>
       </div>
       <ul class="nav-links">
-        <router-link v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'" to="/adminn">Admin</router-link > 
-        <router-link to="/">Home</router-link>
-        <router-link to="/contato">Contato</router-link>
-        <router-link to="/comodoar">Como doar</router-link>
-        <router-link to="/perfil">Perfil</router-link > 
+        <li v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'">Admin</li>
+        <a href="/"><li>Home</li></a>
+        <a href="/contato"><li>Contato</li></a>
+        <a href="/comodoar"><li>Como Doar</li></a>
+        <a href="/perfil"><li>Perfil</li></a>
         <a v-if="!$auth.isAuthenticated" @click="login" class="button is-dark"><strong>Entrar</strong></a>
         <a v-if="$auth.isAuthenticated" @click="logout" class="button is-dark"><strong>Sair</strong></a>
       </ul>
@@ -57,6 +57,11 @@ export default {
   margin: 0;
 }
 
+ul li:hover{
+  background-color: #621200;
+  color: #FFF6EE;
+}
+
 .v-application a{
   color: #621200;
 }
@@ -101,9 +106,9 @@ nav{
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 40%
+  width: 40%;
 }
-.nav-links a{
+.nav-links a, li{
   color: #621200;
   font-family: "Proxima Nova", system-ui, sans-serif;
   text-decoration: none;
@@ -157,5 +162,12 @@ nav{
   .burguer {
     display: block;
   }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown:hover .dropdown-content {
+  display: block;
+}
 }
 </style>

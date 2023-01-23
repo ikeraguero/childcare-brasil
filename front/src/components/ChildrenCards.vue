@@ -20,16 +20,16 @@
                             </p>
                             <div class="buttons flex justify-center mt-20 h-fit">    
                                 <router-link
-                                    v-bind:to="'/criancas/doar/' + card.id"
-                                    type="button"
-                                    class="inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
-                                    >Doar</router-link
+                                v-bind:to="'/criancas/doar/' + card.id"
+                                type="button"
+                                class="inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
+                                >Doar</router-link
                                 >
                                 <router-link
-                                    v-bind:to="'/criancas/perfil/' + card.id"
-                                    type="button"
-                                    class="inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
-                                    >Informações</router-link
+                                v-bind:to="'/criancas/perfil/' + card.id"
+                                type="button"
+                                class="inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
+                                >Informações</router-link
                                 >
                             </div>
                         </div>

@@ -56,7 +56,7 @@
     </section> 
     <v-row>
       <v-col>
-        <h1 class="titulo-resto"></h1>
+        <h1 class="title-rest"></h1>
       </v-col>
     </v-row>
   </div>
@@ -172,7 +172,7 @@ h1{
   font-size: 30px;
 }
 
-.titulo-resto{
+.title-rest{
   text-align: center;
 }
 .box {
