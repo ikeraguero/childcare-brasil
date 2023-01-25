@@ -78,7 +78,7 @@ export default {
         };
     },
     mounted() {
-        axios.get("http://localhost:7777/api/school/" + this.$route.params.id)
+        axios.get("https://childcare-brasil.vercel.app/api/school/" + this.$route.params.id)
         .then(response => {
             this.school = response.data;
         })

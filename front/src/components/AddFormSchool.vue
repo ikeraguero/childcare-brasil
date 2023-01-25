@@ -4,7 +4,7 @@
 
             <p>{{ image }}</p>
 
-            <form class="bg-[#15393C] rounded px-12 pt-8 pb-8 mb-8" action="http://localhost:7777/api/schooladd" method="post">
+            <form class="bg-[#15393C] rounded px-12 pt-8 pb-8 mb-8" action="https://childcare-brasil.vercel.app/api/schooladd" method="post">
                 <div class="flex mb-4">
                     <img src="https://i.imgur.com/Wp6hAjO.jpg" class="rounded-lg h-48 w-52" alt="Avatar" id="img" />
                     <div class="px-4 mt-3">
@@ -119,7 +119,7 @@ data() {
     },
     mounted() {
 
-        axios.get("http://localhost:7777/api/states").then((response) => (this.states = response));
+        axios.get("https://childcare-brasil.vercel.app/api/states").then((response) => (this.states = response));
     },
 }
 </script>

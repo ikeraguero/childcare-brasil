@@ -33,7 +33,7 @@
         </div>
         <div class="test1 mb-0 flex justify-center" id="l3">Você está doando para:</div>
         <div class="test1 mb-5 flex justify-center font-bold" id="l4">{{ school.name }}</div>
-        <form class="rounded px-8 pt-16 pb-16 mb-0 mt-8" action="http://localhost:7777/api/donationadd" method="post" id="form" style="display: block">
+        <form class="rounded px-8 pt-16 pb-16 mb-0 mt-8" action="https://childcare-brasil.vercel.app/api/donationadd" method="post" id="form" style="display: block">
             <div id="formcomponents">
                 <label class="block text-white text-sm font-bold mb-0" for="username">
                     <div class="background"></div>
@@ -242,8 +242,8 @@ export default {
         script.addEventListener("load", this.setLoaded);
         document.body.appendChild(script)
     
-        axios.get("http://localhost:7777/api/states").then((response) => (this.states = response));
-        axios.get("http://localhost:7777/api/school/" + this.$route.params.id)
+        axios.get("https://childcare-brasil.vercel.app/api/states").then((response) => (this.states = response));
+        axios.get("https://childcare-brasil.vercel.app/api/school/" + this.$route.params.id)
         .then(response => {
             this.school = response.data
         })

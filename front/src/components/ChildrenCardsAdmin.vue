@@ -47,7 +47,7 @@ export default {
         };
     },
     mounted() {
-        axios.get("http://localhost:7777/api/children").then((response) => (this.cards = response));
+        axios.get("https://childcare-brasil.vercel.app/api/children").then((response) => (this.cards = response));
     },
     methods: {
         age(age) {
@@ -58,7 +58,7 @@ export default {
             }
         },
         excluir(card_id) {
-            axios.post(`http://localhost:7777/api/childdel/${card_id}`).then(response => {
+            axios.post(`https://childcare-brasil.vercel.app/api/childdel/${card_id}`).then(response => {
                 this.$router.push('/adminn');
                 alert("Criança removida com sucesso")
                 return response.data;

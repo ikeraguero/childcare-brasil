@@ -79,17 +79,17 @@ export default {
         };
     },
     mounted() {
-        axios.get("http://localhost:7777/api/donations").then((response) => (this.cards = response));
+        axios.get("https://childcare-brasil.vercel.app/api/donations").then((response) => (this.cards = response));
     },
     methods: {
         excluir(card_id) {
-            axios.post(`http://localhost:7777/api/donationdel/${card_id}`).then(response => {
+            axios.post(`https://childcare-brasil.vercel.appapi/donationdel/${card_id}`).then(response => {
                 this.$router.push("/adminn");
                 return response.data;
             });
         },
         concluir(card_id) {
-            axios.put(`http://localhost:7777/api/donation/${card_id}`, {
+            axios.put(`https://childcare-brasil.vercel.app/api/donation/${card_id}`, {
                 status: "Aprovada"
             }).then(response => {
                 this.$router.push("/adminn");

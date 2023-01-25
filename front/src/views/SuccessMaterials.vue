@@ -9,7 +9,7 @@
         <div>
             {{child.address}}, {{child.city}}, {{child.state}}
         </div>
-        <form action="http://localhost:7777/api/donationadd" method="post">
+        <form action="https://childcare-brasil.vercel.app/api/donationadd" method="post">
             <input class="bg-white text-[#15393C] font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" 
             id="materialpayment" type="submit" value="Prosseguir">
         </form>
@@ -32,7 +32,7 @@ export default {
         };
     },
     mounted() {
-        axios.get("http://localhost:7777/api/child/" + this.$route.params.id)
+        axios.get("https://childcare-brasil.vercel.app/api/child/" + this.$route.params.id)
         .then(response => {
             this.child = response.data
         })

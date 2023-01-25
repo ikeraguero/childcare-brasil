@@ -52,7 +52,7 @@ export default {
         };
     },
     mounted() {
-        axios.get("http://localhost:7777/api/children").then((response) => (this.cards = response));
+        axios.get("https://childcare-brasil.vercel.app/api/children").then((response) => (this.cards = response));
     },
     methods: {
         age(age) {

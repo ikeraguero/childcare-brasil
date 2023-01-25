@@ -79,7 +79,7 @@ export default {
         };
     },
     mounted() {
-        axios.get("http://localhost:7777/api/donations").then((response) => (this.cards = response));
+        axios.get("https://childcare-brasil.vercel.app/api/donations").then((response) => (this.cards = response));
     },
   
 };

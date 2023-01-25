@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-center max-w-3xl mx-auto py-10">
         <div class="w-full h-full ">
-            <form class="rounded px-12 pt-8 pb-8 mt-8 mb-8" v-bind:action="'http://localhost:7777/api/childupdate/' + child.id" method="post">
+            <form class="rounded px-12 pt-8 pb-8 mt-8 mb-8" v-bind:action="'https://childcare-brasil.vercel.app/api/childupdate/' + child.id" method="post">
                 <div class="flex mb-4">
                     <img :src="child.photo" class="rounded-lg h-48 w-52" alt="Avatar" id="img" />
                     <div class="px-4">
@@ -131,9 +131,9 @@ export default {
         };
     },
     mounted() {
-        axios.get("http://localhost:7777/api/schools").then((response) => (this.cards = response));
-        axios.get("http://localhost:7777/api/states").then((response) => (this.states = response));
-        axios.get("http://localhost:7777/api/child/" + this.$route.params.id)
+        axios.get("https://childcare-brasil.vercel.app/api/schools").then((response) => (this.cards = response));
+        axios.get("https://childcare-brasil.vercel.app/api/states").then((response) => (this.states = response));
+        axios.get("https://childcare-brasil.vercel.app/api/child/" + this.$route.params.id)
             .then(response => {
                 this.child = response.data;
             })

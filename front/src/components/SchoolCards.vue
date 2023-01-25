@@ -46,7 +46,7 @@ export default {
         };
     },
     mounted() {
-        axios.get("http://localhost:7777/api/schools").then((response) => (this.cards = response));
+        axios.get("https://childcare-brasil.vercel.app/api/schools").then((response) => (this.cards = response));
     },
     methods: {
         age(age) {
@@ -57,7 +57,7 @@ export default {
             }
         },
         excluir(card_id) {
-            axios.post(`http://localhost:7777/api/schooldel/${card_id}`).then(response => {
+            axios.post(`https://childcare-brasil.vercel.app/api/schooldel/${card_id}`).then(response => {
                 this.$router.push('/adminn');
                 alert("Escola removida com sucesso")
                 return response.data;
@@ -171,7 +171,7 @@ export default {
         };
     },
     mounted() {
-        axios.get("http://localhost:7777/api/schools").then((response) => (this.cards = response));
+        axios.get("https://childcare-brasil.vercel.app/api/schools").then((response) => (this.cards = response));
     },
 
 };
