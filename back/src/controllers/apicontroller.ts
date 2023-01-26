@@ -19,7 +19,7 @@ export const child = async (req: Request, res: Response) => {
 export const childadd = async (req: Request, res: Response) => {
     const r = req.body;
     const child = await addChild(r.childphoto, r.childname, r.childgender, r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.childmaterialsneeded, r.childresponsables);
-    res.redirect("http://localhost:8080/adminn/criancas");
+    res.redirect("https://childcarebrasil.netlify.app/adminn/criancas");
 
 }
 
@@ -32,7 +32,7 @@ export const childdelete = async (req: Request, res: Response) => {
 export const childupdate = async (req: Request, res: Response) => {
     const r = req.body;
     const child = await updateChild(req.params.child_id, r.childphoto, r.childname, r.childgender, r.childschool, r.childage, r.childaddress, r.childcity, r.childstate, r.childcpf, r.childmaterialsneeded, r.childresponsables);
-    res.redirect("http://localhost:8080/adminn/criancas");
+    res.redirect("https://childcarebrasil.netlify.app/adminn/criancas");
 }
 
 // Schools' APIs
@@ -50,7 +50,7 @@ export const school = async (req: Request, res: Response) => {
 export const schooladd = async (req: Request, res: Response) => {
     const r = req.body;
     const school = await addSchool(r.schoolemail, r.schoolinepcode, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate, r.schoolmaterialsneeded, r.schooldirector);
-    res.redirect("http://localhost:8080/adminn/escolas");
+    res.redirect("https://childcarebrasil.netlify.app/adminn/escolas");
 
 }
 
@@ -62,7 +62,7 @@ export const schooldelete = async (req: Request, res: Response) => {
 export const schoolupdate = async (req: Request, res: Response) => {
     const r = req.body;
     const school = await updateSchool(req.params.school_id, r.schoolemail, r.schoolinepcode, r.schoolcellphone, r.schoolphoto, r.schoolname, r.schooladdress, r.schoolcity, r.schoolstate, r.schoolmaterialsneeded, r.schooldirector);
-    res.redirect("http://localhost:8080/adminn/escolas");
+    res.redirect("https://childcarebrasil.netlify.app/adminn/escolas");
 }
 
 // Donations' APIs
@@ -80,7 +80,7 @@ export const donation = async (req: Request, res: Response) => {
 export const donationadd = async (req: Request, res: Response) => {
     const r = req.body;
     const donation = await addDonation(r.donationdonatortype, r.donationdonator, r.donationemail, r.donationcpf, r.donationcnpj, r.donationcellphone, r.donationtype, r.donationvalue, r.donationmaterials, r.donationdonatedto, r.donationdonatedtoid, r.donationstate, r.donationcity, r.donationaddress, r.donationstatus);
-    res.redirect("http://localhost:8080/success")
+    res.redirect("https://childcarebrasil.netlify.app/success")
 }
 
 export const donationdelete = async (req: Request, res: Response) => {

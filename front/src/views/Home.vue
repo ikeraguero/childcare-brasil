@@ -39,10 +39,10 @@
       <br>
     </v-row>
     <p></p>
-    <div class="boxtwo rounded-sm" >
+    <section class="counters mt-20">
+      <div class="boxtwo rounded-sm" >
       <v-row class="counter-text" justify="center">CONTADOR</v-row>
     </div>
-    <section class="counters"> 
       <v-col>
         <div v-if="cards.data.length <= 9">
 					<div class="counter mb-4"> 0{{cards.data.length}} </div>
@@ -185,7 +185,7 @@ h1{
   
 }
 .boxtwo {
-  margin-top: 100px;
+  margin-top: 5px;
   margin-left: 0;
   margin-right: 0;
   display: flex;
@@ -196,6 +196,7 @@ h1{
   
 }
 .counter{
+  margin-top: 10px;
   font-size: 100px;
   color: #621200;
    text-align: center;

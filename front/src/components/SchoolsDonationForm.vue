@@ -36,11 +36,10 @@
         <form class="rounded px-8 pt-16 pb-16 mb-0 mt-8" action="https://childcare-brasil.vercel.app/api/donationadd" method="post" id="form" style="display: block">
             <div id="formcomponents">
                 <label class="block text-white text-sm font-bold mb-0" for="username">
-                    <div class="background"></div>
                     <div class="test">Doar como:</div>
                 </label>
                 <select class="form-select appearance-none
-                shadow appearance-none font-normal border rounded w-full mt-1.5 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationdonatortype" id="donatortype" @click="donatorbar">
+                shadow appearance-none font-normal border rounded w-full mt-1.5 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationdonatortype" id="donatortype" @click="donatortypebar">
                     <option value="0"></option>    
                     <option value="Pessoa">Pessoa Física</option>
                     <option value="Empresa">Empresa</option>
@@ -74,6 +73,7 @@
                     class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                     required>
                 </label>
+                
                 <label class='block text-sm font-bold mb-3' id="email">
                     <div class="test">Email para contato</div>
                     <input 
@@ -83,6 +83,7 @@
                     class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
                     required>
                 </label>
+                
                 <label class='block  text-sm font-bold mb-3' id="cellphone">
                     <div class="test">Telefone para contato</div>
                     <input
@@ -95,13 +96,13 @@
                     required>
                 </label>
                 <label class="block text-white text-sm font-bold mb-0" id="state">
-                    <div class="background"></div>
                     <div class="test">Estado</div>
                 </label>
                 <select class="form-select appearance-none
-                shadow appearance-none border font-normal rounded w-full mt-1.5 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationstate">
-                    <option v-for="state in states.data" :key="state.index">{{ state.name }}</option>
+                shadow appearance-none font-normal border rounded w-full mt-1.5 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationstate" id="state">
+                    <option v-for ="state in states.data" :key="state.index">{{ state.name }}</option>
                 </select>
+                
                 <label class='block text-sm font-bold mb-3' id="donatedto" style="display: none">
                     <div class="test"></div>
                     <input
@@ -150,7 +151,7 @@
                 <label class="block text-sm text-sm font-bold mb-0">
                     <div class="test">Tipo de doação</div>
                 </label>
-                <select type="text" class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationtype" id="donationtype" @click='typebar'>
+                <select type="text" class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationtype" id="donationtype" @click='donationtypebar'>
                     <option value ="0"></option>    
                     <option value="Dinheiro">Dinheiro</option>
                     <option value="Material">Material Escolar</option>
@@ -291,7 +292,7 @@ export default {
                 return "Ano";
             }
         },    
-        typebar(){
+        donationtypebar(){
 
             if (document.getElementById("donationtype").value == 'Dinheiro') {
             document.getElementById('nothing').style.display = 'none';
@@ -319,7 +320,7 @@ export default {
 }
 
 },
-        donator() {
+        donatortypebar() {
             if (document.getElementById("donatortype").value == 'Pessoa') {
             document.getElementById('person').removeAttribute('style')
             document.getElementById('company').style.display = 'none';

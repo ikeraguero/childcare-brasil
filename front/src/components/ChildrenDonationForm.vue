@@ -40,7 +40,7 @@
                     <div class="test">Doar como:</div>
                 </label>
                 <select class="form-select appearance-none
-                shadow appearance-none font-normal border rounded w-full mt-1.5 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationdonatortype" id="donatortype" @click="donatorbar">
+                shadow appearance-none font-normal border rounded w-full mt-1.5 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationdonatortype" id="donatortype" @click="donatortypebar">
                     <option value="0"></option>    
                     <option value="Pessoa">Pessoa Física</option>
                     <option value="Empresa">Empresa</option>
@@ -150,7 +150,7 @@
                 <label class="block text-sm text-sm font-bold mb-0">
                     <div class="test">Tipo de doação</div>
                 </label>
-                <select type="text" class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationtype" id="donationtype" @click='typebar'>
+                <select type="text" class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" name="donationtype" id="donationtype" @click='donationtypebar'>
                     <option value ="0"></option>    
                     <option value="Dinheiro">Dinheiro</option>
                     <option value="Material">Material Escolar</option>
@@ -291,7 +291,7 @@ export default {
                 return "Ano";
             }
         },    
-        typebar(){
+        donationtypebar(){
 
             if (document.getElementById("donationtype").value == 'Dinheiro') {
             document.getElementById('nothing').style.display = 'none';
@@ -319,7 +319,7 @@ export default {
 }
 
 },
-        donator() {
+        donatortypebar() {
             if (document.getElementById("donatortype").value == 'Pessoa') {
             document.getElementById('person').removeAttribute('style')
             document.getElementById('company').style.display = 'none';
