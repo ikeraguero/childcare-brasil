@@ -12,10 +12,11 @@
                             Link da Imagem
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-96 py-2 px-3 mb-2 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white" 
-                            placeholder="Link da Imagem"
-                            name="schoolphoto"
-                            >
+                                type="file"
+                                class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none" 
+                                @change="uploadImage($event.target.files[0])"
+                                accept="image/*"
+                                >
                         <label class="block text-white text-sm font-bold mb-2 mt-5" for="username">
                             Nome da Escola
                         </label>
@@ -121,6 +122,27 @@ data() {
 
         axios.get("https://childcare-brasil.vercel.app/api/states").then((response) => (this.states = response));
     },
+    methods: {
+        uploadChildImg(image) {
+            
+            var myHeaders = new Headers();
+            myHeaders.append("Authorization", "Client-ID edb7383edef747d");
+            var formdata = new FormData();
+            formdata.append("image", image);
+            var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: formdata,
+            redirect: 'follow'
+            };
+            fetch("https://api.imgur.com/3/image", requestOptions)
+            .then(data => data.json()).then(data => {
+                this.image = data.data.link;
+            })
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+        }
+    }
 }
 </script>
 
