@@ -2,7 +2,7 @@
     <span>
         <div class="grid gap-0 grid-cols-4 grid-rows-0 overflow whitespace-nowrap" id="container">
             <div v-for="card in cards.data" :key="card.index">
-                <div class="px-2 m-2 snap-center ">
+                <div class="px-2 m-4 snap-center max-w-max">
                     <div class="teste rounded-lg shadow-md w-96lg:w-410 overflow-hidden " style="overflow-wrap: anywhere;">
                         <a href="/">
                             <router-link v-bind:to="'/criancas/perfil/' + card.id"><img class="rounded-t-lg h-80" :src="card.photo" /></router-link>

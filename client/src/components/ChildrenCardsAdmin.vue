@@ -2,7 +2,7 @@
     <span>
         <div class="grid gap-0 grid-cols-4 grid-rows-0 overflow whitespace-nowrap no-scrollbar relative scroll-smooth snap-x" id="container">
             <div v-for="card in cards.data" :key="card.index">
-                <div class="flex px-3 m-2 snap-center ">
+                <div class="flex px-3 m-2 snap-center max-w-max">
                     <div class="rounded-lg shadow-md w-[300px] lg:w-[410px]">
                         <a href="/">
                             <router-link v-bind:to="'/criancas/perfil/' + card.id"><img class="rounded-t-lg h-80" :src="card.photo" /></router-link>

@@ -36,7 +36,6 @@ const routes = [
       {
         path: '/criancas',
         name: 'Children',
-        beforeEnter: authGuard,
         component: () => import('../views/HelpChildren.vue')
       },
       {
