@@ -9,14 +9,14 @@
 </template>
 
 <script>
-  export default {
-    name: 'SignupButton',
-    methods: {
-      signup() {
-        this.$auth.loginWithRedirect({
-          screen_hint: 'signup',
-        });
-      },
+export default {
+  name: "SignupButton",
+  methods: {
+    signup() {
+      this.$auth.loginWithRedirect({
+        screen_hint: "signup",
+      });
     },
-  };
+  },
+};
 </script>

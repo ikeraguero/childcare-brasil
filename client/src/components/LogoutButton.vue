@@ -9,13 +9,13 @@
 </template>
 
 <script>
-  export default {
-    name: 'LogoutButton',
-    methods: {
-      logout() {
-        this.$auth.logout();
-        this.$router.push({ path: '/' });
-      },
+export default {
+  name: "LogoutButton",
+  methods: {
+    logout() {
+      this.$auth.logout();
+      this.$router.push({ path: "/" });
     },
-  };
+  },
+};
 </script>

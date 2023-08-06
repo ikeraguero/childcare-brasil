@@ -1,30 +1,25 @@
 <template>
-  <button 
-    class="btn btn-block"
-    v-if="!$auth.isAuthenticated"
-    @click="login"
-  >
-      Entrar
+  <button class="btn btn-block" v-if="!$auth.isAuthenticated" @click="login">
+    Entrar
   </button>
 </template>
 
 <script>
-  export default {
-    name: 'LoginButton',
-    methods: {
-      login() {
-        this.$auth.loginWithRedirect();
-      },
+export default {
+  name: "LoginButton",
+  methods: {
+    login() {
+      this.$auth.loginWithRedirect();
     },
-    
-  };
+  },
+};
 </script>
 <style>
-.btn{
+.btn {
   color: #621200;
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 14px;
-};
+}
 </style>

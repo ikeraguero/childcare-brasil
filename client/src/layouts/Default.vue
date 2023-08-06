@@ -5,70 +5,75 @@
         <router-link to="/"><h4>Childcare Brasil</h4></router-link>
       </div>
       <ul class="nav-links">
-        <li v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'">Admin</li>
+        <li
+          v-if="
+            $auth.isAuthenticated &&
+            $auth.user.email == 'ikerpires407@gmail.com'
+          "
+        >
+          Admin
+        </li>
         <a href="/"><li>Home</li></a>
         <a href="/contato"><li>Contato</li></a>
         <a href="/comodoar"><li>Como Doar</li></a>
         <a href="/perfil"><li>Perfil</li></a>
-        <a v-if="!$auth.isAuthenticated" @click="login" class="button is-dark"><strong>Entrar</strong></a>
-        <a v-if="$auth.isAuthenticated" @click="logout" class="button is-dark"><strong>Sair</strong></a>
+        <a v-if="!$auth.isAuthenticated" @click="login" class="button is-dark"
+          ><strong>Entrar</strong></a
+        >
+        <a v-if="$auth.isAuthenticated" @click="logout" class="button is-dark"
+          ><strong>Sair</strong></a
+        >
       </ul>
       <div class="burguer">
         <div class="linha1"></div>
         <div class="linha2"></div>
         <div class="linha3"></div>
       </div>
-      
     </nav>
 
     <v-main class="fundo">
-      
       <router-view></router-view>
     </v-main>
     <v-footer app class="py-1"
       ><span class="caption">ChildcareBrasil &copy;2022</span></v-footer
     >
   </v-app>
-
 </template>
 <script>
 export default {
-  name: 'Nav',
+  name: "Nav",
   methods: {
-  // Log the user in
-  login() {
-    this.$auth.loginWithRedirect();
+    // Log the user in
+    login() {
+      this.$auth.loginWithRedirect();
+    },
+    // Log the user out
+    logout() {
+      this.$auth.logout({
+        returnTo: window.location.origin,
+      });
+    },
   },
-  // Log the user out
-  logout() {
-    this.$auth.logout({
-      returnTo: window.location.origin
-    });
-  }
-  }
-}
+};
 </script>
 
 <style>
-
-
-
-*{
+* {
   margin: 0;
 }
 
-ul li:hover{
+ul li:hover {
   background-color: #621200;
-  color: #FFF6EE;
+  color: #fff6ee;
 }
 
-.v-application a{
+.v-application a {
   color: #621200;
 }
-.fundo{
+.fundo {
   background-image: linear-gradient(120deg, #621200, #7c3403);
 }
-.conta{
+.conta {
   padding: auto 9px;
   color: #621200;
 }
@@ -80,24 +85,24 @@ ul li:hover{
   color: #621200;
 }
 
-.menu{
-  color:#621200;
-  display:inline;
+.menu {
+  color: #621200;
+  display: inline;
   margin: 10px;
-  padding:0px;
+  padding: 0px;
 }
 .teste {
   justify-content: center;
 }
 
-nav{
+nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background-color: #FFF6EE;
+  background-color: #fff6ee;
 }
-.logo{
+.logo {
   color: #621200;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -108,7 +113,8 @@ nav{
   justify-content: space-around;
   width: 40%;
 }
-.nav-links a, li{
+.nav-links a,
+li {
   color: #621200;
   font-family: "Proxima Nova", system-ui, sans-serif;
   text-decoration: none;
@@ -117,38 +123,38 @@ nav{
   font-size: 14px;
 }
 
-.nav-links li{
+.nav-links li {
   list-style: none;
 }
 
-.burguer{
-  display: none
+.burguer {
+  display: none;
 }
 
-.burguer div{
+.burguer div {
   width: 25px;
   height: 3px;
-  background-color:#621200;
+  background-color: #621200;
   margin: 5px;
   cursor: pointer;
 }
 
-@media screen and (max-width:1024px){
-  .nav-linha{
-    width:60%
+@media screen and (max-width: 1024px) {
+  .nav-linha {
+    width: 60%;
   }
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
   }
-  .nav-links{
+  .nav-links {
     position: absolute;
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color:#FFF6EE;
+    background-color: #fff6ee;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -167,7 +173,7 @@ nav{
     display: inline-block;
   }
   .dropdown:hover .dropdown-content {
-  display: block;
-}
+    display: block;
+  }
 }
 </style>
