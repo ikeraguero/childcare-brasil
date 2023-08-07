@@ -13,10 +13,10 @@
         >
           Admin
         </li>
-        <a href="/"><li>Home</li></a>
-        <a href="/contato"><li>Contato</li></a>
-        <a href="/comodoar"><li>Como Doar</li></a>
-        <a href="/perfil"><li>Perfil</li></a>
+        <router-link to="/"><li>Home</li></router-link>
+        <router-link to="/contato"><li>Contato</li></router-link>
+        <router-link to="/comodoar"><li>Como Doar</li></router-link>
+        <router-link to="/perfil"><li>Perfil</li></router-link>
         <a v-if="!$auth.isAuthenticated" @click="login" class="button is-dark"
           ><strong>Entrar</strong></a
         >
@@ -35,7 +35,7 @@
       <router-view></router-view>
     </v-main>
     <v-footer app class="py-1"
-      ><span class="caption">ChildcareBrasil &copy;2022</span></v-footer
+      ><span class="caption">ChildcareBrasil &copy;2023</span></v-footer
     >
   </v-app>
 </template>

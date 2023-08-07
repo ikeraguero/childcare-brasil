@@ -20,7 +20,20 @@
               ID
             </label>
             <input
-              class="shadow appearance-none border rounded w-96 py-2 px-3 mb-2 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="
+                shadow
+                appearance-none
+                border
+                rounded
+                w-96
+                py-2
+                px-3
+                mb-2
+                text-black-900
+                leading-tight
+                focus:outline-none focus:shadow-outline
+                bg-white
+              "
               placeholder="Link da Imagem"
               name="childphoto"
               v-model="donation.photo"
@@ -32,7 +45,19 @@
               Nome da Criança
             </label>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="
+                shadow
+                appearance-none
+                border
+                rounded
+                w-full
+                py-2
+                px-3
+                text-black-900
+                leading-tight
+                focus:outline-none focus:shadow-outline
+                bg-white
+              "
               id="name"
               type="text"
               placeholder="Nome da Criança"
@@ -53,7 +78,19 @@
               CNPJ
             </label>
             <input
-              class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="
+                shadow
+                appearance-none
+                border
+                rounded
+                w-15
+                py-2
+                px-3
+                text-black-900
+                leading-tight
+                focus:outline-none focus:shadow-outline
+                bg-white
+              "
               id="age"
               type="text"
               placeholder="Idade"
@@ -65,7 +102,19 @@
           <div class="mb-4 ml-5">
             <label class="block text-white text-sm font-bold mb-2"> CPF </label>
             <input
-              class="shadow appearance-none border rounded w-48 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="
+                shadow
+                appearance-none
+                border
+                rounded
+                w-48
+                py-2
+                px-3
+                text-black-900
+                leading-tight
+                focus:outline-none focus:shadow-outline
+                bg-white
+              "
               id="cpf"
               type="text"
               placeholder="CPF"
@@ -83,7 +132,19 @@
               Tipo
             </label>
             <input
-              class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="
+                shadow
+                appearance-none
+                border
+                rounded
+                w-15
+                py-2
+                px-3
+                text-black-900
+                leading-tight
+                focus:outline-none focus:shadow-outline
+                bg-white
+              "
               id="address"
               type="text"
               placeholder="Endereço"
@@ -96,7 +157,19 @@
               Valor
             </label>
             <input
-              class="shadow appearance-none border rounded w-48 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="
+                shadow
+                appearance-none
+                border
+                rounded
+                w-48
+                py-2
+                px-3
+                text-black-900
+                leading-tight
+                focus:outline-none focus:shadow-outline
+                bg-white
+              "
               id="city"
               type="text"
               placeholder="Cidade"
@@ -110,7 +183,19 @@
             Materiais Necessitados
           </label>
           <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="
+              shadow
+              appearance-none
+              border
+              rounded
+              w-full
+              py-2
+              px-3
+              text-black-900
+              leading-tight
+              focus:outline-none focus:shadow-outline
+              bg-white
+            "
             id="description"
             type="text"
             placeholder="Materias Necessitados"
@@ -123,7 +208,19 @@
             Nome do Responsável
           </label>
           <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="
+              shadow
+              appearance-none
+              border
+              rounded
+              w-full
+              py-2
+              px-3
+              text-black-900
+              leading-tight
+              focus:outline-none focus:shadow-outline
+              bg-white
+            "
             id="responsable"
             type="text"
             placeholder="Nome do Responsável"
@@ -136,7 +233,19 @@
             Nome do Responsável
           </label>
           <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="
+              shadow
+              appearance-none
+              border
+              rounded
+              w-full
+              py-2
+              px-3
+              text-black-900
+              leading-tight
+              focus:outline-none focus:shadow-outline
+              bg-white
+            "
             id="responsable"
             type="text"
             placeholder="Nome do Responsável"
@@ -149,7 +258,19 @@
             Nome do Responsável
           </label>
           <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="
+              shadow
+              appearance-none
+              border
+              rounded
+              w-full
+              py-2
+              px-3
+              text-black-900
+              leading-tight
+              focus:outline-none focus:shadow-outline
+              bg-white
+            "
             id="responsable"
             type="text"
             placeholder="Nome do Responsável"
@@ -160,14 +281,33 @@
         <div class="flex justify-center">
           <div>
             <button
-              class="popup-close btn bg-white font-bold py-2.5 px-4 rounded focus:outline-none focus:shadow-outline"
+              class="
+                popup-close
+                btn
+                bg-white
+                font-bold
+                py-2.5
+                px-4
+                rounded
+                focus:outline-none focus:shadow-outline
+              "
               type="button"
               value="Cancelar"
             >
               Cancelar
             </button>
             <input
-              class="btn bg-white font-bold py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
+              class="
+                btn
+                bg-white
+                font-bold
+                py-2
+                px-4
+                ml-2
+                rounded
+                cursor-pointer
+                focus:outline-none focus:shadow-outline
+              "
               type="submit"
               value="Salvar"
             />

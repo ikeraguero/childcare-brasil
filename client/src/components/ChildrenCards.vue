@@ -32,13 +32,39 @@
                 <router-link
                   v-bind:to="'/criancas/doar/' + card.id"
                   type="button"
-                  class="inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
+                  class="
+                    inline-block
+                    px-6
+                    py-2.5
+                    ml-3
+                    bg-white
+                    cursor-pointer
+                    font-semibold
+                    text-xs
+                    leading-tight
+                    uppercase
+                    rounded
+                    shadow-md
+                  "
                   >Doar</router-link
                 >
                 <router-link
                   v-bind:to="'/criancas/perfil/' + card.id"
                   type="button"
-                  class="inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
+                  class="
+                    inline-block
+                    px-6
+                    py-2.5
+                    ml-3
+                    bg-white
+                    cursor-pointer
+                    font-semibold
+                    text-xs
+                    leading-tight
+                    uppercase
+                    rounded
+                    shadow-md
+                  "
                   >Informações</router-link
                 >
               </div>
@@ -88,9 +114,7 @@ export default {
   color: #15393c81;
   transition: 0.5s;
 }
-.card-control:hover {
-  color: #15393c;
-}
+
 .left {
   left: 0;
 }

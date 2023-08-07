@@ -62,7 +62,6 @@ export default {
 </script>
 <style>
 .pa-8 {
-  color: #fff6ee;
   font-size: 26px;
   font-family: "Proxima Nova", system-ui, sans-serif;
   text-align: center;
@@ -72,17 +71,12 @@ export default {
   list-style: none;
 }
 
-a:link {
-  color: #fff6ee;
-}
-
 #twitter,
 #instagram,
-#facebook {
-  color: #fff6ee;
-}
-
-.color {
+#facebook,
+.color,
+.pa-8,
+a:link {
   color: #fff6ee;
 }
 </style>

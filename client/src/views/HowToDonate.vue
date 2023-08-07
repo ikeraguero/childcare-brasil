@@ -103,21 +103,23 @@ export default {
 </script>
 
 <style>
+.steps,
+.color2 {
+  font-family: "Proxima Nova", system-ui, sans-serif;
+  text-align: center;
+}
+
 .color {
   background-color: #621200;
 }
 
 .color2 {
   background-color: #fff6ee;
-  font-family: "Proxima Nova", system-ui, sans-serif;
-  text-align: center;
   color: #621200;
 }
 
 .steps {
-  font-family: "Proxima Nova", system-ui, sans-serif;
   justify-content: center;
-  text-align: center;
   color: #fff6ee;
 }
 </style>

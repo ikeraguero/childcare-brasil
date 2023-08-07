@@ -85,6 +85,32 @@ export default {
 </script>
 
 <style>
+.counters,
+.counter-text,
+.counter {
+  color: #621200;
+}
+
+.slogan,
+.counter-text,
+h1 {
+  font-family: "Proxima Nova", system-ui, sans-serif;
+}
+
+.box,
+.boxtwo {
+  display: flex;
+  background-color: #fff6ee;
+  width: 100%;
+  align-content: center;
+}
+
+body,
+h1,
+.slogan {
+  color: #fff6ee;
+}
+
 header {
   flex: 1;
   height: 100%;
@@ -99,7 +125,6 @@ header h1 {
 
 .counters {
   background: #fff6ee;
-  color: #621200;
   padding: 40px 20px;
   margin: 0px;
   border-top: 3px #621200, solid;
@@ -137,7 +162,6 @@ body {
   font-family: "Roboto", sans-serif;
   background: lightskyblue
     url("https://i.pinimg.com/originals/3c/24/46/3c24462450c2a902bf7e18f3d9aada81.jpg");
-  color: #fff;
   /* Push to bottom */
 }
 
@@ -146,24 +170,18 @@ body {
 }
 
 .slogan {
-  font-family: "Proxima Nova", system-ui, sans-serif;
   text-align: center;
-  color: #fff6ee;
   font-size: 40px;
 }
 
 .counter-text {
-  font-family: "Proxima Nova", system-ui, sans-serif;
   text-align: center;
-  color: #621200;
   font-size: 40px;
   min-height: 20px;
   margin-top: 20px;
 }
 
 h1 {
-  color: #fff6ee;
-  font-family: "Proxima Nova", system-ui, sans-serif;
   font-size: 30px;
 }
 
@@ -171,26 +189,17 @@ h1 {
   text-align: center;
 }
 .box {
-  display: flex;
-  background-color: #fff6ee;
-  width: 100%;
   padding: 35px;
-  align-content: center;
 }
 .boxtwo {
   margin-top: 5px;
   margin-left: 0;
   margin-right: 0;
-  display: flex;
-  background-color: #fff6ee;
-  width: 100%;
   padding: 10px;
-  align-content: center;
 }
 .counter {
   margin-top: 10px;
   font-size: 100px;
-  color: #621200;
   text-align: center;
 }
 .bottom {

@@ -20,7 +20,20 @@
               Link da Imagem
             </label>
             <input
-              class="shadow appearance-none border rounded w-96 py-2 px-3 mb-2 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="
+                shadow
+                appearance-none
+                border
+                rounded
+                w-96
+                py-2
+                px-3
+                mb-2
+                text-black-900
+                leading-tight
+                focus:outline-none focus:shadow-outline
+                bg-white
+              "
               placeholder="Link da Imagem"
               name="childphoto"
               v-model="child.photo"
@@ -32,7 +45,19 @@
               Nome da Criança
             </label>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="
+                shadow
+                appearance-none
+                border
+                rounded
+                w-full
+                py-2
+                px-3
+                text-black-900
+                leading-tight
+                focus:outline-none focus:shadow-outline
+                bg-white
+              "
               id="name"
               type="text"
               placeholder="Nome da Criança"
@@ -46,7 +71,20 @@
               Sexo
             </label>
             <select
-              class="shadow form-select appearance-none block w-full px-3 py-2 text-base font-normal text-black bg-white rounded"
+              class="
+                shadow
+                form-select
+                appearance-none
+                block
+                w-full
+                px-3
+                py-2
+                text-base
+                font-normal
+                text-black
+                bg-white
+                rounded
+              "
               name="childgender"
               id="gender"
               v-model="child.gender"
@@ -62,7 +100,19 @@
               Idade
             </label>
             <input
-              class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="
+                shadow
+                appearance-none
+                border
+                rounded
+                w-15
+                py-2
+                px-3
+                text-black-900
+                leading-tight
+                focus:outline-none focus:shadow-outline
+                bg-white
+              "
               id="age"
               type="text"
               placeholder="Idade"
@@ -75,7 +125,19 @@
               Escola
             </label>
             <select
-              class="shadow appearance-none border rounded w-56 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="
+                shadow
+                appearance-none
+                border
+                rounded
+                w-56
+                py-2
+                px-3
+                text-black-900
+                leading-tight
+                focus:outline-none focus:shadow-outline
+                bg-white
+              "
               id="school"
               type="text"
               placeholder="Escola"
@@ -89,7 +151,19 @@
           <div class="mb-4 ml-5">
             <label class="block text-white text-sm font-bold mb-2"> CPF </label>
             <input
-              class="shadow appearance-none border rounded w-48 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="
+                shadow
+                appearance-none
+                border
+                rounded
+                w-48
+                py-2
+                px-3
+                text-black-900
+                leading-tight
+                focus:outline-none focus:shadow-outline
+                bg-white
+              "
               id="cpf"
               type="text"
               placeholder="CPF"
@@ -107,7 +181,19 @@
               Endereço
             </label>
             <input
-              class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="
+                shadow
+                appearance-none
+                border
+                rounded
+                w-15
+                py-2
+                px-3
+                text-black-900
+                leading-tight
+                focus:outline-none focus:shadow-outline
+                bg-white
+              "
               id="address"
               type="text"
               placeholder="Endereço"
@@ -120,7 +206,20 @@
               Estado
             </label>
             <select
-              class="shadow appearance-none border rounded w-56 py-2 px-2 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white mr-0"
+              class="
+                shadow
+                appearance-none
+                border
+                rounded
+                w-56
+                py-2
+                px-2
+                text-black-900
+                leading-tight
+                focus:outline-none focus:shadow-outline
+                bg-white
+                mr-0
+              "
               id="state"
               placeholder="Estado"
               name="childstate"
@@ -136,7 +235,19 @@
               Cidade
             </label>
             <input
-              class="shadow appearance-none border rounded w-48 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="
+                shadow
+                appearance-none
+                border
+                rounded
+                w-48
+                py-2
+                px-3
+                text-black-900
+                leading-tight
+                focus:outline-none focus:shadow-outline
+                bg-white
+              "
               id="city"
               type="text"
               placeholder="Cidade"
@@ -150,7 +261,19 @@
             Materiais Necessitados (opcional)
           </label>
           <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="
+              shadow
+              appearance-none
+              border
+              rounded
+              w-full
+              py-2
+              px-3
+              text-black-900
+              leading-tight
+              focus:outline-none focus:shadow-outline
+              bg-white
+            "
             id="description"
             type="text"
             placeholder="Materias Necessitados"
@@ -163,7 +286,19 @@
             Nome do Responsável (opcional)
           </label>
           <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="
+              shadow
+              appearance-none
+              border
+              rounded
+              w-full
+              py-2
+              px-3
+              text-black-900
+              leading-tight
+              focus:outline-none focus:shadow-outline
+              bg-white
+            "
             id="responsable"
             type="text"
             placeholder="Nome do Responsável"
@@ -175,13 +310,31 @@
           <div>
             <router-link
               to="/adminn/criancas/"
-              class="btn bg-white font-bold py-2.5 px-4 rounded focus:outline-none focus:shadow-outline"
+              class="
+                btn
+                bg-white
+                font-bold
+                py-2.5
+                px-4
+                rounded
+                focus:outline-none focus:shadow-outline
+              "
               type="button"
               value="Cancelar"
               >Cancelar</router-link
             >
             <input
-              class="btn bg-white font-bold py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
+              class="
+                btn
+                bg-white
+                font-bold
+                py-2
+                px-4
+                ml-2
+                rounded
+                cursor-pointer
+                focus:outline-none focus:shadow-outline
+              "
               type="submit"
               value="Salvar"
             />

@@ -29,12 +29,39 @@
               <a
                 v-bind:href="'/adminn/escolas/' + card.id"
                 type="button"
-                class="edit inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
+                class="
+                  edit
+                  inline-block
+                  px-6
+                  py-2.5
+                  ml-3
+                  bg-white
+                  cursor-pointer
+                  font-semibold
+                  text-xs
+                  leading-tight
+                  uppercase
+                  rounded
+                  shadow-md
+                "
                 >Editar</a
               >
               <button
                 @click="excluir(card.id)"
-                class="del inline-block px-6 py-2.5 ml-3 text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
+                class="
+                  del
+                  inline-block
+                  px-6
+                  py-2.5
+                  ml-3
+                  cursor-pointer
+                  font-semibold
+                  text-xs
+                  leading-tight
+                  uppercase
+                  rounded
+                  shadow-md
+                "
                 type="button"
                 value="Excluir"
               >

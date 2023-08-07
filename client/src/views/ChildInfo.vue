@@ -119,7 +119,7 @@ export default {
 </script>
 
 <style>
-body {
+body, .bg-c-lite-green {
   background-color: #f9f9fa;
 }
 

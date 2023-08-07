@@ -1,7 +1,15 @@
 <template>
   <span>
     <div
-      class="grid gap-1 grid-cols-4 grid-rows-0 whitespace-nowrap no-scrollbar scroll-smooth snap-x"
+      class="
+        grid
+        gap-1
+        grid-cols-4 grid-rows-0
+        whitespace-nowrap
+        no-scrollbar
+        scroll-smooth
+        snap-x
+      "
       id="container"
     >
       <div v-for="card in cards.data" :key="card.index">
@@ -58,7 +66,21 @@
               <div class="flex justify-center flex-row">
                 <button
                   @click="excluir(card.id)"
-                  class="inline-block mt-2 px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
+                  class="
+                    inline-block
+                    mt-2
+                    px-6
+                    py-2.5
+                    ml-3
+                    bg-white
+                    cursor-pointer
+                    font-semibold
+                    text-xs
+                    leading-tight
+                    uppercase
+                    rounded
+                    shadow-md
+                  "
                   type="button"
                   value="Excluir"
                 >

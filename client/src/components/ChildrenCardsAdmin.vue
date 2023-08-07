@@ -1,7 +1,17 @@
 <template>
   <span>
     <div
-      class="grid gap-0 grid-cols-4 grid-rows-0 overflow whitespace-nowrap no-scrollbar relative scroll-smooth snap-x"
+      class="
+        grid
+        gap-0
+        grid-cols-4 grid-rows-0
+        overflow
+        whitespace-nowrap
+        no-scrollbar
+        relative
+        scroll-smooth
+        snap-x
+      "
       id="container"
     >
       <div v-for="card in cards.data" :key="card.index">
@@ -29,12 +39,40 @@
                 <a
                   v-bind:href="'/adminn/criancas/' + card.id"
                   type="button"
-                  class="edit inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
+                  class="
+                    edit
+                    inline-block
+                    px-6
+                    py-2.5
+                    ml-3
+                    bg-white
+                    cursor-pointer
+                    font-semibold
+                    text-xs
+                    leading-tight
+                    uppercase
+                    rounded
+                    shadow-md
+                  "
                   >Editar</a
                 >
                 <button
                   @click="excluir(card.id)"
-                  class="del inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
+                  class="
+                    del
+                    inline-block
+                    px-6
+                    py-2.5
+                    ml-3
+                    bg-white
+                    cursor-pointer
+                    font-semibold
+                    text-xs
+                    leading-tight
+                    uppercase
+                    rounded
+                    shadow-md
+                  "
                   type="button"
                   value="Excluir"
                 >

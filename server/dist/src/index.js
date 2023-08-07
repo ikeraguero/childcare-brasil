@@ -25,38 +25,25 @@ var __importStar = (this && this.__importStar) || function (mod) {
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-exports.__esModule = true;
-var client_1 = require("@prisma/client");
-var dotenv_1 = __importDefault(require("dotenv"));
-var cors_1 = __importDefault(require("cors"));
-var api = __importStar(require("./controllers/apicontroller"));
-var express = require("express");
-var app = express();
-dotenv_1["default"].config();
-var prisma = new client_1.PrismaClient();
-var bodyParser = require("body-parser");
-var jwt = require("express-jwt").expressjwt;
-var jwksRsa = require("jwks-rsa");
-// Set up Auth0 configuration
-var authConfig = {
-    domain: "dev-hhi6hna9.us.auth0.com",
-    audience: "https://childcare-brasil-api.com",
-    useRefreshTokens: true,
-    cacheLocation: 'localstorage'
-};
-app.get("/", function (req, res) {
-    res.send("Hi! Server is listening on port ".concat(port));
-});
+Object.defineProperty(exports, "__esModule", { value: true });
+const client_1 = require("@prisma/client");
+const dotenv_1 = __importDefault(require("dotenv"));
+const cors_1 = __importDefault(require("cors"));
+const api = __importStar(require("./controllers/apicontroller"));
+const express = require("express");
+const app = express();
+dotenv_1.default.config();
+const prisma = new client_1.PrismaClient();
+const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
-app.use((0, cors_1["default"])());
+app.use((0, cors_1.default)());
 app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', '*');
-    res.setHeader('Access-Control-Allow-Headers', '*');
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "*");
+    res.setHeader("Access-Control-Allow-Headers", "*");
     next();
 });
-var port = process.env.PORT || 3000;
 // GET
 app.get("/api/children", api.children);
 app.get("/api/child/:child_id", api.child);
@@ -78,7 +65,8 @@ app.post("/api/donationdel/:donation_id", api.donationdelete);
 app.post("/api/donationupdate/:donation_id", api.donationupdate);
 app.put("/api/donation/:donation_id", api.donation);
 //
-app.listen(port, function () {
-    console.log("Port: http://localhost:".concat(port, "."));
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Port: http://localhost:${port}.`);
 });
 //# sourceMappingURL=index.js.map
