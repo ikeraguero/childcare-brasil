@@ -2,7 +2,7 @@
 
 ## 1
 ```
-cd Back
+cd server
 ```
 
 ### 2
@@ -22,6 +22,11 @@ npm run start
 ### 5
 ```
 cd ..
+```
+
+### 7
+```
+cd client
 ```
 
 ### 6
