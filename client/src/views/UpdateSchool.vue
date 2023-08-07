@@ -1,12 +1,11 @@
 <template>
-    <div>
-        <EditFormSchool />
-    </div>
+  <div>
+    <EditFormSchool />
+  </div>
 </template>
 
 <script>
 export default {
-    name: "School"
-}
-
+  name: "School",
+};
 </script>

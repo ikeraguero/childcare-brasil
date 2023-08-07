@@ -1,12 +1,11 @@
 <template>
-    <div>
-        <EditDonations />
-    </div>
+  <div>
+    <EditDonations />
+  </div>
 </template>
 
 <script>
 export default {
-    name: "Donation"
-}
-
+  name: "Donation",
+};
 </script>

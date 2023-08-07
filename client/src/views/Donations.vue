@@ -1,26 +1,27 @@
 <template>
-  <div v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'" class="block galleryBlock">
+  <div
+    v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'"
+    class="block galleryBlock"
+  >
     <v-container>
-      <h1 class="flex justify-center py-10 text-4xl text-[#15393C] font-semibold">Doações</h1>
+      <h1 class="flex justify-center py-10 text-4xl font-semibold">Doações</h1>
       <DonationCards class="flex drop-shadow-md mb-9" />
     </v-container>
   </div>
-  <div v-else class="msg flex justify-center py-10 text-4xl text-[#15393C] font-semibold">Você não têm acesso à essa página</div>
+  <div v-else class="msg flex justify-center py-10 text-4xl font-semibold">
+    Você não têm acesso à essa página
+  </div>
 </template>
 
 <script>
-
-
 export default {
-      name:"Donation",
-      components: {
-
-    },
-  }
+  name: "Donation",
+  components: {},
+};
 </script>
 
 <style>
 .msg {
-  color: #FFF6EE;
+  color: #fff6ee;
 }
 </style>
