@@ -5,6 +5,7 @@
         <router-link to="/"><h4>Childcare Brasil</h4></router-link>
       </div>
       <ul class="nav-links">
+        <router-link to="/adminn">
         <li
           v-if="
             $auth.isAuthenticated &&
@@ -13,6 +14,7 @@
         >
           Admin
         </li>
+      </router-link>
         <router-link to="/"><li>Home</li></router-link>
         <router-link to="/contato"><li>Contato</li></router-link>
         <router-link to="/comodoar"><li>Como Doar</li></router-link>

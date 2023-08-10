@@ -124,13 +124,13 @@ const routes = [
       {
         path: "/criancas/perfil/:id",
         name: "Child Info",
-
+        beforeEnter: authGuard,
         component: () => import("../views/ChildInfo.vue"),
       },
       {
         path: "/escolas/perfil/:id",
         name: "School Info",
-
+        beforeEnter: authGuard,
         component: () => import("../views/SchoolInfo.vue"),
       },
     ],
