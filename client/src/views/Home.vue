@@ -25,99 +25,101 @@
         </div>
       </div>
     </header>
-    <section>
-      <div class="features-container">
-        <div class="feature-box">
-          <strong class="feature-title"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="feature-icon w-6 h-6"
+    <div class="sections">
+      <section>
+        <div class="features-container">
+          <div class="feature-box">
+            <strong class="feature-title"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="feature-icon w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+              Fazendo o bem</strong
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-              />
-            </svg>
-            Fazendo o bem</strong
-          >
-          <p class="feature-text">
-            Doe agora mesmo para nossas escolas e crianças e se sinta bem
-            consigo mesmo por ajudar uma causa tão importante
-          </p>
-        </div>
+            <p class="feature-text">
+              Doe agora mesmo para nossas escolas e crianças e se sinta bem
+              consigo mesmo por ajudar uma causa tão importante.
+            </p>
+          </div>
 
-        <div class="feature-box">
-          <strong class="feature-title"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="feature-icon w-6 h-6"
+          <div class="feature-box">
+            <strong class="feature-title"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="feature-icon w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              Honestidade com seu dinheiro</strong
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-            Honestidade com seu dinheiro</strong
-          >
-          <p class="feature-text">
-            Somos uma organização que não visa o lucro, portanto, doe e tenha a
-            consciência que 100% do seu dinheiro será destinado a escola ou
-            criança escolhida por você!
-          </p>
-        </div>
+            <p class="feature-text">
+              Somos uma organização que não visa o lucro, portanto, doe e tenha
+              a consciência que 100% do seu dinheiro será destinado a escola ou
+              criança escolhida por você!
+            </p>
+          </div>
 
-        <div class="feature-box">
-          <strong class="feature-title">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="feature-icon w-6 h-6"
+          <div class="feature-box">
+            <strong class="feature-title">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="feature-icon w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"
+                />
+              </svg>
+              Contador de doações</strong
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"
-              />
-            </svg>
-            Contador de doações</strong
-          >
-          <p class="feature-text">
-            Até o momento, o contador de doações do Childcare Brasil atualizado
-            em tempo real contabiliza um total de
-            <strong>{{ cards.data.length }}</strong> doações
-          </p>
+            <p class="feature-text">
+              Até o momento, o contador de doações do Childcare Brasil
+              atualizado em tempo real contabiliza um total de
+              <strong>{{ cards.data.length }}</strong> doações.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="quote-section">
-      <div class="imagequote">
-        <img
-          src="https://afcb3dd970a3f0576827-af285b1eb7ee6b663e4897a25a039f30.ssl.cf1.rackcdn.com/GaleriaImagem/152751/foto-convite-ifc-2022_img8547pp.jpg"
-          alt=""
-          class="img-quote"
-        />
-      </div>
-      <div class="blockquote">
-        “E eu tenho uma preocupação muito grande com as crianças, como elas se
-        desenvolvem, como elas crescem, como são educadas. No Brasil e no mundo
-        faltam recursos para que essas crianças sejam educadas da maneira devida
-        e é por essa razão que eu doo.”
-        <p>- Yasmim Bernardi</p>
-      </div>
-    </section>
+      </section>
+      <section class="quote-section">
+        <div class="imagequote">
+          <img
+            src="../assets/imagens/Screenshot from 2023-09-06 13-15-40.png"
+            alt=""
+            class="img-quote"
+          />
+        </div>
+        <div class="blockquote">
+          “E eu tenho uma preocupação muito grande com as crianças, como elas se
+          desenvolvem, como elas crescem, como são educadas. No Brasil e no
+          mundo faltam recursos para que essas crianças sejam educadas da
+          maneira devida e é por essa razão que eu doo.”
+          <p class="mt-6 font-bold">- Yasmim Bernardi</p>
+        </div>
+      </section>
+    </div>
   </article>
 </template>
 
@@ -320,7 +322,7 @@ h1 {
   margin-left: 15px;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 30px;
-  margin-top: 80px;
+  margin-top: 90px;
   margin-bottom: 80px;
 }
 
@@ -351,7 +353,7 @@ h1 {
   justify-content: center;
   grid-template-columns: 1fr 2fr;
   padding: 20px;
-  width: 80%;
+
   background-color: #743d31;
   margin: 0 auto;
 }
@@ -359,6 +361,11 @@ h1 {
 .img-quote {
   margin: 0 auto;
   border-radius: 10px;
-  width: 50%;
+  width: 80%;
+}
+
+.sections {
+  margin: 0 auto;
+  width: 90%;
 }
 </style>
