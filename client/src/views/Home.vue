@@ -13,10 +13,7 @@
           Realize uma doação e nos ajude a mudar a vida de milhares de crianças!
         </h1>
         <h2 class="header-description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor
-          massa id neque aliquam. Sed faucibus turpis in eu mi bibendum neque
-          egestas
+          Doe agora para as nossas escolas e crianças registradas
         </h2>
         <div class="header-btns">
           <router-link to="/criancas" class="donation-btn"
@@ -28,27 +25,84 @@
         </div>
       </div>
     </header>
+    <section>
+      <div class="features-container">
+        <div class="feature-box">
+          <strong class="feature-title"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="feature-icon w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+              />
+            </svg>
+            Fazendo o bem</strong
+          >
+          <p class="feature-text">
+            Doe agora mesmo para nossas escolas e crianças e se sinta bem
+            consigo mesmo por ajudar uma causa tão importante
+          </p>
+        </div>
 
-    <section class="counters mt-20">
-      <div class="boxtwo rounded-sm">
-        <v-row class="counter-text" justify="center">CONTADOR</v-row>
+        <div class="feature-box">
+          <strong class="feature-title"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="feature-icon w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            Honestidade com seu dinheiro</strong
+          >
+          <p class="feature-text">
+            Somos uma organização que não visa o lucro, portanto, doe e tenha a
+            consciência que 100% do seu dinheiro será destinado a escola ou
+            criança escolhida por você!
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <strong class="feature-title">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="feature-icon w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"
+              />
+            </svg>
+            Contador de doações</strong
+          >
+          <p class="feature-text">
+            Até o momento, o contador de doações do Childcare Brasil atualizado
+            em tempo real contabiliza um total de
+            <strong>{{ cards.data.length }}</strong> doações
+          </p>
+        </div>
       </div>
-      <v-col>
-        <div v-if="cards.data.length <= 9">
-          <div class="counter mb-4">0{{ cards.data.length }}</div>
-          <h3 class="text-2xl text-center">Total de Doações Realizadas</h3>
-        </div>
-        <div v-else>
-          <div class="counter mb-4">{{ cards.data.length }}</div>
-          <h3 class="text-2xl text-center">Total de Doações Realizadas</h3>
-        </div>
-      </v-col>
     </section>
-    <v-row>
-      <v-col>
-        <h1 class="title-rest"></h1>
-      </v-col>
-    </v-row>
+    <section></section>
   </article>
 </template>
 
@@ -203,8 +257,9 @@ h1 {
 }
 
 .header-title,
-.header-description {
-  color: rgb(92, 92, 92);
+.header-description,
+.features-container {
+  color: #343a40;
 }
 
 .header-title {
@@ -228,7 +283,7 @@ h1 {
 
 .header-btns {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   margin-top: 20px;
 }
 
@@ -243,5 +298,28 @@ h1 {
   border-radius: 1000px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.features-container {
+  display: grid;
+  margin-left: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  margin-top: 100px;
+}
+
+.feature-title {
+  font-size: 22px;
+  letter-spacing: -0.7px;
+}
+
+.feature-text {
+  margin-top: 15px;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.feature-icon {
+  stroke: #743d31;
 }
 </style>

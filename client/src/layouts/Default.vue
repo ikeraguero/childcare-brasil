@@ -15,7 +15,7 @@
             Admin
           </li>
         </router-link>
-        <router-link to="/"><li>Home</li></router-link>
+        <router-link to="/"><li>Início</li></router-link>
         <router-link to="/contato"><li>Contato</li></router-link>
         <router-link to="/comodoar"><li>Como Doar</li></router-link>
         <router-link to="/perfil"><li>Perfil</li></router-link>
@@ -108,17 +108,18 @@ nav {
 }
 .nav-links {
   display: flex;
-  justify-content: space-around;
-  width: 40%;
+  justify-content: space-between;
+  gap: 40px;
 }
 .nav-links a,
 li {
   color: #fff6ee;
+
   font-family: "Proxima Nova", system-ui, sans-serif;
   text-decoration: none;
   letter-spacing: 0px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
