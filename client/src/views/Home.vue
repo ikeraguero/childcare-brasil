@@ -102,7 +102,22 @@
         </div>
       </div>
     </section>
-    <section></section>
+    <section class="quote-section">
+      <div class="imagequote">
+        <img
+          src="https://afcb3dd970a3f0576827-af285b1eb7ee6b663e4897a25a039f30.ssl.cf1.rackcdn.com/GaleriaImagem/152751/foto-convite-ifc-2022_img8547pp.jpg"
+          alt=""
+          class="img-quote"
+        />
+      </div>
+      <div class="blockquote">
+        “E eu tenho uma preocupação muito grande com as crianças, como elas se
+        desenvolvem, como elas crescem, como são educadas. No Brasil e no mundo
+        faltam recursos para que essas crianças sejam educadas da maneira devida
+        e é por essa razão que eu doo.”
+        <p>- Yasmim Bernardi</p>
+      </div>
+    </section>
   </article>
 </template>
 
@@ -305,7 +320,8 @@ h1 {
   margin-left: 15px;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 30px;
-  margin-top: 100px;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 .feature-title {
@@ -321,5 +337,28 @@ h1 {
 
 .feature-icon {
   stroke: #743d31;
+}
+
+.blockquote {
+  color: #fff6ee;
+  font-size: 20px;
+}
+
+.quote-section {
+  display: grid;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 2fr;
+  padding: 20px;
+  width: 80%;
+  background-color: #743d31;
+  margin: 0 auto;
+}
+
+.img-quote {
+  margin: 0 auto;
+  border-radius: 10px;
+  width: 50%;
 }
 </style>
