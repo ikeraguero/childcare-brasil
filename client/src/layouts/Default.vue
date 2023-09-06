@@ -6,24 +6,24 @@
       </div>
       <ul class="nav-links">
         <router-link to="/adminn">
-        <li
-          v-if="
-            $auth.isAuthenticated &&
-            $auth.user.email == 'ikerpires407@gmail.com'
-          "
-        >
-          Admin
-        </li>
-      </router-link>
+          <li
+            v-if="
+              $auth.isAuthenticated &&
+              $auth.user.email == 'ikerpires407@gmail.com'
+            "
+          >
+            Admin
+          </li>
+        </router-link>
         <router-link to="/"><li>Home</li></router-link>
         <router-link to="/contato"><li>Contato</li></router-link>
         <router-link to="/comodoar"><li>Como Doar</li></router-link>
         <router-link to="/perfil"><li>Perfil</li></router-link>
         <a v-if="!$auth.isAuthenticated" @click="login" class="button is-dark"
-          ><strong>Entrar</strong></a
+          ><strong class="auth-btn">Fazer Login</strong></a
         >
         <a v-if="$auth.isAuthenticated" @click="logout" class="button is-dark"
-          ><strong>Sair</strong></a
+          ><strong class="auth-btn">Sair</strong></a
         >
       </ul>
       <div class="burguer">
@@ -64,31 +64,26 @@ export default {
   margin: 0;
 }
 
-ul li:hover {
-  background-color: #621200;
+.v-application a {
   color: #fff6ee;
 }
-
-.v-application a {
-  color: #621200;
-}
 .fundo {
-  background-image: linear-gradient(120deg, #621200, #7c3403);
+  background-color: #fff6ee;
 }
 .conta {
   padding: auto 9px;
-  color: #621200;
+  color: #fff6ee;
 }
 
 .v-list-item__content {
-  color: #621200;
+  color: #fff6ee;
 }
 .v-list-item__icon {
-  color: #621200;
+  color: #fff6ee;
 }
 
 .menu {
-  color: #621200;
+  color: #fff6ee;
   display: inline;
   margin: 10px;
   padding: 0px;
@@ -101,12 +96,13 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh;
-  background-color: #fff6ee;
+  min-height: 10vh;
+  background-color: #743d31;
 }
 .logo {
-  color: #621200;
+  color: #fff6ee;
   text-transform: uppercase;
+
   letter-spacing: 5px;
   font-size: 20px;
 }
@@ -117,12 +113,13 @@ nav {
 }
 .nav-links a,
 li {
-  color: #621200;
+  color: #fff6ee;
   font-family: "Proxima Nova", system-ui, sans-serif;
   text-decoration: none;
-  letter-spacing: 3px;
+  letter-spacing: 0px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
 .nav-links li {
@@ -177,5 +174,16 @@ li {
   .dropdown:hover .dropdown-content {
     display: block;
   }
+}
+
+.auth-btn {
+  color: #743d31;
+  background-color: #fff6ee;
+  padding: 5px 20px;
+  border-radius: 1000px;
+}
+
+.auth-btn:hover {
+  background-color: #ffffff;
 }
 </style>

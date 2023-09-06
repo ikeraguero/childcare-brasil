@@ -1,45 +1,34 @@
 <template>
-  <div class="pa-8 px-0" fluid>
-    <h1 class="h1"></h1>
-    <v-row>
-      <v-col cols="5">
-        <mosaico class="mt-4 ml-3" />
-      </v-col>
-      <v-col>
-        <p class="slogan mt-24">Faça sua doação para</p>
-        <br /><br />
-        <div class="d-flex justify-space-around mt-20 ml-8">
-          <v-btn icon min-width="200" link to="/criancas">
-            <v-img
-              class="posicao"
-              max-height="300px"
-              max-width="350px"
-              src="@/assets/imagens/1a.png"
-            >
-            </v-img>
-          </v-btn>
-          <v-btn icon min-width="200" link to="/escolas">
-            <v-img
-              class="posicao"
-              max-height="300"
-              max-width="350"
-              src="@/assets/imagens/2a.png"
-            >
-            </v-img>
-          </v-btn>
+  <article>
+    <header class="header-2">
+      <div>
+        <v-row>
+          <v-col cols="10">
+            <mosaico class="mt-4 ml-3" />
+          </v-col>
+        </v-row>
+      </div>
+      <div class="header-text">
+        <h1 class="header-title">
+          Realize uma doação e nos ajude a mudar a vida de milhares de crianças!
+        </h1>
+        <h2 class="header-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor
+          massa id neque aliquam. Sed faucibus turpis in eu mi bibendum neque
+          egestas
+        </h2>
+        <div class="header-btns">
+          <router-link to="/criancas" class="donation-btn"
+            >Doe para Crianças</router-link
+          >
+          <router-link to="/escolas" class="donation-btn"
+            >Doe para Escolas</router-link
+          >
         </div>
-        <br />
-        <div
-          class="d-flex justify-space-around mt-16 text-3xl font-bold ml-7"
-          height="100"
-        >
-          <h1>Crianças</h1>
-          <h1>Escolas</h1>
-        </div>
-      </v-col>
-      <br />
-    </v-row>
-    <p></p>
+      </div>
+    </header>
+
     <section class="counters mt-20">
       <div class="boxtwo rounded-sm">
         <v-row class="counter-text" justify="center">CONTADOR</v-row>
@@ -60,7 +49,7 @@
         <h1 class="title-rest"></h1>
       </v-col>
     </v-row>
-  </div>
+  </article>
 </template>
 
 <script>
@@ -109,18 +98,6 @@ body,
 h1,
 .slogan {
   color: #fff6ee;
-}
-
-header {
-  flex: 1;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-header h1 {
-  font-size: 60px;
 }
 
 .counters {
@@ -223,5 +200,48 @@ h1 {
 .v-btn {
   position: relative;
   margin: 0;
+}
+
+.header-title,
+.header-description {
+  color: rgb(92, 92, 92);
+}
+
+.header-title {
+  line-height: 1;
+  font-size: 48px;
+  letter-spacing: -3px;
+}
+
+.header-description {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.header-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  align-items: center;
+  min-height: 0px;
+}
+
+.header-btns {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.donation-btn:hover {
+  background-color: #855348;
+}
+
+.donation-btn {
+  background-color: #743d31;
+  font-size: 15px;
+  padding: 15px 13px;
+  border-radius: 1000px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 </style>
