@@ -10,7 +10,8 @@
       </div>
       <div class="header-text">
         <h1 class="header-title">
-          Realize uma doação e nos ajude a mudar a vida de milhares de crianças!
+          Realize uma doação e nos ajude a mudar a vida de milhares de crianças
+          brasileiras!
         </h1>
         <h2 class="header-description">
           Doe agora para as nossas escolas e crianças registradas
@@ -116,7 +117,9 @@
           desenvolvem, como elas crescem, como são educadas. No Brasil e no
           mundo faltam recursos para que essas crianças sejam educadas da
           maneira devida e é por essa razão que eu doo.”
-          <p class="mt-6 font-bold">- Yasmim Bernardi</p>
+          <p class="mt-6 font-bold">
+            - Yasmim Bernardi, co-fundadora do Childcare Brasil
+          </p>
         </div>
       </section>
     </div>
@@ -145,54 +148,10 @@ export default {
 </script>
 
 <style>
-.counters,
-.counter-text,
-.counter {
-  color: #621200;
-}
-
-.slogan,
-.counter-text,
-h1 {
-  font-family: "Proxima Nova", system-ui, sans-serif;
-}
-
-.box,
-.boxtwo {
-  display: flex;
-  background-color: #fff6ee;
-  width: 100%;
-  align-content: center;
-}
-
 body,
 h1,
 .slogan {
   color: #fff6ee;
-}
-
-.counters {
-  background: #fff6ee;
-  padding: 40px 20px;
-  margin: 0px;
-  border-top: 3px #621200, solid;
-}
-
-.counters .container {
-  display: flex;
-  margin: 0px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 25px;
-  text-align: center;
-}
-
-.counters i {
-  color: lightskyblue;
-  margin-bottom: 5px;
-}
-
-.counters .counter {
-  font-size: 55px;
 }
 
 @media (max-width: 700px) {
@@ -213,59 +172,12 @@ body {
   /* Push to bottom */
 }
 
-.posicao {
-  display: inline-block;
-}
-
-.slogan {
-  text-align: center;
-  font-size: 40px;
-}
-
-.counter-text {
-  text-align: center;
-  font-size: 40px;
-  min-height: 20px;
-  margin-top: 20px;
-}
-
 h1 {
   font-size: 30px;
 }
 
-.title-rest {
-  text-align: center;
-}
-.box {
-  padding: 35px;
-}
-.boxtwo {
-  margin-top: 5px;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 10px;
-}
-.counter {
-  margin-top: 10px;
-  font-size: 100px;
-  text-align: center;
-}
-.bottom {
-  font-size: 25px;
-  text-align: center;
-  height: 20px;
-  padding: 0px;
-}
-
 * {
   box-sizing: border-box;
-}
-
-.counter-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 30px 50px;
 }
 
 .v-btn {
@@ -292,8 +204,8 @@ h1 {
 
 .header-2 {
   display: grid;
+  padding: 50px;
   grid-template-columns: 1fr 1fr;
-  column-gap: 10px;
   align-items: center;
   min-height: 0px;
 }
@@ -322,7 +234,7 @@ h1 {
   margin-left: 15px;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 30px;
-  margin-top: 90px;
+  margin-top: 50px;
   margin-bottom: 80px;
 }
 
