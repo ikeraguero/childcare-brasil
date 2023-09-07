@@ -157,6 +157,10 @@ export default {
   background-color: #743d31;
   border-radius: 1000px;
 }
+
+.btn:hover {
+  background-color: #855348;
+}
 .rounded-t-lg {
   width: 388px;
 }

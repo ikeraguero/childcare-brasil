@@ -280,4 +280,8 @@ h1 {
   margin: 0 auto;
   width: 90%;
 }
+
+svg {
+  margin-bottom: 10px;
+}
 </style>
