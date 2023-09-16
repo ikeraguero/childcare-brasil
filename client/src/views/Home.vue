@@ -113,11 +113,13 @@
           />
         </div>
         <div class="blockquote">
-          “E eu tenho uma preocupação muito grande com as crianças, como elas se
-          desenvolvem, como elas crescem, como são educadas. No Brasil e no
-          mundo faltam recursos para que essas crianças sejam educadas da
-          maneira devida e é por essa razão que eu doo.”
-          <p class="mt-6 font-bold">
+          <div class="quote-text font-bold">
+            “E eu tenho uma preocupação muito grande com as crianças, como elas
+            se desenvolvem, como elas crescem, como são educadas. No Brasil e no
+            mundo faltam recursos para que essas crianças sejam educadas da
+            maneira devida e é por essa razão que eu doo.”
+          </div>
+          <p class="mt-6">
             - Yasmim Bernardi, co-fundadora do Childcare Brasil
           </p>
         </div>
@@ -198,7 +200,7 @@ h1 {
 }
 
 .header-description {
-  margin-top: 20px;
+  margin-top: 15px;
   font-size: 20px;
 }
 
@@ -213,7 +215,7 @@ h1 {
 .header-btns {
   display: flex;
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .donation-btn:hover {
@@ -224,7 +226,7 @@ h1 {
   background-color: #743d31;
   font-size: 15px;
   padding: 15px 13px;
-  border-radius: 1000px;
+  border-radius: 15px;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -234,18 +236,18 @@ h1 {
   margin-left: 15px;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 30px;
-  margin-top: 50px;
-  margin-bottom: 80px;
+  margin-top: 86px;
+  margin-bottom: 86px;
 }
 
 .feature-title {
-  font-size: 22px;
+  font-size: 24px;
   letter-spacing: -0.7px;
 }
 
 .feature-text {
-  margin-top: 15px;
-  font-size: 15px;
+  margin-top: 10px;
+  font-size: 18px;
   line-height: 22px;
 }
 
@@ -255,7 +257,7 @@ h1 {
 
 .blockquote {
   color: #fff6ee;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .quote-section {
