@@ -26,4 +26,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+v-img {
+  z-index: 999;
+}
+</style>

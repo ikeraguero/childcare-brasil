@@ -10,11 +10,10 @@
       </div>
       <div class="header-text">
         <h1 class="header-title">
-          Realize uma doação e nos ajude a mudar a vida de milhares de crianças
-          brasileiras!
+          Nos ajude a mudar a vida de milhares de crianças brasileiras!
         </h1>
         <h2 class="header-description">
-          Doe agora para as nossas escolas e crianças registradas
+          Doe agora para as nossas escolas e crianças registradas.
         </h2>
         <div class="header-btns">
           <router-link to="/criancas" class="donation-btn"
@@ -195,8 +194,9 @@ h1 {
 
 .header-title {
   line-height: 1;
-  font-size: 48px;
+  font-size: 4.8rem;
   letter-spacing: -3px;
+  font-weight: 500;
 }
 
 .header-description {
@@ -206,10 +206,12 @@ h1 {
 
 .header-2 {
   display: grid;
-  padding: 50px;
+  padding: 1.2rem 4.8rem;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   min-height: 0px;
+  gap: -2.8rem;
+  max-width: 130rem;
 }
 
 .header-btns {

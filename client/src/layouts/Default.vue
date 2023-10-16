@@ -1,8 +1,14 @@
 <template>
   <v-app>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rubik:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <nav>
-      <div class="logo">
-        <router-link to="/"><h4>Childcare Brasil</h4></router-link>
+      <div>
+        <router-link to="/"><h1 class="logo">Childcare Brasil</h1></router-link>
       </div>
       <ul class="nav-links">
         <router-link to="/adminn">
@@ -20,7 +26,7 @@
         <router-link to="/comodoar"><li>Como Doar</li></router-link>
         <router-link to="/perfil"><li>Perfil</li></router-link>
         <a v-if="!$auth.isAuthenticated" @click="login" class="button is-dark"
-          ><strong class="auth-btn">Fazer Login</strong></a
+          ><strong class="auth-btn">Começe a doar</strong></a
         >
         <a v-if="$auth.isAuthenticated" @click="logout" class="button is-dark"
           ><strong class="auth-btn">Sair</strong></a
@@ -62,11 +68,23 @@ export default {
 <style>
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Rubik", sans-serif;
 }
 
 .v-application a {
   color: #fff6ee;
 }
+
+.v-application {
+  font-family: "Rubik", sans-serif;
+}
+
 .fundo {
   background-color: #fff6ee;
 }
@@ -97,10 +115,10 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
-  background-color: #743d31;
+  background-color: #fff6ee;
 }
 .logo {
-  color: #fff6ee;
+  color: #743d31;
   text-transform: uppercase;
 
   letter-spacing: 5px;
@@ -113,14 +131,12 @@ nav {
 }
 .nav-links a,
 li {
-  color: #fff6ee;
-
+  color: #333;
   font-family: "Proxima Nova", system-ui, sans-serif;
   text-decoration: none;
-  letter-spacing: 0px;
+  letter-spacing: 0.1rem;
   font-weight: bold;
-  font-size: 14px;
-  text-transform: uppercase;
+  font-size: 1.8rem;
 }
 
 .nav-links li {
@@ -178,10 +194,10 @@ li {
 }
 
 .auth-btn {
-  color: #743d31;
-  background-color: #fff6ee;
-  padding: 5px 20px;
-  border-radius: 1000px;
+  color: #fff6ee;
+  background-color: #743d31;
+  padding: 1.2rem 3.2rem;
+  border-radius: 9px;
 }
 
 .auth-btn:hover {
