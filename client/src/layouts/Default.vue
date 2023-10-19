@@ -112,9 +112,10 @@ html {
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 4.8rem;
   align-items: center;
-  min-height: 10vh;
+  height: 9.6rem;
   background-color: #fff6ee;
 }
 .logo {
