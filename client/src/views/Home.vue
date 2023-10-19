@@ -17,11 +17,9 @@
         </h2>
         <div class="header-btns">
           <router-link to="/criancas" class="donation-btn"
-            >Doe para Crianças</router-link
+            >Crianças</router-link
           >
-          <router-link to="/escolas" class="donation-btn"
-            >Doe para Escolas</router-link
-          >
+          <router-link to="/escolas" class="donation-btn">Escolas</router-link>
         </div>
         <div class="donations-made">
           <div class="donators-images">
@@ -253,7 +251,7 @@ h1 {
 
 .header-btns {
   display: flex;
-  gap: 20px;
+  gap: 8px;
   margin-top: 25px;
 }
 
@@ -264,10 +262,9 @@ h1 {
 .donation-btn {
   background-color: #743d31;
   font-size: 15px;
-  padding: 15px 13px;
-  border-radius: 15px;
+  padding: 8px 32px;
+  border-radius: 9px;
   font-weight: bold;
-  text-transform: uppercase;
 }
 
 .features-container {
