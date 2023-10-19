@@ -23,6 +23,43 @@
             >Doe para Escolas</router-link
           >
         </div>
+        <div class="donations-made">
+          <div class="donators-images">
+            <img
+              src="../assets/imagens/1.jpg"
+              alt="Donator 1"
+              class="donator-img"
+            />
+            <img
+              src="../assets/imagens/2.jpg"
+              alt="Donator 2"
+              class="donator-img"
+            />
+            <img
+              src="../assets/imagens/3.jpg"
+              alt="Donator 3"
+              class="donator-img"
+            />
+            <img
+              src="../assets/imagens/4.jpg"
+              alt="Donator 4"
+              class="donator-img"
+            />
+            <img
+              src="../assets/imagens/5.jpg"
+              alt="Donator 5"
+              class="donator-img"
+            />
+            <img
+              src="../assets/imagens/6.jpg"
+              alt="Donator 6"
+              class="donator-img"
+            />
+          </div>
+          <div class="donators-text">
+            <span>R$500.000+</span> em doações no último ano!
+          </div>
+        </div>
       </div>
     </header>
     <div class="sections">
@@ -287,5 +324,36 @@ h1 {
 
 svg {
   margin-bottom: 10px;
+}
+
+.donators-images,
+.donations-made {
+  display: flex;
+}
+
+.donator-img {
+  width: 5.4rem;
+  border-radius: 50%;
+  border: solid 3px #fff6ee;
+}
+
+.donator-img:not(:first-child) {
+  margin-left: -1.2rem;
+}
+
+.donations-made {
+  align-items: center;
+  gap: 1.8rem;
+  padding-top: 4.8rem;
+}
+
+.donators-text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: -0.7px;
+}
+
+.donators-text span {
+  color: #621200;
 }
 </style>

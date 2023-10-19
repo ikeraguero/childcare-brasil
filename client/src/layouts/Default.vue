@@ -26,7 +26,7 @@
         <router-link to="/comodoar"><li>Como Doar</li></router-link>
         <router-link to="/perfil"><li>Perfil</li></router-link>
         <a v-if="!$auth.isAuthenticated" @click="login" class="button is-dark"
-          ><strong class="auth-btn">Começe a doar</strong></a
+          ><strong class="auth-btn">Comece a doar</strong></a
         >
         <a v-if="$auth.isAuthenticated" @click="logout" class="button is-dark"
           ><strong class="auth-btn">Sair</strong></a
