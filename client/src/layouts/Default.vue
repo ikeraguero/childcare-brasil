@@ -13,6 +13,7 @@
       <ul class="nav-links">
         <router-link to="/adminn">
           <li
+            class="nav-item"
             v-if="
               $auth.isAuthenticated &&
               $auth.user.email == 'ikerpires407@gmail.com'
@@ -21,10 +22,14 @@
             Admin
           </li>
         </router-link>
-        <router-link to="/"><li>Início</li></router-link>
-        <router-link to="/contato"><li>Contato</li></router-link>
-        <router-link to="/comodoar"><li>Como Doar</li></router-link>
-        <router-link to="/perfil"><li>Perfil</li></router-link>
+        <router-link to="/"><li class="nav-item">Início</li></router-link>
+        <router-link to="/contato"
+          ><li class="nav-item">Contato</li></router-link
+        >
+        <router-link to="/comodoar"
+          ><li class="nav-item">Como Doar</li></router-link
+        >
+        <router-link to="/perfil"><li class="nav-item">Perfil</li></router-link>
         <a v-if="!$auth.isAuthenticated" @click="login" class="button is-dark"
           ><strong class="auth-btn">Comece a doar</strong></a
         >
@@ -202,6 +207,11 @@ li {
 }
 
 .auth-btn:hover {
-  background-color: #ffffff;
+  background-color: #855348;
+}
+
+.nav-item:hover,
+.nav-item:active {
+  color: #743d31;
 }
 </style>

@@ -224,18 +224,18 @@ h1 {
 .header-title,
 .header-description,
 .features-container {
-  color: #343a40;
+  color: #333;
 }
 
 .header-title {
   line-height: 1;
-  font-size: 4.8rem;
+  font-size: 5.2rem;
   letter-spacing: -3px;
   font-weight: 500;
 }
 
 .header-description {
-  margin-top: 15px;
+  margin-top: 1.4rem;
   font-size: 20px;
 }
 
@@ -252,7 +252,7 @@ h1 {
 .header-btns {
   display: flex;
   gap: 8px;
-  margin-top: 25px;
+  margin-top: 2.4rem;
 }
 
 .donation-btn:hover {
@@ -261,10 +261,10 @@ h1 {
 
 .donation-btn {
   background-color: #743d31;
-  font-size: 15px;
+  font-size: 1.8rem;
   padding: 8px 32px;
   border-radius: 9px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .features-container {
@@ -341,7 +341,7 @@ svg {
 .donations-made {
   align-items: center;
   gap: 1.8rem;
-  padding-top: 4.8rem;
+  padding-top: 3.2rem;
 }
 
 .donators-text {
