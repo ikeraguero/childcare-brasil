@@ -62,72 +62,34 @@
     </header>
     <div class="sections">
       <section>
+        <div class="section-header">
+          <span class="section-title">DOAR</span>
+          <span class="section-subtitle">Doe agora mesmo!</span>
+        </div>
         <div class="features-container">
           <div class="feature-box">
             <strong class="feature-title"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="feature-icon w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-                />
-              </svg>
+              ><ion-icon name="heart-outline" class="feature-icon"></ion-icon>
               Fazendo o bem</strong
             >
             <p class="feature-text">
-              Doe agora mesmo para nossas escolas e crianças e se sinta bem
-              consigo mesmo por ajudar uma causa tão importante.
+              Comece a doar e tenha a certeza de ajudar uma causa extremamente importante em todo o país.
             </p>
           </div>
 
           <div class="feature-box">
             <strong class="feature-title"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="feature-icon w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
+              ><ion-icon name="cash-outline" class="feature-icon"></ion-icon>
               Honestidade com seu dinheiro</strong
             >
             <p class="feature-text">
-              Somos uma organização que não visa o lucro, portanto, doe e tenha
-              a consciência que 100% do seu dinheiro será destinado a escola ou
-              criança escolhida por você!
+              Não visamos lucros, 100% do seu dinheiro é destinado à escola ou criança escolhida por você!
             </p>
           </div>
 
           <div class="feature-box">
             <strong class="feature-title">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="feature-icon w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"
-                />
-              </svg>
+              <ion-icon name="stats-chart-outline" class="feature-icon"></ion-icon>
               Contador de doações</strong
             >
             <p class="feature-text">
@@ -137,6 +99,13 @@
             </p>
           </div>
         </div>
+      </section>
+      <div class="section-header">
+          <span class="section-title">DOADORES</span>
+          <span class="section-subtitle">Depoimentos de quem faz o bem</span>
+        </div>
+      <section>
+        
       </section>
       <section class="quote-section">
         <div class="imagequote">
@@ -160,6 +129,7 @@
       </section>
     </div>
   </article>
+  
 </template>
 
 <script>
@@ -182,6 +152,7 @@ export default {
   },
 };
 </script>
+
 
 <style>
 body,
@@ -241,12 +212,13 @@ h1 {
 
 .header-2 {
   display: grid;
-  padding: 1.2rem 4.8rem;
+  padding: 1.2rem 4.8rem 6.4rem 4.8rem;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   min-height: 0px;
   gap: -2.8rem;
   max-width: 130rem;
+  background-color: #fff6ee;
 }
 
 .header-btns {
@@ -271,10 +243,11 @@ h1 {
   display: grid;
   margin-left: 15px;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 30px;
-  margin-top: 86px;
-  margin-bottom: 86px;
+  column-gap: 4.8rem;
+  margin-top: 7.8rem;
+  margin-bottom: 9.6rem
 }
+
 
 .feature-title {
   font-size: 24px;
@@ -284,11 +257,19 @@ h1 {
 .feature-text {
   margin-top: 10px;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1.8;
+  color: #555;
 }
 
 .feature-icon {
-  stroke: #743d31;
+  color: #743d31;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: #fff6ee;
+  border-radius: 50%;
+  display: block;
+  padding: 1.6rem;
+  margin-bottom: 1.2rem;
 }
 
 .blockquote {
@@ -352,5 +333,32 @@ svg {
 
 .donators-text span {
   color: #621200;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  color: #743d31;
+  font-size: 1.4rem;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+}
+
+.section-subtitle {
+  color: #333;
+  font-size: 3.6rem;
+  letter-spacing: 0.4px;
+  font-weight: 700;
+}
+
+section:nth-child(2) {
+  padding-top: 10.8rem;
+}
+
+section {
+  margin-top: 8.4rem;
 }
 </style>

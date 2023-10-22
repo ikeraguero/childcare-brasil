@@ -91,7 +91,7 @@ html {
 }
 
 .fundo {
-  background-color: #fff6ee;
+  background-color: #fff;
 }
 .conta {
   padding: auto 9px;
