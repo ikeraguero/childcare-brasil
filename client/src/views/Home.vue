@@ -104,28 +104,17 @@
           <span class="section-title">DOADORES</span>
           <span class="section-subtitle">Depoimentos de quem faz o bem</span>
         </div>
-      <section>
+      <section class="testimonials-section">
+          <div class="quote-photo"><img src="../assets/imagens/1.jpg" alt="" class="quote-donator-img"></div>
+          <div class="quote-text"><blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore corporis tenetur sunt nihil illum vero, perspiciatis iure exercitationem voluptate ex animi architecto sequi eligendi. Dignissimos tempore recusandae modi nulla voluptatibus.</blockquote></div>
         
-      </section>
-      <section class="quote-section">
-        <div class="imagequote">
-          <img
-            src="../assets/imagens/Screenshot from 2023-09-06 13-15-40.png"
-            alt=""
-            class="img-quote"
-          />
-        </div>
-        <div class="blockquote">
-          <div class="quote-text font-bold">
-            “E eu tenho uma preocupação muito grande com as crianças, como elas
-            se desenvolvem, como elas crescem, como são educadas. No Brasil e no
-            mundo faltam recursos para que essas crianças sejam educadas da
-            maneira devida e é por essa razão que eu doo.”
-          </div>
-          <p class="mt-6">
-            - Yasmim Bernardi, co-fundadora do Childcare Brasil
-          </p>
-        </div>
+          <div class="quote-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eius ab facere veniam accusamus dolore. Dolorum fugit voluptates quisquam provident veniam, commodi molestiae perferendis debitis, odio nihil voluptate esse quod.</div>
+          <div class="quote-photo"><img src="../assets/imagens/1.jpg" alt="" class="quote-donator-img"></div>
+        
+        
+          <div class="quote-photo"><img src="../assets/imagens/1.jpg" alt="" class="quote-donator-img"></div>
+          <div class="quote-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, atque dolor fugiat corrupti ipsa, nesciunt consequuntur aliquid optio doloremque natus commodi architecto? Natus voluptas maxime, praesentium possimus et ipsa asperiores?</div>
+        
       </section>
     </div>
   </article>
@@ -361,4 +350,28 @@ section:nth-child(2) {
 section {
   margin-top: 8.4rem;
 }
+
+
+.testimonials-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  row-gap: 6.4rem;
+  align-items: center;
+  }
+
+  .quote-text {
+    grid-column: span 2;
+    font-size: 1.6em;
+  }
+  .quote-photo {
+    justify-self: center;
+  }
+
+  .quote-photo img {
+    width: 14.8rem;
+    border-radius: 50%;
+    border: 4px #743d31 solid;
+  }
+
 </style>
