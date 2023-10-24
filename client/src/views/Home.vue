@@ -116,6 +116,7 @@
           <div class="quote-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, atque dolor fugiat corrupti ipsa, nesciunt consequuntur aliquid optio doloremque natus commodi architecto? Natus voluptas maxime, praesentium possimus et ipsa asperiores?</div>
         
       </section>
+      <section class="cta"></section>
     </div>
   </article>
   
