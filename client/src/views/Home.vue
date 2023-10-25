@@ -116,7 +116,37 @@
           <div class="quote-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, atque dolor fugiat corrupti ipsa, nesciunt consequuntur aliquid optio doloremque natus commodi architecto? Natus voluptas maxime, praesentium possimus et ipsa asperiores?</div>
         
       </section>
-      <section class="cta"></section>
+      <section class="cta">
+        <div class="cta-container grid grid--3-cols">
+          <div class="text-box">
+            <h2>Registre crianças e escolas!</h2>
+            <p>Preencha as informações abaixo caso seja representante de uma escola e possua alunos que deseja inserir em nosso sistema para doações. </p>
+            <form action="">
+              <div class="name">
+                <label for="full-name">Qual o seu nome completo?</label>
+                <input type="text" placeholder="João da Silva" id="full-name">
+              </div>
+              <div class="email">
+                <label for="email">Qual o seu email?</label>
+                <input type="text" placeholder="eu@exemplo.com" id="email">
+              </div>
+              <div class="heard-of-us">
+                <label for="">Aonde ouviu falar de nós?</label>
+                <select name="" id="">
+                <option value="Youtube">Youtube</option>
+                <option value="Youtube"></option>
+                <option value="Youtube"></option>
+                <option value="Youtube"></option>
+                <option value="Youtube"></option>
+              </select>
+              </div>
+            </form>
+          </div>
+          <div class="img-box">
+            <img src="../assets/imagens/2.jpg" alt="">
+          </div>
+        </div>
+      </section>
     </div>
   </article>
   
@@ -168,6 +198,15 @@ body {
     url("https://i.pinimg.com/originals/3c/24/46/3c24462450c2a902bf7e18f3d9aada81.jpg");
   /* Push to bottom */
 }
+
+.grid {
+  display: grid;
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 
 h1 {
   font-size: 30px;
@@ -373,6 +412,10 @@ section {
     width: 14.8rem;
     border-radius: 50%;
     border: 4px #743d31 solid;
+  }
+
+  .text-box {
+    grid-column: span 2;
   }
 
 </style>
