@@ -119,31 +119,32 @@
       <section class="cta">
         <div class="cta-container grid grid--3-cols">
           <div class="text-box">
-            <h2>Registre crianças e escolas!</h2>
-            <p>Preencha as informações abaixo caso seja representante de uma escola e possua alunos que deseja inserir em nosso sistema para doações. </p>
-            <form action="">
-              <div class="name">
+            <h2 class="cta-title">Registre crianças e escolas!</h2>
+            <p class="cta-subtitle">Preencha as informações abaixo caso seja representante de uma escola e possua alunos que deseja inserir em nosso sistema para doações. </p>
+            <form action="" class="grid grid--2-cols">
+              <div class="cta-form-grid-item">
                 <label for="full-name">Qual o seu nome completo?</label>
                 <input type="text" placeholder="João da Silva" id="full-name">
               </div>
-              <div class="email">
+              <div class="cta-form-grid-item">
                 <label for="email">Qual o seu email?</label>
                 <input type="text" placeholder="eu@exemplo.com" id="email">
               </div>
-              <div class="heard-of-us">
+              <div class="cta-form-grid-item">
                 <label for="">Aonde ouviu falar de nós?</label>
                 <select name="" id="">
                 <option value="Youtube">Youtube</option>
-                <option value="Youtube"></option>
-                <option value="Youtube"></option>
-                <option value="Youtube"></option>
-                <option value="Youtube"></option>
+                <option value="Instagram">Instagram</option>
+                <option value="Twitter">Twitter/X</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Others">Outros</option>
               </select>
               </div>
+              <button class="cta-button">Enviar os dados</button>
             </form>
           </div>
           <div class="img-box">
-            <img src="../assets/imagens/2.jpg" alt="">
+            <img src="../assets/imagens/cta-photo.jpeg" alt="" class="cta-img">
           </div>
         </div>
       </section>
@@ -201,6 +202,10 @@ body {
 
 .grid {
   display: grid;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .grid--3-cols {
@@ -417,5 +422,62 @@ section {
   .text-box {
     grid-column: span 2;
   }
+
+  .cta-container {
+    background-color: #743d31;
+    border-radius: 9px;
+  }
+
+  .img-box {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .cta-img {
+    width: 90%;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    
+  }
+
+  .cta-title {
+    font-size: 4.4rem;
+    font-weight: 500;
+  }
+
+  .cta-subtitle {
+    font-size: 1.8rem;
+  }
+
+  .cta-form-grid-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cta-form-grid-item label {
+    font-size: 1.6rem;
+  }
+
+  form {
+    gap: 2.4rem;
+  }
+
+  form input, form select {
+    background-color: #fff6ee;
+    padding: 1.2rem 1.2rem;
+    font-size: 1.8rem;
+  }
+
+  .cta-button {
+    background-color: #fff6ee;
+    display: inline-block;
+    text-decoration: none;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  
+
+
 
 </style>
