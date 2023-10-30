@@ -421,11 +421,13 @@ section {
 
   .text-box {
     grid-column: span 2;
+    padding: 4.8rem 3.6rem 3.6rem 3.6rem;
   }
 
   .cta-container {
     background-color: #743d31;
     border-radius: 9px;
+    font-family: inherit;
   }
 
   .img-box {
@@ -442,14 +444,16 @@ section {
 
   .cta-title {
     font-size: 4.4rem;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .cta-subtitle {
+    margin-top: 1.2rem;
     font-size: 1.8rem;
   }
 
   .cta-form-grid-item {
+    margin-top: 2.4rem;
     display: flex;
     flex-direction: column;
   }
@@ -459,21 +463,26 @@ section {
   }
 
   form {
-    gap: 2.4rem;
+    column-gap: 2.4rem;
+    row-gap: 1.2rem;
   }
 
-  form input, form select {
+  form input, form select, .cta-button {
     background-color: #fff6ee;
     padding: 1.2rem 1.2rem;
     font-size: 1.8rem;
+    border-radius: 9px;
+    margin-top: 0.8rem;
   }
 
   .cta-button {
     background-color: #fff6ee;
-    display: inline-block;
+    display: block;
     text-decoration: none;
+    border-radius: 9px;
     min-width: 0;
-    min-height: 0;
+    min-height: 5.2rem;
+    align-self: flex-end;
   }
 
   
