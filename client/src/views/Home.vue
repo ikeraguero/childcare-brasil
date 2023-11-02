@@ -149,7 +149,11 @@
         </div>
       </section>
       <footer class="footer">
-
+        <div class="logo">Logo</div>
+        <div class="colum">Contato</div>
+        <div class="colum">Conta</div>
+        <div class="colum">Empresa</div>
+        <div class="colum">Recursos</div>
       </footer>
     </div>
   </article>
