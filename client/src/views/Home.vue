@@ -150,10 +150,37 @@
       </section>
       <footer class="footer">
         <div class="logo">Logo</div>
-        <div class="colum">Contato</div>
-        <div class="colum">Conta</div>
-        <div class="colum">Empresa</div>
-        <div class="colum">Recursos</div>
+        <div class="colum">
+          <span class="column-footer-title">Contato</span>
+          <p>Rua Dona Cezarina, 101, Joinville, Santa Catarina</p>
+          <p>(47) 99963-2311</p>
+          <p>childcarebrasil@gmail.com</p>
+        </div>
+        <div class="colum">
+          <span class="column-footer-title">Conta</span>
+          <ul>
+            <li>Criar uma conta</li>
+            <li>Fazer Log In</li>
+            <li>iOS</li>
+            <li>Android</li>
+          </ul>
+        </div>
+        <div class="colum">
+          <span class="column-footer-title">Empresa</span>
+          <ul>
+            <li>Sobre ChildcareBrasil</li>
+            <li>Para Negócios</li>
+            <li>Parceiros</li>
+          </ul>
+        </div>
+        <div class="colum">
+          <span class="column-footer-title">Recursos</span>
+          <ul>
+            <li>Doações</li>
+            <li>Central de Ajuda</li>
+            <li>Termos de privacidade</li>
+          </ul>
+        </div>
       </footer>
     </div>
   </article>
