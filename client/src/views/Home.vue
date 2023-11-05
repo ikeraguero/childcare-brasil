@@ -148,34 +148,43 @@
           </div>
         </div>
       </section>
-      <footer class="footer">
-        <div class="logo">Logo</div>
-        <div class="colum">
-          <span class="column-footer-title">Contato</span>
-          <p>Rua Dona Cezarina, 101, Joinville, Santa Catarina</p>
-          <p>(47) 99963-2311</p>
-          <p>childcarebrasil@gmail.com</p>
+      <footer class="footer-section grid grid--5-cols">
+        <div class="column">
+          <span class="logo-footer">CHILDCARE BRASIL</span>
+          <div class="social-media-icons">
+            <a href="#"><ion-icon name="logo-facebook" class="footer-icons"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram" class="footer-icons"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter" class="footer-icons"></ion-icon></a>
+          </div>
         </div>
-        <div class="colum">
+        <div class="column">
+          <span class="column-footer-title">Contato</span>
+          <div class="contact-info">
+            <p class="address">Rua Dona Cezarina, 101, Joinville, Santa Catarina</p>
+            <p class="cellphone">(47) 99963-2311</p>
+            <p class="email">childcarebrasil@gmail.com</p>
+          </div>
+        </div>
+        <div class="column">
           <span class="column-footer-title">Conta</span>
-          <ul>
+          <ul class="footer-list">
             <li>Criar uma conta</li>
             <li>Fazer Log In</li>
             <li>iOS</li>
             <li>Android</li>
           </ul>
         </div>
-        <div class="colum">
+        <div class="column">
           <span class="column-footer-title">Empresa</span>
-          <ul>
+          <ul class="footer-list">
             <li>Sobre ChildcareBrasil</li>
             <li>Para Negócios</li>
             <li>Parceiros</li>
           </ul>
         </div>
-        <div class="colum">
+        <div class="column">
           <span class="column-footer-title">Recursos</span>
-          <ul>
+          <ul class="footer-list">
             <li>Doações</li>
             <li>Central de Ajuda</li>
             <li>Termos de privacidade</li>
@@ -244,6 +253,10 @@ body {
 
 .grid--3-cols {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 
@@ -519,8 +532,54 @@ section {
     align-self: flex-end;
   }
 
-  
+  .footer-section {
+    margin-top: 9.6rem;
+  }
 
+  .column-footer-title {
+    font-size: 1.8rem;
+    color: #111;
+    font-weight: 400;
+  }
+
+  .footer-list {
+    font-size: 1.4rem;
+    margin-top: 1.4rem;
+    list-style: none;
+    padding-left: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #555;
+  }
+
+  .logo-footer {
+  color: #743d31;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  font-size: 1.6rem
+  }
+
+  .address, .cellphone, .email {
+    font-size: 1.4rem;
+    color: #555;
+  }
+
+  .contact-info {
+    margin-top: 1.4rem;
+  }
+
+  .social-media-icons {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 3.2rem;
+  }
+
+  .footer-icons {
+    color: #555;
+    width: 2.6rem;
+    height: 2.6rem;
+  }
 
 
 </style>

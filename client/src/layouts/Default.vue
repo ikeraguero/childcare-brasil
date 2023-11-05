@@ -135,8 +135,7 @@ nav {
   justify-content: space-between;
   gap: 40px;
 }
-.nav-links a,
-li {
+.nav-links a, .nav-item {
   color: #333;
   font-family: "Proxima Nova", system-ui, sans-serif;
   text-decoration: none;
