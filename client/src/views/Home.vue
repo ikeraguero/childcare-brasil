@@ -106,14 +106,14 @@
         </div>
       <section class="testimonials-section">
           <div class="quote-photo"><img src="../assets/imagens/1.jpg" alt="" class="quote-donator-img"></div>
-          <div class="quote-text"><blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore corporis tenetur sunt nihil illum vero, perspiciatis iure exercitationem voluptate ex animi architecto sequi eligendi. Dignissimos tempore recusandae modi nulla voluptatibus.</blockquote></div>
+          <div class="quote-text"><blockquote>“E eu tenho uma preocupação muito grande com as crianças, como elas se desenvolvem, como elas crescem, como são educadas. No Brasil e no mundo faltam recursos para que essas crianças sejam educadas da maneira devida e é por essa razão que eu doo.”</blockquote></div>
         
-          <div class="quote-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eius ab facere veniam accusamus dolore. Dolorum fugit voluptates quisquam provident veniam, commodi molestiae perferendis debitis, odio nihil voluptate esse quod.</div>
+          <div class="quote-text">“Eu sou um doador e quero convidar você também para ser um novo doador. Eu faço isso porque eu acredito no trabalho, acredito que as crianças necessitam de apoio e de ajuda e eu não conheço ninguém melhor do que o Childcare Brasil para fazer esse trabalho.”</div>
           <div class="quote-photo"><img src="../assets/imagens/1.jpg" alt="" class="quote-donator-img"></div>
         
         
           <div class="quote-photo"><img src="../assets/imagens/1.jpg" alt="" class="quote-donator-img"></div>
-          <div class="quote-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, atque dolor fugiat corrupti ipsa, nesciunt consequuntur aliquid optio doloremque natus commodi architecto? Natus voluptas maxime, praesentium possimus et ipsa asperiores?</div>
+          <div class="quote-text">“Que alegria sinto em saber que muitas crianças estão sendo protegidas e alimentadas. Sinto imenso orgulho de todas as pessoas envolvidas nesta causa.”</div>
         
       </section>
       <section class="cta">
