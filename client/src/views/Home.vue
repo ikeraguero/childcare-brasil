@@ -106,14 +106,19 @@
         </div>
       <section class="testimonials-section">
           <div class="quote-photo"><img src="../assets/imagens/donator1.jpg" alt="" class="quote-donator-img"></div>
-          <div class="quote-text"><blockquote>“E eu tenho uma preocupação muito grande com as crianças, como elas se desenvolvem, como elas crescem, como são educadas. No Brasil e no mundo faltam recursos para que essas crianças sejam educadas da maneira devida e é por essa razão que eu doo.”</blockquote></div>
+          <div class="quote-text"><blockquote>“E eu tenho uma preocupação muito grande com as crianças, como elas se desenvolvem, como elas crescem, como são educadas. No Brasil e no mundo faltam recursos para que essas crianças sejam educadas da maneira devida e é por essa razão que eu doo.”</blockquote>
+            <p class="quote-author">Isabela dos Santos, doadora do Childcare Brasil</p> </div>
+          
         
-          <div class="quote-text">“Eu sou doadora e quero convidar você também para ser um novo doador. Eu faço isso porque eu acredito no trabalho, acredito que as crianças necessitam de apoio e de ajuda e eu não conheço ninguém melhor do que o Childcare Brasil para fazer esse trabalho.”</div>
+          <div class="quote-text"><blockquote>“Eu sou doadora e quero convidar você também para ser um novo doador. Eu faço isso porque eu acredito no trabalho, acredito que as crianças necessitam de apoio e de ajuda e eu não conheço ninguém melhor do que o Childcare Brasil para fazer esse trabalho.”</blockquote>
+            <p class="quote-author">Alice Moraes, doadora do Childcare Brasil</p> </div>
           <div class="quote-photo"><img src="../assets/imagens/donator2.jpg" alt="" class="quote-donator-img"></div>
+          
         
         
           <div class="quote-photo"><img src="../assets/imagens/donator3.jpg" alt="" class="quote-donator-img"></div>
-          <div class="quote-text">“Que alegria sinto em saber que muitas crianças estão sendo protegidas e alimentadas. Sinto imenso orgulho de todas as pessoas envolvidas nesta causa.”</div>
+          <div class="quote-text"><blockquote>“Que alegria sinto em saber que muitas crianças estão sendo protegidas e alimentadas. Sinto imenso orgulho de todas as pessoas envolvidas nesta causa.”</blockquote>
+            <p class="quote-author">Ricardo Rodrigues, doador do Childcare Brasil</p> </div>
         
       </section>
       <section class="cta">
@@ -447,7 +452,7 @@ section {
 .testimonials-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.8rem;
+  gap: 0.8rem;
   row-gap: 6.4rem;
   align-items: center;
   }
@@ -455,6 +460,16 @@ section {
   .quote-text {
     grid-column: span 2;
     font-size: 1.6em;
+  }
+
+  .quote-text blockquote {
+    color: #333;
+    font-size: 1.8rem;
+  }
+
+  .quote-author {
+    margin-top: 2rem;
+    color: #555555c2
   }
   .quote-photo {
     justify-self: center;
