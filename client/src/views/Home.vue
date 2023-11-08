@@ -61,7 +61,7 @@
       </div>
     </header>
     <div class="sections">
-      <section>
+      <section class="donate-section">
         <div class="section-header">
           <span class="section-title">DOAR</span>
           <span class="section-subtitle">Doe agora mesmo!</span>
@@ -105,14 +105,14 @@
           <span class="section-subtitle">Depoimentos de quem faz o bem</span>
         </div>
       <section class="testimonials-section">
-          <div class="quote-photo"><img src="../assets/imagens/1.jpg" alt="" class="quote-donator-img"></div>
+          <div class="quote-photo"><img src="../assets/imagens/donator1.jpg" alt="" class="quote-donator-img"></div>
           <div class="quote-text"><blockquote>“E eu tenho uma preocupação muito grande com as crianças, como elas se desenvolvem, como elas crescem, como são educadas. No Brasil e no mundo faltam recursos para que essas crianças sejam educadas da maneira devida e é por essa razão que eu doo.”</blockquote></div>
         
-          <div class="quote-text">“Eu sou um doador e quero convidar você também para ser um novo doador. Eu faço isso porque eu acredito no trabalho, acredito que as crianças necessitam de apoio e de ajuda e eu não conheço ninguém melhor do que o Childcare Brasil para fazer esse trabalho.”</div>
-          <div class="quote-photo"><img src="../assets/imagens/1.jpg" alt="" class="quote-donator-img"></div>
+          <div class="quote-text">“Eu sou doadora e quero convidar você também para ser um novo doador. Eu faço isso porque eu acredito no trabalho, acredito que as crianças necessitam de apoio e de ajuda e eu não conheço ninguém melhor do que o Childcare Brasil para fazer esse trabalho.”</div>
+          <div class="quote-photo"><img src="../assets/imagens/donator2.jpg" alt="" class="quote-donator-img"></div>
         
         
-          <div class="quote-photo"><img src="../assets/imagens/1.jpg" alt="" class="quote-donator-img"></div>
+          <div class="quote-photo"><img src="../assets/imagens/donator3.jpg" alt="" class="quote-donator-img"></div>
           <div class="quote-text">“Que alegria sinto em saber que muitas crianças estão sendo protegidas e alimentadas. Sinto imenso orgulho de todas as pessoas envolvidas nesta causa.”</div>
         
       </section>
