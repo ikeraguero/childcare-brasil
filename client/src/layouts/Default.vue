@@ -48,7 +48,7 @@
       <router-view></router-view>
     </v-main>
     <v-footer app class="py-1"
-      ><span class="caption">ChildcareBrasil &copy;2023</span></v-footer
+      ><span class="caption"></span></v-footer
     >
   </v-app>
 </template>
