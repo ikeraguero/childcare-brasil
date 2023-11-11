@@ -8,7 +8,7 @@
     "lint": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint"
   },
   "engines": {
-    "node": "18.18.2"
+    "node": "17.9.1"
   },
   "dependencies": {
     "@achrinza/node-ipc": "^10.1.10",
