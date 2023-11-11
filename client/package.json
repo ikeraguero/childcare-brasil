@@ -11,7 +11,6 @@
     "node": "17.9.1"
   },
   "dependencies": {
-    "@achrinza/node-ipc": "^10.1.10",
     "@auth0/auth0-spa-js": "^1.22.4",
     "@emailjs/browser": "^3.7.0",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
