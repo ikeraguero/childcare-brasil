@@ -47,8 +47,48 @@
     <v-main class="fundo">
       <router-view></router-view>
     </v-main>
-    <v-footer app class="py-1"
-      ><span class="caption"></span></v-footer
+    <footer class="container-footer footer-section footer-grid"
+      ><div class="column">
+          <span class="logo-footer">CHILDCARE BRASIL</span>
+          <div class="social-media-icons">
+            <a href="#"><ion-icon name="logo-facebook" class="footer-icons"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram" class="footer-icons"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter" class="footer-icons"></ion-icon></a>
+          </div>
+        </div>
+        <div class="column">
+          <span class="column-footer-title">Contato</span>
+          <div class="contact-info">
+            <p class="address">Rua Dona Cezarina, 101, Joinville, Santa Catarina</p>
+            <p class="cellphone">(47) 99963-2311</p>
+            <p class="email">childcarebrasil@gmail.com</p>
+          </div>
+        </div>
+        <div class="column">
+          <span class="column-footer-title">Conta</span>
+          <ul class="footer-list">
+            <li>Criar uma conta</li>
+            <li>Fazer Log In</li>
+            <li>iOS</li>
+            <li>Android</li>
+          </ul>
+        </div>
+        <div class="column">
+          <span class="column-footer-title">Empresa</span>
+          <ul class="footer-list">
+            <li>Sobre ChildcareBrasil</li>
+            <li>Para Negócios</li>
+            <li>Parceiros</li>
+          </ul>
+        </div>
+        <div class="column">
+          <span class="column-footer-title">Recursos</span>
+          <ul class="footer-list">
+            <li>Doações</li>
+            <li>Central de Ajuda</li>
+            <li>Termos de privacidade</li>
+          </ul>
+        </div></footer
     >
   </v-app>
 </template>
@@ -212,5 +252,9 @@ nav {
 .nav-item:hover,
 .nav-item:active {
   color: #743d31;
+}
+
+footer{
+ padding: 9.6rem 0
 }
 </style>

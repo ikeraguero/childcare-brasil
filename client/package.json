@@ -7,6 +7,9 @@
     "build": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
     "lint": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint"
   },
+  "engines": {
+    "node": "16.13.1"
+  },
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.22.4",
     "@emailjs/browser": "^3.7.0",
