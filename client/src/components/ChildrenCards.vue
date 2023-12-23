@@ -5,7 +5,7 @@
       id="container"
     >
       <div v-for="card in cards.data" :key="card.index">
-        <div class="px-2 m-4 snap-center max-w-max">
+        <div class="px-2 m-4 snap-center max-w-max p-6">
           <div
             class="teste rounded-lg w-96lg:w-410 overflow-hidden"
             style="overflow-wrap: anywhere"
@@ -57,39 +57,13 @@
                 <router-link
                   v-bind:to="'/criancas/doar/' + card.id"
                   type="button"
-                  class="
-                    btn
-                    inline-block
-                    px-6
-                    py-2.5
-                    ml-3
-                    bg-white
-                    cursor-pointer
-                    font-semibold
-                    text-xs
-                    leading-tight
-                    uppercase
-                    shadow-md
-                  "
+                  class="btn inline-block px-6 py-2.5 ml-3 bg-white cursor-pointer font-semibold text-xs leading-tight uppercase shadow-md"
                   >Doar</router-link
                 >
                 <router-link
                   v-bind:to="'/criancas/perfil/' + card.id"
                   type="button"
-                  class="
-                    btn
-                    inline-block
-                    px-6
-                    py-2.5
-                    ml-3
-                    bg-white
-                    cursor-pointer
-                    font-semibold
-                    text-xs
-                    leading-tight
-                    uppercase
-                    shadow-md
-                  "
+                  class="btn inline-block px-6 py-2.5 ml-3 bg-white cursor-pointer font-semibold text-xs leading-tight uppercase shadow-md"
                   >Informações</router-link
                 >
               </div>
@@ -154,6 +128,7 @@ export default {
 }
 .btn {
   color: #fff6ee;
+  font-size: 12px;
   background-color: #743d31;
   border-radius: 1000px;
 }
@@ -165,7 +140,6 @@ export default {
   width: 388px;
 }
 .teste {
-  height: 550px;
   box-shadow: 1px 20px 30px 2px rgb(0, 0, 0, 0.07);
 }
 #container {
@@ -196,11 +170,17 @@ export default {
   align-items: flex-start;
   margin-bottom: 5px;
   gap: 10px;
+  overflow-wrap: break-word;
 }
 
 .card-icon {
   stroke: #743d31;
   width: 24px;
   height: 24px;
+  flex-shrink: 0;
+}
+
+.buttons {
+  padding-bottom: 24px;
 }
 </style>
