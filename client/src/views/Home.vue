@@ -54,7 +54,7 @@
               class="donator-img"
             />
           </div>
-          <div class="donators-text">
+          <div class="donators-text overflow whitespace-nowrap">
             <span>R$500.000+</span> em doações no último ano!
           </div>
         </div>
@@ -73,7 +73,8 @@
               Fazendo o bem</strong
             >
             <p class="feature-text">
-              Comece a doar e tenha a certeza de ajudar uma causa extremamente importante em todo o país.
+              Comece a doar e tenha a certeza de ajudar uma causa extremamente
+              importante em todo o país.
             </p>
           </div>
 
@@ -83,13 +84,17 @@
               Honestidade com seu dinheiro</strong
             >
             <p class="feature-text">
-              Não visamos lucros, 100% do seu dinheiro é destinado à escola ou criança escolhida por você!
+              Não visamos lucros, 100% do seu dinheiro é destinado à escola ou
+              criança escolhida por você!
             </p>
           </div>
 
           <div class="feature-box">
             <strong class="feature-title">
-              <ion-icon name="stats-chart-outline" class="feature-icon"></ion-icon>
+              <ion-icon
+                name="stats-chart-outline"
+                class="feature-icon"
+              ></ion-icon>
               Contador de doações</strong
             >
             <p class="feature-text">
@@ -101,61 +106,106 @@
         </div>
       </section>
       <div class="section-header">
-          <span class="section-title">DOADORES</span>
-          <span class="section-subtitle">Depoimentos de quem faz o bem</span>
-        </div>
+        <span class="section-title">DOADORES</span>
+        <span class="section-subtitle">Depoimentos de quem faz o bem</span>
+      </div>
       <section class="testimonials-section">
-          <div class="quote-photo"><img src="../assets/imagens/donator1.jpg" alt="" class="quote-donator-img"></div>
-          <div class="quote-text"><blockquote>“E eu tenho uma preocupação muito grande com as crianças, como elas se desenvolvem, como elas crescem, como são educadas. No Brasil e no mundo faltam recursos para que essas crianças sejam educadas da maneira devida e é por essa razão que eu doo.”</blockquote>
-            <p class="quote-author">Isabela dos Santos, doadora do Childcare Brasil</p> </div>
-          
-        
-          <div class="quote-text"><blockquote>“Eu sou doadora e quero convidar você também para ser um novo doador. Eu faço isso porque eu acredito no trabalho, acredito que as crianças necessitam de apoio e de ajuda e eu não conheço ninguém melhor do que o Childcare Brasil para fazer esse trabalho.”</blockquote>
-            <p class="quote-author">Alice Moraes, doadora do Childcare Brasil</p> </div>
-          <div class="quote-photo"><img src="../assets/imagens/donator2.jpg" alt="" class="quote-donator-img"></div>
-          
-        
-        
-          <div class="quote-photo"><img src="../assets/imagens/donator3.jpg" alt="" class="quote-donator-img"></div>
-          <div class="quote-text"><blockquote>“Que alegria sinto em saber que muitas crianças estão sendo protegidas e alimentadas. Sinto imenso orgulho de todas as pessoas envolvidas nesta causa.”</blockquote>
-            <p class="quote-author">Ricardo Rodrigues, doador do Childcare Brasil</p> </div>
-        
+        <div class="quote-photo">
+          <img
+            src="../assets/imagens/donator1.jpg"
+            alt=""
+            class="quote-donator-img"
+          />
+        </div>
+        <div class="quote-text">
+          <blockquote>
+            “E eu tenho uma preocupação muito grande com as crianças, como elas
+            se desenvolvem, como elas crescem, como são educadas. No Brasil e no
+            mundo faltam recursos para que essas crianças sejam educadas da
+            maneira devida e é por essa razão que eu doo.”
+          </blockquote>
+          <p class="quote-author">
+            Isabela dos Santos, doadora do Childcare Brasil
+          </p>
+        </div>
+
+        <div class="quote-text">
+          <blockquote>
+            “Eu sou doadora e quero convidar você também para ser um novo
+            doador. Eu faço isso porque eu acredito no trabalho, acredito que as
+            crianças necessitam de apoio e de ajuda e eu não conheço ninguém
+            melhor do que o Childcare Brasil para fazer esse trabalho.”
+          </blockquote>
+          <p class="quote-author">Alice Moraes, doadora do Childcare Brasil</p>
+        </div>
+        <div class="quote-photo">
+          <img
+            src="../assets/imagens/donator2.jpg"
+            alt=""
+            class="quote-donator-img"
+          />
+        </div>
+
+        <div class="quote-photo">
+          <img
+            src="../assets/imagens/donator3.jpg"
+            alt=""
+            class="quote-donator-img"
+          />
+        </div>
+        <div class="quote-text">
+          <blockquote>
+            “Que alegria sinto em saber que muitas crianças estão sendo
+            protegidas e alimentadas. Sinto imenso orgulho de todas as pessoas
+            envolvidas nesta causa.”
+          </blockquote>
+          <p class="quote-author">
+            Ricardo Rodrigues, doador do Childcare Brasil
+          </p>
+        </div>
       </section>
       <section class="cta">
         <div class="cta-container grid grid--3-cols">
           <div class="text-box">
             <h2 class="cta-title">Registre crianças e escolas!</h2>
-            <p class="cta-subtitle">Preencha as informações abaixo caso seja representante de uma escola e possua alunos que deseja inserir em nosso sistema para doações. </p>
+            <p class="cta-subtitle">
+              Preencha as informações abaixo caso seja representante de uma
+              escola e possua alunos que deseja inserir em nosso sistema para
+              doações.
+            </p>
             <form action="" class="grid grid--2-cols">
               <div class="cta-form-grid-item">
                 <label for="full-name">Qual o seu nome completo?</label>
-                <input type="text" placeholder="João da Silva" id="full-name">
+                <input type="text" placeholder="João da Silva" id="full-name" />
               </div>
               <div class="cta-form-grid-item">
                 <label for="email">Qual o seu email?</label>
-                <input type="text" placeholder="eu@exemplo.com" id="email">
+                <input type="text" placeholder="eu@exemplo.com" id="email" />
               </div>
               <div class="cta-form-grid-item">
                 <label for="">Aonde ouviu falar de nós?</label>
                 <select name="" id="">
-                <option value="Youtube">Youtube</option>
-                <option value="Instagram">Instagram</option>
-                <option value="Twitter">Twitter/X</option>
-                <option value="Facebook">Facebook</option>
-                <option value="Others">Outros</option>
-              </select>
+                  <option value="Youtube">Youtube</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="Twitter">Twitter/X</option>
+                  <option value="Facebook">Facebook</option>
+                  <option value="Others">Outros</option>
+                </select>
               </div>
               <button class="cta-button">Enviar os dados</button>
             </form>
           </div>
           <div class="img-box">
-            <img src="../assets/imagens/cta-photo.jpeg" alt="" class="cta-img">
+            <img
+              src="../assets/imagens/cta-photo.jpeg"
+              alt=""
+              class="cta-img"
+            />
           </div>
         </div>
       </section>
     </div>
   </article>
-  
 </template>
 
 <script>
@@ -178,7 +228,6 @@ export default {
   },
 };
 </script>
-
 
 <style>
 body,
@@ -214,7 +263,6 @@ body {
 .grid--5-cols {
   grid-template-columns: repeat(5, 1fr);
 }
-
 
 h1 {
   font-size: 30px;
@@ -282,9 +330,8 @@ h1 {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 4.8rem;
   margin-top: 7.8rem;
-  margin-bottom: 9.6rem
+  margin-bottom: 9.6rem;
 }
-
 
 .feature-title {
   font-size: 24px;
@@ -399,159 +446,159 @@ section {
   margin-top: 8.4rem;
 }
 
-
 .testimonials-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.8rem;
   row-gap: 6.4rem;
   align-items: center;
-  }
+}
 
-  .quote-text {
-    grid-column: span 2;
-    font-size: 1.6em;
-  }
+.quote-text {
+  grid-column: span 2;
+  font-size: 1.6em;
+}
 
-  .quote-text blockquote {
-    color: #333;
-    font-size: 1.8rem;
-  }
+.quote-text blockquote {
+  color: #333;
+  font-size: 1.8rem;
+}
 
-  .quote-author {
-    margin-top: 2rem;
-    color: #555555c2
-  }
-  .quote-photo {
-    justify-self: center;
-  }
+.quote-author {
+  margin-top: 2rem;
+  color: #555555c2;
+}
+.quote-photo {
+  justify-self: center;
+}
 
-  .quote-photo img {
-    width: 14.8rem;
-    border-radius: 50%;
-    border: 4px #743d31 solid;
-  }
+.quote-photo img {
+  width: 14.8rem;
+  border-radius: 50%;
+  border: 4px #743d31 solid;
+}
 
-  .text-box {
-    grid-column: span 2;
-    padding: 4.8rem 3.6rem 3.6rem 3.6rem;
-  }
+.text-box {
+  grid-column: span 2;
+  padding: 4.8rem 3.6rem 3.6rem 3.6rem;
+}
 
-  .cta-container {
-    background-color: #743d31;
-    border-radius: 9px;
-    font-family: inherit;
-  }
+.cta-container {
+  background-color: #743d31;
+  border-radius: 9px;
+  font-family: inherit;
+}
 
-  .img-box {
-    display: flex;
-    justify-content: flex-end;
-  }
+.img-box {
+  display: flex;
+  justify-content: flex-end;
+}
 
-  .cta-img {
-    width: 90%;
-    border-top-right-radius: 9px;
-    border-bottom-right-radius: 9px;
-    
-  }
+.cta-img {
+  width: 90%;
+  border-top-right-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
 
-  .cta-title {
-    font-size: 4.4rem;
-    font-weight: 600;
-  }
+.cta-title {
+  font-size: 4.4rem;
+  font-weight: 600;
+}
 
-  .cta-subtitle {
-    margin-top: 1.2rem;
-    font-size: 1.8rem;
-  }
+.cta-subtitle {
+  margin-top: 1.2rem;
+  font-size: 1.8rem;
+}
 
-  .cta-form-grid-item {
-    margin-top: 2.4rem;
-    display: flex;
-    flex-direction: column;
-  }
+.cta-form-grid-item {
+  margin-top: 2.4rem;
+  display: flex;
+  flex-direction: column;
+}
 
-  .cta-form-grid-item label {
-    font-size: 1.6rem;
-  }
+.cta-form-grid-item label {
+  font-size: 1.6rem;
+}
 
-  form {
-    column-gap: 2.4rem;
-    row-gap: 1.2rem;
-  }
+form {
+  column-gap: 2.4rem;
+  row-gap: 1.2rem;
+}
 
-  form input, form select, .cta-button {
-    background-color: #fff6ee;
-    padding: 1.2rem 1.2rem;
-    font-size: 1.8rem;
-    border-radius: 9px;
-    margin-top: 0.8rem;
-  }
+form input,
+form select,
+.cta-button {
+  background-color: #fff6ee;
+  padding: 1.2rem 1.2rem;
+  font-size: 1.8rem;
+  border-radius: 9px;
+  margin-top: 0.8rem;
+}
 
-  .cta-button {
-    background-color: #fff6ee;
-    display: block;
-    text-decoration: none;
-    border-radius: 9px;
-    min-width: 0;
-    min-height: 5.2rem;
-    align-self: flex-end;
-  }
+.cta-button {
+  background-color: #fff6ee;
+  display: block;
+  text-decoration: none;
+  border-radius: 9px;
+  min-width: 0;
+  min-height: 5.2rem;
+  align-self: flex-end;
+}
 
-  .footer-section {
-    margin-top: 9.6rem;
-  }
+.footer-section {
+  margin-top: 9.6rem;
+}
 
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
-    gap: 4.8rem;
-  }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+  gap: 4.8rem;
+}
 
-  .column-footer-title {
-    font-size: 1.8rem;
-    color: #111;
-    font-weight: 400;
-  }
+.column-footer-title {
+  font-size: 1.8rem;
+  color: #111;
+  font-weight: 400;
+}
 
-  .footer-list {
-    font-size: 1.4rem;
-    margin-top: 1.4rem;
-    list-style: none;
-    padding-left: 0 !important;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    color: #555;
-  }
+.footer-list {
+  font-size: 1.4rem;
+  margin-top: 1.4rem;
+  list-style: none;
+  padding-left: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #555;
+}
 
-  .logo-footer {
+.logo-footer {
   color: #743d31;
   text-transform: uppercase;
   letter-spacing: 0.4rem;
-  font-size: 1.6rem
-  }
+  font-size: 1.6rem;
+}
 
-  .address, .cellphone, .email {
-    font-size: 1.4rem;
-    color: #555;
-  }
+.address,
+.cellphone,
+.email {
+  font-size: 1.4rem;
+  color: #555;
+}
 
-  .contact-info {
-    margin-top: 1.4rem;
-  }
+.contact-info {
+  margin-top: 1.4rem;
+}
 
-  .social-media-icons {
-    margin-top: 1.2rem;
-    display: flex;
-    gap: 3.2rem;
-  }
+.social-media-icons {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 3.2rem;
+}
 
-  .footer-icons {
-    color: #555;
-    width: 2.6rem;
-    height: 2.6rem;
-  }
-
-
+.footer-icons {
+  color: #555;
+  width: 2.6rem;
+  height: 2.6rem;
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <div class="section-header">
-    <span class="section-title">Você está doando para</span>
-    <h1 class="section-subtitle">Crianças</h1>
+  <div class="section-header text-center">
+    <span class="section-title pt-8">Você está doando para</span>
+    <h1 class="section-subtitle pb-4">Crianças</h1>
     <ChildrenCards />
   </div>
 </template>
@@ -13,12 +13,4 @@ export default {
 };
 </script>
 
-<style>
-.section-header {
-  text-align: center;
-  padding-top: 38px;
-}
-.section-subtitle {
-  padding-bottom: 26px;
-}
-</style>
+<style></style>
