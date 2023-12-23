@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <h1 class="title flex">Crianças</h1>
+  <div class="section-header">
+    <span class="section-title">Você está doando para</span>
+    <h1 class="section-subtitle">Crianças</h1>
     <ChildrenCards />
   </div>
 </template>
@@ -13,13 +14,11 @@ export default {
 </script>
 
 <style>
-.title {
-  color: #743d31;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  justify-content: center;
-  padding: 30px;
-  margin: 0 auto;
-  font-size: 40px;
+.section-header {
+  text-align: center;
+  padding-top: 38px;
+}
+.section-subtitle {
+  padding-bottom: 26px;
 }
 </style>
