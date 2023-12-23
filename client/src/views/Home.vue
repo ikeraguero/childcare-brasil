@@ -125,7 +125,7 @@
             maneira devida e é por essa razão que eu doo.”
           </blockquote>
           <p class="quote-author">
-            Isabela dos Santos, doadora do Childcare Brasil
+            &ndash; Isabela dos Santos, doadora do Childcare Brasil
           </p>
         </div>
 
@@ -136,7 +136,9 @@
             crianças necessitam de apoio e de ajuda e eu não conheço ninguém
             melhor do que o Childcare Brasil para fazer esse trabalho.”
           </blockquote>
-          <p class="quote-author">Alice Moraes, doadora do Childcare Brasil</p>
+          <p class="quote-author">
+            &ndash; Alice Moraes, doadora do Childcare Brasil
+          </p>
         </div>
         <div class="quote-photo">
           <img
@@ -160,7 +162,7 @@
             envolvidas nesta causa.”
           </blockquote>
           <p class="quote-author">
-            Ricardo Rodrigues, doador do Childcare Brasil
+            &ndash; Ricardo Rodrigues, doador do Childcare Brasil
           </p>
         </div>
       </section>
@@ -302,7 +304,7 @@ h1 {
   align-items: center;
   min-height: 0px;
   gap: -2.8rem;
-  max-width: 130rem;
+  max-width: 140rem;
   background-color: #fff6ee;
 }
 
@@ -473,7 +475,7 @@ section {
 }
 
 .quote-photo img {
-  width: 14.8rem;
+  width: 16.8rem;
   border-radius: 50%;
   border: 4px #743d31 solid;
 }
