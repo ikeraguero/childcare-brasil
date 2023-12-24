@@ -16,8 +16,8 @@
               /></router-link>
             </a>
             <div class="p-5">
-              <div class="card-content">
-                <h3 class="card-name">{{ card.name }}</h3>
+              <div class="card-content" id="card-content">
+                <h3 class="card-name text-left">{{ card.name }}</h3>
                 <p class="card-age">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,7 @@
                   </svg>
                   {{ card.age }} anos
                 </p>
-                <p class="card-location">
+                <p class="card-location" id="card-location">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -87,10 +87,19 @@ export default {
     };
   },
   mounted() {
+    /* document.addEventListener("DOMContentLoaded", function () {
+      if (
+        document.getElementById("card-content").offsetWidth <=
+        document.getElementById("container").offsetWidth
+      ) {
+        document.getElementById("card-content").style.padding = "16px";
+      }
+    }), */
     axios
       .get("https://childcare-brasil.vercel.app/api/children")
       .then((response) => (this.cards = response));
   },
+
   methods: {
     age(age) {
       if (age > 1) {
@@ -102,7 +111,6 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 .card-control {
   background-color: transparent;
@@ -146,7 +154,6 @@ export default {
   overflow: auto;
 }
 
-.card-content h3,
 .card-content li {
   color: #343a40;
   display: flex;
@@ -170,7 +177,6 @@ export default {
   align-items: flex-start;
   margin-bottom: 5px;
   gap: 10px;
-  overflow-wrap: break-word;
 }
 
 .card-icon {

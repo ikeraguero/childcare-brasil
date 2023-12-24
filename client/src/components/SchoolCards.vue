@@ -11,7 +11,7 @@
             style="overflow-wrap: anywhere"
           >
             <a href="/">
-              <router-link v-bind:to="'/criancas/perfil/' + card.id"
+              <router-link v-bind:to="'/escolas/perfil/' + card.id"
                 ><img class="rounded-t-lg h-80" :src="card.photo"
               /></router-link>
             </a>
@@ -38,13 +38,13 @@
               </div>
               <div class="buttons flex justify-center mt-10 h-fit">
                 <router-link
-                  v-bind:to="'/criancas/doar/' + card.id"
+                  v-bind:to="'/escolas/doar/' + card.id"
                   type="button"
                   class="btn inline-block px-6 py-2.5 ml-3 bg-white cursor-pointer font-semibold text-xs leading-tight uppercase shadow-md"
                   >Doar</router-link
                 >
                 <router-link
-                  v-bind:to="'/criancas/perfil/' + card.id"
+                  v-bind:to="'/escolas/perfil/' + card.id"
                   type="button"
                   class="btn inline-block px-6 py-2.5 ml-3 bg-white cursor-pointer font-semibold text-xs leading-tight uppercase shadow-md"
                   >Informações</router-link
