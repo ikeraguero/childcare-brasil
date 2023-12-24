@@ -113,7 +113,7 @@
           </label>
           <label class="block text-white text-sm font-bold mb-3" id="cellphone">
             <div class="background"></div>
-            <div class="test">Telefone para contato</div>
+            <div class="test">Telefone</div>
             <input
               name="donationcellphone"
               id="phone"
@@ -198,25 +198,8 @@
               required
             />
           </label>
-          <label class="block text-sm text-sm font-bold mb-0">
-            <div class="test">Tipo de doação</div>
-          </label>
-          <select
-            type="text"
-            class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            name="donationtype"
-            id="donationtype"
-            @click="donationtypebar"
-          >
-            <option value="0"></option>
-            <option value="Dinheiro">Dinheiro</option>
-            <option value="Material">Material Escolar</option>
-          </select>
-          <label
-            class="block text-sm font-bold mb-3 mt-3"
-            id="money"
-            style="display: none"
-          >
+
+          <label class="block text-sm font-bold mb-3 mt-3" id="money">
             <div class="test">Valor</div>
             <select
               id="valuemoney"
@@ -225,7 +208,6 @@
               type="text"
               class="shadow appearance-none font-medium mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             >
-              <option value=""></option>
               <option value="0.26">R$1.00</option>
               <option value="2.57">R$10.00</option>
               <option value="7.71">R$30.00</option>
