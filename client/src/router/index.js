@@ -81,7 +81,6 @@ const routes = [
       {
         path: "escolas/doar/:id/",
         name: "DonateSchool",
-
         component: () => import("../views/SchoolDonationPage.vue"),
       },
       {
@@ -99,7 +98,6 @@ const routes = [
       {
         path: "criancas/doar/:id/sucesso",
         name: "SuccessMaterials",
-        beforeEnter: authGuard,
         component: () => import("../views/SuccessMaterials.vue"),
       },
       {
@@ -123,13 +121,12 @@ const routes = [
       {
         path: "/criancas/perfil/:id",
         name: "Child Info",
-        beforeEnter: authGuard,
         component: () => import("../views/ChildInfo.vue"),
       },
       {
         path: "/escolas/perfil/:id",
         name: "School Info",
-        beforeEnter: authGuard,
+
         component: () => import("../views/SchoolInfo.vue"),
       },
     ],
