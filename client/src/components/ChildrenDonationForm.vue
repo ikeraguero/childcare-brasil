@@ -1,6 +1,6 @@
 <template>
-  <div class="flex justify-center max-w-full mx-auto py-10">
-    <div class="w-full h-full p-8">
+  <div class="flex justify-center max-w-3xl mx-auto py-10">
+    <div class="w-full h-full">
       <div
         class="pa-8 mb-0 content-align-center"
         id="paypalpayment"
@@ -37,12 +37,14 @@
           childcarebrasil@gmail.com e conclua a doação
         </div>
       </div>
-      <div class="section-header text-center">
-        <span class="section-title">Você está doando para</span>
-        <h1 class="section-subtitle pb-4">{{ child.name }}</h1>
+      <div class="test1 mb-0 flex justify-center" id="l3">
+        Você está doando para:
+      </div>
+      <div class="test1 mb-5 flex justify-center font-bold" id="l4">
+        {{ child.name }}
       </div>
       <form
-        class="rounded-lg px-8 pt-16 pb-16 mb-0 mt-8 w-full"
+        class="rounded px-8 pt-16 pb-16 mb-0 mt-8"
         action="https://childcare-brasil.vercel.app/api/donationadd"
         method="post"
         id="form"
@@ -51,7 +53,7 @@
         <div id="formcomponents">
           <label class="block text-white text-sm font-bold mb-0" for="username">
             <div class="background"></div>
-            <div class="test">Tipo de doador</div>
+            <div class="test">Doar como:</div>
           </label>
           <select
             class="form-select appearance-none shadow appearance-none font-normal border rounded w-full mt-1.5 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
@@ -61,7 +63,7 @@
           >
             <option value="0"></option>
             <option value="Pessoa">Pessoa Física</option>
-            <option value="Empresa">Pessoa Jurídica</option>
+            <option value="Empresa">Empresa</option>
           </select>
           <label
             class="block text-sm font-bold mb-3 mt-3"
@@ -102,7 +104,7 @@
             />
           </label>
           <label class="block text-sm font-bold mb-3" id="email">
-            <div class="test">Email</div>
+            <div class="test">Email para contato</div>
             <input
               name="donationemail"
               type="email"
@@ -111,8 +113,7 @@
               required
             />
           </label>
-          <label class="block text-white text-sm font-bold mb-3" id="cellphone">
-            <div class="background"></div>
+          <label class="block text-sm font-bold mb-3" id="cellphone">
             <div class="test">Telefone para contato</div>
             <input
               name="donationcellphone"
@@ -453,40 +454,31 @@ export default {
 
 <style scoped>
 .test {
-  color: #fff6ee;
-  font-size: 16px;
-  font-weight: 500;
+  color: #621200;
+  font-size: 17px;
 }
 .test1 {
   color: #fff6ee;
+  font-family: "Proxima Nova", system-ui, sans-serif;
   font-size: 26px;
 }
 
-select:hover,
-option:hover {
+select:hover {
   cursor: pointer;
 }
 
 .pa-8 {
   color: #fff6ee;
   font-size: 26px;
+  font-family: "Proxima Nova", system-ui, sans-serif;
   text-align: center;
 }
 
 form {
-  background-color: #743d31;
+  background-color: #fff6ee;
 }
 .block {
   color: #621200;
-}
-
-label:not(:first-child) {
-  padding-top: 22px;
-}
-
-input,
-select {
-  margin-top: 10px;
 }
 
 #donator,
