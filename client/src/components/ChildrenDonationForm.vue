@@ -1,8 +1,8 @@
 <template>
-  <div class="flex justify-center max-w-3xl mx-auto py-10">
+  <div class="flex justify-center mx-auto py-10 content-align-center">
     <div class="w-full h-full">
       <div
-        class="pa-8 mb-0 content-align-center"
+        class="flex pa-8 mb-0 justify-center"
         id="paypalpayment"
         style="display: none"
       >
@@ -56,14 +56,14 @@
             <div class="test">Doar como:</div>
           </label>
           <select
-            class="form-select appearance-none shadow appearance-none font-normal border rounded w-full mt-1.5 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="form-select appearance-none shadow appearance-none font-normal border rounded-2xl w-full mt-1.5 py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             name="donationdonatortype"
             id="donatortype"
             @click="donatortypebar"
           >
             <option value="0"></option>
             <option value="Pessoa">Pessoa Física</option>
-            <option value="Empresa">Empresa</option>
+            <option value="Empresa">Pessoa Jurídica</option>
           </select>
           <label
             class="block text-sm font-bold mb-3 mt-3"
@@ -76,7 +76,7 @@
               placeholder="XXX.XXX.XXX-XX"
               name="donationcpf"
               type="text"
-              class="shadow appearance-none font-normal border mt-1.5 rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="shadow appearance-none font-normal border mt-1.5 rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
           </label>
           <label
@@ -90,7 +90,7 @@
               placeholder="XX.XXX.XXX/0001-XX"
               name="donationcnpj"
               type="text"
-              class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
           </label>
           <label class="block text-sm font-bold mb-3 mt-3" id="donator">
@@ -99,29 +99,29 @@
               name="donationdonator"
               placeholder="Nome e Sobrenome"
               type="text"
-              class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               required
             />
           </label>
           <label class="block text-sm font-bold mb-3" id="email">
-            <div class="test">Email para contato</div>
+            <div class="test">Email</div>
             <input
               name="donationemail"
               type="email"
               placeholder="email@contato.com"
-              class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               required
             />
           </label>
           <label class="block text-sm font-bold mb-3" id="cellphone">
-            <div class="test">Telefone para contato</div>
+            <div class="test">Telefone</div>
             <input
               name="donationcellphone"
               id="phone"
               maxlength="14"
               placeholder="(DD)XXXXX-XXXX"
               type="text"
-              class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               required
             />
           </label>
@@ -130,7 +130,7 @@
             <div class="test">Estado</div>
           </label>
           <select
-            class="form-select appearance-none shadow appearance-none border font-normal rounded w-full mt-1.5 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            class="form-select appearance-none shadow appearance-none border font-normal rounded-2xl w-full mt-1.5 py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             name="donationstate"
           >
             <option v-for="state in states.data" :key="state.index">
@@ -147,7 +147,7 @@
               name="donationdonatedto"
               type="text"
               v-bind:value="child.name"
-              class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               required
             />
           </label>
@@ -161,7 +161,7 @@
               name="donationstatus"
               type="text"
               value="Pendente"
-              class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               required
             />
           </label>
@@ -175,7 +175,7 @@
               name="donationdonatedtoid"
               type="text"
               v-bind:value="child.id"
-              class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               required
             />
           </label>
@@ -185,7 +185,7 @@
               name="donationcity"
               placeholder="Cidade"
               type="text"
-              class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               required
             />
           </label>
@@ -195,7 +195,7 @@
               name="donationaddress"
               placeholder="Rua, número"
               type="text"
-              class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               required
             />
           </label>
@@ -207,7 +207,7 @@
               placeholder="..."
               name="donationvalue"
               type="text"
-              class="shadow appearance-none font-medium mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="shadow appearance-none font-medium mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             >
               <option value="0.26">R$1.00</option>
               <option value="2.57">R$10.00</option>
@@ -422,7 +422,7 @@ export default {
       document.getElementById("message").removeAttribute("style");
     },
     unhideForm1() {
-      document.getElementById("form").style.backgroundColor = "#FFF6EE";
+      document.getElementById("form").style.backgroundColor = "#743d31";
       document.getElementById("formcomponents").removeAttribute("style");
       document.getElementById("fakesubmit").removeAttribute("style");
       document.getElementById("l3").removeAttribute("style");
@@ -440,7 +440,7 @@ export default {
       document.getElementById("paypalpayment").removeAttribute("style");
     },
     unhideForm2() {
-      document.getElementById("form").style.backgroundColor = "#FFF6EE";
+      document.getElementById("form").style.backgroundColor = "#743d31";
       document.getElementById("formcomponents").removeAttribute("style");
       document.getElementById("fakesubmit").removeAttribute("style");
       document.getElementById("l3").removeAttribute("style");
@@ -454,12 +454,12 @@ export default {
 
 <style scoped>
 .test {
-  color: #621200;
+  color: #fff6ee;
   font-size: 17px;
+  margin-top: 20px;
 }
 .test1 {
   color: #fff6ee;
-  font-family: "Proxima Nova", system-ui, sans-serif;
   font-size: 26px;
 }
 
@@ -470,15 +470,19 @@ select:hover {
 .pa-8 {
   color: #fff6ee;
   font-size: 26px;
-  font-family: "Proxima Nova", system-ui, sans-serif;
   text-align: center;
 }
 
 form {
-  background-color: #fff6ee;
+  background-color: #743d31;
 }
 .block {
   color: #621200;
+}
+
+input,
+select {
+  margin-top: 10px;
 }
 
 #donator,
