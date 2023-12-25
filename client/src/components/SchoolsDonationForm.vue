@@ -1,6 +1,6 @@
 <template>
-  <div class="flex justify-center max-w-3xl mx-auto py-10">
-    <div class="w-full h-full">
+  <div class="flex justify-center max-w-full mx-auto py-10">
+    <div class="w-full h-full p-8">
       <div
         class="pa-8 mb-0 content-align-center"
         id="paypalpayment"
@@ -37,14 +37,12 @@
           childcarebrasil@gmail.com e conclua a doação
         </div>
       </div>
-      <div class="test1 mb-0 flex justify-center" id="l3">
-        Você está doando para:
-      </div>
-      <div class="test1 mb-5 flex justify-center font-bold" id="l4">
-        {{ school.name }}
+      <div class="section-header text-center">
+        <span class="section-title">Você está doando para</span>
+        <h1 class="section-subtitle pb-4">{{ school.name }}</h1>
       </div>
       <form
-        class="rounded px-8 pt-16 pb-16 mb-0 mt-8"
+        class="rounded-lg px-8 pt-16 pb-16 mb-0 mt-8 w-full"
         action="https://childcare-brasil.vercel.app/api/donationadd"
         method="post"
         id="form"
@@ -52,33 +50,18 @@
       >
         <div id="formcomponents">
           <label class="block text-white text-sm font-bold mb-0" for="username">
-            <div class="test">Doar como:</div>
+            <div class="background"></div>
+            <div class="test">Tipo de doador</div>
           </label>
           <select
-            class="
-              form-select
-              appearance-none
-              shadow
-              appearance-none
-              font-normal
-              border
-              rounded
-              w-full
-              mt-1.5
-              py-2
-              px-3
-              text-black-900
-              leading-tight
-              focus:outline-none focus:shadow-outline
-              bg-white
-            "
+            class="form-select appearance-none shadow appearance-none font-normal border rounded-2xl w-full mt-1.5 py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             name="donationdonatortype"
             id="donatortype"
             @click="donatortypebar"
           >
             <option value="0"></option>
             <option value="Pessoa">Pessoa Física</option>
-            <option value="Empresa">Empresa</option>
+            <option value="Empresa">Pessoa Jurídica</option>
           </select>
           <label
             class="block text-sm font-bold mb-3 mt-3"
@@ -91,21 +74,7 @@
               placeholder="XXX.XXX.XXX-XX"
               name="donationcpf"
               type="text"
-              class="
-                shadow
-                appearance-none
-                font-normal
-                border
-                mt-1.5
-                rounded
-                w-full
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none font-normal border mt-1.5 rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
           </label>
           <label
@@ -119,21 +88,7 @@
               placeholder="XX.XXX.XXX/0001-XX"
               name="donationcnpj"
               type="text"
-              class="
-                shadow
-                appearance-none
-                font-normal
-                mt-1.5
-                border
-                rounded
-                w-full
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
           </label>
           <label class="block text-sm font-bold mb-3 mt-3" id="donator">
@@ -142,51 +97,22 @@
               name="donationdonator"
               placeholder="Nome e Sobrenome"
               type="text"
-              class="
-                shadow
-                appearance-none
-                font-normal
-                mt-1.5
-                border
-                rounded
-                w-full
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               required
             />
           </label>
-
           <label class="block text-sm font-bold mb-3" id="email">
-            <div class="test">Email para contato</div>
+            <div class="test">Email</div>
             <input
               name="donationemail"
               type="email"
               placeholder="email@contato.com"
-              class="
-                shadow
-                appearance-none
-                font-normal
-                mt-1.5
-                border
-                rounded
-                w-full
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               required
             />
           </label>
-
-          <label class="block text-sm font-bold mb-3" id="cellphone">
+          <label class="block text-white text-sm font-bold mb-3" id="cellphone">
+            <div class="background"></div>
             <div class="test">Telefone para contato</div>
             <input
               name="donationcellphone"
@@ -194,53 +120,22 @@
               maxlength="14"
               placeholder="(DD)XXXXX-XXXX"
               type="text"
-              class="
-                shadow
-                appearance-none
-                font-normal
-                mt-1.5
-                border
-                rounded
-                w-full
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               required
             />
           </label>
           <label class="block text-white text-sm font-bold mb-0" id="state">
+            <div class="background"></div>
             <div class="test">Estado</div>
           </label>
           <select
-            class="
-              form-select
-              appearance-none
-              shadow
-              appearance-none
-              font-normal
-              border
-              rounded
-              w-full
-              mt-1.5
-              py-2
-              px-3
-              text-black-900
-              leading-tight
-              focus:outline-none focus:shadow-outline
-              bg-white
-            "
+            class="form-select appearance-none shadow appearance-none border font-normal rounded-2xl w-full mt-1.5 py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             name="donationstate"
-            id="state"
           >
             <option v-for="state in states.data" :key="state.index">
               {{ state.name }}
             </option>
           </select>
-
           <label
             class="block text-sm font-bold mb-3"
             id="donatedto"
@@ -251,21 +146,7 @@
               name="donationdonatedto"
               type="text"
               v-bind:value="school.name"
-              class="
-                shadow
-                appearance-none
-                font-normal
-                mt-1.5
-                border
-                rounded
-                w-full
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               required
             />
           </label>
@@ -279,21 +160,7 @@
               name="donationstatus"
               type="text"
               value="Pendente"
-              class="
-                shadow
-                appearance-none
-                font-normal
-                mt-1.5
-                border
-                rounded
-                w-full
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               required
             />
           </label>
@@ -307,21 +174,7 @@
               name="donationdonatedtoid"
               type="text"
               v-bind:value="school.id"
-              class="
-                shadow
-                appearance-none
-                font-normal
-                mt-1.5
-                border
-                rounded
-                w-full
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               required
             />
           </label>
@@ -331,21 +184,7 @@
               name="donationcity"
               placeholder="Cidade"
               type="text"
-              class="
-                shadow
-                appearance-none
-                font-normal
-                mt-1.5
-                border
-                rounded
-                w-full
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               required
             />
           </label>
@@ -355,21 +194,7 @@
               name="donationaddress"
               placeholder="Rua, número"
               type="text"
-              class="
-                shadow
-                appearance-none
-                font-normal
-                mt-1.5
-                border
-                rounded
-                w-full
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               required
             />
           </label>
@@ -378,21 +203,7 @@
           </label>
           <select
             type="text"
-            class="
-              shadow
-              appearance-none
-              font-normal
-              mt-1.5
-              border
-              rounded
-              w-full
-              py-2
-              px-3
-              text-black-900
-              leading-tight
-              focus:outline-none focus:shadow-outline
-              bg-white
-            "
+            class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             name="donationtype"
             id="donationtype"
             @click="donationtypebar"
@@ -412,21 +223,7 @@
               placeholder="..."
               name="donationvalue"
               type="text"
-              class="
-                shadow
-                appearance-none
-                font-medium
-                mt-1.5
-                border
-                rounded
-                w-full
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none font-medium mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             >
               <option value=""></option>
               <option value="0.26">R$1.00</option>
@@ -448,21 +245,7 @@
               placeholder="Caneta, Borracha, Caderno..."
               name="donationmaterials"
               type="text"
-              class="
-                shadow
-                appearance-none
-                font-normal
-                mt-1.5
-                border
-                rounded
-                w-full
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             />
           </label>
         </div>
@@ -474,30 +257,14 @@
           <div class="mt-6 flex justify-center">
             <button
               @click="unhideForm1"
-              class="
-                bg-white
-                font-medium
-                py-2
-                px-4
-                rounded
-                focus:outline-none focus:shadow-outline
-                mr-2
-              "
+              class="bg-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2"
               type="button"
               value="Voltar"
             >
               Voltar
             </button>
             <input
-              class="
-                bg-white
-                font-medium
-                px-4
-                ml-2
-                rounded
-                cursor-pointer
-                focus:outline-none focus:shadow-outline
-              "
+              class="bg-white font-medium px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
               type="submit"
               value="Concluir doação"
             />
@@ -511,15 +278,7 @@
           <div class="flex justify-center">
             <button
               @click="unhideForm2"
-              class="
-                bg-white
-                font-medium
-                py-2
-                px-4
-                rounded
-                focus:outline-none focus:shadow-outline
-                mr-2
-              "
+              class="bg-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2"
               type="button"
               value="Voltar"
             >
@@ -527,16 +286,7 @@
             </button>
             <input
               v-if="paidFor == true"
-              class="
-                bg-white
-                font-medium
-                py-2
-                px-4
-                ml-2
-                rounded
-                cursor-pointer
-                focus:outline-none focus:shadow-outline
-              "
+              class="bg-white font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
               type="submit"
               value="Concluir doação"
             />
@@ -546,31 +296,14 @@
       <div class="flex justify-center" id="fakesubmit">
         <div class="mt-6 flex justify-center">
           <router-link
-            to="/criancas/"
-            class="
-              bg-white
-              font-medium
-              py-2
-              px-4
-              rounded
-              focus:outline-none focus:shadow-outline
-              mr-2
-            "
+            to="/escolas/"
+            class="bg-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2"
             type="button"
             value="Cancelar"
             >Cancelar</router-link
           >
           <button
-            class="
-              bg-white
-              font-medium
-              py-2
-              px-4
-              ml-2
-              rounded
-              cursor-pointer
-              focus:outline-none focus:shadow-outline
-            "
+            class="bg-white font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
             id="moneypayment"
             @click="hideForm2"
             style="display: none"
@@ -578,16 +311,7 @@
             Prosseguir
           </button>
           <button
-            class="
-              bg-white
-              font-medium
-              py-2
-              px-4
-              ml-2
-              rounded
-              cursor-pointer
-              focus:outline-none focus:shadow-outline
-            "
+            class="bg-white font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
             id="materialpayment"
             @click="hideForm1"
             style="display: none"
@@ -595,16 +319,7 @@
             Prosseguir
           </button>
           <button
-            class="
-              bg-white
-              font-medium
-              py-2
-              px-4
-              ml-2
-              rounded
-              cursor-pointer
-              focus:outline-none focus:shadow-outline
-            "
+            class="bg-white font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
             id="nothing"
             style="display: block"
           >
@@ -778,31 +493,40 @@ export default {
 
 <style scoped>
 .test {
-  color: #621200;
-  font-size: 17px;
+  color: #fff6ee;
+  font-size: 16px;
+  font-weight: 500;
 }
 .test1 {
   color: #fff6ee;
-  font-family: "Proxima Nova", system-ui, sans-serif;
   font-size: 26px;
 }
 
-select:hover {
+select:hover,
+option:hover {
   cursor: pointer;
 }
 
 .pa-8 {
   color: #fff6ee;
   font-size: 26px;
-  font-family: "Proxima Nova", system-ui, sans-serif;
   text-align: center;
 }
 
 form {
-  background-color: #fff6ee;
+  background-color: #743d31;
 }
 .block {
   color: #621200;
+}
+
+label:not(:first-child) {
+  padding-top: 22px;
+}
+
+input,
+select {
+  margin-top: 10px;
 }
 
 #donator,
