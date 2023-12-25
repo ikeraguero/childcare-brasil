@@ -76,13 +76,11 @@ const routes = [
       {
         path: "criancas/doar/:id/",
         name: "DonateChild",
-        beforeEnter: authGuard,
         component: () => import("../views/ChildDonationPage.vue"),
       },
       {
         path: "escolas/doar/:id/",
         name: "DonateSchool",
-        beforeEnter: authGuard,
         component: () => import("../views/SchoolDonationPage.vue"),
       },
       {
