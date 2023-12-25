@@ -1,17 +1,17 @@
 <template>
-  <div class="flex justify-center max-w-full mx-auto py-10">
-    <div class="w-full h-full p-8">
+  <div class="flex justify-center py-10 content-align-center">
+    <div class="w-10/12 h-full">
       <div
-        class="pa-8 mb-0 content-align-center"
+        class="flex pa-8 mb-0 justify-center"
         id="paypalpayment"
         style="display: none"
       >
         <div class="font-semibold">
           <v-container class="content-align-center">
             <div v-if="paidFor == false">
-              <h1 class="test1 mb-0 flex justify-center">Quase lá!</h1>
-              <p class="test1 mb-0 flex justify-center">
-                Finalize a sua doação para {{ school.name }}
+              <h1 class="section-title mb-0 flex justify-center">Quase lá!</h1>
+              <p class="section-subtitle mb-0 flex justify-center">
+                Finalize a sua doação!
               </p>
               <div class="pay mt-16 bg-antiquewhite" ref="paypal"></div>
             </div>
@@ -37,12 +37,14 @@
           childcarebrasil@gmail.com e conclua a doação
         </div>
       </div>
-      <div class="section-header text-center">
-        <span class="section-title">Você está doando para</span>
-        <h1 class="section-subtitle pb-4">{{ school.name }}</h1>
+      <div class="section-title mb-0 flex justify-center" id="l3">
+        Você está doando para:
+      </div>
+      <div class="section-subtitle mb-5 flex justify-center font-bold" id="l4">
+        {{ school.name }}
       </div>
       <form
-        class="rounded-lg px-8 pt-16 pb-16 mb-0 mt-8 w-full"
+        class="rounded px-8 pt-16 pb-16 mb-0 mt-8"
         action="https://childcare-brasil.vercel.app/api/donationadd"
         method="post"
         id="form"
@@ -111,9 +113,8 @@
               required
             />
           </label>
-          <label class="block text-white text-sm font-bold mb-3" id="cellphone">
-            <div class="background"></div>
-            <div class="test">Telefone para contato</div>
+          <label class="block text-sm font-bold mb-3" id="cellphone">
+            <div class="test">Telefone</div>
             <input
               name="donationcellphone"
               id="phone"
@@ -160,7 +161,7 @@
               name="donationstatus"
               type="text"
               value="Pendente"
-              class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               required
             />
           </label>
@@ -174,7 +175,7 @@
               name="donationdonatedtoid"
               type="text"
               v-bind:value="school.id"
-              class="shadow appearance-none font-normal mt-1.5 border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               required
             />
           </label>
@@ -198,25 +199,8 @@
               required
             />
           </label>
-          <label class="block text-sm text-sm font-bold mb-0">
-            <div class="test">Tipo de doação</div>
-          </label>
-          <select
-            type="text"
-            class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            name="donationtype"
-            id="donationtype"
-            @click="donationtypebar"
-          >
-            <option value="0"></option>
-            <option value="Dinheiro">Dinheiro</option>
-            <option value="Material">Material Escolar</option>
-          </select>
-          <label
-            class="block text-sm font-bold mb-3 mt-3"
-            id="money"
-            style="display: none"
-          >
+
+          <label class="block text-sm font-bold mb-3 mt-3" id="money">
             <div class="test">Valor</div>
             <select
               id="valuemoney"
@@ -225,7 +209,6 @@
               type="text"
               class="shadow appearance-none font-medium mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             >
-              <option value=""></option>
               <option value="0.26">R$1.00</option>
               <option value="2.57">R$10.00</option>
               <option value="7.71">R$30.00</option>
@@ -234,19 +217,6 @@
               <option value="64.30">R$250.00</option>
               <option value="257.18">R$1,000.00</option>
             </select>
-          </label>
-          <label
-            class="block text-sm font-bold mb-3 mt-3"
-            id="materials"
-            style="display: none"
-          >
-            <div class="test">Materiais</div>
-            <input
-              placeholder="Caneta, Borracha, Caderno..."
-              name="donationmaterials"
-              type="text"
-              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            />
           </label>
         </div>
         <div
@@ -294,34 +264,26 @@
         </div>
       </form>
       <div class="flex justify-center" id="fakesubmit">
-        <div class="mt-6 flex justify-center">
+        <div class="mt-6 flex justify-center gap-5">
           <router-link
             to="/escolas/"
-            class="bg-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2"
+            class="donation-btn"
             type="button"
             value="Cancelar"
             >Cancelar</router-link
           >
           <button
-            class="bg-white font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
+            class="donation-btn text-white"
             id="moneypayment"
             @click="hideForm2"
-            style="display: none"
-          >
-            Prosseguir
-          </button>
-          <button
-            class="bg-white font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
-            id="materialpayment"
-            @click="hideForm1"
-            style="display: none"
+            style="display: block"
           >
             Prosseguir
           </button>
           <button
             class="bg-white font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
             id="nothing"
-            style="display: block"
+            style="display: none"
           >
             Prosseguir
           </button>
@@ -461,7 +423,7 @@ export default {
       document.getElementById("message").removeAttribute("style");
     },
     unhideForm1() {
-      document.getElementById("form").style.backgroundColor = "#FFF6EE";
+      document.getElementById("form").style.backgroundColor = "#743d31";
       document.getElementById("formcomponents").removeAttribute("style");
       document.getElementById("fakesubmit").removeAttribute("style");
       document.getElementById("l3").removeAttribute("style");
@@ -479,7 +441,7 @@ export default {
       document.getElementById("paypalpayment").removeAttribute("style");
     },
     unhideForm2() {
-      document.getElementById("form").style.backgroundColor = "#FFF6EE";
+      document.getElementById("form").style.backgroundColor = "#743d31";
       document.getElementById("formcomponents").removeAttribute("style");
       document.getElementById("fakesubmit").removeAttribute("style");
       document.getElementById("l3").removeAttribute("style");
@@ -494,16 +456,15 @@ export default {
 <style scoped>
 .test {
   color: #fff6ee;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 17px;
+  margin-top: 20px;
 }
 .test1 {
   color: #fff6ee;
   font-size: 26px;
 }
 
-select:hover,
-option:hover {
+select:hover {
   cursor: pointer;
 }
 
@@ -518,10 +479,6 @@ form {
 }
 .block {
   color: #621200;
-}
-
-label:not(:first-child) {
-  padding-top: 22px;
 }
 
 input,

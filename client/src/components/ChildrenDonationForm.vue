@@ -1,6 +1,8 @@
 <template>
-  <div class="flex justify-center mx-auto py-10 content-align-center">
-    <div class="w-full h-full">
+  <div
+    class="flex justify-center mx-auto py-10 content-align-center rounded-2xl"
+  >
+    <div class="w-10/12 h-full border rounded-2xl">
       <div
         class="flex pa-8 mb-0 justify-center"
         id="paypalpayment"
@@ -9,9 +11,9 @@
         <div class="font-semibold">
           <v-container class="content-align-center">
             <div v-if="paidFor == false">
-              <h1 class="test1 mb-0 flex justify-center">Quase lá!</h1>
-              <p class="test1 mb-0 flex justify-center">
-                Finalize a sua doação para {{ child.name }}
+              <h1 class="section-title mb-0 flex justify-center">Quase lá!</h1>
+              <p class="section-subtitle mb-0 flex justify-center">
+                Finalize a sua doação!
               </p>
               <div class="pay mt-16 bg-antiquewhite" ref="paypal"></div>
             </div>
@@ -37,10 +39,10 @@
           childcarebrasil@gmail.com e conclua a doação
         </div>
       </div>
-      <div class="test1 mb-0 flex justify-center" id="l3">
+      <div class="section-title mb-0 flex justify-center" id="l3">
         Você está doando para:
       </div>
-      <div class="test1 mb-5 flex justify-center font-bold" id="l4">
+      <div class="section-subtitle mb-5 flex justify-center font-bold" id="l4">
         {{ child.name }}
       </div>
       <form
@@ -53,7 +55,7 @@
         <div id="formcomponents">
           <label class="block text-white text-sm font-bold mb-0" for="username">
             <div class="background"></div>
-            <div class="test">Doar como:</div>
+            <div class="test">Tipo de doador</div>
           </label>
           <select
             class="form-select appearance-none shadow appearance-none font-normal border rounded-2xl w-full mt-1.5 py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
@@ -264,16 +266,16 @@
         </div>
       </form>
       <div class="flex justify-center" id="fakesubmit">
-        <div class="mt-6 flex justify-center">
+        <div class="mt-6 flex justify-center gap-5">
           <router-link
             to="/criancas/"
-            class="bg-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2"
+            class="donation-btn"
             type="button"
             value="Cancelar"
             >Cancelar</router-link
           >
           <button
-            class="bg-white font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
+            class="donation-btn text-white"
             id="moneypayment"
             @click="hideForm2"
             style="display: block"
