@@ -1,8 +1,6 @@
 <template>
-  <div
-    class="flex justify-center mx-auto py-10 content-align-center rounded-2xl"
-  >
-    <div class="w-10/12 h-full border rounded-2xl">
+  <div class="flex justify-center mx-auto py-10 content-align-center">
+    <div class="w-11/12 h-full">
       <div
         class="flex pa-8 mb-0 justify-center"
         id="paypalpayment"
@@ -229,7 +227,7 @@
           <div class="mt-6 flex justify-center">
             <button
               @click="unhideForm1"
-              class="bg-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2"
+              class="back-btn"
               type="button"
               value="Voltar"
             >
@@ -497,5 +495,9 @@ select {
 #valuemoney,
 #materials {
   color: black;
+}
+
+.back-btn {
+  font-size: 18px;
 }
 </style>
