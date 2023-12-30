@@ -1,97 +1,34 @@
 <template>
-  <v-timeline :dense="$vuetify.breakpoint.smAndDown">
-    <v-timeline-item color="#FFF6EE" fill-dot right small>
-      <v-card>
-        <v-card-title class="color">
-          <v-icon dark size="42" class="mr-4"> </v-icon>
-          <h2 class="text-h4 white--text font-weight-light">
-            <div class="steps font-semibold text-center">Passo 1</div>
-          </h2>
-        </v-card-title>
-        <v-container class="color2 font-semibold">
-          <v-row class="mb-2 mt-2">
-            Abra a página de crianças/escolas disponíveis e selecionar a que
-            mais se encaixa com você.
-          </v-row>
-        </v-container>
-      </v-card>
-    </v-timeline-item>
-
-    <v-timeline-item color="#FFF6EE" fill-dot left small>
-      <v-card>
-        <v-card-title class="color">
-          <h2 class="text-h4 mr-4 white--text font-weight-light">
-            <div class="steps font-semibold">Passo 2</div>
-          </h2>
-          <v-icon dark size="4"> </v-icon>
-        </v-card-title>
-        <v-container class="color2 font-semibold">
-          <v-row class="mb-2 mt-2">
-            Ao selecionar você é redirecionado á página de cadastro de doador,
-            para realizar o cadastro de doador você deve se atentar á preencher
-            seus dados corretamente.
-          </v-row>
-        </v-container>
-      </v-card>
-    </v-timeline-item>
-
-    <v-timeline-item color="#FFF6EE" fill-dot right small>
-      <v-card>
-        <v-card-title class="color">
-          <h2 class="text-h4 mr-4 white--text font-weight-light">
-            <div class="steps font-semibold">Passo 3</div>
-          </h2>
-          <v-icon dark size="4"> </v-icon>
-        </v-card-title>
-        <v-container class="color2 font-semibold">
-          <v-row class="mb-2 mt-2">
-            <v-col>
-              Em caso de doação de materiais, junte suas doações, as empacote de
-              uma forma que não danifique os objetos doados.
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-card>
-    </v-timeline-item>
-
-    <v-timeline-item color="#FFF6EE" fill-dot left small>
-      <v-card>
-        <v-card-title class="color">
-          <h2 class="text-h4 mr-4 white--text font-weight-light">
-            <div class="steps font-semibold">Passo 4</div>
-          </h2>
-          <v-icon dark> </v-icon>
-        </v-card-title>
-        <v-container class="color2 font-semibold">
-          <v-row class="mb-2 mt-2">
-            <v-col>
-              Você deve enviar o comprovante de envio por email como
-              especificado no cadastro.
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-card>
-    </v-timeline-item>
-
-    <v-timeline-item color="#FFF6EE" fill-dot right small>
-      <v-card>
-        <v-card-title class="color">
-          <v-icon class="mr-4" dark size="42"> </v-icon>
-          <h2 class="text-h4 white--text font-weight-light">
-            <div class="steps font-semibold">Passo 5</div>
-          </h2>
-        </v-card-title>
-        <v-container class="color2 font-semibold">
-          <v-row class="mb-2 mt-2">
-            <v-col>
-              Ao receber o comprovante, nossa equipe confirma que a doação e o
-              envio foram realizados corretamente.
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-card>
-    </v-timeline-item>
-  </v-timeline>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-title">COMO DOAR</div>
+      <div class="section-subtitle">
+        Passo a passo para realizar a sua doação!
+      </div>
+    </div>
+    <div class="step-by-step grid grid--2-cols">
+      <div class="grid-photo">
+        <img src="../assets/imagens/mock-1.png" alt="" />
+      </div>
+      <div class="grid-text">TEXT 1</div>
+      <div class="grid-text">TEXT 2</div>
+      <div class="grid-photo">
+        <img src="../assets/imagens/mock-2.png" alt="" />
+      </div>
+      <div class="grid-photo">
+        <img src="../assets/imagens/mock-3.png" alt="" />
+      </div>
+      <div class="grid-text">TEXT 3</div>
+      <div class="grid-text">TEXT 4</div>
+      <div class="grid-photo">
+        <img src="../assets/imagens/mock-4.png" alt="" />
+      </div>
+      <div class="grid-photo">
+        <img src="../assets/imagens/mock-5.png" alt="" />
+      </div>
+      <div class="grid-text">TEXT 5</div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -103,23 +40,7 @@ export default {
 </script>
 
 <style>
-.steps,
-.color2 {
-  font-family: "Proxima Nova", system-ui, sans-serif;
-  text-align: center;
-}
-
-.color {
-  background-color: #621200;
-}
-
-.color2 {
-  background-color: #fff6ee;
-  color: #621200;
-}
-
-.steps {
-  justify-content: center;
-  color: #fff6ee;
+.step-by-step {
+  row-gap: 2.4rem;
 }
 </style>

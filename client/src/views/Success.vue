@@ -13,9 +13,8 @@ export default {};
 
 <style>
 .pa-8 {
-  color: #fff6ee;
+  color: #743d31;
   font-size: 26px;
-  font-family: "Proxima Nova", system-ui, sans-serif;
   text-align: center;
 }
 </style>

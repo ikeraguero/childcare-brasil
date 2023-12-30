@@ -304,7 +304,7 @@ h1 {
   align-items: center;
   min-height: 0px;
   gap: -2.8rem;
-  max-width: 140rem;
+  max-width: 160rem;
   background-color: #fff6ee;
 }
 
