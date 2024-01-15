@@ -5,7 +5,7 @@
   "main": "/src/index.ts",
   "scripts": {
     "start": "nodemon src/index.ts",
-    "build": "prisma generate && rimraf dist && tsc",
+    "build": "npx prisma db push && npx prisma generate && rimraf dist && tsc",
     "ts.check": "tsc --project tsconfig.json",
     "add-build": "git add dist",
     "postinstall": "tsc && prisma generate",
