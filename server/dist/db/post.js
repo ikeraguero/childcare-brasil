@@ -43,7 +43,7 @@ exports.updateDonation =
   exports.updateChild =
   exports.addChild =
     void 0;
-const client_1 = require("@prisma/client/edge");
+const client_1 = require("@prisma/client");
 const prisma = new client_1.PrismaClient();
 function addChild(
   childphoto,

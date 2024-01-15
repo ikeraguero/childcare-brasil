@@ -43,7 +43,7 @@ exports.getState =
   exports.getChildren =
     void 0;
 const responseConstructor_1 = require("../lib/responseConstructor");
-const client_1 = require("@prisma/client/edge");
+const client_1 = require("@prisma/client");
 const prisma = new client_1.PrismaClient();
 // get all children
 function getChildren() {
