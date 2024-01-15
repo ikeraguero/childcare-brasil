@@ -13,7 +13,7 @@
       <div class="grid-text">
         <div class="text-content">
           <div class="number">01</div>
-          <div class="title">Tela inicial</div>
+          <div class="text-title">Tela inicial</div>
           <div class="instructions">
             Em nossa tela inicial, selecione se deseja doar para escolas ou
             crianças!
@@ -23,7 +23,7 @@
       <div class="grid-text">
         <div class="text-content">
           <div class="number">02</div>
-          <div class="title">Tela de doação</div>
+          <div class="text-title">Tela de doação</div>
           <div class="instructions">
             Na tela de doação, você deve selecionar a criança/escola para qual
             deseja doar.
@@ -39,7 +39,7 @@
       <div class="grid-text">
         <div class="text-content">
           <div class="number">03</div>
-          <div class="title">Formulario de doação</div>
+          <div class="text-title">Formulario de doação</div>
           <div class="instructions">
             Após selecionar a opção desejada, o formulário deve ser preenchido
             com seus dados e informações sobre a doação!
@@ -49,7 +49,7 @@
       <div class="grid-text">
         <div class="text-content">
           <div class="number">04</div>
-          <div class="title">Opção de pagamento</div>
+          <div class="text-title">Opção de pagamento</div>
           <div class="instructions">
             Ao preencher o formulário, você poderá selecionar qual a opção de
             pagamento deseja.
@@ -65,7 +65,7 @@
       <div class="grid-text">
         <div class="text-content">
           <div class="number">05</div>
-          <div class="title">Tela de pagamento</div>
+          <div class="text-title">Tela de pagamento</div>
           <div class="instructions">
             Basta confirmar o pagamento na nossa tela de pagamento que sua
             doação será concluída com sucesso!
@@ -75,7 +75,7 @@
       <div class="grid-text">
         <div class="text-content">
           <div class="number">06</div>
-          <div class="title">Tela de sucesso</div>
+          <div class="text-title">Tela de sucesso</div>
           <div class="instructions">
             Após a confirmação do pagamento, você deverá ser direcionado à essa
             tela. Caso isso aconteça, significa que sua doação já foi
@@ -100,11 +100,39 @@ export default {
 
 <style>
 .step-by-step {
-  row-gap: 2.4rem;
+  row-gap: 4.4rem;
   column-gap: 2.4rem;
+  grid-template-columns: 1fr, 1fr;
 }
 .grid-text {
   display: flex;
+  align-items: center;
+}
+
+.text-content {
+}
+
+.number {
+  font-weight: 600;
+  font-size: 19.6rem;
+  color: lightgray;
+}
+
+.text-title {
+  font-size: 3.2rem;
+}
+
+.instructions {
+  font-size: 2.2rem;
+}
+
+.grid-photo img {
+  width: 65%;
+}
+
+.grid-photo {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 </style>
