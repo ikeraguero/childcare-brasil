@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client/edge";
 import dotenv from "dotenv";
 import cors from "cors";
 import * as api from "./controllers/apicontroller";

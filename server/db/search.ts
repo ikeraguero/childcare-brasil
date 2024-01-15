@@ -1,5 +1,5 @@
 import { response } from "../lib/responseConstructor";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client/edge";
 
 const prisma = new PrismaClient();
 
