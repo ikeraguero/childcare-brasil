@@ -12,12 +12,12 @@
       </div>
       <div class="grid-text">
         <div class="text-content">
-          <div class="number">01</div>
-          <div class="text-title">Tela inicial</div>
-          <div class="instructions">
+          <p class="number">01</p>
+          <p class="text-title">Tela inicial</p>
+          <p class="instructions">
             Em nossa tela inicial, selecione se deseja doar para escolas ou
             crianças!
-          </div>
+          </p>
         </div>
       </div>
       <div class="grid-text">
@@ -104,6 +104,10 @@ export default {
   column-gap: 2.4rem;
   grid-template-columns: 1fr, 1fr;
 }
+
+.container {
+  padding: 4.8rem 8.2rem 4.8rem 8.2rem;
+}
 .grid-text {
   display: flex;
   align-items: center;
@@ -114,20 +118,30 @@ export default {
 
 .number {
   font-weight: 600;
-  font-size: 19.6rem;
+  font-size: 8.6rem;
   color: lightgray;
 }
 
 .text-title {
   font-size: 3.2rem;
+  font-weight: 600;
 }
 
 .instructions {
   font-size: 2.2rem;
+  color: #666;
 }
 
 .grid-photo img {
-  width: 65%;
+  width: 70%;
+  border-radius: 1000px;
+}
+
+.grid-photo img::before {
+  width: 80%;
+  padding-bottom: 60%;
+  background-color: #eea366;
+  z-index: -2;
 }
 
 .grid-photo {
