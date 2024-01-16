@@ -23,9 +23,7 @@
           </li>
         </router-link>
         <router-link to="/"><li class="nav-item">Início</li></router-link>
-        <router-link to="/contato"
-          ><li class="nav-item">Contato</li></router-link
-        >
+        <a href="#contact"><li class="nav-item">Contato</li></a>
         <router-link to="/comodoar"
           ><li class="nav-item">Como Doar</li></router-link
         >
@@ -47,49 +45,57 @@
     <v-main class="fundo">
       <router-view></router-view>
     </v-main>
-    <footer class="container-footer footer-section footer-grid"
-      ><div class="column">
-          <span class="logo-footer">CHILDCARE BRASIL</span>
-          <div class="social-media-icons">
-            <a href="#"><ion-icon name="logo-facebook" class="footer-icons"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-instagram" class="footer-icons"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-twitter" class="footer-icons"></ion-icon></a>
-          </div>
+    <footer class="container-footer footer-section footer-grid">
+      <div class="column">
+        <span class="logo-footer">CHILDCARE BRASIL</span>
+        <div class="social-media-icons">
+          <a href="#"
+            ><ion-icon name="logo-facebook" class="footer-icons"></ion-icon
+          ></a>
+          <a href="#"
+            ><ion-icon name="logo-instagram" class="footer-icons"></ion-icon
+          ></a>
+          <a href="#"
+            ><ion-icon name="logo-twitter" class="footer-icons"></ion-icon
+          ></a>
         </div>
-        <div class="column">
-          <span class="column-footer-title">Contato</span>
-          <div class="contact-info">
-            <p class="address">Rua Dona Cezarina, 101, Joinville, Santa Catarina</p>
-            <p class="cellphone">(47) 99963-2311</p>
-            <p class="email">childcarebrasil@gmail.com</p>
-          </div>
+      </div>
+      <div class="column">
+        <span class="column-footer-title">Contato</span>
+        <div class="contact-info">
+          <p class="address">
+            Rua Dona Cezarina, 101, Joinville, Santa Catarina
+          </p>
+          <p class="cellphone">(47) 99963-2311</p>
+          <p class="email">childcarebrasil@gmail.com</p>
         </div>
-        <div class="column">
-          <span class="column-footer-title">Conta</span>
-          <ul class="footer-list">
-            <li>Criar uma conta</li>
-            <li>Fazer Log In</li>
-            <li>iOS</li>
-            <li>Android</li>
-          </ul>
-        </div>
-        <div class="column">
-          <span class="column-footer-title">Empresa</span>
-          <ul class="footer-list">
-            <li>Sobre ChildcareBrasil</li>
-            <li>Para Negócios</li>
-            <li>Parceiros</li>
-          </ul>
-        </div>
-        <div class="column">
-          <span class="column-footer-title">Recursos</span>
-          <ul class="footer-list">
-            <li>Doações</li>
-            <li>Central de Ajuda</li>
-            <li>Termos de privacidade</li>
-          </ul>
-        </div></footer
-    >
+      </div>
+      <div class="column">
+        <span class="column-footer-title">Conta</span>
+        <ul class="footer-list">
+          <li>Criar uma conta</li>
+          <li>Fazer Log In</li>
+          <li>iOS</li>
+          <li>Android</li>
+        </ul>
+      </div>
+      <div class="column">
+        <span class="column-footer-title">Empresa</span>
+        <ul class="footer-list">
+          <li>Sobre ChildcareBrasil</li>
+          <li>Para Negócios</li>
+          <li>Parceiros</li>
+        </ul>
+      </div>
+      <div class="column">
+        <span class="column-footer-title">Recursos</span>
+        <ul class="footer-list">
+          <li>Doações</li>
+          <li>Central de Ajuda</li>
+          <li>Termos de privacidade</li>
+        </ul>
+      </div>
+    </footer>
   </v-app>
 </template>
 <script>
@@ -175,7 +181,8 @@ nav {
   justify-content: space-between;
   gap: 40px;
 }
-.nav-links a, .nav-item {
+.nav-links a,
+.nav-item {
   color: #333;
   font-family: "Proxima Nova", system-ui, sans-serif;
   text-decoration: none;
@@ -254,7 +261,11 @@ nav {
   color: #743d31;
 }
 
-footer{
- padding: 9.6rem 0
+.nav-item li a:hover,
+.nav-item li a:active {
+  color: #743d31;
+}
+footer {
+  padding: 9.6rem 0;
 }
 </style>

@@ -166,7 +166,7 @@
           </p>
         </div>
       </section>
-      <section class="cta">
+      <section class="cta" id="contact">
         <div class="cta-container grid grid--3-cols">
           <div class="text-box">
             <h2 class="cta-title">Registre crianças e escolas!</h2>
