@@ -262,7 +262,7 @@
           <div class="flex justify-center">
             <button
               @click="unhideForm2"
-              class="bg-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2"
+              class="donation-btn bg-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2"
               type="button"
               value="Voltar"
             >
@@ -513,5 +513,9 @@ select {
 
 .back-btn {
   font-size: 18px;
+}
+
+.donation-btn {
+  background-color: #743d31;
 }
 </style>

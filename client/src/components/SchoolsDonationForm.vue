@@ -241,7 +241,7 @@
           <div class="mt-6 flex justify-center">
             <button
               @click="unhideForm1"
-              class="bg-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2"
+              class="donation-btn bg-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2"
               type="button"
               value="Voltar"
             >
