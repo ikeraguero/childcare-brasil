@@ -13,13 +13,18 @@
               <p class="section-subtitle mb-0 flex justify-center">
                 Finalize a sua doação!
               </p>
-              <div class="pay mt-16 bg-antiquewhite" ref="paypal"></div>
             </div>
             <div v-if="paidFor == true">
-              <h1>Pagamento realizado com sucesso!</h1>
-              <h1>Conclua a doação para finalizar</h1>
+              <div class="text-sucessful-payment">
+                <h1 class="section-title">Pagamento realizado com sucesso!</h1>
+                <h1 class="section-subtitle">
+                  Conclua a doação para finalizar
+                </h1>
+              </div>
             </div>
-            <div class="pay mt-16 bg-antiquewhite" ref="paypal"></div>
+            <div v-if="paidFor == false">
+              <div class="pay mt-16 bg-antiquewhite" ref="paypal"></div>
+            </div>
           </v-container>
         </div>
       </div>
@@ -248,7 +253,7 @@
               Voltar
             </button>
             <input
-              class="bg-white font-medium px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
+              class="donation-btn bg-white font-medium px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
               type="submit"
               value="Concluir doação"
             />
@@ -270,7 +275,7 @@
             </button>
             <input
               v-if="paidFor == true"
-              class="bg-white font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
+              class="donation-btn bg-white font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
               type="submit"
               value="Concluir doação"
             />
@@ -517,5 +522,14 @@ select {
 
 .donation-btn {
   background-color: #743d31;
+  color: #ffff;
+}
+
+.invisible {
+  display: none;
+}
+
+.text-sucessful-payment h1 {
+  color: #743d31;
 }
 </style>
