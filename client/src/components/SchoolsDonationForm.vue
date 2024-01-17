@@ -167,6 +167,20 @@
           </label>
           <label
             class="block text-sm font-bold mb-3"
+            id="donatedto"
+            style="display: none"
+          >
+            <div class="test"></div>
+            <input
+              name="donationtype"
+              type="text"
+              value="Dinheiro"
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              required
+            />
+          </label>
+          <label
+            class="block text-sm font-bold mb-3"
             id="donatedtoid"
             style="display: none"
           >

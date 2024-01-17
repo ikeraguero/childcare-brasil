@@ -61,7 +61,6 @@
                   >Doar</router-link
                 >
                 <router-link
-                  v-bind:to="'/criancas/perfil/' + card.id"
                   type="button"
                   class="btn inline-block px-6 py-2.5 ml-3 bg-white cursor-pointer font-semibold text-xs leading-tight uppercase shadow-md"
                   >Informações</router-link
