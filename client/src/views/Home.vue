@@ -105,7 +105,7 @@
           </div>
         </div>
       </section>
-      <div class="section-header">
+      <div class="section-header" id="testimonials">
         <span class="section-title">DOADORES</span>
         <span class="section-subtitle">Depoimentos de quem faz o bem</span>
       </div>

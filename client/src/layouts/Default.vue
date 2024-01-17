@@ -24,9 +24,7 @@
         </router-link>
         <router-link to="/"><li class="nav-item">Início</li></router-link>
         <a href="#contact"><li class="nav-item">Contato</li></a>
-        <router-link to="/comodoar"
-          ><li class="nav-item">Como Doar</li></router-link
-        >
+        <a href="#testimonials"><li class="nav-item">Depoimentos</li></a>
         <router-link to="/perfil"><li class="nav-item">Perfil</li></router-link>
         <a v-if="!$auth.isAuthenticated" @click="login" class="button is-dark"
           ><strong class="auth-btn">Comece a doar</strong></a
