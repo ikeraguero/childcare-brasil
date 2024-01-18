@@ -129,10 +129,6 @@ export default {
     },
   },
 };
-
-document
-  .getElementById("closed")
-  .addEventListener("Click", console.log("Teste"));
 </script>
 
 <style>
