@@ -4,7 +4,7 @@
       <div>
         <v-row>
           <v-col cols="10">
-            <mosaico class="mt-4 ml-3" />
+            <mosaico class="mosaico mt-4 ml-3" />
           </v-col>
         </v-row>
       </div>
@@ -238,11 +238,9 @@ h1,
   color: #fff6ee;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  background: lightskyblue
-    url("https://i.pinimg.com/originals/3c/24/46/3c24462450c2a902bf7e18f3d9aada81.jpg");
-  /* Push to bottom */
+body,
+template {
+  font-family: "Rubik", sans-serif;
 }
 
 .container-footer {
@@ -602,5 +600,52 @@ form select,
   color: #555;
   width: 2.6rem;
   height: 2.6rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 79em) {
+  .donations-made {
+    flex-direction: column;
+    align-items: normal;
+  }
+}
+
+@media (max-width: 68em) {
+  .footer-grid {
+    gap: 1.2rem;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .nav-links {
+    gap: 2.8rem;
+  }
+}
+
+@media (max-width: 55em) {
+  .mosaico {
+    display: none;
+  }
+  .header-2 {
+    display: flex;
+    text-align: center;
+    position: relative;
+  }
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-btns {
+    padding-top: 4.8rem;
+  }
+  section {
+    margin-top: 3.2rem;
+  }
+  .footer-section {
+    padding-top: 3.6rem;
+  }
+  .cta {
+    padding-top: 2.4rem;
+  }
 }
 </style>

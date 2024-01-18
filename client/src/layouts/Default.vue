@@ -35,11 +35,18 @@
           ><strong class="auth-btn">Sair</strong></a
         >
       </ul>
-      <div class="burguer">
-        <div class="linha1"></div>
-        <div class="linha2"></div>
-        <div class="linha3"></div>
-      </div>
+      <button class="nav-menu-mobile">
+        <ion-icon
+          class="nav-menu-mobile-icon"
+          name="close-outline"
+          id="open"
+        ></ion-icon>
+        <ion-icon
+          class="nav-menu-mobile-icon"
+          name="menu-outline"
+          id="closed"
+        ></ion-icon>
+      </button>
     </nav>
 
     <v-main class="fundo">
@@ -79,7 +86,7 @@
           <li>Android</li>
         </ul>
       </div>
-      <div class="column">
+      <div class="column-company">
         <span class="column-footer-title">Empresa</span>
         <ul class="footer-list">
           <li>Sobre ChildcareBrasil</li>
@@ -98,6 +105,14 @@
     </footer>
   </v-app>
 </template>
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
 <script>
 export default {
   name: "Nav",
@@ -114,6 +129,10 @@ export default {
     },
   },
 };
+
+document
+  .getElementById("closed")
+  .addEventListener("Click", console.log("Teste"));
 </script>
 
 <style>
@@ -179,7 +198,7 @@ nav {
 .nav-links {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 4rem;
 }
 .nav-links a,
 .nav-item {
@@ -265,7 +284,56 @@ nav {
 .nav-item li a:active {
   color: #743d31;
 }
+
+ion-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
 footer {
-  padding: 9.6rem 0;
+  padding: 9.6rem 4.6rem;
+}
+
+@media (max-width: 73em) {
+  .footer-grid {
+    gap: 1.2rem;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .nav-links {
+    gap: 1.6rem;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 64em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 60em) {
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 55em) {
+  .nav-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    /* hide it visually */
+    opacity: 0;
+    /* hide it from mouse and keyboard */
+    pointer-events: none;
+    /* hide it from screen readers */
+    visibility: hidden;
+
+    transition: all 0.5s;
+  }
 }
 </style>
