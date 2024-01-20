@@ -144,9 +144,12 @@ export default {
       });
     },
     openMenu() {
-      this.$nextTick(() => {
-        console.log(this.myNavRef);
-      });
+      document.querySelector("nav").classList.add("mobile-menu");
+      document.querySelector(".logo").classList.add("mobile-menu-stay-at-top");
+      document
+        .querySelector(".nav-menu-mobile")
+        .classList.add("mobile-menu-stay-at-top");
+      document.querySelector(".nav-links").classList.add("appear");
     },
   },
 };
@@ -162,6 +165,20 @@ export default {
 html {
   font-size: 62.5%;
   font-family: "Rubik", sans-serif;
+}
+
+.mobile-menu {
+  height: 100vh;
+  background-color: #fff;
+  position: relative;
+}
+
+.mobile-menu-stay-at-top {
+  display: none;
+}
+
+.appear {
+  display: block;
 }
 
 .v-application a {
@@ -333,7 +350,7 @@ footer {
 
 @media (max-width: 60em) {
   .footer-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
   html {
     font-size: 50%;
@@ -341,14 +358,7 @@ footer {
 }
 @media (max-width: 55em) {
   .nav-links {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
     display: none;
-
-    transition: all 0.5s;
   }
   .nav-menu-mobile {
     display: block;
@@ -359,6 +369,29 @@ footer {
   }
   #open {
     display: none;
+  }
+}
+@media (max-width: 46em) {
+  .footer-grid {
+    grid-template-columns: 0.5fr 1fr;
+    row-gap: 2.8rem;
+  }
+  .column-footer-title {
+    font-size: 2.4rem;
+  }
+  .footer-list,
+  .address,
+  .cellphone,
+  .email {
+    font-size: 1.6rem;
+  }
+  .logo-footer {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 40em) {
+  .footer-grid {
+    grid-template-columns: 1.5fr;
   }
 }
 </style>

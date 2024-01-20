@@ -1,37 +1,6 @@
 <template>
   <article>
     <header>
-      <nav class="white-nav" ref="myNav">
-        <ul class="nav-links-mobile">
-          <router-link to="/"
-            ><li class="nav-item-mobile">Início</li></router-link
-          >
-          <a href="#contact"><li class="nav-item-mobile">Contato</li></a>
-          <router-link to="/comodoar"
-            ><li class="nav-item-mobile">Como Doar</li></router-link
-          >
-          <a href="#testimonials"
-            ><li class="nav-item-mobile">Depoimentos</li></a
-          >
-          <a v-if="!$auth.isAuthenticated" @click="login">
-            <li class="nav-item-mobile">Comece a doar</li></a
-          >
-          <a v-if="$auth.isAuthenticated" @click="logout"
-            ><li class="nav-item-mobile">Sair</li></a
-          >
-          <router-link to="/adminn">
-            <li
-              class="nav-item-mobile"
-              v-if="
-                $auth.isAuthenticated &&
-                $auth.user.email == 'ikerpires407@gmail.com'
-              "
-            >
-              Admin
-            </li>
-          </router-link>
-        </ul>
-      </nav>
       <div class="header-2">
         <div>
           <v-row>
@@ -145,7 +114,7 @@
         <span class="section-subtitle">Depoimentos de quem faz o bem</span>
       </div>
       <section class="testimonials-section">
-        <div class="quote-photo">
+        <div class="quote-photo photo--isabela">
           <img
             src="../assets/imagens/donator1.jpg"
             alt=""
@@ -175,7 +144,7 @@
             &ndash; Alice Moraes, doadora do Childcare Brasil
           </p>
         </div>
-        <div class="quote-photo">
+        <div class="quote-photo photo--alice">
           <img
             src="../assets/imagens/donator2.jpg"
             alt=""
@@ -183,7 +152,7 @@
           />
         </div>
 
-        <div class="quote-photo">
+        <div class="quote-photo photo--ricardo">
           <img
             src="../assets/imagens/donator3.jpg"
             alt=""
@@ -202,7 +171,7 @@
         </div>
       </section>
       <section class="cta" id="contact">
-        <div class="cta-container grid grid--3-cols">
+        <div class="cta-container">
           <div class="text-box">
             <h2 class="cta-title">Registre crianças e escolas!</h2>
             <p class="cta-subtitle">
@@ -210,7 +179,7 @@
               escola e possua alunos que deseja inserir em nosso sistema para
               doações.
             </p>
-            <form action="" class="grid grid--2-cols">
+            <form action="" class="cta-grid">
               <div class="cta-form-grid-item">
                 <label for="full-name">Qual o seu nome completo?</label>
                 <input type="text" placeholder="João da Silva" id="full-name" />
@@ -562,11 +531,18 @@ section {
   background-color: #743d31;
   border-radius: 9px;
   font-family: inherit;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .img-box {
   display: flex;
   justify-content: flex-end;
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .cta-img {
@@ -705,14 +681,12 @@ form select,
     text-align: center;
     position: relative;
     top: 0;
+    flex-direction: column;
   }
   .header-text {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .header-btns {
-    padding-top: 4.8rem;
   }
   section {
     margin-top: 3.2rem;
@@ -746,5 +720,64 @@ form select,
     position: absolute;
     width: 100%;
   }
+  .header-btns {
+    padding-top: 2.4rem;
+  }
+}
+
+@media (max-width: 49em) {
+  .features-container {
+    grid-template-columns: 1fr;
+    row-gap: 3.6rem;
+  }
+  .cta-grid {
+    grid-template-columns: 1fr;
+    row-gap: 0.8rem;
+  }
+  .cta-button {
+    margin-top: 4.2rem;
+  }
+  .cta-form-grid-item label {
+    font-size: 2rem;
+  }
+  .cta-img {
+    width: 100%;
+  }
+  .text-box {
+    grid-column: span 1;
+  }
+  .cta-container {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
+@media (max-width: 45em) {
+  .testimonials-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2.8rem;
+  }
+  .quote-photo {
+    align-self: center;
+    justify-self: center;
+    margin-top: 2.8rem;
+  }
+
+  .quote-photo img {
+    width: 18.6rem;
+  }
+  .photo--alice {
+    grid-row: 3;
+  }
+
+  .cta-img {
+    display: none;
+  }
+  .text-box {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 40em) {
 }
 </style>
