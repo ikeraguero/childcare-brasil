@@ -1,18 +1,20 @@
 <template>
   <span>
     <div
-      class="grid gap-0 grid-cols-4 grid-rows-0 overflow whitespace-nowrap"
+      class="children-grid grid gap-0 grid-cols-4 grid-rows-0 overflow whitespace-nowrap"
       id="container"
     >
       <div v-for="card in cards.data" :key="card.index">
-        <div class="px-2 m-4 snap-center max-w-max p-6">
+        <div class="card-item px-2 m-4 snap-center max-w-max p-6">
           <div
             class="teste rounded-lg w-96lg:w-410 overflow-hidden"
             style="overflow-wrap: anywhere"
           >
             <a href="/">
               <router-link v-bind:to="'/criancas/perfil/' + card.id"
-                ><img class="rounded-t-lg h-80" :src="card.photo"
+                ><img
+                  class="children-photo rounded-t-lg h-80"
+                  :src="card.photo"
               /></router-link>
             </a>
             <div class="p-5">
@@ -188,5 +190,34 @@ export default {
 
 .buttons {
   padding-bottom: 24px;
+}
+@media (max-width: 75em) {
+  .children-grid {
+    grid-template-columns: repeat(3, 1fr);
+    .children-photo {
+      height: 29.6rem;
+    }
+  }
+  @media (max-width: 67em) {
+    .children-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .children-photo {
+      width: 86rem;
+    }
+  }
+
+  @media (max-width: 45em) {
+    .teste {
+      width: 36rem;
+    }
+  }
+  @media (max-width: 39em) {
+    .children-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
 </style>
