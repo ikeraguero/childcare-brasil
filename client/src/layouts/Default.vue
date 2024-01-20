@@ -6,7 +6,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rubik:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <nav>
+    <nav class="nav" ref="myNav">
       <div>
         <router-link to="/"><h1 class="logo">Childcare Brasil</h1></router-link>
       </div>
@@ -45,6 +45,7 @@
           class="nav-menu-mobile-icon"
           name="menu-outline"
           id="closed"
+          @click="openMenu"
         ></ion-icon>
       </button>
     </nav>
@@ -114,8 +115,23 @@
   src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
 ></script>
 <script>
+import Home from "../views/Home.vue";
+
 export default {
   name: "Nav",
+  components: {
+    Home,
+  },
+  mounted() {
+    this.$on("navRef", (navRef) => {
+      this.myNavRef = navRef;
+    });
+  },
+  data() {
+    return {
+      myNavRef: null,
+    };
+  },
   methods: {
     // Log the user in
     login() {
@@ -125,6 +141,11 @@ export default {
     logout() {
       this.$auth.logout({
         returnTo: window.location.origin,
+      });
+    },
+    openMenu() {
+      this.$nextTick(() => {
+        console.log(this.myNavRef);
       });
     },
   },
@@ -220,6 +241,10 @@ nav {
   background-color: #621200;
   margin: 5px;
   cursor: pointer;
+}
+
+.nav-menu-mobile {
+  display: none;
 }
 
 @media screen and (max-width: 1024px) {
@@ -321,15 +346,19 @@ footer {
     left: 0;
     width: 100%;
     height: 100vh;
-    justify-content: center;
-    /* hide it visually */
-    opacity: 0;
-    /* hide it from mouse and keyboard */
-    pointer-events: none;
-    /* hide it from screen readers */
-    visibility: hidden;
+    display: none;
 
     transition: all 0.5s;
+  }
+  .nav-menu-mobile {
+    display: block;
+  }
+  .nav-menu-mobile ion-icon {
+    width: 24px;
+    height: 24px;
+  }
+  #open {
+    display: none;
   }
 }
 </style>

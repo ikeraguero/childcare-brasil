@@ -1,61 +1,96 @@
 <template>
   <article>
-    <header class="header-2">
-      <div>
-        <v-row>
-          <v-col cols="10">
-            <mosaico class="mosaico mt-4 ml-3" />
-          </v-col>
-        </v-row>
-      </div>
-      <div class="header-text">
-        <h1 class="header-title">
-          Nos ajude a mudar a vida de milhares de crianças brasileiras!
-        </h1>
-        <h2 class="header-description">
-          Doe agora para as nossas escolas e crianças registradas.
-        </h2>
-        <div class="header-btns">
-          <router-link to="/criancas" class="donation-btn"
-            >Crianças</router-link
+    <header>
+      <nav class="white-nav" ref="myNav">
+        <ul class="nav-links-mobile">
+          <router-link to="/"
+            ><li class="nav-item-mobile">Início</li></router-link
           >
-          <router-link to="/escolas" class="donation-btn">Escolas</router-link>
+          <a href="#contact"><li class="nav-item-mobile">Contato</li></a>
+          <router-link to="/comodoar"
+            ><li class="nav-item-mobile">Como Doar</li></router-link
+          >
+          <a href="#testimonials"
+            ><li class="nav-item-mobile">Depoimentos</li></a
+          >
+          <a v-if="!$auth.isAuthenticated" @click="login">
+            <li class="nav-item-mobile">Comece a doar</li></a
+          >
+          <a v-if="$auth.isAuthenticated" @click="logout"
+            ><li class="nav-item-mobile">Sair</li></a
+          >
+          <router-link to="/adminn">
+            <li
+              class="nav-item-mobile"
+              v-if="
+                $auth.isAuthenticated &&
+                $auth.user.email == 'ikerpires407@gmail.com'
+              "
+            >
+              Admin
+            </li>
+          </router-link>
+        </ul>
+      </nav>
+      <div class="header-2">
+        <div>
+          <v-row>
+            <v-col cols="10">
+              <mosaico class="mosaico mt-4 ml-3" />
+            </v-col>
+          </v-row>
         </div>
-        <div class="donations-made">
-          <div class="donators-images">
-            <img
-              src="../assets/imagens/1.jpg"
-              alt="Donator 1"
-              class="donator-img"
-            />
-            <img
-              src="../assets/imagens/2.jpg"
-              alt="Donator 2"
-              class="donator-img"
-            />
-            <img
-              src="../assets/imagens/3.jpg"
-              alt="Donator 3"
-              class="donator-img"
-            />
-            <img
-              src="../assets/imagens/4.jpg"
-              alt="Donator 4"
-              class="donator-img"
-            />
-            <img
-              src="../assets/imagens/5.jpg"
-              alt="Donator 5"
-              class="donator-img"
-            />
-            <img
-              src="../assets/imagens/6.jpg"
-              alt="Donator 6"
-              class="donator-img"
-            />
+        <div class="header-text">
+          <h1 class="header-title">
+            Nos ajude a mudar a vida de milhares de crianças brasileiras!
+          </h1>
+          <h2 class="header-description">
+            Doe agora para as nossas escolas e crianças registradas.
+          </h2>
+          <div class="header-btns">
+            <router-link to="/criancas" class="donation-btn"
+              >Crianças</router-link
+            >
+            <router-link to="/escolas" class="donation-btn"
+              >Escolas</router-link
+            >
           </div>
-          <div class="donators-text overflow whitespace-nowrap">
-            <span>R$500.000+</span> em doações no último ano!
+          <div class="donations-made">
+            <div class="donators-images">
+              <img
+                src="../assets/imagens/1.jpg"
+                alt="Donator 1"
+                class="donator-img"
+              />
+              <img
+                src="../assets/imagens/2.jpg"
+                alt="Donator 2"
+                class="donator-img"
+              />
+              <img
+                src="../assets/imagens/3.jpg"
+                alt="Donator 3"
+                class="donator-img"
+              />
+              <img
+                src="../assets/imagens/4.jpg"
+                alt="Donator 4"
+                class="donator-img"
+              />
+              <img
+                src="../assets/imagens/5.jpg"
+                alt="Donator 5"
+                class="donator-img"
+              />
+              <img
+                src="../assets/imagens/6.jpg"
+                alt="Donator 6"
+                class="donator-img"
+              />
+            </div>
+            <div class="donators-text overflow whitespace-nowrap">
+              <span>R$500.000+</span> em doações no último ano!
+            </div>
           </div>
         </div>
       </div>
@@ -215,18 +250,40 @@ import Mosaico from "@/components/template/Mosaico";
 import axios from "axios";
 
 export default {
+  name: "Home",
   components: { Mosaico },
-  methods: {},
+  methods: {
+    // Log the user in
+    login() {
+      this.$auth.loginWithRedirect();
+    },
+    // Log the user out
+    logout() {
+      this.$auth.logout({
+        returnTo: window.location.origin,
+      });
+    },
+    openMenu() {
+      console.log("Test");
+    },
+  },
   data() {
     return {
       cards: [],
       showControls: true,
     };
   },
+  props: {
+    myNavRef: {
+      type: Object,
+      default: null,
+    },
+  },
   mounted() {
     axios
       .get("https://childcare-brasil.vercel.app/api/donations")
       .then((response) => (this.cards = response));
+    this.$emit("navRef", this.$refs.myNav);
   },
 };
 </script>
@@ -288,6 +345,24 @@ h1 {
   font-size: 5.2rem;
   letter-spacing: -3px;
   font-weight: 500;
+}
+
+.nav-item-mobile {
+  font-size: 3.2rem;
+  color: #333;
+  font-family: "Rubik", system-ui, sans-serif;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+}
+
+.nav-links-mobile li:hover,
+.nav-links-mobile li:active {
+  color: #743d31;
+}
+
+.white-nav {
+  display: none;
 }
 
 .header-description {
@@ -629,6 +704,7 @@ form select,
     display: flex;
     text-align: center;
     position: relative;
+    top: 0;
   }
   .header-text {
     display: flex;
@@ -646,6 +722,29 @@ form select,
   }
   .cta {
     padding-top: 2.4rem;
+  }
+
+  .nav-links-mobile {
+    background-color: #fff;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .nav-item {
+    font-size: 6.4rem;
+  }
+
+  .white-nav {
+    height: 100vh;
+    padding: 0;
+    position: absolute;
+    width: 100%;
   }
 }
 </style>
