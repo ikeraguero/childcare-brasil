@@ -1,7 +1,7 @@
 <template>
   <span>
     <div
-      class="grid gap-0 grid-cols-4 grid-rows-0 overflow whitespace-nowrap"
+      class="schools-grid grid gap-0 grid-cols-4 grid-rows-0 overflow whitespace-nowrap"
       id="container"
     >
       <div v-for="card in cards.data" :key="card.index">
@@ -12,7 +12,7 @@
           >
             <a href="/">
               <router-link v-bind:to="'/escolas/perfil/' + card.id"
-                ><img class="rounded-t-lg h-80" :src="card.photo"
+                ><img class="schools-photo rounded-t-lg h-80" :src="card.photo"
               /></router-link>
             </a>
             <div class="p-5">
@@ -165,5 +165,35 @@ export default {
 
 .buttons {
   padding-bottom: 24px;
+}
+
+@media (max-width: 75em) {
+  .schools-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .schools-photo {
+    height: 29.6rem;
+  }
+}
+@media (max-width: 67em) {
+  .schools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .schools-photo {
+    width: 86rem;
+  }
+}
+
+@media (max-width: 45em) {
+  .teste {
+    width: 36rem;
+  }
+}
+@media (max-width: 39em) {
+  .schools-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 </style>

@@ -194,30 +194,30 @@ export default {
 @media (max-width: 75em) {
   .children-grid {
     grid-template-columns: repeat(3, 1fr);
-    .children-photo {
-      height: 29.6rem;
-    }
   }
-  @media (max-width: 67em) {
-    .children-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .children-photo {
-      width: 86rem;
-    }
+  .children-photo {
+    height: 29.6rem;
   }
+}
+@media (max-width: 67em) {
+  .children-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .children-photo {
+    width: 86rem;
+  }
+}
 
-  @media (max-width: 45em) {
-    .teste {
-      width: 36rem;
-    }
+@media (max-width: 45em) {
+  .teste {
+    width: 36rem;
   }
-  @media (max-width: 39em) {
-    .children-grid {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+}
+@media (max-width: 39em) {
+  .children-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 </style>
