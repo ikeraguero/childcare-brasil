@@ -10,7 +10,7 @@
       <div>
         <router-link to="/"><h1 class="logo">Childcare Brasil</h1></router-link>
       </div>
-      <ul class="nav-links">
+      <ul class="nav-links" id="links-nav">
         <router-link to="/adminn">
           <li
             class="nav-item"
@@ -40,6 +40,7 @@
           class="nav-menu-mobile-icon"
           name="close-outline"
           id="open"
+          @click="closeMenu"
         ></ion-icon>
         <ion-icon
           class="nav-menu-mobile-icon"
@@ -145,11 +146,19 @@ export default {
     },
     openMenu() {
       document.querySelector("nav").classList.add("mobile-menu");
-      document.querySelector(".logo").classList.add("mobile-menu-stay-at-top");
-      document
-        .querySelector(".nav-menu-mobile")
-        .classList.add("mobile-menu-stay-at-top");
-      document.querySelector(".nav-links").classList.add("appear");
+      document.querySelector(".logo").style.display = "none";
+      document.querySelector(".nav-item").style.marginTop = "30px";
+      document.getElementById("links-nav").style.display = "block";
+      document.getElementById("closed").style.display = "none";
+      document.getElementById("open").style.display = "block";
+      console.log(document.querySelector(".nav-item"));
+    },
+    closeMenu() {
+      document.querySelector("nav").classList.remove("mobile-menu");
+      document.querySelector(".logo").style.display = "block";
+      document.getElementById("links-nav").style.display = "none";
+      document.getElementById("closed").style.display = "block";
+      document.getElementById("open").style.display = "none";
     },
   },
 };
@@ -214,6 +223,10 @@ html {
   justify-content: center;
 }
 
+.nav-links-vertical-spacing {
+  margin-top: 2.4rem;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -264,41 +277,13 @@ nav {
   display: none;
 }
 
+.spacing {
+  margin-top: 1.8rem !important;
+}
+
 @media screen and (max-width: 1024px) {
   .nav-linha {
     width: 60%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-  .nav-links {
-    position: absolute;
-    right: 0px;
-    height: 92vh;
-    top: 8vh;
-    background-color: #fff6ee;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-  }
-  .nav-links li {
-    opacity: 0;
-  }
-  .burguer {
-    display: block;
-  }
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  .dropdown:hover .dropdown-content {
-    display: block;
   }
 }
 
