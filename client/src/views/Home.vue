@@ -346,7 +346,6 @@ h1 {
   align-items: center;
   min-height: 0px;
   gap: -2.8rem;
-  min-width: 160rem;
   background-color: #fff6ee;
 }
 
@@ -549,7 +548,7 @@ section {
 }
 
 .cta-img {
-  width: 90%;
+  width: 100%;
   border-top-right-radius: 9px;
   border-bottom-right-radius: 9px;
 }
