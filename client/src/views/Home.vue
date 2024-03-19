@@ -529,7 +529,6 @@ section {
   flex-direction: column;
   justify-content: center;
 }
-}
 
 .cta-container {
   background-color: #743d31;
