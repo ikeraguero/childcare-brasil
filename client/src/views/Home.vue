@@ -524,7 +524,11 @@ section {
 
 .text-box {
   grid-column: span 2;
-  padding: 4.8rem 3.6rem 3.6rem 3.6rem;
+  padding: 3.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 }
 
 .cta-container {
