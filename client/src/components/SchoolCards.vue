@@ -129,6 +129,7 @@ export default {
   overflow: auto;
 }
 
+
 .card-content h3,
 .card-content li {
   color: #343a40;
