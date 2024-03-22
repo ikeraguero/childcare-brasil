@@ -264,6 +264,10 @@ h1,
   color: #fff6ee;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body,
 template {
   font-family: "Rubik", sans-serif;
