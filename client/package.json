@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+    "serve": "NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
     "build": "NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
     "lint": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint"
   },
@@ -15,7 +15,6 @@
     "@emailjs/browser": "^3.7.0",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
-    "@heroicons/vue": "^1.0.6",
     "@prisma/client": "^4.1.0",
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "@vue-stripe/vue-stripe": "^4.4.4",
@@ -25,7 +24,6 @@
     "emailjs-com": "^3.2.0",
     "firebase": "^9.6.0",
     "netlify": "^13.1.2",
-    "node-sass": "^6.0.1",
     "postcss": "^7.0.39",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
     "uninstall": "^0.0.0",
@@ -33,7 +31,6 @@
     "vue-axios": "^3.4.1",
     "vue-router": "^3.2.0",
     "vue-select": "^3.20.0",
-    "vue3-autocounter": "^1.0.6",
     "vuetify": "^2.4.0"
   },
   "devDependencies": {

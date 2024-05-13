@@ -1,7 +1,7 @@
 <template>
   <span>
     <div
-      class="schools-grid grid gap-0 grid-cols-4 grid-rows-0 overflow whitespace-nowrap"
+      class="schools-grid grid gap-0 grid-cols-4 grid-rows-0 overflow whitespace-nowrap container"
       id="container"
     >
       <div v-for="card in cards.data" :key="card.index">
@@ -87,6 +87,10 @@ export default {
 </script>
 
 <style scoped>
+
+.container {
+  width: 180rem;
+}
 .card-control {
   background-color: transparent;
   border: none;

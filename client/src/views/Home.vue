@@ -1,7 +1,7 @@
 <template>
   <article>
-    <header>
-      <div class="header-2">
+    <header >
+      <div class="header-2 container">
         <div>
           <v-row>
             <v-col cols="10">
@@ -65,7 +65,7 @@
       </div>
     </header>
     <div class="sections">
-      <section class="donate-section">
+      <section class="donate-section container">
         <div class="section-header">
           <span class="section-title">DOAR</span>
           <span class="section-subtitle">Doe agora mesmo!</span>
@@ -109,11 +109,11 @@
           </div>
         </div>
       </section>
-      <div class="section-header" id="testimonials">
+      <div class="section-header container" id="testimonials">
         <span class="section-title">DOADORES</span>
         <span class="section-subtitle">Depoimentos de quem faz o bem</span>
       </div>
-      <section class="testimonials-section">
+      <section class="testimonials-section container">
         <div class="quote-photo photo--isabela">
           <img
             src="../assets/imagens/donator1.jpg"
@@ -170,7 +170,7 @@
           </p>
         </div>
       </section>
-      <section class="cta" id="contact">
+      <section class="cta container" id="contact">
         <div class="cta-container">
           <div class="text-box">
             <h2 class="cta-title">Registre crianças e escolas!</h2>
@@ -258,6 +258,15 @@ export default {
 </script>
 
 <style>
+
+.container {
+  width: 110rem;
+}
+
+header {
+  background-color: #fff6ee;
+}
+
 body,
 h1,
 .slogan {
@@ -350,7 +359,6 @@ h1 {
   align-items: center;
   min-height: 0px;
   gap: -2.8rem;
-  background-color: #fff6ee;
 }
 
 .header-btns {
@@ -732,6 +740,10 @@ form select,
 }
 
 @media (max-width: 49em) {
+  .container {
+    padding: 9.6rem 6.4rem 2.4rem 6.4rem;
+    width: 80rem !important;
+  }
   .features-container {
     grid-template-columns: 1fr;
     row-gap: 3.6rem;
@@ -785,5 +797,13 @@ form select,
   }
 }
 @media (max-width: 40em) {
+  .container{
+    width: 68rem !important;
+  }
+}
+@media (max-width: 33em) {
+  .container{
+    width: 50rem !important;
+  }
 }
 </style>

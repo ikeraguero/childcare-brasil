@@ -1,7 +1,7 @@
 <template>
   <span>
     <div
-      class="children-grid grid gap-0 grid-cols-4 grid-rows-0 overflow whitespace-nowrap"
+      class="children-grid grid gap-0 grid-cols-4 grid-rows-0 overflow whitespace-nowrap container"
       id="container"
     >
       <div v-for="card in cards.data" :key="card.index">
