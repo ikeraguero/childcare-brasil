@@ -6,6 +6,12 @@ Childcare Brasil is a website designed for a fictional organization with the goa
 
 The aim of Childcare Brasil is to create an easy-to-use and secure website where donors can contribute to improving the lives of children and enhancing educational facilities in Brazil. The website main goal is to facilitate donations.
 
+
+## Acknowledgements
+
+This project was developed as part of the coursework at IFC.
+Special thanks to the course instructors and peers for their support and feedback.
+
 <!--# projeto-childcarebrasil
 
 ## 1
