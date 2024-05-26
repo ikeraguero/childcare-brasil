@@ -109,13 +109,15 @@
           </div>
         </div>
       </section>
-      <div class="section-header container" id="testimonials">
-        <span class="section-title">DOADORES</span>
-        <span class="section-subtitle">Depoimentos de quem faz o bem</span>
-      </div>
       <section class="testimonials-section container">
-        <div class="quote-photo photo--isabela">
-          <img
+        <div class="section-header  " id="testimonials">
+          <span class="section-title">DOADORES</span>
+          <span class="section-subtitle">Depoimentos de quem faz o bem</span>
+        </div>
+        <div class="testimonials-grid">
+
+          <div class="quote-photo photo--isabela">
+            <img
             src="../assets/imagens/donator1.jpg"
             alt=""
             class="quote-donator-img"
@@ -132,7 +134,7 @@
             &ndash; Isabela dos Santos, doadora do Childcare Brasil
           </p>
         </div>
-
+        
         <div class="quote-text">
           <blockquote>
             “Eu sou doadora e quero convidar você também para ser um novo
@@ -146,17 +148,17 @@
         </div>
         <div class="quote-photo photo--alice">
           <img
-            src="../assets/imagens/donator2.jpg"
-            alt=""
-            class="quote-donator-img"
+          src="../assets/imagens/donator2.jpg"
+          alt=""
+          class="quote-donator-img"
           />
         </div>
-
+        
         <div class="quote-photo photo--ricardo">
           <img
-            src="../assets/imagens/donator3.jpg"
-            alt=""
-            class="quote-donator-img"
+          src="../assets/imagens/donator3.jpg"
+          alt=""
+          class="quote-donator-img"
           />
         </div>
         <div class="quote-text">
@@ -169,6 +171,7 @@
             &ndash; Ricardo Rodrigues, doador do Childcare Brasil
           </p>
         </div>
+      </div>
       </section>
       <section class="cta container" id="contact">
         <div class="cta-container">
@@ -282,6 +285,10 @@ template {
   font-family: "Rubik", sans-serif;
 }
 
+.mosaico {
+  box-shadow: 1px 20px 30px 2px rgb(0, 0, 0, 0.07);
+}
+
 .container-footer {
   width: 120rem;
   margin: 0 auto;
@@ -354,7 +361,7 @@ h1 {
 
 .header-2 {
   display: grid;
-  padding: 1.2rem 4.8rem 6.4rem 4.8rem;
+  padding: 6.4rem 4.8rem 9.2rem 4.8rem;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   min-height: 0px;
@@ -385,7 +392,6 @@ h1 {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 4.8rem;
   margin-top: 7.8rem;
-  margin-bottom: 9.6rem;
 }
 
 .feature-title {
@@ -393,7 +399,7 @@ h1 {
   letter-spacing: -0.7px;
 }
 
-.feature-text {
+.feature-text, .quote-text blockquote{
   margin-top: 10px;
   font-size: 18px;
   line-height: 1.8;
@@ -493,20 +499,18 @@ svg {
   font-weight: 700;
 }
 
-section:nth-child(2) {
-  padding-top: 10.8rem;
-}
 
 section {
-  margin-top: 8.4rem;
+  margin-top: 9.6rem;
 }
 
-.testimonials-section {
+.testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.8rem;
   row-gap: 6.4rem;
   align-items: center;
+  margin-top: 7.8rem
 }
 
 .quote-text {
@@ -515,8 +519,8 @@ section {
 }
 
 .quote-text blockquote {
-  color: #333;
-  font-size: 1.8rem;
+  color: #444;
+  font-size: 1.9rem;
 }
 
 .quote-author {
@@ -528,9 +532,10 @@ section {
 }
 
 .quote-photo img {
-  width: 16.8rem;
+  width: 20.4rem;
   border-radius: 50%;
   border: 4px #743d31 solid;
+  box-shadow: 1px 20px 30px 2px rgb(0, 0, 0, 0.07);
 }
 
 .text-box {
@@ -547,6 +552,7 @@ section {
   font-family: inherit;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  box-shadow: 1px 20px 30px 2px rgb(0, 0, 0, 0.07);
 }
 
 .img-box {
@@ -769,7 +775,8 @@ form select,
   }
 }
 @media (max-width: 45em) {
-  .testimonials-section {
+  .testimonials-grid {
+    margin-top: 3.2rem;
     grid-template-columns: 1fr;
     text-align: center;
     align-items: center;
@@ -796,14 +803,28 @@ form select,
     grid-column: span 2;
   }
 }
-@media (max-width: 40em) {
+@media (max-width: 43.8em) {
   .container{
     width: 68rem !important;
   }
 }
-@media (max-width: 33em) {
+@media (max-width: 37em) {
   .container{
     width: 50rem !important;
   }
+  .section-header {
+    text-align: center
+  }
+}
+@media (max-width: 26.6em) {
+  .container{
+    width: 40rem !important;
+  }
+}
+@media (max-width: 21.2em) {
+  .container{
+    width: 30rem !important;
+  }
+  
 }
 </style>
