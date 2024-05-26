@@ -1,6 +1,6 @@
 ## Childcare Brasil
 
-Childcare Brasil is a website designed for a fictional organization with the goal of providing a platform for people to donate money to support Brazilian children and schools. This project was developed for academic purposes as part of the coursework at IFC.
+Childcare Brasil is a website designed for a fictional organization with the goal of providing a platform for people to donate money to support Brazilian children and schools. This project was developed for academic purposes as part of the coursework at <a href='https://ifc.edu.br/'>IFC</a>.
 
 ## Project Overview
 
