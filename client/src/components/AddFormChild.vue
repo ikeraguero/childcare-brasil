@@ -1,6 +1,6 @@
 <template>
-  <div class="flex justify-center max-w-3xl mx-auto py-10">
-    <div class="w-full h-full">
+  <div class="rounded">
+    <div class="container">
       <p>{{ image }}</p>
 
       <form
@@ -8,75 +8,35 @@
         action="https://childcare-brasil.vercel.app/api/childadd"
         method="post"
       >
-        <div class="flex mb-4">
+        <div class="flex mb-4 w-full">
           <img
             src="https://i.imgur.com/Wp6hAjO.jpg"
-            class="rounded-lg h-50 w-52"
+            class="rounded-lg h-50 w-2/6"
             alt="Avatar"
             id="img-preview"
           />
           <div class="px-4">
-            <label class="block text-white text-sm font-bold mb-2" for="image">
+            <label class="block text-white text-sm font-bold" for="image">
               Link da Imagem
             </label>
             <input
-              class="
-                shadow
-                appearance-none
-                border
-                rounded
-                w-96
-                py-2
-                px-3
-                mb-2
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none border rounded-2xl w-full py-2 px-3 mb-2 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               placeholder="Link da Imagem"
               name="childphoto"
             />
-            <label class="block text-white text-sm font-bold mb-2">
+            <label class="block text-white text-sm font-bold">
               Nome da Criança
             </label>
             <input
-              class="
-                shadow
-                appearance-none
-                border
-                rounded
-                w-full
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none border rounded-2xl w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               id="name"
               type="text"
               placeholder="Nome da Criança"
               name="childname"
             />
-            <label class="block text-white text-sm font-bold mb-1 mt-2">
-              Sexo
-            </label>
+            <label class="block text-white text-sm font-bold"> Sexo </label>
             <select
-              class="
-                shadow
-                form-select
-                appearance-none
-                block
-                w-full
-                px-3
-                py-2
-                text-base
-                font-normal
-                text-black
-                bg-white
-                rounded
-              "
+              class="shadow appearance-none border rounded-2xl w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               name="childgender"
               id="gender"
             >
@@ -87,21 +47,9 @@
         </div>
         <div class="flex justify-start">
           <div class="mb-4">
-            <label class="block text-white text-sm font-bold mb-2">
-              Idade
-            </label>
+            <label class="block text-white text-sm font-bold"> Idade </label>
             <input
-              class="
-                shadow
-                appearance-none
-                w-15
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white border rounded-2xl"
               id="age"
               type="text"
               placeholder="Idade"
@@ -110,23 +58,9 @@
             />
           </div>
           <div class="mb-4 ml-3">
-            <label class="block text-white text-sm font-bold mb-2">
-              Escola
-            </label>
+            <label class="block text-white text-sm font-bold"> Escola </label>
             <select
-              class="
-                shadow
-                appearance-none
-                border
-                rounded
-                w-56
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none border border rounded-2xl w-56 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               id="school"
               type="text"
               placeholder="Escola"
@@ -138,21 +72,9 @@
             </select>
           </div>
           <div class="mb-4 ml-4">
-            <label class="block text-white text-sm font-bold mb-2"> CPF </label>
+            <label class="block text-white text-sm font-bold"> CPF </label>
             <input
-              class="
-                shadow
-                appearance-none
-                border
-                rounded
-                w-full
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none border rounded-2xl w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               id="cpf"
               type="text"
               placeholder="CPF"
@@ -163,23 +85,9 @@
         </div>
         <div class="flex justify-start">
           <div class="mb-4">
-            <label class="block text-white text-sm font-bold mb-2">
-              Endereço
-            </label>
+            <label class="block text-white text-sm font-bold"> Endereço </label>
             <input
-              class="
-                shadow
-                appearance-none
-                border
-                rounded
-                w-15
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none border rounded-2xl w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               id="address"
               type="text"
               placeholder="Endereço"
@@ -187,24 +95,9 @@
             />
           </div>
           <div class="mb-4 ml-3">
-            <label class="block text-white text-sm font-bold mb-2">
-              Estado
-            </label>
+            <label class="block text-white text-sm font-bold"> Estado </label>
             <select
-              class="
-                shadow
-                appearance-none
-                border
-                rounded
-                w-56
-                py-2
-                px-2
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-                mr-0
-              "
+              class="shadow appearance-none border rounded-2xl w-56 py-2 px-2 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white mr-0"
               id="state"
               placeholder="Estado"
               name="childstate"
@@ -215,23 +108,9 @@
             </select>
           </div>
           <div class="mb-4 ml-4">
-            <label class="block text-white text-sm font-bold mb-2">
-              Cidade
-            </label>
+            <label class="block text-white text-sm font-bold"> Cidade </label>
             <input
-              class="
-                shadow
-                appearance-none
-                border
-                rounded
-                w-full
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none border rounded-2xl w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               id="city"
               type="text"
               placeholder="Cidade"
@@ -240,23 +119,11 @@
           </div>
         </div>
         <div class="mb-4">
-          <label class="block text-white text-sm font-bold mb-2">
+          <label class="block text-white text-sm font-bold">
             Materiais Necessitados (opcional)
           </label>
           <input
-            class="
-              shadow
-              appearance-none
-              border
-              rounded
-              w-full
-              py-2
-              px-3
-              text-black-900
-              leading-tight
-              focus:outline-none focus:shadow-outline
-              bg-white
-            "
+            class="shadow appearance-none border rounded-2xl w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             id="description"
             type="text"
             placeholder="Materias Necessitados"
@@ -264,64 +131,35 @@
           />
         </div>
         <div class="mb-4">
-          <label class="block text-white text-sm font-bold mb-2" for="username">
+          <label class="block text-white text-sm font-bold" for="username">
             Nome do Responsável (opcional)
           </label>
           <input
-            class="
-              shadow
-              appearance-none
-              border
-              rounded
-              w-full
-              py-2
-              px-3
-              text-black-900
-              leading-tight
-              focus:outline-none focus:shadow-outline
-              bg-white
-            "
+            class="shadow appearance-none border rounded-2xl w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             id="responsable"
             type="text"
             placeholder="Nome do Responsável"
             name="childresponsables"
           />
         </div>
-        <div class="flex justify-center">
-          <div>
-            <router-link
-              to="/adminn/criancas/"
-              class="
-                btn
-                bg-white
-                font-bold
-                py-2.5
-                px-4
-                rounded
-                focus:outline-none focus:shadow-outline
-              "
-              type="button"
-              value="Cancelar"
-              >Cancelar</router-link
-            >
-            <input
-              class="
-                btn
-                bg-white
-                font-bold
-                py-2
-                px-4
-                ml-2
-                rounded
-                cursor-pointer
-                focus:outline-none focus:shadow-outline
-              "
-              type="submit"
-              value="Salvar"
-            />
-          </div>
-        </div>
       </form>
+      <div class="flex justify-center gap-5">
+        <router-link
+          to="/adminn/criancas/"
+          class="donation-btn text-white"
+          type="button"
+          value="Cancelar"
+          >Cancelar</router-link
+        >
+        <button
+          class="donation-btn text-white"
+          style="display: block"
+          type="submit"
+          value="Salvar"
+        >
+          Salvar
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -355,22 +193,43 @@ export default {
 }
 
 form {
-  background-color: #fff6ee;
+  background-color: #743d31;
+  width: 65%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .block {
-  color: #621200;
+  color: #fff6ee;
+  font-size: 17px;
+  margin-top: 20px;
 }
 .v-application a {
   color: #fff6ee;
 }
 
 .btn {
-  background-color: #621200;
+  background-color: #743d31;
   color: #fff6ee;
+  font-size: 1.8rem;
+  padding: 8px 32px;
+  border-radius: 9px;
+  font-weight: 600;
 }
 
 #gender {
   color: black;
+}
+
+.top-form {
+  justify-content: center;
+}
+
+.cancel-btn {
+  padding: 38px !important;
 }
 </style>

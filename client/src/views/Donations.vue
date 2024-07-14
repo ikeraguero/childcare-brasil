@@ -22,6 +22,6 @@ export default {
 
 <style>
 .msg {
-  color: #fff6ee;
+  color: #333;
 }
 </style>
