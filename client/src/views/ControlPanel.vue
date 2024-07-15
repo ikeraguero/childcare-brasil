@@ -2,7 +2,7 @@
   <div
     v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'"
   >
-    <h1 class="flex justify-center py-10 text-4xl text-[#15393C] font-semibold">
+    <h1 class="msg flex justify-center py-10 text-4xl font-semibold">
       PAINEL DE CONTROLE
     </h1>
     <div class="d-flex justify-space-around mt-40">
@@ -41,9 +41,9 @@
     </div>
     <br />
     <div class="d-flex justify-space-around mt-16 text-3xl" height="100">
-      <h1>Crianças</h1>
-      <h1>Escolas</h1>
-      <h1>Doações</h1>
+      <h1 class="button">Crianças</h1>
+      <h1 class="button">Escolas</h1>
+      <h1 class="button">Doações</h1>
     </div>
   </div>
   <div
@@ -59,5 +59,10 @@
 <style>
 .msg {
   color: #333;
+}
+
+.button {
+  color: #743d31;
+  font-weight: 600;
 }
 </style>

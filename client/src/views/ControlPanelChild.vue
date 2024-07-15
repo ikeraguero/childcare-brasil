@@ -2,10 +2,13 @@
   <div
     v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'"
   >
-    <AddButtonChild />
-    <br />
-    <ChildrenCardsAdmin />
+    <div>
+      <AddButtonChild />
+      <br />
+      <ChildrenCardsAdmin />
+    </div>
   </div>
+
   <div
     v-else
     class="msg flex justify-center py-10 text-4xl text-[#15393C] font-semibold"

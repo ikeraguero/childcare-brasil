@@ -4,7 +4,11 @@
       to="/adminn/criancas/adicionar"
       class="font-semibold text-white rounded-lg py-1 px-3"
     >
-      <span><span class="text-lg">+ Adicionar Criança </span></span>
+      <span
+        class="text-lg font-semibold"
+        style="color: #743d31; font-size: 1.4rem"
+        >+ Adicionar Criança</span
+      >
     </router-link>
   </div>
 </template>
@@ -14,9 +18,3 @@ export default {
   name: "AddButtonChild",
 };
 </script>
-
-<style>
-.text-lg {
-  color: #fff6ee;
-}
-</style>

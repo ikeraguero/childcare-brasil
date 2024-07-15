@@ -1,62 +1,34 @@
 <template>
-  <div class="flex justify-center max-w-3xl mx-auto py-10">
-    <div class="w-full h-full">
+  <div class="rounded">
+    <div class="container">
       <p>{{ image }}</p>
 
       <form
         class="rounded px-12 pt-8 pb-8 mb-8"
-        action="https://childcare-brasil.vercel.app/api/schooladd"
+        action="https://childcare-brasil.vercel.app/api/childadd"
         method="post"
       >
-        <div class="flex mb-4">
+        <div class="flex mb-4 w-full">
           <img
             src="https://i.imgur.com/Wp6hAjO.jpg"
-            class="rounded-lg h-48 w-52"
+            class="rounded-lg h-50 w-2/6"
             alt="Avatar"
-            id="img"
+            id="img-preview"
           />
-          <div class="px-4 mt-3">
-            <label class="block text-white text-sm font-bold mb-2" for="image">
+          <div class="px-4">
+            <label class="block text-white text-sm font-bold" for="image">
               Link da Imagem
             </label>
             <input
-              type="file"
-              class="
-                block
-                mb-2
-                w-96
-                h-7
-                text-sm text-black-900
-                bg-white
-                rounded
-                border border-white
-                cursor-pointer
-                dark:text-gray-400
-                focus:outline-none
-              "
-              @change="uploadImage($event.target.files[0])"
-              accept="image/*"
+              class="shadow appearance-none border rounded-2xl w-full py-2 px-3 mb-2 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+              placeholder="Link da Imagem"
+              name="childphoto"
             />
-            <label
-              class="block text-white text-sm font-bold mb-2 mt-5"
-              for="username"
-            >
+            <label class="block text-white text-sm font-bold">
               Nome da Escola
             </label>
             <input
-              class="
-                shadow
-                appearance-none
-                border
-                rounded
-                w-full
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none border rounded-2xl w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               id="name"
               type="text"
               placeholder="Nome da Escola"
@@ -66,23 +38,11 @@
         </div>
         <div class="flex justify-start">
           <div class="mb-4">
-            <label class="block text-white text-sm font-bold mb-2">
-              Código INEP
-            </label>
+            <label class="block text-white text-sm font-bold">
+              Código INEP</label
+            >
             <input
-              class="
-                shadow
-                appearance-none
-                border
-                rounded
-                w-15
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white border rounded-2xl"
               id="age"
               type="text"
               placeholder="Código INEP"
@@ -91,23 +51,9 @@
             />
           </div>
           <div class="mb-4 ml-3">
-            <label class="block text-white text-sm font-bold mb-2">
-              Telefone
-            </label>
+            <label class="block text-white text-sm font-bold"> Telefone </label>
             <input
-              class="
-                shadow
-                appearance-none
-                border
-                rounded
-                w-56
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white border rounded-2xl"
               id="weight"
               type="text"
               placeholder="Telefone"
@@ -115,27 +61,10 @@
               name="schoolcellphone"
             />
           </div>
-          <div class="mb-4 ml-5">
-            <label
-              class="block text-white text-sm font-bold mb-2"
-              for="username"
-            >
-              Email
-            </label>
+          <div class="mb-4 ml-4">
+            <label class="block text-white text-sm font-bold"> Email </label>
             <input
-              class="
-                shadow
-                appearance-none
-                border
-                rounded
-                w-full
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none border rounded-2xl w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               id="name"
               type="text"
               placeholder="Email"
@@ -145,23 +74,9 @@
         </div>
         <div class="flex justify-start">
           <div class="mb-4">
-            <label class="block text-white text-sm font-bold mb-2">
-              Endereço
-            </label>
+            <label class="block text-white text-sm font-bold"> Endereço </label>
             <input
-              class="
-                shadow
-                appearance-none
-                border
-                rounded
-                w-15
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none border rounded-2xl w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               id="address"
               type="text"
               placeholder="Endereço"
@@ -169,23 +84,9 @@
             />
           </div>
           <div class="mb-4 ml-3">
-            <label class="block text-white text-sm font-bold mb-2">
-              Estado
-            </label>
+            <label class="block text-white text-sm font-bold"> Estado </label>
             <select
-              class="
-                shadow
-                appearance-none
-                border
-                rounded
-                w-56
-                py-2
-                px-2
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none border rounded-2xl w-56 py-2 px-2 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white mr-0"
               id="state"
               placeholder="Estado"
               name="schoolstate"
@@ -195,24 +96,10 @@
               </option>
             </select>
           </div>
-          <div class="mb-4 ml-5">
-            <label class="block text-white text-sm font-bold mb-2">
-              Cidade
-            </label>
+          <div class="mb-4 ml-4">
+            <label class="block text-white text-sm font-bold"> Cidade </label>
             <input
-              class="
-                shadow
-                appearance-none
-                border
-                rounded
-                w-full
-                py-2
-                px-3
-                text-black-900
-                leading-tight
-                focus:outline-none focus:shadow-outline
-                bg-white
-              "
+              class="shadow appearance-none border rounded-2xl w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
               id="city"
               type="text"
               placeholder="Cidade"
@@ -221,23 +108,11 @@
           </div>
         </div>
         <div class="mb-4">
-          <label class="block text-white text-sm font-bold mb-2">
+          <label class="block text-white text-sm font-bold">
             Materiais Necessitados (opcional)
           </label>
           <input
-            class="
-              shadow
-              appearance-none
-              border
-              rounded
-              w-full
-              py-2
-              px-3
-              text-black-900
-              leading-tight
-              focus:outline-none focus:shadow-outline
-              bg-white
-            "
+            class="shadow appearance-none border rounded-2xl w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             id="desc"
             type="text"
             placeholder="Materiais Necessitados"
@@ -245,64 +120,35 @@
           />
         </div>
         <div class="mb-4">
-          <label class="block text-white text-sm font-bold mb-2" for="username">
+          <label class="block text-white text-sm font-bold" for="username">
             Diretor(a) (opcional)
           </label>
           <input
-            class="
-              shadow
-              appearance-none
-              border
-              rounded
-              w-full
-              py-2
-              px-3
-              text-black-900
-              leading-tight
-              focus:outline-none focus:shadow-outline
-              bg-white
-            "
+            class="shadow appearance-none border rounded-2xl w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             id="name"
             type="text"
             placeholder="Diretor(a)"
             name="schooldirector"
           />
         </div>
-        <div class="flex justify-center">
-          <div>
-            <router-link
-              to="/adminn/escolas/"
-              class="
-                btn
-                bg-white
-                font-bold
-                py-2.5
-                px-4
-                rounded
-                focus:outline-none focus:shadow-outline
-              "
-              type="button"
-              value="Cancelar"
-              >Cancelar</router-link
-            >
-            <input
-              class="
-                btn
-                bg-white
-                font-bold
-                py-2
-                px-4
-                ml-2
-                rounded
-                cursor-pointer
-                focus:outline-none focus:shadow-outline
-              "
-              type="submit"
-              value="Salvar"
-            />
-          </div>
-        </div>
       </form>
+      <div class="flex justify-center gap-5">
+        <router-link
+          to="/adminn/criancas/"
+          class="donation-btn text-white"
+          type="button"
+          value="Cancelar"
+          >Cancelar</router-link
+        >
+        <button
+          class="donation-btn text-white"
+          style="display: block"
+          type="submit"
+          value="Salvar"
+        >
+          Salvar
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -314,35 +160,18 @@ export default {
 
   data() {
     return {
+      cards: [],
       states: [],
       showControls: true,
     };
   },
   mounted() {
     axios
+      .get("https://childcare-brasil.vercel.app/api/schools")
+      .then((response) => (this.cards = response));
+    axios
       .get("https://childcare-brasil.vercel.app/api/states")
       .then((response) => (this.states = response));
-  },
-  methods: {
-    uploadChildImg(image) {
-      var myHeaders = new Headers();
-      myHeaders.append("Authorization", "Client-ID edb7383edef747d");
-      var formdata = new FormData();
-      formdata.append("image", image);
-      var requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        body: formdata,
-        redirect: "follow",
-      };
-      fetch("https://api.imgur.com/3/image", requestOptions)
-        .then((data) => data.json())
-        .then((data) => {
-          this.image = data.data.link;
-        })
-        .then((result) => console.log(result))
-        .catch((error) => console.log("error", error));
-    },
   },
 };
 </script>
@@ -353,18 +182,43 @@ export default {
 }
 
 form {
-  background-color: #fff6ee;
+  background-color: #743d31;
+  width: 65%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .block {
-  color: #621200;
+  color: #fff6ee;
+  font-size: 17px;
+  margin-top: 20px;
 }
 .v-application a {
   color: #fff6ee;
 }
 
 .btn {
-  background-color: #621200;
+  background-color: #743d31;
   color: #fff6ee;
+  font-size: 1.8rem;
+  padding: 8px 32px;
+  border-radius: 9px;
+  font-weight: 600;
+}
+
+#gender {
+  color: black;
+}
+
+.top-form {
+  justify-content: center;
+}
+
+.cancel-btn {
+  padding: 38px !important;
 }
 </style>

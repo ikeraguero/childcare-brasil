@@ -1,82 +1,74 @@
 <template>
   <span>
     <div
-      class="
-        grid
-        gap-0
-        grid-cols-4 grid-rows-0
-        overflow
-        whitespace-nowrap
-        no-scrollbar
-        relative
-        scroll-smooth
-        snap-x
-      "
+      class="grid gap-0 grid-cols-4 grid-rows-0 overflow whitespace-nowrap no-scrollbar relative scroll-smooth snap-x"
       id="container"
     >
       <div v-for="card in cards.data" :key="card.index">
-        <div class="flex px-3 m-2 snap-center max-w-max">
-          <div class="rounded-lg shadow-md w-[300px] lg:w-[410px]">
+        <div class="card-item px-2 m-4 snap-center max-w-max p-6">
+          <div
+            class="teste rounded-lg w-96lg:w-410 overflow-hidden"
+            style="overflow-wrap: anywhere"
+          >
             <a href="/">
               <router-link v-bind:to="'/criancas/perfil/' + card.id"
-                ><img class="rounded-t-lg h-80" :src="card.photo"
+                ><img
+                  class="children-photo rounded-t-lg h-80"
+                  :src="card.photo"
               /></router-link>
             </a>
-            <div class="p-6">
-              <div class="flex justify-between">
-                <h5 class="text-white text-xl font-medium mb-2">
-                  {{ card.name }}
-                </h5>
-                <h5 class="text-white text-xl font-medium mb-2">
-                  {{ card.age }} {{ age(card.age) }}
-                </h5>
+            <div class="p-5">
+              <div class="card-content" id="card-content">
+                <h3 class="card-name text-left">{{ card.name }}</h3>
+                <p class="card-age">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="card-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z"
+                    />
+                  </svg>
+                  {{ card.age }} anos
+                </p>
+                <p class="card-location" id="card-location">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="card-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                    />
+                  </svg>
+                  {{ card.city }}, {{ card.state }}
+                </p>
               </div>
-
-              <p class="text-white text-base mb-4 h-20 w-fit">
-                {{ card.city }}, {{ card.state }}
-              </p>
-              <div class="flex justify-center flex-row">
+              <div class="buttons flex justify-center mb-2 mt-14 h-fit">
                 <a
-                  v-bind:href="'/adminn/criancas/' + card.id"
+                  v-bind:href="'/adminn/escolas/' + card.id"
                   type="button"
-                  class="
-                    edit
-                    inline-block
-                    px-6
-                    py-2.5
-                    ml-3
-                    bg-white
-                    cursor-pointer
-                    font-semibold
-                    text-xs
-                    leading-tight
-                    uppercase
-                    rounded
-                    shadow-md
-                  "
+                  class="btn inline-block px-6 py-2.5 ml-3 bg-white cursor-pointer font-semibold text-xs leading-tight uppercase shadow-md"
                   >Editar</a
                 >
                 <button
                   @click="excluir(card.id)"
-                  class="
-                    del
-                    inline-block
-                    px-6
-                    py-2.5
-                    ml-3
-                    bg-white
-                    cursor-pointer
-                    font-semibold
-                    text-xs
-                    leading-tight
-                    uppercase
-                    rounded
-                    shadow-md
-                  "
+                  class="btn inline-block px-6 py-2.5 ml-3 bg-white cursor-pointer font-semibold text-xs leading-tight uppercase shadow-md"
                   type="button"
                   value="Excluir"
                 >
-                  Excluir
+                  Deletar
                 </button>
               </div>
             </div>
@@ -134,9 +126,7 @@ export default {
   color: #15393c81;
   transition: 0.5s;
 }
-.card-control:hover {
-  color: #15393c;
-}
+
 .left {
   left: 0;
 }
@@ -149,16 +139,88 @@ export default {
 .text-white {
   color: #621200;
 }
-.edit {
+.btn {
   color: #fff6ee;
-  background-color: #621200;
+  font-size: 12px;
+  background-color: #743d31;
+  border-radius: 1000px;
 }
 
-.del {
-  color: #fff6ee;
-  background-color: #bd0000;
+.btn:hover {
+  background-color: #855348;
 }
 .rounded-t-lg {
   width: 388px;
+}
+.teste {
+  box-shadow: 1px 20px 30px 2px rgb(0, 0, 0, 0.07);
+}
+#container {
+  overflow: auto;
+}
+
+.card-content li {
+  color: #343a40;
+  display: flex;
+  align-content: center;
+}
+
+.card-content li {
+  list-style: none;
+}
+.card-name {
+  color: #343a40;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card-age,
+.card-location {
+  display: flex;
+  font-size: 18px;
+  align-items: flex-start;
+  margin-bottom: 5px;
+  gap: 10px;
+}
+
+.card-icon {
+  stroke: #743d31;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.buttons {
+  padding-bottom: 24px;
+}
+@media (max-width: 75em) {
+  .children-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .children-photo {
+    height: 29.6rem;
+  }
+}
+@media (max-width: 67em) {
+  .children-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .children-photo {
+    width: 86rem;
+  }
+}
+
+@media (max-width: 45em) {
+  .teste {
+    width: 36rem;
+  }
+}
+@media (max-width: 39em) {
+  .children-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 </style>

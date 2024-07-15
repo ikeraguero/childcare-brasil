@@ -1,18 +1,25 @@
 <template>
-  <div
+  <!--
+
+    <div
     v-if="$auth.isAuthenticated && $auth.user.email == 'ikerpires407@gmail.com'"
-  >
+    >
+  -->
+  <div>
     <AddButtonSchool />
     <br />
     <SchoolCardsAdmin />
   </div>
-  <div
-    v-else
-    class="msg flex justify-center py-10 text-4xl text-[#15393C] font-semibold"
-  >
-    Você não têm acesso à essa página
+  <!--
+
   </div>
-</template>
+  <div
+  v-else
+  class="msg flex justify-center py-10 text-4xl text-[#15393C] font-semibold"
+  >
+  Você não têm acesso à essa página
+</div>
+--></template>
 
 <script>
 import AddButtonSchool from "../components/AddButtonSchool.vue";
