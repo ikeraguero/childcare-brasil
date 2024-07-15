@@ -46,19 +46,19 @@ const routes = [
       {
         path: "/adminn",
         name: "Controll Panel",
-        // beforeEnter: authGuard,
+        beforeEnter: authGuard,
         component: () => import("../views/ControlPanel.vue"),
       },
       {
         path: "adminn/criancas",
         name: "Children Controll Panel",
-        // beforeEnter: authGuard,
+        beforeEnter: authGuard,
         component: () => import("../views/ControlPanelChild.vue"),
       },
       {
         path: "adminn/criancas/adicionar",
         name: "AddChildren",
-        // beforeEnter: authGuard,
+        beforeEnter: authGuard,
         component: () => import("../views/FormChild.vue"),
       },
       {
