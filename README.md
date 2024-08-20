@@ -9,7 +9,7 @@ The aim of Childcare Brasil is to create an easy-to-use and secure website where
 
 ## Acknowledgements
 
-This project was developed as the Conclusion Project of my IT technical course at <a href='https://ifc.edu.br/'>IFC</a>.
+Although still receiving updates to this day, this project was originally developed in 2022 as the Conclusion Project of my IT technical course at <a href='https://ifc.edu.br/'>IFC</a>.
 Special thanks to the course instructors and peers for their support and feedback.
 
 <!--# projeto-childcarebrasil
