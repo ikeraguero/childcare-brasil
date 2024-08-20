@@ -134,7 +134,7 @@
       </form>
       <div class="flex justify-center gap-5">
         <router-link
-          to="/adminn/criancas/"
+          to="/adminn/escolas/"
           class="donation-btn text-white"
           type="button"
           value="Cancelar"

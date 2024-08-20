@@ -6,7 +6,10 @@
     >
   -->
   <div>
-    <AddButtonSchool />
+    <AddButton
+      route="/adminn/escolas/adicionar"
+      buttonText="Adicionar Escola"
+    />
     <br />
     <SchoolCardsAdmin />
   </div>
@@ -22,11 +25,11 @@
 --></template>
 
 <script>
-import AddButtonSchool from "../components/AddButtonSchool.vue";
+import AddButton from "../components/AddButton.vue";
 import SchoolCardsAdmin from "../components/SchoolCardsAdmin.vue";
 export default {
   components: {
-    AddButtonSchool,
+    AddButton,
     SchoolCardsAdmin,
   },
 };
