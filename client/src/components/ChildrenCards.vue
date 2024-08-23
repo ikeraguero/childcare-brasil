@@ -68,13 +68,14 @@ export default {
 
 <style scoped>
 .card-item {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
 .teste {
-  box-shadow: 1px 20px 30px 2px rgb(0, 0, 0, 0.07);
+  box-shadow: 1px 5px 10px 2px rgb(0, 0, 0, 0.07);
   background-color: #fff6ee;
   width: 100%;
   height: 100%;
@@ -91,7 +92,7 @@ export default {
 }
 
 .buttons {
-  padding-bottom: 24px;
+  padding-bottom: 2.4rem;
 }
 
 .card-content {
@@ -110,10 +111,17 @@ export default {
 .card-age,
 .card-location {
   display: flex;
-  font-size: 18px;
+  font-size: 1.8rem;
   align-items: flex-start;
   margin-bottom: 5px;
-  gap: 10px;
+  gap: 1rem;
+}
+
+.card-location,
+.card-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-icon {

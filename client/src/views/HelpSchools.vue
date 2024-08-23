@@ -2,9 +2,7 @@
   <div class="section-header text-center">
     <span class="section-title pt-8">Você está doando para</span>
     <h1 class="section-subtitle pb-4">Escolas</h1>
-    <div
-      class="schools-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2"
-    >
+    <div class="schools-grid grid grid-cols-4 px-44 py-4">
       <div v-for="item in cardList" :key="item.id">
         <SchoolCards :card="item" class="card-item">
           <template v-slot:buttons>
@@ -55,14 +53,6 @@ export default {
 </script>
 
 <style scoped>
-.schools-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  justify-content: center; /* Centers the grid items horizontally within the grid container */
-  padding: 0 9.4rem;
-}
-
 .btn {
   color: #fff6ee;
   font-size: 12px;
@@ -70,9 +60,50 @@ export default {
   border-radius: 1000px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .btn:hover {
   background-color: #855348;
+}
+.section-title {
+  color: #743d31;
+  font-size: 1.4rem;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+}
+
+.section-subtitle {
+  color: #333;
+  font-size: 3.6rem;
+  letter-spacing: 0.4px;
+  font-weight: 700;
+}
+
+@media (max-width: 77em) {
+  .schools-grid {
+    @apply py-36;
+  }
+}
+
+@media (max-width: 75em) {
+  .schools-grid {
+    @apply grid-cols-3;
+  }
+}
+
+@media (max-width: 54em) {
+  .schools-grid {
+    @apply grid-cols-2;
+  }
+}
+
+@media (max-width: 40em) {
+  .schools-grid {
+    @apply grid-cols-1;
+  }
 }
 </style>

@@ -86,7 +86,7 @@ export default {
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
   justify-content: center; /* Centers the grid items horizontally within the grid container */
-  padding: 0 9.4rem;
+  padding: 10rem 10.4rem;
 }
 
 .btn {

@@ -65,6 +65,12 @@ export default {
   width: 100%;
   height: 100%;
 }
+.card-location,
+.card-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .card-photo {
   width: 100%;
