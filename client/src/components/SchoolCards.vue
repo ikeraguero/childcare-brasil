@@ -65,7 +65,7 @@ export default {
   width: 100%;
   height: 100%;
 }
-.card-location,
+.card-details,
 .card-name {
   white-space: nowrap;
   overflow: hidden;
