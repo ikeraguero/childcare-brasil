@@ -7,7 +7,7 @@
         <SchoolCards :card="item" class="card-item">
           <template v-slot:buttons>
             <router-link
-              :to="'/criancas/doar/' + item.id"
+              :to="'/escolas/doar/' + item.id"
               class="btn inline-block px-6 py-2.5 ml-3 bg-white cursor-pointer font-semibold text-xs leading-tight uppercase shadow-md"
               >Doar</router-link
             >

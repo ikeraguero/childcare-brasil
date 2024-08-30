@@ -1,7 +1,7 @@
 <template>
   <div class="card-item px-2 m-4 snap-center p-6">
     <div class="card-wrapper rounded-lg flex flex-col">
-      <router-link :to="`${baseRoute}/${card.id}`">
+      <router-link v-bind:to="`escolas/doar/${card.id}`">
         <img class="card-photo rounded-t-lg" :src="card.photo" />
       </router-link>
       <div class="p-5 flex-1 flex flex-col justify-between">
