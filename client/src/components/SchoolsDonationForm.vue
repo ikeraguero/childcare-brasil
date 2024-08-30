@@ -1,29 +1,32 @@
 <template>
   <div class="flex justify-center py-10 content-align-center">
     <div class="w-10/12 h-full">
-      <div
-        class="flex pa-8 mb-0 justify-center"
-        id="paypalpayment"
-        style="display: none"
-      >
+      <div class="flex pa-8 mb-0 justify-center" id="paypalpayment">
         <div class="font-semibold">
-          <v-container class="content-align-center">
-            <div v-if="paidFor == false">
+          <v-container
+            class="content-align-center"
+            v-if="paidFor == false"
+            id="paypalpayment"
+            style="display: none"
+          >
+            <div>
               <h1 class="section-title mb-0 flex justify-center">Quase lá!</h1>
               <p class="section-subtitle mb-0 flex justify-center">
                 Finalize a sua doação!
               </p>
             </div>
+            <div>
+              <div class="pay mt-16 bg-antiquewhite" ref="paypal"></div>
+            </div>
+          </v-container>
+          <v-container>
             <div v-if="paidFor == true">
-              <div class="text-sucessful-payment">
+              <div>
                 <h1 class="section-title">Pagamento realizado com sucesso!</h1>
                 <h1 class="section-subtitle">
                   Conclua a doação para finalizar
                 </h1>
               </div>
-            </div>
-            <div v-if="paidFor == false">
-              <div class="pay mt-16 bg-antiquewhite" ref="paypal"></div>
             </div>
           </v-container>
         </div>
@@ -264,21 +267,22 @@
           style="display: none"
           id="submitbuttons2"
         >
-          <div class="flex justify-center">
+          <div class="flex justify-center" v-if="paidFor == true">
             <button
               @click="unhideForm2"
-              class="donation-btn bg-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2"
+              class="donation-btn bg-white font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
               type="button"
               value="Voltar"
             >
               Voltar
             </button>
-            <input
-              v-if="paidFor == true"
+            <button
               class="donation-btn bg-white font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
               type="submit"
               value="Concluir doação"
-            />
+            >
+              Concluir doação
+            </button>
           </div>
         </div>
       </form>
