@@ -31,24 +31,13 @@
           </v-container>
         </div>
       </div>
-      <div class="pa-8 content-align-center" id="message" style="display: none">
-        <div class="font-semibold">Quase lá!</div>
-        <div>
-          Para completar sua doação para <b>{{ school.name }}</b
-          >, envie os materiais informados para o seguinte endereço:
-        </div>
-        <div class="mt-16 font-medium">
-          <i>{{ school.address }}, {{ school.city }}, {{ school.state }}</i>
-        </div>
-        <div class="mt-24">
-          Após isso, envie o comprovante de envio para o email
-          childcarebrasil@gmail.com e conclua a doação
-        </div>
-      </div>
       <div class="section-title mb-0 flex justify-center" id="l3">
         Você está doando para:
       </div>
-      <div class="section-subtitle mb-5 flex justify-center font-bold" id="l4">
+      <div
+        class="section-subtitle text-center mb-5 flex justify-center font-bold"
+        id="l4"
+      >
         {{ school.name }}
       </div>
       <form

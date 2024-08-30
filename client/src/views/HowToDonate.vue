@@ -7,10 +7,10 @@
       </div>
     </div>
     <div class="step-by-step grid grid--2-cols">
-      <div class="grid-photo">
+      <div class="grid-photo grid-item">
         <img src="../assets/imagens/mock-1.png" alt="" />
       </div>
-      <div class="grid-text">
+      <div class="grid-text grid-item">
         <div class="text-content">
           <p class="number">01</p>
           <p class="text-title">Tela inicial</p>
@@ -20,7 +20,7 @@
           </p>
         </div>
       </div>
-      <div class="grid-text">
+      <div class="grid-text grid-item">
         <div class="text-content">
           <div class="number">02</div>
           <div class="text-title">Tela de doação</div>
@@ -30,13 +30,13 @@
           </div>
         </div>
       </div>
-      <div class="grid-photo">
+      <div class="grid-photo grid-item">
         <img src="../assets/imagens/mock-6.png" alt="" />
       </div>
-      <div class="grid-photo">
+      <div class="grid-photo grid-item">
         <img src="../assets/imagens/mock-2.png" alt="" />
       </div>
-      <div class="grid-text">
+      <div class="grid-text grid-item">
         <div class="text-content">
           <div class="number">03</div>
           <div class="text-title">Formulario de doação</div>
@@ -46,7 +46,7 @@
           </div>
         </div>
       </div>
-      <div class="grid-text">
+      <div class="grid-text grid-item">
         <div class="text-content">
           <div class="number">04</div>
           <div class="text-title">Opção de pagamento</div>
@@ -56,13 +56,13 @@
           </div>
         </div>
       </div>
-      <div class="grid-photo">
+      <div class="grid-photo grid-item">
         <img src="../assets/imagens/mock-3.png" alt="" />
       </div>
-      <div class="grid-photo">
+      <div class="grid-photo grid-item">
         <img src="../assets/imagens/mock-4.png" alt="" />
       </div>
-      <div class="grid-text">
+      <div class="grid-text grid-item">
         <div class="text-content">
           <div class="number">05</div>
           <div class="text-title">Tela de pagamento</div>
@@ -72,7 +72,7 @@
           </div>
         </div>
       </div>
-      <div class="grid-text">
+      <div class="grid-text grid-item">
         <div class="text-content">
           <div class="number">06</div>
           <div class="text-title">Tela de sucesso</div>
@@ -83,7 +83,7 @@
           </div>
         </div>
       </div>
-      <div class="grid-photo">
+      <div class="grid-photo grid-item">
         <img src="../assets/imagens/mock-5.png" alt="" />
       </div>
     </div>
@@ -148,5 +148,27 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 35em) {
+  .step-by-step {
+    grid-template-columns: 1fr;
+    gap: 0rem;
+  }
+  .grid-item:nth-child(3) {
+    grid-row: 4;
+  }
+  .grid-item:nth-child(7) {
+    grid-row: 8;
+  }
+  .grid-item:nth-child(11) {
+    grid-row: 12;
+  }
+  .grid-photo {
+    margin-top: 3.2rem;
+  }
+  .grid-photo img {
+    width: 90%;
+  }
 }
 </style>

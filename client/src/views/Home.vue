@@ -1,6 +1,6 @@
 <template>
   <article>
-    <header >
+    <header>
       <div class="header-2 container">
         <div>
           <v-row>
@@ -110,68 +110,68 @@
         </div>
       </section>
       <section class="testimonials-section container">
-        <div class="section-header  " id="testimonials">
+        <div class="section-header" id="testimonials">
           <span class="section-title">DOADORES</span>
           <span class="section-subtitle">Depoimentos de quem faz o bem</span>
         </div>
         <div class="testimonials-grid">
-
           <div class="quote-photo photo--isabela">
             <img
-            src="../assets/imagens/donator1.jpg"
-            alt=""
-            class="quote-donator-img"
-          />
+              src="../assets/imagens/donator1.jpg"
+              alt=""
+              class="quote-donator-img"
+            />
+          </div>
+          <div class="quote-text">
+            <blockquote>
+              “E eu tenho uma preocupação muito grande com as crianças, como
+              elas se desenvolvem, como elas crescem, como são educadas. No
+              Brasil e no mundo faltam recursos para que essas crianças sejam
+              educadas da maneira devida e é por essa razão que eu doo.”
+            </blockquote>
+            <p class="quote-author">
+              &ndash; Isabela dos Santos, doadora do Childcare Brasil
+            </p>
+          </div>
+
+          <div class="quote-text">
+            <blockquote>
+              “Eu sou doadora e quero convidar você também para ser um novo
+              doador. Eu faço isso porque eu acredito no trabalho, acredito que
+              as crianças necessitam de apoio e de ajuda e eu não conheço
+              ninguém melhor do que o Childcare Brasil para fazer esse
+              trabalho.”
+            </blockquote>
+            <p class="quote-author">
+              &ndash; Alice Moraes, doadora do Childcare Brasil
+            </p>
+          </div>
+          <div class="quote-photo photo--alice">
+            <img
+              src="../assets/imagens/donator2.jpg"
+              alt=""
+              class="quote-donator-img"
+            />
+          </div>
+
+          <div class="quote-photo photo--ricardo">
+            <img
+              src="../assets/imagens/donator3.jpg"
+              alt=""
+              class="quote-donator-img"
+            />
+          </div>
+          <div class="quote-text">
+            <blockquote>
+              “Que alegria sinto em saber que muitas crianças estão sendo
+              protegidas e alimentadas. Sinto imenso orgulho de todas as pessoas
+              envolvidas nesta causa.”
+            </blockquote>
+            <p class="quote-author">
+              &ndash; Ricardo Rodrigues, doador do Childcare Brasil
+            </p>
+          </div>
         </div>
-        <div class="quote-text">
-          <blockquote>
-            “E eu tenho uma preocupação muito grande com as crianças, como elas
-            se desenvolvem, como elas crescem, como são educadas. No Brasil e no
-            mundo faltam recursos para que essas crianças sejam educadas da
-            maneira devida e é por essa razão que eu doo.”
-          </blockquote>
-          <p class="quote-author">
-            &ndash; Isabela dos Santos, doadora do Childcare Brasil
-          </p>
-        </div>
-        
-        <div class="quote-text">
-          <blockquote>
-            “Eu sou doadora e quero convidar você também para ser um novo
-            doador. Eu faço isso porque eu acredito no trabalho, acredito que as
-            crianças necessitam de apoio e de ajuda e eu não conheço ninguém
-            melhor do que o Childcare Brasil para fazer esse trabalho.”
-          </blockquote>
-          <p class="quote-author">
-            &ndash; Alice Moraes, doadora do Childcare Brasil
-          </p>
-        </div>
-        <div class="quote-photo photo--alice">
-          <img
-          src="../assets/imagens/donator2.jpg"
-          alt=""
-          class="quote-donator-img"
-          />
-        </div>
-        
-        <div class="quote-photo photo--ricardo">
-          <img
-          src="../assets/imagens/donator3.jpg"
-          alt=""
-          class="quote-donator-img"
-          />
-        </div>
-        <div class="quote-text">
-          <blockquote>
-            “Que alegria sinto em saber que muitas crianças estão sendo
-            protegidas e alimentadas. Sinto imenso orgulho de todas as pessoas
-            envolvidas nesta causa.”
-          </blockquote>
-          <p class="quote-author">
-            &ndash; Ricardo Rodrigues, doador do Childcare Brasil
-          </p>
-        </div>
-      </div>
       </section>
       <section class="cta container" id="contact">
         <div class="cta-container">
@@ -261,7 +261,6 @@ export default {
 </script>
 
 <style>
-
 .container {
   width: 110rem;
 }
@@ -276,7 +275,8 @@ h1,
   color: #fff6ee;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -399,7 +399,8 @@ h1 {
   letter-spacing: -0.7px;
 }
 
-.feature-text, .quote-text blockquote{
+.feature-text,
+.quote-text blockquote {
   margin-top: 10px;
   font-size: 18px;
   line-height: 1.8;
@@ -499,7 +500,6 @@ svg {
   font-weight: 700;
 }
 
-
 section {
   margin-top: 9.6rem;
 }
@@ -510,7 +510,7 @@ section {
   gap: 0.8rem;
   row-gap: 6.4rem;
   align-items: center;
-  margin-top: 7.8rem
+  margin-top: 7.8rem;
 }
 
 .quote-text {
@@ -804,27 +804,26 @@ form select,
   }
 }
 @media (max-width: 43.8em) {
-  .container{
+  .container {
     width: 68rem !important;
   }
 }
 @media (max-width: 37em) {
-  .container{
+  .container {
     width: 50rem !important;
   }
   .section-header {
-    text-align: center
+    text-align: center;
   }
 }
 @media (max-width: 26.6em) {
-  .container{
+  .container {
     width: 40rem !important;
   }
 }
 @media (max-width: 21.2em) {
-  .container{
+  .container {
     width: 30rem !important;
   }
-  
 }
 </style>

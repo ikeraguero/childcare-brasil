@@ -35,7 +35,10 @@
       <div class="section-title mb-0 flex justify-center" id="l3">
         Você está doando para:
       </div>
-      <div class="section-subtitle mb-5 flex justify-center font-bold" id="l4">
+      <div
+        class="section-subtitle text-center mb-5 flex justify-center font-bold"
+        id="l4"
+      >
         {{ child.name }}
       </div>
       <form
@@ -518,5 +521,11 @@ select {
 
 .text-sucessful-payment h1 {
   color: #743d31;
+}
+
+@media (max-width: 36em) {
+  .container {
+    width: 100rem !important;
+  }
 }
 </style>
