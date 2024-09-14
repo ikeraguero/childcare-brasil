@@ -1,11 +1,11 @@
 <template>
   <div class="card-item px-2 m-4 snap-center p-6">
     <div
-      class="teste rounded-lg flex flex-col"
+      class="card-wrapper rounded-lg flex flex-col"
       style="overflow-wrap: anywhere; height: 100%; width: 100%"
     >
       <a href="/">
-        <router-link v-bind:to="'/criancas/perfil/' + card.id">
+        <router-link v-bind:to="`criancas/doar/${card.id}`">
           <img class="children-photo rounded-t-lg" :src="card.photo" />
         </router-link>
       </a>
@@ -74,7 +74,7 @@ export default {
   width: 100%;
 }
 
-.card-item div {
+.card-wrapper {
   box-shadow: 0.1rem 0.5rem 1rem 0.2rem rgb(0, 0, 0, 0.07);
   background-color: #fff6ee;
   width: 100%;
@@ -87,7 +87,7 @@ export default {
   object-fit: cover;
 }
 
-.p-5 {
+.card-wrapper div {
   flex-grow: 1;
 }
 

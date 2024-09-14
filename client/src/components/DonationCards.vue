@@ -148,10 +148,10 @@ div:empty {
   background-color: #fff6ee;
 }
 .donation-detail {
-  color: #621200;
+  color: #743d31;
 }
 .delete-btn {
   color: #fff6ee;
-  background-color: #621200;
+  background-color: #743d31;
 }
 </style>
