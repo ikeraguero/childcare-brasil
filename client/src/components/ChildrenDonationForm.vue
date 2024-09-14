@@ -49,8 +49,10 @@
         style="display: block"
       >
         <div id="formcomponents">
-          <label class="block text-white text-sm font-bold mb-0" for="username">
-            <div class="background"></div>
+          <label
+            class="block text-white text-sm font-bold mb-1"
+            for="donationdonatortype"
+          >
             Tipo de Doador
           </label>
           <select
@@ -63,37 +65,39 @@
             <option value="Pessoa">Pessoa Física</option>
             <option value="Empresa">Pessoa Jurídica</option>
           </select>
-          <label
-            class="block text-sm font-bold mb-3 mt-3"
-            id="person"
-            style="display: none"
-          >
-            CPF</label
-          >
-          <input
-            maxlength="11"
-            placeholder="XXX.XXX.XXX-XX"
-            name="donationcpf"
-            type="text"
-            class="shadow appearance-none font-normal border mt-1.5 rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-          />
+          <div id="person" style="display: none">
+            <label
+              class="cpf-label block text-white text-sm font-bold mb-1 mt-6"
+            >
+              CPF</label
+            >
+            <input
+              maxlength="11"
+              placeholder="XXX.XXX.XXX-XX"
+              name="donationcpf"
+              type="text"
+              class="shadow appearance-none font-normal border mt-1.5 rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            />
+          </div>
+          <div id="company" style="display: none">
+            <label
+              class="cnpj-label block text-white text-sm font-bold mb-1 mt-6"
+            >
+              CNPJ</label
+            >
+            <input
+              maxlength="14"
+              placeholder="XX.XXX.XXX/0001-XX"
+              name="donationcnpj"
+              type="text"
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            />
+          </div>
 
           <label
-            class="block text-sm font-bold mb-3 mt-3"
-            id="company"
-            style="display: none"
+            class="block text-white text-sm font-bold mb-1 mt-6"
+            id="donator"
           >
-            CNPJ</label
-          >
-          <input
-            maxlength="14"
-            placeholder="XX.XXX.XXX/0001-XX"
-            name="donationcnpj"
-            type="text"
-            class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-          />
-
-          <label class="block text-sm font-bold mb-3 mt-3" id="donator">
             Nome Completo
           </label>
           <input
@@ -104,7 +108,12 @@
             required
           />
 
-          <label class="block text-sm font-bold mb-3" id="email"> Email</label>
+          <label
+            class="block text-white text-sm font-bold mb-1 mt-6"
+            id="email"
+          >
+            Email</label
+          >
           <input
             name="donationemail"
             type="email"
@@ -113,7 +122,10 @@
             required
           />
 
-          <label class="block text-sm font-bold mb-3" id="cellphone">
+          <label
+            class="block text-white text-sm font-bold mb-1 mt-6"
+            id="cellphone"
+          >
             Telefone</label
           >
           <input
@@ -125,7 +137,10 @@
             class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required
           />
-          <label class="block text-white text-sm font-bold mb-0" id="state">
+          <label
+            class="block text-white text-sm font-bold mb-1 mt-6"
+            id="state"
+          >
             <div class="background"></div>
             Estado
           </label>
@@ -138,7 +153,7 @@
             </option>
           </select>
           <label
-            class="block text-sm font-bold mb-3"
+            class="block text-sm font-bold mb-1"
             id="donatedto"
             style="display: none"
           >
@@ -151,7 +166,7 @@
             />
           </label>
           <label
-            class="block text-sm font-bold mb-3"
+            class="block text-sm font-bold mb-1"
             id="donatedto"
             style="display: none"
           >
@@ -164,7 +179,7 @@
             />
           </label>
           <label
-            class="block text-sm font-bold mb-3"
+            class="block text-sm font-bold mb-1"
             id="donatedto"
             style="display: none"
           >
@@ -177,7 +192,7 @@
             />
           </label>
           <label
-            class="block text-sm font-bold mb-3"
+            class="block text-sm font-bold mb-1"
             id="donatedtoid"
             style="display: none"
           >
@@ -189,7 +204,7 @@
               required
             />
           </label>
-          <label class="block text-sm font-bold mb-3 mt-3" id="city">
+          <label class="block text-white text-sm font-bold mb-1 mt-6" id="city">
             Cidade</label
           >
           <input
@@ -199,7 +214,10 @@
             class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required
           />
-          <label class="block text-sm font-bold mb-3" id="address">
+          <label
+            class="block text-white text-sm font-bold mb-1 mt-6"
+            id="address"
+          >
             Endereço</label
           >
           <input
@@ -210,7 +228,10 @@
             required
           />
 
-          <label class="block text-sm font-bold mb-3 mt-3" id="money">
+          <label
+            class="block text-white text-sm font-bold mb-1 mt-6"
+            id="money"
+          >
             Valor
           </label>
           <select
@@ -464,6 +485,8 @@ label {
   color: #fff6ee;
   font-size: 1.7rem;
   margin-top: 2rem;
+  padding: 0;
+  margin: 0;
 }
 
 select:hover {
@@ -479,25 +502,10 @@ select:hover {
 form {
   background-color: #743d31;
 }
-label {
-  color: #621200;
-}
 
 input,
 select {
-  margin-top: 1rem;
-}
-
-#donator,
-#city,
-#address,
-#person,
-#company,
-#email,
-#cellphone,
-#valuemoney,
-#materials {
-  color: #000000;
+  margin-top: 0.2rem;
 }
 
 .back-btn {

@@ -1,10 +1,7 @@
 <template>
-  <div class="flex justify-center py-10 content-align-center">
-    <div class="w-10/12 h-full">
-      <div
-        class="container-wrapper flex pa-8 mb-0 justify-center"
-        id="paypalpayment"
-      >
+  <div class="flex justify-center mx-auto py-10 content-align-center">
+    <div class="w-11/12 h-full">
+      <div class="container-wrapper flex pa-8 mb-0 justify-center">
         <div class="font-semibold">
           <v-container
             class="content-align-center"
@@ -34,6 +31,7 @@
           </v-container>
         </div>
       </div>
+
       <div class="section-title mb-0 flex justify-center" id="l3">
         Você está doando para:
       </div>
@@ -51,9 +49,11 @@
         style="display: block"
       >
         <div id="formcomponents">
-          <label class="block text-white text-sm font-bold mb-0" for="username">
-            <div class="background"></div>
-            <div class="test">Tipo de doador</div>
+          <label
+            class="block text-white text-sm font-bold mb-1"
+            for="donationdonatortype"
+          >
+            Tipo de Doador
           </label>
           <select
             class="form-select appearance-none shadow appearance-none font-normal border rounded-2xl w-full mt-1.5 py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
@@ -65,37 +65,41 @@
             <option value="Pessoa">Pessoa Física</option>
             <option value="Empresa">Pessoa Jurídica</option>
           </select>
+          <div id="person" style="display: none">
+            <label
+              class="cpf-label block text-white text-sm font-bold mb-1 mt-6"
+            >
+              CPF</label
+            >
+            <input
+              maxlength="11"
+              placeholder="XXX.XXX.XXX-XX"
+              name="donationcpf"
+              type="text"
+              class="shadow appearance-none font-normal border mt-1.5 rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            />
+          </div>
+          <div id="company" style="display: none">
+            <label
+              class="cnpj-label block text-white text-sm font-bold mb-1 mt-6"
+            >
+              CNPJ</label
+            >
+            <input
+              maxlength="14"
+              placeholder="XX.XXX.XXX/0001-XX"
+              name="donationcnpj"
+              type="text"
+              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            />
+          </div>
+
           <label
-            class="block text-sm font-bold mb-3 mt-3"
-            id="person"
-            style="display: none"
+            class="block text-white text-sm font-bold mb-1 mt-6"
+            id="donator"
           >
-            CPF</label
-          >
-          <input
-            maxlength="11"
-            placeholder="XXX.XXX.XXX-XX"
-            name="donationcpf"
-            type="text"
-            class="shadow appearance-none font-normal border mt-1.5 rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-          />
-          <label
-            class="block text-sm font-bold mb-3 mt-3"
-            id="company"
-            style="display: none"
-          >
-            CNPJ</label
-          >
-          <input
-            maxlength="14"
-            placeholder="XX.XXX.XXX/0001-XX"
-            name="donationcnpj"
-            type="text"
-            class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-          />
-          <label class="block text-sm font-bold mb-3 mt-3" id="donator">
-            Nome Completo</label
-          >
+            Nome Completo
+          </label>
           <input
             name="donationdonator"
             placeholder="Nome e Sobrenome"
@@ -104,7 +108,12 @@
             required
           />
 
-          <label class="block text-sm font-bold mb-3" id="email"> Email</label>
+          <label
+            class="block text-white text-sm font-bold mb-1 mt-6"
+            id="email"
+          >
+            Email</label
+          >
           <input
             name="donationemail"
             type="email"
@@ -112,7 +121,11 @@
             class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required
           />
-          <label class="block text-sm font-bold mb-3" id="cellphone">
+
+          <label
+            class="block text-white text-sm font-bold mb-1 mt-6"
+            id="cellphone"
+          >
             Telefone</label
           >
           <input
@@ -124,8 +137,10 @@
             class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required
           />
-
-          <label class="block text-white text-sm font-bold mb-0" id="state">
+          <label
+            class="block text-white text-sm font-bold mb-1 mt-6"
+            id="state"
+          >
             <div class="background"></div>
             Estado
           </label>
@@ -138,7 +153,7 @@
             </option>
           </select>
           <label
-            class="block text-sm font-bold mb-3"
+            class="block text-sm font-bold mb-1"
             id="donatedto"
             style="display: none"
           >
@@ -151,7 +166,7 @@
             />
           </label>
           <label
-            class="block text-sm font-bold mb-3"
+            class="block text-sm font-bold mb-1"
             id="donatedto"
             style="display: none"
           >
@@ -164,7 +179,7 @@
             />
           </label>
           <label
-            class="block text-sm font-bold mb-3"
+            class="block text-sm font-bold mb-1"
             id="donatedto"
             style="display: none"
           >
@@ -177,7 +192,7 @@
             />
           </label>
           <label
-            class="block text-sm font-bold mb-3"
+            class="block text-sm font-bold mb-1"
             id="donatedtoid"
             style="display: none"
           >
@@ -189,9 +204,9 @@
               required
             />
           </label>
-          <label class="block text-sm font-bold mb-3 mt-3" id="city">
-            Cidade
-          </label>
+          <label class="block text-white text-sm font-bold mb-1 mt-6" id="city">
+            Cidade</label
+          >
           <input
             name="donationcity"
             placeholder="Cidade"
@@ -199,20 +214,26 @@
             class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
             required
           />
-          <label class="block text-sm font-bold mb-3" id="address">
-            <div class="test">Endereço</div>
-            <input
-              name="donationaddress"
-              placeholder="Rua, número"
-              type="text"
-              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-              required
-            />
-          </label>
-
-          <label class="block text-sm font-bold mb-3 mt-3" id="money">
-            Valor</label
+          <label
+            class="block text-white text-sm font-bold mb-1 mt-6"
+            id="address"
           >
+            Endereço</label
+          >
+          <input
+            name="donationaddress"
+            placeholder="Rua, número"
+            type="text"
+            class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            required
+          />
+
+          <label
+            class="block text-white text-sm font-bold mb-1 mt-6"
+            id="money"
+          >
+            Valor
+          </label>
           <select
             id="valuemoney"
             placeholder="..."
@@ -237,7 +258,7 @@
           <div class="mt-6 flex justify-center">
             <button
               @click="unhideForm1"
-              class="donation-btn bg-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2"
+              class="back-btn"
               type="button"
               value="Voltar"
             >
@@ -250,11 +271,7 @@
             />
           </div>
         </div>
-        <div
-          class="flex justify-center"
-          style="display: none"
-          id="submitbuttons2"
-        >
+        <div class="flex justify-center" id="submitbuttons2">
           <div class="flex justify-center" v-if="paidFor == true">
             <button
               @click="unhideForm2"
@@ -469,6 +486,8 @@ label {
   color: #fff6ee;
   font-size: 1.7rem;
   margin-top: 2rem;
+  padding: 0;
+  margin: 0;
 }
 
 select:hover {
@@ -484,25 +503,10 @@ select:hover {
 form {
   background-color: #743d31;
 }
-label {
-  color: #621200;
-}
 
 input,
 select {
-  margin-top: 1rem;
-}
-
-#donator,
-#city,
-#address,
-#person,
-#company,
-#email,
-#cellphone,
-#valuemoney,
-#materials {
-  color: #000000;
+  margin-top: 0.2rem;
 }
 
 .back-btn {
@@ -516,5 +520,11 @@ select {
 
 .invisible {
   display: none;
+}
+
+@media (max-width: 36em) {
+  .container {
+    width: 100rem !important;
+  }
 }
 </style>
