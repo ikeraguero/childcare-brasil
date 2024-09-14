@@ -74,8 +74,8 @@ export default {
   width: 100%;
 }
 
-.teste {
-  box-shadow: 1px 5px 10px 2px rgb(0, 0, 0, 0.07);
+.card-item div {
+  box-shadow: 0.1rem 0.5rem 1rem 0.2rem rgb(0, 0, 0, 0.07);
   background-color: #fff6ee;
   width: 100%;
   height: 100%;
@@ -104,8 +104,8 @@ export default {
 .card-name {
   color: #343a40;
   font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .card-age,
@@ -113,7 +113,7 @@ export default {
   display: flex;
   font-size: 1.8rem;
   align-items: flex-start;
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
   gap: 1rem;
 }
 
@@ -126,8 +126,8 @@ export default {
 
 .card-icon {
   stroke: #743d31;
-  width: 24px;
-  height: 24px;
+  width: 2.4rem;
+  height: 2.4rem;
   flex-shrink: 0;
 }
 </style>

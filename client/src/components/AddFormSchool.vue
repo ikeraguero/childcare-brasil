@@ -4,7 +4,7 @@
       <p>{{ image }}</p>
 
       <form
-        class="rounded px-12 pt-8 pb-8 mb-8"
+        class="add-form rounded px-12 pt-8 pb-8 mb-8"
         action="https://childcare-brasil.vercel.app/api/childadd"
         method="post"
       >
@@ -177,8 +177,8 @@ export default {
 </script>
 
 <style scoped>
-.bg-white {
-  color: black;
+.form-add input {
+  color: #000000;
 }
 
 form {
@@ -192,10 +192,10 @@ form {
   align-items: center;
 }
 
-.block {
+.add-form label {
   color: #fff6ee;
-  font-size: 17px;
-  margin-top: 20px;
+  font-size: 1.7rem;
+  margin-top: 2rem;
 }
 .v-application a {
   color: #fff6ee;
@@ -211,7 +211,7 @@ form {
 }
 
 #gender {
-  color: black;
+  color: #000000;
 }
 
 .top-form {
@@ -219,6 +219,6 @@ form {
 }
 
 .cancel-btn {
-  padding: 38px !important;
+  padding: 3.8rem !important;
 }
 </style>

@@ -18,8 +18,8 @@ export default {
 .btn {
   color: #621200;
   text-decoration: none;
-  letter-spacing: 3px;
+  letter-spacing: 0.3rem;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <article>
     <header>
-      <div class="header-2 container">
+      <div class="header container">
         <div>
           <v-row>
             <v-col cols="10">
@@ -269,12 +269,6 @@ header {
   background-color: #fff6ee;
 }
 
-body,
-h1,
-.slogan {
-  color: #fff6ee;
-}
-
 html,
 body {
   overflow-x: hidden;
@@ -350,16 +344,12 @@ h1 {
   color: #743d31;
 }
 
-.white-nav {
-  display: none;
-}
-
 .header-description {
   margin-top: 1.4rem;
   font-size: 20px;
 }
 
-.header-2 {
+.header {
   display: grid;
   padding: 6.4rem 4.8rem 9.2rem 4.8rem;
   grid-template-columns: 1fr 1fr;
@@ -696,7 +686,7 @@ form select,
   .mosaico {
     display: none;
   }
-  .header-2 {
+  .header {
     display: flex;
     text-align: center;
     position: relative;
@@ -734,12 +724,6 @@ form select,
     font-size: 6.4rem;
   }
 
-  .white-nav {
-    height: 100vh;
-    padding: 0;
-    position: absolute;
-    width: 100%;
-  }
   .header-btns {
     padding-top: 2.4rem;
   }

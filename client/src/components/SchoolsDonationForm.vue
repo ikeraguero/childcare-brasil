@@ -1,7 +1,10 @@
 <template>
   <div class="flex justify-center py-10 content-align-center">
     <div class="w-10/12 h-full">
-      <div class="flex pa-8 mb-0 justify-center" id="paypalpayment">
+      <div
+        class="container-wrapper flex pa-8 mb-0 justify-center"
+        id="paypalpayment"
+      >
         <div class="font-semibold">
           <v-container
             class="content-align-center"
@@ -67,64 +70,64 @@
             id="person"
             style="display: none"
           >
-            <div class="test">CPF</div>
-            <input
-              maxlength="11"
-              placeholder="XXX.XXX.XXX-XX"
-              name="donationcpf"
-              type="text"
-              class="shadow appearance-none font-normal border mt-1.5 rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            />
-          </label>
+            CPF</label
+          >
+          <input
+            maxlength="11"
+            placeholder="XXX.XXX.XXX-XX"
+            name="donationcpf"
+            type="text"
+            class="shadow appearance-none font-normal border mt-1.5 rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+          />
           <label
             class="block text-sm font-bold mb-3 mt-3"
             id="company"
             style="display: none"
           >
-            <div class="test">CNPJ</div>
-            <input
-              maxlength="14"
-              placeholder="XX.XXX.XXX/0001-XX"
-              name="donationcnpj"
-              type="text"
-              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            />
-          </label>
+            CNPJ</label
+          >
+          <input
+            maxlength="14"
+            placeholder="XX.XXX.XXX/0001-XX"
+            name="donationcnpj"
+            type="text"
+            class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+          />
           <label class="block text-sm font-bold mb-3 mt-3" id="donator">
-            <div class="test">Nome Completo</div>
-            <input
-              name="donationdonator"
-              placeholder="Nome e Sobrenome"
-              type="text"
-              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-              required
-            />
-          </label>
-          <label class="block text-sm font-bold mb-3" id="email">
-            <div class="test">Email</div>
-            <input
-              name="donationemail"
-              type="email"
-              placeholder="email@contato.com"
-              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-              required
-            />
-          </label>
+            Nome Completo</label
+          >
+          <input
+            name="donationdonator"
+            placeholder="Nome e Sobrenome"
+            type="text"
+            class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            required
+          />
+
+          <label class="block text-sm font-bold mb-3" id="email"> Email</label>
+          <input
+            name="donationemail"
+            type="email"
+            placeholder="email@contato.com"
+            class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            required
+          />
           <label class="block text-sm font-bold mb-3" id="cellphone">
-            <div class="test">Telefone</div>
-            <input
-              name="donationcellphone"
-              id="phone"
-              maxlength="14"
-              placeholder="(DD)XXXXX-XXXX"
-              type="text"
-              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-              required
-            />
-          </label>
+            Telefone</label
+          >
+          <input
+            name="donationcellphone"
+            id="phone"
+            maxlength="14"
+            placeholder="(DD)XXXXX-XXXX"
+            type="text"
+            class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            required
+          />
+
           <label class="block text-white text-sm font-bold mb-0" id="state">
             <div class="background"></div>
-            <div class="test">Estado</div>
+            Estado
           </label>
           <select
             class="form-select appearance-none shadow appearance-none border font-normal rounded-2xl w-full mt-1.5 py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
@@ -139,7 +142,6 @@
             id="donatedto"
             style="display: none"
           >
-            <div class="test"></div>
             <input
               name="donationdonatedto"
               type="text"
@@ -153,7 +155,6 @@
             id="donatedto"
             style="display: none"
           >
-            <div class="test"></div>
             <input
               name="donationstatus"
               type="text"
@@ -167,7 +168,6 @@
             id="donatedto"
             style="display: none"
           >
-            <div class="test"></div>
             <input
               name="donationtype"
               type="text"
@@ -181,7 +181,6 @@
             id="donatedtoid"
             style="display: none"
           >
-            <div class="test"></div>
             <input
               name="donationdonatedtoid"
               type="text"
@@ -191,15 +190,15 @@
             />
           </label>
           <label class="block text-sm font-bold mb-3 mt-3" id="city">
-            <div class="test">Cidade</div>
-            <input
-              name="donationcity"
-              placeholder="Cidade"
-              type="text"
-              class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-              required
-            />
+            Cidade
           </label>
+          <input
+            name="donationcity"
+            placeholder="Cidade"
+            type="text"
+            class="shadow appearance-none font-normal mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            required
+          />
           <label class="block text-sm font-bold mb-3" id="address">
             <div class="test">Endereço</div>
             <input
@@ -212,23 +211,23 @@
           </label>
 
           <label class="block text-sm font-bold mb-3 mt-3" id="money">
-            <div class="test">Valor</div>
-            <select
-              id="valuemoney"
-              placeholder="..."
-              name="donationvalue"
-              type="text"
-              class="shadow appearance-none font-medium mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
-            >
-              <option value="0.26">R$1.00</option>
-              <option value="2.57">R$10.00</option>
-              <option value="7.71">R$30.00</option>
-              <option value="12.86">R$50.00</option>
-              <option value="25.72">R$100.00</option>
-              <option value="64.30">R$250.00</option>
-              <option value="257.18">R$1,000.00</option>
-            </select>
-          </label>
+            Valor</label
+          >
+          <select
+            id="valuemoney"
+            placeholder="..."
+            name="donationvalue"
+            type="text"
+            class="shadow appearance-none font-medium mt-1.5 border rounded-2xl w-full py-3 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline bg-white"
+          >
+            <option value="0.26">R$1.00</option>
+            <option value="2.57">R$10.00</option>
+            <option value="7.71">R$30.00</option>
+            <option value="12.86">R$50.00</option>
+            <option value="25.72">R$100.00</option>
+            <option value="64.30">R$250.00</option>
+            <option value="257.18">R$1,000.00</option>
+          </select>
         </div>
         <div
           class="flex justify-center mt-6"
@@ -466,36 +465,32 @@ export default {
 </script>
 
 <style scoped>
-.test {
+label {
   color: #fff6ee;
-  font-size: 17px;
-  margin-top: 20px;
-}
-.test1 {
-  color: #fff6ee;
-  font-size: 26px;
+  font-size: 1.7rem;
+  margin-top: 2rem;
 }
 
 select:hover {
   cursor: pointer;
 }
 
-.pa-8 {
+.container-wrapper {
   color: #fff6ee;
-  font-size: 26px;
+  font-size: 2.6rem;
   text-align: center;
 }
 
 form {
   background-color: #743d31;
 }
-.block {
+label {
   color: #621200;
 }
 
 input,
 select {
-  margin-top: 10px;
+  margin-top: 1rem;
 }
 
 #donator,
@@ -507,11 +502,19 @@ select {
 #cellphone,
 #valuemoney,
 #materials {
-  color: black;
+  color: #000000;
+}
+
+.back-btn {
+  font-size: 1.8rem;
 }
 
 .donation-btn {
   background-color: #743d31;
   color: #ffff;
+}
+
+.invisible {
+  display: none;
 }
 </style>

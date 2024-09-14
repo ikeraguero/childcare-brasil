@@ -60,7 +60,7 @@ export default {
 }
 
 .card-wrapper {
-  box-shadow: 1px 20px 30px 2px rgba(0, 0, 0, 0.07);
+  box-shadow: 0.1rem 2rem 3rem 0.2rem #00000012;
   background-color: #fff6ee;
   width: 100%;
   height: 100%;
@@ -78,12 +78,12 @@ export default {
   object-fit: cover;
 }
 
-.p-5 {
+.card-wrapper div {
   flex-grow: 1;
 }
 
 .buttons {
-  padding-bottom: 24px;
+  padding-bottom: 2.4rem;
 }
 
 .card-content {
@@ -95,8 +95,8 @@ export default {
 .card-name {
   color: #343a40;
   font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .card-details {
