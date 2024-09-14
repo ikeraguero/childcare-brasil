@@ -44,10 +44,6 @@ export default {
       type: String,
       required: true,
     },
-    iconPath: {
-      type: String,
-      required: true,
-    },
   },
 };
 </script>

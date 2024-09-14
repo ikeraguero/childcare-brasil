@@ -256,14 +256,6 @@
           id="submitbuttons1"
         >
           <div class="mt-6 flex justify-center">
-            <button
-              @click="unhideForm1"
-              class="back-btn"
-              type="button"
-              value="Voltar"
-            >
-              Voltar
-            </button>
             <input
               class="donation-btn bg-white font-medium px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
               type="submit"
@@ -273,14 +265,6 @@
         </div>
         <div class="flex justify-center" id="submitbuttons2">
           <div class="flex justify-center" v-if="paidFor == true">
-            <button
-              @click="unhideForm2"
-              class="donation-btn bg-white font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
-              type="button"
-              value="Voltar"
-            >
-              Voltar
-            </button>
             <button
               class="donation-btn bg-white font-medium py-2 px-4 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
               type="submit"
@@ -303,7 +287,7 @@
           <button
             class="donation-btn text-white"
             id="moneypayment"
-            @click="hideForm2"
+            @click="toggleForm(true, 'submitbuttons2', 'paypalpayment')"
             style="display: block"
           >
             Prosseguir
@@ -401,6 +385,7 @@ export default {
         return "Ano";
       }
     },
+
     donationtypebar() {
       if (document.getElementById("donationtype").value == "Dinheiro") {
         document.getElementById("nothing").style.display = "none";
@@ -441,41 +426,24 @@ export default {
         }
       }
     },
-    hideForm1() {
-      document.getElementById("form").style.backgroundColor = "transparent";
-      document.getElementById("formcomponents").style.display = "none";
-      document.getElementById("l3").style.display = "none";
-      document.getElementById("l4").style.display = "none";
-      document.getElementById("fakesubmit").style.display = "none";
-      document.getElementById("submitbuttons1").removeAttribute("style");
-      document.getElementById("message").removeAttribute("style");
-    },
-    unhideForm1() {
-      document.getElementById("form").style.backgroundColor = "#743d31";
-      document.getElementById("formcomponents").removeAttribute("style");
-      document.getElementById("fakesubmit").removeAttribute("style");
-      document.getElementById("l3").removeAttribute("style");
-      document.getElementById("l4").removeAttribute("style");
-      document.getElementById("submitbuttons1").style.display = "none";
-      document.getElementById("message").style.display = "none";
-    },
-    hideForm2() {
-      document.getElementById("form").style.backgroundColor = "transparent";
-      document.getElementById("formcomponents").style.display = "none";
-      document.getElementById("l3").style.display = "none";
-      document.getElementById("l4").style.display = "none";
-      document.getElementById("fakesubmit").style.display = "none";
-      document.getElementById("submitbuttons2").removeAttribute("style");
-      document.getElementById("paypalpayment").removeAttribute("style");
-    },
-    unhideForm2() {
-      document.getElementById("form").style.backgroundColor = "#743d31";
-      document.getElementById("formcomponents").removeAttribute("style");
-      document.getElementById("fakesubmit").removeAttribute("style");
-      document.getElementById("l3").removeAttribute("style");
-      document.getElementById("l4").removeAttribute("style");
-      document.getElementById("submitbuttons2").style.display = "none";
-      document.getElementById("paypalpayment").style.display = "none";
+    toggleForm(hide, buttonId, paymentId) {
+      document.getElementById("form").style.backgroundColor = hide
+        ? "transparent"
+        : "#743d31";
+      document.getElementById("formcomponents").style.display = hide
+        ? "none"
+        : "";
+      document.getElementById("l3").style.display = hide ? "none" : "";
+      document.getElementById("l4").style.display = hide ? "none" : "";
+      document.getElementById("fakesubmit").style.display = hide ? "none" : "";
+
+      if (hide) {
+        document.getElementById(buttonId).removeAttribute("style");
+        document.getElementById(paymentId).removeAttribute("style");
+      } else {
+        document.getElementById(buttonId).style.display = "none";
+        document.getElementById(paymentId).style.display = "none";
+      }
     },
   },
 };
