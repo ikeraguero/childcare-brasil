@@ -1,5 +1,5 @@
 <template>
-  <v-container class="pa-8 content-align-center">
+  <v-container class="success-container pa-8 content-align-center">
     <div>Doação realizada com sucesso!</div>
     <div class="align-itens-center">
       <u></u>
@@ -12,9 +12,9 @@ export default {};
 </script>
 
 <style>
-.pa-8 {
+.success-container {
   color: #743d31;
-  font-size: 26px;
+  font-size: 2.6rem;
   text-align: center;
 }
 </style>

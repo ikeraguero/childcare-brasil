@@ -84,16 +84,16 @@ export default {
 .schools-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+  gap: 1.2rem;
   justify-content: center; /* Centers the grid items horizontally within the grid container */
   padding: 0 9.4rem;
 }
 
 .btn {
   color: #fff6ee;
-  font-size: 12px;
+  font-size: 1.2rem;
   background-color: #743d31;
-  border-radius: 1000px;
+  border-radius: 999999rem;
   display: flex;
   align-items: center;
 }

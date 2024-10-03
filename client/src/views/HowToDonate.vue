@@ -134,7 +134,7 @@ export default {
 
 .grid-photo img {
   width: 70%;
-  border-radius: 1000px;
+  border-radius: 9999999rem;
 }
 
 .grid-photo img::before {

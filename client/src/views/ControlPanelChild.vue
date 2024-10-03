@@ -91,9 +91,9 @@ export default {
 
 .btn {
   color: #fff6ee;
-  font-size: 12px;
+  font-size: 1.2rem;
   background-color: #743d31;
-  border-radius: 1000px;
+  border-radius: 999999rem;
   display: flex;
   align-items: center;
 }

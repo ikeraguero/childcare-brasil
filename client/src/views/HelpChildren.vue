@@ -55,9 +55,9 @@ export default {
 <style scoped>
 .btn {
   color: #fff6ee;
-  font-size: 12px;
+  font-size: 1.2rem;
   background-color: #743d31;
-  border-radius: 1000px;
+  border-radius: 99999rem;
   display: flex;
   align-items: center;
   justify-content: center;

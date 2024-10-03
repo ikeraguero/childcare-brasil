@@ -37,6 +37,6 @@ export default {
 <style>
 .imgMosaico {
   margin: 0;
-  padding: 5px !important;
+  padding: 0.5rem !important;
 }
 </style>
